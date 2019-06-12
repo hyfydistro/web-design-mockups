@@ -1,6 +1,6 @@
 # Letter-Format
 
-An MDN Assessment: A simple markup of a letter format.
+A MDN Assessment, a simple markup of a letter format.
 
 ## Keynotes
 
