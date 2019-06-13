@@ -45,6 +45,11 @@ It's all about **semantics**. Think about Accessibility and people with _screen 
 
 **IE6 Ghost Bug**: Duplicate of the element may occur, however on other browsers will be fine.
 
++ `p` element is a block element
+
+If there is a new text of line you'd like to create, use the `p` element again. Do not use the `<br>` element to create the paragraph. `<br>` element should be used in poem or postal address,
+where the division of lines is significant. Also, the `p` element SHOULD NOT have any block elements inside it.
+
 ## Credits
 
 - _MDN_ (website/company) - [Marking up a letter](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
