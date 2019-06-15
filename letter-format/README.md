@@ -67,3 +67,7 @@ where the division of lines is significant. Also, the `p` element SHOULD NOT hav
 - _StackOverflow_ (website) - [Why use quote tags when quotation marks will do?](https://stackoverflow.com/questions/20292197/why-use-quote-tags-when-quotation-marks-will-do)
 
 - _StackExchange_ Software Engineering (website) - [Is there anything wrong with putting comments in an HTML closing tag?](https://softwareengineering.stackexchange.com/questions/297774/is-there-anything-wrong-with-putting-comments-in-an-html-closing-tag/297887)
+
+- _CSS-Tricks_ (website) - [The Current State of Telephone Links](https://css-tricks.com/the-current-state-of-telephone-links/)
+
+- _envatotuts+_ (website) - [Quick Tip: Make Telephone Numbers Do Something](https://webdesign.tutsplus.com/articles/quick-tip-make-telephone-numbers-do-something--webdesign-9271)
