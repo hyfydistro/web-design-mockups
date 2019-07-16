@@ -28,6 +28,9 @@ The following will be marked or not whether they are optimized for best web perf
 The layout and design determine how the information will be structured when you create a website. There are five key design and usability points to consider when it comes to choosing the right website template:
 
 * content width design ((1)Full-Width or (2)Box-Width)
+
+**Full-width** content area works well for creative, contemporary designs. **Boxed-width** content area is more suitable for traditional, business-oriented designs.
+
 * header layout
 * navigation design
 * logo placement
@@ -36,14 +39,23 @@ The layout and design determine how the information will be structured when you 
 ## Web Design checklist
 
 [] Start with the 5-second test
+
 [] logo
+
 [] Search Bar
+
 [] Navigation
+
 [] Images
+
 [] Typography
+
 [] Call TO Actions (CTAs)
+
 [] Responsiveness
+
 [] Consistency
+
 [] User Experience
 
 ## Table of Contents // Types of templates
