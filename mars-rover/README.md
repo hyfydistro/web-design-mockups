@@ -43,6 +43,16 @@ Body Text: Franklin Gothic Medium
 
 Caption(s): MS Reference Sans Serif
 
+- Images Used
+
+Width by:
+
+400w for mobile
+
+800w for tablet
+
+14000 for desktop
+
 ## Media Queries
 
 * Mobile - IPhone SE 320w x 568h
