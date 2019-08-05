@@ -19,10 +19,29 @@ Secondary Headings: 130-150%
 
 Check with...
 
-
 - Leading (Line Spacing): 120-145% of text size
 
+=> 24-29
+
+Chose: 25
+
 Main Body Text:
+
+- Color
+
+Primary: (dark red) 5E1011 and (grey) E0E0E0
+
+Secondary: Black and White
+
+- Type
+
+Primary Heading(s): Franklin Gothic Medium, Italize
+
+Sub Heading(s): Franklin Gothic Medium, Italize
+
+Body Text: Franklin Gothic Medium
+
+Caption(s): MS Reference Sans Serif
 
 ## Media Queries
 
