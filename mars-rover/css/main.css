@@ -18,7 +18,15 @@ p {
 }
 
 /* Navigation bar */
-li {
+nav ul {
+  /* background-color: var(--primary-color); */
+}
+
+nav a {
+  /* color: var(--secondary-color); */
+}
+
+nav ul li {
   display: inline;
 }
 
@@ -44,15 +52,19 @@ a {
 
 /* ===== Mobile ===== */
 /* smartphones, iPhone, portrait 480x320 phones */
-@media (min-width:320px)  {
-  li {
-    display: block;
-  }
-}
+/* @media (min-width:320px)  {
+
+} */
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (min-width:481px)  {
+@media (max-width:481px)  {
+  nav ul li {
+    display: block;
+  }
 
+  .dropdown-content.active {
+    display: block;
+  }
 }
 
 /* ===== Tablet ===== */
