@@ -12,9 +12,31 @@ html {
   --secondary-color: #E0E0E0; /* grey */
 }
 
+/* Header */
+
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* TODO: Create automatic and interactive Slideshow after header */
+
 /* body text */
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 30px;
+}
+
 p {
   font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
 }
 
 /* Navigation bar */
@@ -22,8 +44,9 @@ nav ul {
   /* background-color: var(--primary-color); */
 }
 
-nav a {
-  /* color: var(--secondary-color); */
+nav a,
+nav button {
+  color: var(--secondary-color);
 }
 
 nav ul li {
@@ -57,7 +80,20 @@ a {
 } */
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (max-width:481px)  {
+@media (min-width: 320px) and (max-width:481px)  {
+  /* Size Presets */
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
   nav ul li {
     display: block;
   }
@@ -70,6 +106,14 @@ a {
 /* ===== Tablet ===== */
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media (min-width:641px)  {
+  /* Size Presets */
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-style: 28px;
+  }
 
 }
 
@@ -81,6 +125,15 @@ a {
 /* Desktop */
 /* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {
+  /* Size Presets */
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
   .dropdown:hover .dropdown-content {
     display: block;
   }

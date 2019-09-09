@@ -7,13 +7,20 @@ An article about the autonomous exploration vehicle(s) that landed on mars.
 - Font Size
 
 Main Body Font Size: 15-25px
+=> 15
 => 20 (100%)
+=> 25
 
 Primary Headings: 180-200%
-=> 40 (200% of main body font)
+=> 36 (180%) [Mobile]
+=> 38 (190%) [Tablet]
+=> 40 (200% of main body font) [Desktop]
 
 Secondary Headings: 130-150%
 => 26-30
+=> 26 [Mobile]
+=> 28 [Tablet]
+=> 30 [Desktop]
 
 - Characters in a line: 45-90
 
@@ -78,3 +85,7 @@ Footer 320w x 441h
 ## Credits
 
 - Stripo (website) - [Email Template Size: Element’s Width and Height](https://stripo.email/blog/email-template-size-width-height/)
+
+- _Medium_ (website) - [Make a Slideshow with Automatic and Manual Controls using HTML, CSS, and JavaScript](https://medium.com/@mattcroak718/make-a-slideshow-with-automatic-and-manual-controls-using-html-css-and-javascript-b7e9305168f9)
+
+- _StackOverflow_ (website) - [Automatic and manual slideshow](https://stackoverflow.com/questions/40638969/automatic-and-manual-slideshow)
