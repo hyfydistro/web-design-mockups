@@ -16,3 +16,65 @@ html {
 p {
   font-size: 20px;
 }
+
+/* Navigation bar */
+li {
+  display: inline;
+}
+
+/* Reset button styles */
+.dropbtn {
+  border: none;
+  background-color: inherit;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ===== Mobile ===== */
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px)  {
+  li {
+    display: block;
+  }
+}
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px)  {
+
+}
+
+/* ===== Tablet ===== */
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px)  {
+
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:961px)  {
+
+}
+
+/* Desktop */
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+
+}
