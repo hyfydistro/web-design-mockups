@@ -10,24 +10,32 @@ An article about the autonomous exploration vehicle(s) that landed on mars.
 
 - Font Size
 
+Choose a baseline font-size for each viewport (starting at 100%).
+
 Main Body Font Size: 15-25px
 body
-=> 15
-=> 20 (100%)
-=> 25
+(100%)
+Increments by +8 for next viewport
+[Mobile] => 16px
+[Tablet] => 24px
+[Desktop] => 32px
 
 Primary Headings: 180-200%
 h1
-=> 36 (180%) [Mobile]
-=> 38 (190%) [Tablet]
-=> 40 (200% of main body font) [Desktop]
+(180%)
+[Mobile] => 28.8px (180%) // Yet to be tested
+[Tablet] => n/a
+[Desktop] => n/a
 
 Secondary Headings: 130-150%
 h2
-=> 26-30
-=> 26 [Mobile]
-=> 28 [Tablet]
-=> 30 [Desktop]
+[Mobile] => 20.8px
+[Tablet] => n/a
+[Desktop] => n/a
+
+- Line height
+
+Recommended: 1.5-2 * multiple of its font-size.
 
 - Characters in a line: 45-90
 Optimum readability: 9-12 words (for unjustified texts)
