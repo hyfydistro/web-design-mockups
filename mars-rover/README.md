@@ -2,9 +2,21 @@
 
 An article about the autonomous exploration vehicle(s) that landed on mars.
 
+- Informational
+
 ## Brief
 
 - [/] text-heavy pages vs. [] interaction-heavy pages
+
+## Inspirations
+
+identify a Goal, Wish or Opportunity
+
+Gather Input and Insight
+
+Clarify the challenges
+
+=> See "Research" folder for Inspiration and Vision & Ideas.
 
 ## Web Design Details
 
