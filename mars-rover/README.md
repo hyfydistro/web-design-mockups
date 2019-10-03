@@ -18,6 +18,14 @@ Clarify the challenges
 
 => See "Research" folder for Inspiration and Vision & Ideas.
 
+Themes
+
+(1) => "I want you America" - Opportunity and space exploration
+
+(2) => Modernisation - future
+
+(3) => 
+
 ## Web Design Details
 
 - Font Size
