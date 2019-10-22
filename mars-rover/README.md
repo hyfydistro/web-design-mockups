@@ -24,7 +24,7 @@ Themes
 
 (2) => Modernisation - future
 
-(3) => 
+(3) =>
 
 ## Web Design Details
 
@@ -44,14 +44,14 @@ Primary Headings: 180-200%
 h1
 (180%)
 [Mobile] => 28.8px (180%) // Yet to be tested
-[Tablet] => n/a
-[Desktop] => n/a
+[Tablet] => 43.2px
+[Desktop] => 57.6px
 
 Secondary Headings: 130-150%
 h2
 [Mobile] => 20.8px
-[Tablet] => n/a
-[Desktop] => n/a
+[Tablet] => 31.2px
+[Desktop] => 41.6px
 
 - Line height
 
@@ -70,6 +70,10 @@ Check with...
 Chose: 25
 
 Main Body Text:
+body p (avg. text size)
+[Mobile] => 16 * 1.2 = 19.2px
+[Tablet] =>
+[Desktop] =>
 
 - Color
 
