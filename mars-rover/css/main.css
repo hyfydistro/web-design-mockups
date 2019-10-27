@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* = 10px */
 }
 
 :root {
@@ -12,37 +12,92 @@ html {
   --secondary-color: #E0E0E0; /* grey */
 }
 
-/* Header */
+/* ===== Header ===== */
 
 header {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
+/* ===== Body ===== */
+
+main {
+
+}
+
+article {
+
+}
+
+/* ===== Footer ===== */
+.social-medias ul {
+  /* Presets */
+  list-style: none;
+  /* Grid */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-columns: minmax(50px, auto);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  /* Flex-Box */
+  /* display: flex;
+  justify-content: space-around; */
+  /* flex shorthand in order:
+     flex-grow
+     flex-shrink
+     flex-basis */
+ /* flex-flow shorthand:
+     flex-direction
+     flex-wrap */
+     /* flex-flow: row wrap; */
+}
+
+.social-medias ul li a img {
+  /* TODO: Change image colors to white */
+
+}
+
 /* TODO: Create automatic and interactive Slideshow after header */
 
-/* body text */
+/* ===== Main presets ===== */
 h1 {
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
   font-style: italic;
-  font-size: 40px;
+  text-align: center;
+  /* font-size: 40px; */
 }
 
 h2 {
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
   font-style: italic;
-  font-size: 30px;
+  text-align: center;
+  color: var(--secondary-color);
+  background-color: #000;
+  padding: 0.7em;
+  margin: 0.8em;
+  /* font-size: 30px; */
 }
 
 p {
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
+  margin: 0 0 1em 0.8em;
+}
+
+figcaption {
+  font-family: 'MS Reference Sans Serif';
+  background-color: #000;
+  color: var(--secondary-color);
+}
+
+/* ===== Navigation bar ===== */
+nav ul,
+.dropbtn {
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
 }
 
-/* Navigation bar */
 nav ul {
   /* background-color: var(--primary-color); */
-  font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
   text-align: left;
   /* Add padding; Note: 'Mission' font size is slightly bigger */
 }
@@ -83,6 +138,7 @@ a {
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width: 320px) and (max-width:480px)  {
   /* Size Presets */
+  /* font sizes */
   h1 {
     font-size: 28.8px;
   }
@@ -93,10 +149,39 @@ a {
 
   p {
     font-size: 16px;
+    /* leading (line height) */
+    line-height: 23.2px;
+  }
+
+  figcaption {
+    font-size: 16px;
+  }
+
+  nav ul,
+  .dropbtn {
+    font-size: 15px;
+  }
+
+  /* Position presets */
+.figure-frame figure picture source,
+.figure-frame figure picture img {
+    width: 100%;
+  }
+
+  figcaption {
+    padding: 0.7em;
+    margin: 0.8em;
+    transform: translate(0, -40px);
   }
 
   nav ul li {
     display: block;
+  }
+
+  /* Social media sizes */
+  .social-medias ul li a img {
+    width: 48px;
+    height: 48px;
   }
 
 /* Utilities */
@@ -104,7 +189,15 @@ a {
     display: block;
   }
 
-/* MORE Utilities here? Yet to decide */
+/* MORE Utilities here? Yet to decide... or don't at all */
+
+/* TODO: Add padding for mobile navigation bar... DONE... But is it correct? */
+  nav ul > li {
+    /* background-color: var(--primary-color); */
+    text-align: left;
+    /* Add padding; Note: 'Mission' font size is slightly bigger */
+    padding: 0.5em;
+  }
 }
 
 /* ===== Tablet ===== */
@@ -122,13 +215,15 @@ a {
 
   p {
     font-size: 24px;
+    line-height: 34.8px;
   }
 }
 
 /* Desktop */
 /* big landscape tablets, laptops, and desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) /* and (max-width: 1280px) */ {
   /* Size Presets */
+  /* TODO: Fix font size for desktop. TEST! */
   h1 {
     font-size: 57.6px;
   }
@@ -139,6 +234,7 @@ a {
 
   p {
     font-size: 32px;
+    /* line-height: 41.6px; */
   }
 
   .dropdown:hover .dropdown-content {
