@@ -37,13 +37,14 @@ body
 (100%)
 Increments by +8 for next viewport
 [Mobile] => 16px
+  [Mobile - Nav] => 15px (15px is MINIMUM for human's eyesight!!!!)
 [Tablet] => 24px
 [Desktop] => 32px
 
 Primary Headings: 180-200%
 h1
 (180%)
-[Mobile] => 28.8px (180%) // Yet to be tested
+[Mobile] => 28.8px (180%)
 [Tablet] => 43.2px
 [Desktop] => 57.6px
 
@@ -71,9 +72,9 @@ Chose: 25
 
 Main Body Text:
 body p (avg. text size)
-[Mobile] => 16 * 1.2 = 19.2px
-[Tablet] =>
-[Desktop] =>
+[Mobile] => 16 * 1.45 = 23.2px
+[Tablet] => 24 * 1.45 = 34.8px
+[Desktop] => 32 * 1.3 = 41.6px
 
 - Color
 
@@ -122,6 +123,8 @@ min 320 w
 Header 320w x 70h
 
 Footer 320w x 441h
+
+Fun Fact* 1cm is roughly 38 pixels
 
 ## Credits
 

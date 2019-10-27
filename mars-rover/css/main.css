@@ -42,6 +42,9 @@ p {
 /* Navigation bar */
 nav ul {
   /* background-color: var(--primary-color); */
+  font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
+  text-align: left;
+  /* Add padding; Note: 'Mission' font size is slightly bigger */
 }
 
 nav a,
@@ -73,30 +76,35 @@ a {
   text-align: center;
 }
 
+/* TODO: Change font size according to the README */
+
 /* ===== Mobile ===== */
 /* smartphones, iPhone, portrait 480x320 phones */
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width: 320px) and (max-width:480px)  {
   /* Size Presets */
   h1 {
-    font-size: 36px;
+    font-size: 28.8px;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 20.8px;
   }
 
   p {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   nav ul li {
     display: block;
   }
 
+/* Utilities */
   .dropdown-content.active {
     display: block;
   }
+
+/* MORE Utilities here? Yet to decide */
 }
 
 /* ===== Tablet ===== */
@@ -105,11 +113,15 @@ a {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* Size Presets */
   h1 {
-    font-size: 38px;
+    font-size: 43.2px;
   }
 
   h2 {
-    font-style: 28px;
+    font-size: 31.2px;
+  }
+
+  p {
+    font-size: 24px;
   }
 }
 
@@ -118,11 +130,15 @@ a {
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* Size Presets */
   h1 {
-    font-size: 40px;
+    font-size: 57.6px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 41.6px;
+  }
+
+  p {
+    font-size: 32px;
   }
 
   .dropdown:hover .dropdown-content {
