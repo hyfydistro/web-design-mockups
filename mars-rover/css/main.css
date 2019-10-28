@@ -30,26 +30,25 @@ article {
 }
 
 /* ===== Footer ===== */
+
+.social-medias {
+  margin: 0 auto;
+  width: 200px;
+}
+
 .social-medias ul {
   /* Presets */
   list-style: none;
   /* Grid */
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-columns: minmax(50px, auto);
   grid-template-rows: repeat(2, 1fr);
-  grid-auto-rows: minmax(50px, auto);
-  /* Flex-Box */
-  /* display: flex;
-  justify-content: space-around; */
-  /* flex shorthand in order:
-     flex-grow
-     flex-shrink
-     flex-basis */
- /* flex-flow shorthand:
-     flex-direction
-     flex-wrap */
-     /* flex-flow: row wrap; */
+  grid-auto-rows: minmax(50px, auto); */
+}
+
+.social-medias ul li {
+  margin: 1em;
 }
 
 .social-medias ul li a img {
@@ -60,11 +59,11 @@ article {
 /* TODO: Create automatic and interactive Slideshow after header */
 
 /* ===== Main presets ===== */
+
 h1 {
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
   font-style: italic;
   text-align: center;
-  /* font-size: 40px; */
 }
 
 h2 {
@@ -75,11 +74,9 @@ h2 {
   background-color: #000;
   padding: 0.7em;
   margin: 0.8em;
-  /* font-size: 30px; */
 }
 
 p {
-  /* font-size: 20px; */
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
   margin: 0 0 1em 0.8em;
 }
@@ -91,6 +88,7 @@ figcaption {
 }
 
 /* ===== Navigation bar ===== */
+
 nav ul,
 .dropbtn {
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
@@ -176,6 +174,32 @@ a {
 
   nav ul li {
     display: block;
+  }
+
+  /* ===== Footer ===== */
+  .follow-us-text {
+    font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
+    font-style: italic;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 1em;
+    font-size: 20.8px;
+  }
+
+  /* position social media icons */
+  .social-medias ul {
+    /* Flex-Box */
+    display: flex;
+    justify-content: center;
+    /* flex shorthand in order:
+       flex-grow
+       flex-shrink
+       flex-basis */
+   /* flex-flow shorthand:
+       flex-direction
+       flex-wrap */
+     flex-flow: row wrap;
   }
 
   /* Social media sizes */
