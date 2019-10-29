@@ -1,3 +1,12 @@
+/* TODO:
+- Add CSS to section .footer-links
+- Change bg to red for the Footer
+- Add hamburger effect
+- Slideshow on top ?
+- Responsive design: Tablets
+- Responsive design: desktop
+- Responsive other effects tbc */
+
 * {
   margin: 0;
   padding: 0;
@@ -30,12 +39,6 @@ article {
 }
 
 /* ===== Footer ===== */
-
-.social-medias {
-  margin: 0 auto;
-  width: 200px;
-}
-
 .social-medias ul {
   /* Presets */
   list-style: none;
@@ -54,6 +57,20 @@ article {
 .social-medias ul li a img {
   /* TODO: Change image colors to white */
 
+}
+
+.footer-links {
+  font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 /* TODO: Create automatic and interactive Slideshow after header */
@@ -187,7 +204,12 @@ a {
     font-size: 20.8px;
   }
 
-  /* position social media icons */
+  /* POSITION social media icons */
+  .social-medias {
+    margin: 0 auto;
+    width: 200px;
+  }
+
   .social-medias ul {
     /* Flex-Box */
     display: flex;
@@ -206,6 +228,36 @@ a {
   .social-medias ul li a img {
     width: 48px;
     height: 48px;
+  }
+
+  /* POSITION footer-links */
+  .footer-links {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .footer-links ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 20.8px;
+  }
+
+  .footer-links ul li a {
+    margin: 1em;
+  }
+
+  .footer-links ul {
+    /* Flex-Box */
+    display: flex;
+    justify-content: space-between;
+    /* flex shorthand in order:
+       flex-grow
+       flex-shrink
+       flex-basis */
+   /* flex-flow shorthand:
+       flex-direction
+       flex-wrap */
+     flex-flow: row wrap;
   }
 
 /* Utilities */
