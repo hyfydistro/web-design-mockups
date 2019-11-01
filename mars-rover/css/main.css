@@ -1,12 +1,10 @@
 /* TODO:
-- Add CSS to section .footer-links
-- Change bg to red for the Footer
+- dropdown hover effect for 1st and 2nd level
 - Add hamburger effect
 - Slideshow on top ?
 - Responsive design: Tablets
 - Responsive design: desktop
 - Responsive other effects tbc */
-
 * {
   margin: 0;
   padding: 0;
@@ -22,23 +20,21 @@ html {
 }
 
 /* ===== Header ===== */
-
 header {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
 /* ===== Body ===== */
+main {}
 
-main {
-
-}
-
-article {
-
-}
+article {}
 
 /* ===== Footer ===== */
+footer {
+  background-color: var(--primary-color);
+}
+
 .social-medias ul {
   /* Presets */
   list-style: none;
@@ -50,13 +46,13 @@ article {
   grid-auto-rows: minmax(50px, auto); */
 }
 
-.social-medias ul li {
-  margin: 1em;
+.social-medias ul li a,
+.footer-links ul li a {
+  cursor: pointer;
 }
 
 .social-medias ul li a img {
   /* TODO: Change image colors to white */
-
 }
 
 .footer-links {
@@ -73,10 +69,12 @@ article {
   color: var(--secondary-color);
 }
 
+.credit-text {
+  color: var(--secondary-color);
+}
+
 /* TODO: Create automatic and interactive Slideshow after header */
-
 /* ===== Main presets ===== */
-
 h1 {
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
   font-style: italic;
@@ -105,7 +103,6 @@ figcaption {
 }
 
 /* ===== Navigation bar ===== */
-
 nav ul,
 .dropbtn {
   font-family: 'Franklin Gothic Medium', 'Times New Roman', serif;
@@ -136,9 +133,16 @@ nav ul li {
   display: none;
 }
 
+/* UTILITIES */
+
 /* .dropdown:hover .dropdown-content {
   display: block;
 } */
+
+nav ul li:hover {
+  background-color: #000;
+
+}
 
 a {
   text-decoration: none;
@@ -147,11 +151,11 @@ a {
 }
 
 /* TODO: Change font size according to the README */
-
 /* ===== Mobile ===== */
 /* smartphones, iPhone, portrait 480x320 phones */
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (min-width: 320px) and (max-width:480px)  {
+@media (min-width: 320px) and (max-width:480px) {
+
   /* Size Presets */
   /* font sizes */
   h1 {
@@ -178,8 +182,17 @@ a {
   }
 
   /* Position presets */
-.figure-frame figure picture source,
-.figure-frame figure picture img {
+  article h2 {
+    margin-bottom: 2em;
+  }
+
+  .figure-frame {
+    margin-top: 4em;
+    margin-bottom: 2em;
+  }
+
+  .figure-frame figure picture source,
+  .figure-frame figure picture img {
     width: 100%;
   }
 
@@ -201,6 +214,7 @@ a {
     text-align: center;
     color: var(--secondary-color);
     margin-bottom: 1em;
+    padding-top: 2em;
     font-size: 20.8px;
   }
 
@@ -218,10 +232,14 @@ a {
        flex-grow
        flex-shrink
        flex-basis */
-   /* flex-flow shorthand:
+    /* flex-flow shorthand:
        flex-direction
        flex-wrap */
-     flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+
+  .social-medias ul li {
+    margin: 2.5em;
   }
 
   /* Social media sizes */
@@ -254,21 +272,30 @@ a {
        flex-grow
        flex-shrink
        flex-basis */
-   /* flex-flow shorthand:
+    /* flex-flow shorthand:
        flex-direction
        flex-wrap */
-     flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-top: 10em;
   }
 
-/* Utilities */
+  .rocket {
+    margin: 19em auto;
+  }
+
+  .credit-text {
+    text-align: center;
+    margin: 0;
+    }
+
+  /* Utilities */
   .dropdown-content.active {
     display: block;
   }
 
-/* MORE Utilities here? Yet to decide... or don't at all */
-
-/* TODO: Add padding for mobile navigation bar... DONE... But is it correct? */
-  nav ul > li {
+  /* MORE Utilities here? Yet to decide... or don't at all */
+  /* TODO: Add padding for mobile navigation bar... DONE... But is it correct? */
+  nav ul>li {
     /* background-color: var(--primary-color); */
     text-align: left;
     /* Add padding; Note: 'Mission' font size is slightly bigger */
@@ -280,6 +307,7 @@ a {
 /* Low Resolution Tablets, Mobiles (Landscape) */
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
   /* Size Presets */
   h1 {
     font-size: 43.2px;
@@ -297,7 +325,11 @@ a {
 
 /* Desktop */
 /* big landscape tablets, laptops, and desktops */
-@media (min-width: 1025px) /* and (max-width: 1280px) */ {
+@media (min-width: 1025px)
+
+/* and (max-width: 1280px) */
+  {
+
   /* Size Presets */
   /* TODO: Fix font size for desktop. TEST! */
   h1 {
@@ -319,6 +351,4 @@ a {
 }
 
 /* hi-res laptops and desktops */
-@media (min-width:1281px) {
-
-}
+@media (min-width:1281px) {}
