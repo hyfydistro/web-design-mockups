@@ -126,6 +126,34 @@ Footer 320w x 441h
 
 Fun Fact* 1cm is roughly 38 pixels
 
+## UI Design Patterns Used
+
+Navigation
+
+- Navigation Tabs (Tabs)
+
+- Breadcrumbs (Jumping in hierarchy)
+
+- Fat Footer (Jumping in hierarchy)
+
+Half, if you may. Not really fat.
+
+- Home Link (Jumping in hierarchy)
+
+- Vertical dropdown menu (menus)
+
+- horizontal dropdown menu (menus)
+
+- Carousel (content)
+
+- Cards (content)
+
+(In Consideration)
+
+- Progressive Disclosure ( content)
+
+
+
 ## Credits
 
 - Stripo (website) - [Email Template Size: Element’s Width and Height](https://stripo.email/blog/email-template-size-width-height/)
