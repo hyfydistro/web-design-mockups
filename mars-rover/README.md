@@ -8,6 +8,18 @@ An article about the autonomous exploration vehicle(s) that landed on mars.
 
 - [/] text-heavy pages vs. [] interaction-heavy pages
 
+## UX Research
+
+Audience segmentation
+
+Demographic segmentation: 13+
+
+Geographic segmentation: Developed countries
+
+Behaviorial segmentation: n/a
+
+Psychographic segmentation: n/a
+
 ## Inspirations
 
 identify a Goal, Wish or Opportunity
