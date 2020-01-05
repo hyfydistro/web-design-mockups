@@ -167,3 +167,21 @@ nav a {
   color: white;
   text-decoration: none;
 }
+
+/* MOBILE DEVICE */
+@media screen and (max-width: 480px) {
+  @supports (display: flex) {
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    article,
+    aside {
+      width: auto;
+    }
+
+  }
+
+}
