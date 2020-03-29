@@ -1,0 +1,42 @@
+"Introducing JSON" Brief
+
+--------------
+> Design Goals
+--------------
+STEPS
+
+(1) - Business Goals
+
+How do you want to be seen?
+A: modern, contemporary, formal, Government-like theme
+
+What do you want from your customer?
+A: To gain BASIC knowledge of JSONness. 
+To have curiosity to explore
+more article. To search what they need.
+
+What is your purpose?
+To offer knowledge in an accessible way.
+
+- User Goals
+
+(2) - Wireframing
+
+User Interface: Text-heavy vs. Exploratory
+A: Text-heay
+
+- Hierarchy
+
+> Style Guide
+
+> Design System
+
+> Web Development
+
+- Web Performance
+*Responsive Design
+*A11y
+*Service Workers
+*PWA
+
+- Target: Modern and older web browsers.
