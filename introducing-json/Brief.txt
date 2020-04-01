@@ -33,6 +33,13 @@ A: Text-heay
 
 > Web Development
 
+- Image sources for targeted device-width
+	S - 600w
+	M - 1024w
+	L - 1280w
+
+Disregarded aspect ratio, because how the images were designed.
+
 - Web Performance
 *Responsive Design
 *A11y
