@@ -8,9 +8,9 @@ Breakpoints
 
 **XS**
 
-Targeted device-width: ####
+Targeted device-width: 320px
 
-font base: ####
+font base: 14px
 
 H1: ####
 
