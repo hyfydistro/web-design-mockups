@@ -12,25 +12,27 @@ Targeted device-width: 320px
 
 font base: 14px
 
-H1: ####
+H1: 27px
 
-H2: ####
+H2: 22px
 
-H3 (optional): ####
+H3 (optional): 18px
 
-H4 (optional): ####
+H4 (optional): n/a
 
-H5 (optional): ####
+H5 (optional): n/a
 
-H6 (optional): ####
+H6 (optional): n/a
 
-Body Copy: ####
+Body Copy: 14px
 
-Bold: ####
+Bold: 14px
 
-Italic: ####
+Italic: 14px
 
-Link: ####
+Link: 14px; #004399;
+
+link-active: 14px; #002D66;
 
 Other: (if available)
 
