@@ -105,7 +105,17 @@ Body Copy color: #1A1A1A
 
 n/a
 
-## Elements?
+## Logo
+
+* JSON Logo
+
+constraints: 48wx48h for button press area
+
+Area
+width: 36px
+height: 36px
+Top / Bottom padding: 12px
+Right margin: 10.5px (i.e. space-unit-1 / 2)
 
 ## Icons
 
@@ -132,7 +142,7 @@ width: 19.7 px
 height: 19.7 px
 
 Color
-color:
+color: (`primary-color-80`)
 
 * Back to Top
 
@@ -153,3 +163,34 @@ height: 36 px
 
 Color
 color: (`primary-color-40`)
+
+* Language Icon
+
+Area
+width: 32 px
+height: 22.2 px
+
+# Images
+
+**XS**
+
+device-width: 320px
+device-height: 568px
+
+Constraints: L/R margin (because image does not look good at absolute 100% - no added margins inside them!)
+
+object.png : 100% (w), 128px (h)
+
+array.png : 100% (w), 84px (h)
+
+value.png : 100% (w), 210px (h)
+
+string.png : 100% (w), 336px (h)
+
+**S**
+
+**M**
+
+**L**
+
+**XL**
