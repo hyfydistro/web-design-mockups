@@ -11,29 +11,20 @@ Breakpoints
 Targeted device-width: 320px
 
 font-face-heading: Bahnschrift
-
 font-face-body: Bahnschrift
-
 font-face-code: Courier New
 
 font base: 14px
 
 H1: 27px
-
 H2: 22px
-
 H3 (optional): 18px
-
 H4 (optional): n/a
-
 H5 (optional): n/a
-
 H6 (optional): n/a
-
 Body Copy: 14px
 
 Bold: 14px
-
 Italic: 14px
 
 Link: 14px; (color) #004399;
@@ -63,13 +54,9 @@ font base * line-height ratio = space-unit * 1
 **XS**
 
 space-unit-1: 21
-
 space-unit-2: 42
-
 space-unit-3: 63
-
 space-unit-4: 84
-
 space-unit-5: 95 (unused)
 
 **S**
@@ -126,6 +113,7 @@ n/a
 
 constraints: 48wx48h for button press area
 
+Area
 width: 24px
 height: 17px
 Top padding: 21px
@@ -134,6 +122,25 @@ L / R padding: (space-unit-1)
 total header height: 59 px
 Top / Bottom margin: (space-unit-1)
 
+Color
+color: #1A1A1A
+
 * Back to Top
 
+Circle-component
+
+Area
+width: 58 px
+height: 58 px
+
+Color
 background color: (`primary-color-05`)
+
+Arrow-component
+
+Area
+width: 21.4 px
+height: 36 px
+
+Color
+color: #999999
