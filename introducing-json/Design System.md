@@ -10,6 +10,12 @@ Breakpoints
 
 Targeted device-width: 320px
 
+font-face-heading: Bahnschrift
+
+font-face-body: Bahnschrift
+
+font-face-code: Courier New
+
 font base: 14px
 
 H1: 27px
@@ -32,7 +38,13 @@ Italic: 14px
 
 Link: 14px; #004399;
 
-link-active: 14px; #002D66;
+Link-active: 14px; #002D66;
+
+Text Date: 14px; #808080;
+
+Copyrights / endnotes: 14px; #808080;
+
+
 
 Other: (if available)
 
@@ -50,15 +62,15 @@ font base * line-height ratio = space-unit * 1
 
 **XS**
 
-space-unit-1: ####
+space-unit-1: 21
 
-space-unit-2: ####
+space-unit-2: 42
 
-space-unit-3: ####
+space-unit-3: 63
 
-space-unit-4: ####
+space-unit-4: 84
 
-space-unit-5: ####
+space-unit-5: 95 (unused)
 
 **S**
 
