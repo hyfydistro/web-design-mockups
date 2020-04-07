@@ -109,7 +109,7 @@ n/a
 
 ## Icons
 
-* hamburger
+* Hamburger [Opened Menu]
 
 constraints: 48wx48h for button press area
 
@@ -123,7 +123,16 @@ total header height: 59 px
 Top / Bottom margin: (space-unit-1)
 
 Color
-color: #1A1A1A
+color: (`primary-color-80`)
+
+* Hamburger - Cross Icon [Closed Menu]
+
+Area
+width: 19.7 px
+height: 19.7 px
+
+Color
+color:
 
 * Back to Top
 
@@ -143,4 +152,4 @@ width: 21.4 px
 height: 36 px
 
 Color
-color: #999999
+color: (`primary-color-40`)
