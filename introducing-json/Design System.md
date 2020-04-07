@@ -84,18 +84,33 @@ space-unit-5: 95 (unused)
 
 **Primary Color Variation**
 
-`primary-color-05` (brightest and least saturated): ####
-`primary-color-10`: ####
-`primary-color-20`: ####
-`primary-color-30`: ####
-`primary-color-40`: ####
-`primary-color-50`: ####
-`primary-color-60`: ####
-`primary-color-70`: ####
-`primary-color-80`: ####
-`primary-color-90`(darkest and most saturated): ####
+Selected color: #2987FF
+
+`primary-color-05` (brightest and least saturated): #E5F1FF (In use)
+`primary-color-10`: #CCE2FF (In use)
+`primary-color-20`: #99C6FF
+`primary-color-30`: #66A9FF
+`primary-color-40`: #2987FF (In use)
+`primary-color-50`: #0070FF
+`primary-color-60`: #005ACC
+`primary-color-70`: #004399 (In use)
+`primary-color-80`: #002D66 (In use)
+`primary-color-90`(darkest and most saturated): #001633
 
 **Secondary Color Variation**
+
+Body Copy color: #1A1A1A
+
+`primary-color-05` (brightest and least saturated): #F2F2F2
+`primary-color-10`: #E5E5E5
+`primary-color-20`: #CCCCCC
+`primary-color-30`: #B2B2B2
+`primary-color-40`: #999999
+`primary-color-50`: #808080
+`primary-color-60`: #666666
+`primary-color-70`: #4D4D4D
+`primary-color-80`: #1A1A1A
+`primary-color-90`(darkest and most saturated): #000000
 
 **Other**
 
