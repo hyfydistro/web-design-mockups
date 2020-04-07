@@ -36,13 +36,13 @@ Bold: 14px
 
 Italic: 14px
 
-Link: 14px; #004399;
+Link: 14px; (color) #004399;
 
-Link-active: 14px; #002D66;
+Link-active: 14px; (color) #002D66;
 
-Text Date: 14px; #808080;
+Text Date: 14px; (color) #808080;
 
-Copyrights / endnotes: 14px; #808080;
+Copyrights / endnotes: 14px; (color) #808080;
 
 
 
@@ -105,11 +105,11 @@ Body Copy color: #1A1A1A
 `primary-color-10`: #E5E5E5
 `primary-color-20`: #CCCCCC
 `primary-color-30`: #B2B2B2
-`primary-color-40`: #999999
-`primary-color-50`: #808080
+`primary-color-40`: #999999 (In use)
+`primary-color-50`: #808080 (In use)
 `primary-color-60`: #666666
-`primary-color-70`: #4D4D4D
-`primary-color-80`: #1A1A1A
+`primary-color-70`: #4D4D4D (In use)
+`primary-color-80`: #1A1A1A (In use)
 `primary-color-90`(darkest and most saturated): #000000
 
 **Other**
@@ -119,3 +119,21 @@ Body Copy color: #1A1A1A
 n/a
 
 ## Elements?
+
+## Icons
+
+* hamburger
+
+constraints: 48wx48h for button press area
+
+width: 24px
+height: 17px
+Top padding: 21px
+Bottom padding: 21px
+L / R padding: (space-unit-1)
+total header height: 59 px
+Top / Bottom margin: (space-unit-1)
+
+* Back to Top
+
+background color: (`primary-color-05`)
