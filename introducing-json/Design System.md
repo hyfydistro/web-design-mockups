@@ -25,7 +25,9 @@ H6 (optional): n/a
 Body Copy: 14px
 
 Bold: 14px
+-Abbreviation; plural nouns
 Italic: 14px
+-passage
 
 Link: 14px; (color) #004399;
 
@@ -34,7 +36,6 @@ Link-active: 14px; (color) #002D66;
 Text Date: 14px; (color) #808080;
 
 Copyrights / endnotes: 14px; (color) #808080;
-
 
 
 Other: (if available)
@@ -177,7 +178,9 @@ height: 22.2 px
 device-width: 320px
 device-height: 568px
 
-Constraints: L/R margin (because image does not look good at absolute 100% - no added margins inside them!)
+Constraints:
+-L/R margin (because image does not look good at absolute 100% - no added margins inside them!)
+-16:9 ratio
 
 object.png : 100% (w), 128px (h)
 
