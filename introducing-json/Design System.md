@@ -42,9 +42,15 @@ Other: (if available)
 
 **S**
 
+Targeted device-width: [a popular S size]
+
 **M**
 
+Targeted device-width: [a basic M size]
+
 **L**
+
+Targeted device-width: [a basic L size]
 
 **XL**
 
