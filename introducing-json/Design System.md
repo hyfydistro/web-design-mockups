@@ -40,19 +40,33 @@ Copyrights / endnotes: 14px; (color) #808080;
 
 Other: (if available)
 
-* Use Fluid or Responsive Typography; Add another size up in **XS** 
+* Use Fluid or Responsive Typography; Add another size up in **XS** - Responsive Typography option [chosen]
+
+Responsive Typography Size-Up [Choose popular device]
 
 **S**
 
 Targeted device-width: 600px
 
+...
+
+Responsive Typography Size-Up [Choose popular device]
+
 **M**
 
 Targeted device-width: 1024px
 
+...
+
+Responsive Typography Size-Up [Choose popular device]
+
 **L**
 
 Targeted device-width: 1440px (max width)
+
+...
+
+Responsive Typography Size-Up [Choose popular device]
 
 **XL**
 
