@@ -8,7 +8,7 @@ Breakpoints
 
 **XS**
 
-Targeted device-width: 320px
+Targeted device-width: 320px (min width)
 
 font-face-heading: Bahnschrift
 font-face-body: Bahnschrift
@@ -40,19 +40,23 @@ Copyrights / endnotes: 14px; (color) #808080;
 
 Other: (if available)
 
+* Use Fluid or Responsive Typography; Add another size up in **XS** 
+
 **S**
 
-Targeted device-width: [a popular S size]
+Targeted device-width: 600px
 
 **M**
 
-Targeted device-width: [a basic M size]
+Targeted device-width: 1024px
 
 **L**
 
-Targeted device-width: [a basic L size]
+Targeted device-width: 1440px (max width)
 
 **XL**
+
+n/a
 
 ## Spatial System (and Size?)
 
