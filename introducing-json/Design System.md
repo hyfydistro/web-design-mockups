@@ -44,6 +44,10 @@ Other: (if available)
 
 Responsive Typography Size-Up [Choose popular device]
 
+2019 popular **XS** device-width: 375px
+
+
+
 **S**
 
 Targeted device-width: 600px
@@ -52,7 +56,11 @@ Targeted device-width: 600px
 
 Responsive Typography Size-Up [Choose popular device]
 
+2019 popular **S** device-width: 768px
+
 **M**
+
+Constraints: 960px article max-width
 
 Targeted device-width: 1024px
 
@@ -60,7 +68,11 @@ Targeted device-width: 1024px
 
 Responsive Typography Size-Up [Choose popular device]
 
+2019 popular **M** device-width: 1366px
+
 **L**
+
+Constraints: 960px article max-width
 
 Targeted device-width: 1440px (max width)
 
