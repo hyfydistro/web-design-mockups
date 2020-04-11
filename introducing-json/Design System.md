@@ -4,6 +4,8 @@
 
 ## Typography
 
+Modular Scale: 1.25
+
 Breakpoints
 
 **XS**
@@ -37,16 +39,37 @@ Text Date: 14px; (color) #808080;
 
 Copyrights / endnotes: 14px; (color) #808080;
 
-
 Other: (if available)
 
-* Use Fluid or Responsive Typography; Add another size up in **XS** - Responsive Typography option [chosen]
+To Scale Typography method - (1) Responsive [selected], or (2) Fluid
 
 Responsive Typography Size-Up [Choose popular device]
 
 2019 popular **XS** device-width: 375px
 
+font base: 14px
 
+find ratio: 14 = 360 * x
+x * 375 = 14.58333... = 15
+new font base: 15px
+
+H1: 29.29... = 29px
+H2: 23.43... = 23px
+H3 (optional): 18.75 = 19px
+Body Copy: 15px
+
+Bold: `body-copy`
+-Abbreviation; plural nouns
+Italic: `body-copy`
+-passage
+
+Link: `body-copy`; (color) #004399;
+
+Link-active: `body-copy`; (color) #002D66;
+
+Text Date: `body-copy`; (color) #808080;
+
+Copyrights / endnotes: `body-copy`; (color) #808080;
 
 **S**
 
@@ -97,6 +120,12 @@ space-unit-4: 84
 space-unit-5: 95 (unused)
 
 **S**
+
+space-unit-1: 
+space-unit-2:
+space-unit-3:
+space-unit-4:
+space-unit-5:
 
 **M**
 
