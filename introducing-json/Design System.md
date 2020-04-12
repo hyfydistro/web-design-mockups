@@ -49,6 +49,8 @@ Copyrights / endnotes: 14px; (color) #808080;
 
 Other: (if available)
 
+Language block
+line-height: 28px
 
 * To Scale Typography method - (1) Responsive [selected], or (2) Fluid
 
@@ -108,6 +110,9 @@ H1: 29.29... = 31px
 H2: 23.43... = 25px
 H3 (optional): 20px
 Body Copy: 16px
+
+Language block:
+line-height: 40px
 
 ...
 
@@ -306,6 +311,7 @@ whitespace.png : 100% (w), 145.9 px (h)
 536 px
 device-width: 600px
 device-height: 800px
+L/R margins; 32px (for each side)
 
 Constraints:
 -L/R margin (because image does not look good at absolute 100% - no added margins inside them!)
@@ -332,5 +338,50 @@ whitespace.png : 100% (w), 272.2 px (h)
 
 ## Cards
 
-width: 288 px
-height: 
+**XS**
+
+**S**
+
+card size
+width: 256 px
+height: 224.1 px = 224px
+
+card image size
+width: 256 px
+height: 145 px = 143px
+
+card type block
+width: 256 px
+height: 79.1 px = 79px
+
+
+**M**
+
+**L**
+
+**XL**
+
+## Modules
+
+Hamburger Menu - Open
+
+**XS**
+
+grid system: 4; aligned with column
+width:
+height:
+
+**S**
+
+Constraints
+Scroll position is paused. No scroll finger movement can move the page. Tapping outside the module or the cross icon to close the menu will allow you to scroll as normal.
+
+grid system: 8; aligned with column
+width: 288px
+height: 100$
+
+**M**
+
+**L**
+
+**XL**
