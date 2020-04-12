@@ -11,6 +11,14 @@ Breakpoints
 **XS**
 
 Targeted device-width: 320px (min width)
+Targeted device-height: 568px
+
+gutter: 21px
+column no.: 4
+Column width: 56px
+approx. characters: 41ch
+
+-----------------------------------------
 
 font-face-heading: Bahnschrift
 font-face-body: Bahnschrift
@@ -41,11 +49,21 @@ Copyrights / endnotes: 14px; (color) #808080;
 
 Other: (if available)
 
-To Scale Typography method - (1) Responsive [selected], or (2) Fluid
+
+* To Scale Typography method - (1) Responsive [selected], or (2) Fluid
 
 Responsive Typography Size-Up [Choose popular device]
 
 2019 popular **XS** device-width: 375px
+
+Modular Scale: 1.25
+gutter: 23px
+Column width: 69px
+approx. characters: 53ch
+
+-----------------------------------------
+
+JSON (JavaScript Object Notation) is a lightweight
 
 font base: 14px
 
@@ -74,6 +92,22 @@ Copyrights / endnotes: `body-copy`; (color) #808080;
 **S**
 
 Targeted device-width: 600px
+Targeted device-height (opt.): 800px
+
+Modular Scale: 1.25
+given L/R margin: 32px
+gutter: 24px ea. (space-unit-1)
+column no.: 8
+Column width: 46px ea.
+approx. characters: 70ch
+
+font base: 16px
+line-height: 16 * 1.5 = 24px (space-unit-1)
+
+H1: 29.29... = 31px
+H2: 23.43... = 25px
+H3 (optional): 20px
+Body Copy: 16px
 
 ...
 
@@ -119,9 +153,17 @@ space-unit-3: 63
 space-unit-4: 84
 space-unit-5: 95 (unused)
 
+2019 popular **XS** device-width: 375px
+
+space-unit-1:
+space-unit-2:
+space-unit-3:
+space-unit-4:
+space-unit-5:
+
 **S**
 
-space-unit-1: 
+space-unit-1:
 space-unit-2:
 space-unit-3:
 space-unit-4:
@@ -246,6 +288,7 @@ device-height: 568px
 Constraints:
 -L/R margin (because image does not look good at absolute 100% - no added margins inside them!)
 -16:9 ratio
+-Images width scale to: 600px
 
 object.png : 100% (w), 128px (h)
 
@@ -256,6 +299,14 @@ value.png : 100% (w), 210px (h)
 string.png : 100% (w), 336px (h)
 
 **S**
+536 px
+device-width: 600px
+device-height: 800px
+
+Constraints:
+-L/R margin (because image does not look good at absolute 100% - no added margins inside them!)
+-16:9 ratio ???
+-Images width scale to: 1024px
 
 **M**
 
