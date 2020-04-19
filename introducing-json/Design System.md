@@ -14,9 +14,10 @@ Targeted device-width: 320px (min width)
 Targeted device-height: 568px
 
 gutter: 21px
-column no.: 4
+No. of Column: 4
 Column width: 56px
 approx. characters: 41ch
+measure width: 288px
 
 -----------------------------------------
 
@@ -97,11 +98,15 @@ Targeted device-width: 600px
 Targeted device-height (opt.): 800px
 
 Modular Scale: 1.25
+
 given L/R margin: 32px
 gutter: 24px ea. (space-unit-1)
-column no.: 8
+No. of Column: 8
 Column width: 46px ea.
 approx. characters: 70ch
+measure width: 536px
+
+-----------------------------------------
 
 font base: 16px
 line-height: 16 * 1.5 = 24px (space-unit-1)
@@ -125,6 +130,16 @@ Responsive Typography Size-Up [Choose popular device]
 Constraints: 960px article max-width
 
 Targeted device-width: 1024px
+Targeted device-height (opt.):
+
+Modular Scale: 1.25
+
+given L/R margin:
+gutter: #### (space-unit-1)
+No. of Column:
+Column width:
+approx. characters:
+measure width: 
 
 ...
 
@@ -168,7 +183,7 @@ space-unit-5:
 
 **S**
 
-space-unit-1:
+space-unit-1: 24
 space-unit-2:
 space-unit-3:
 space-unit-4:
