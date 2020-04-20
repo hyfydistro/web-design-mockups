@@ -197,18 +197,18 @@ space-unit-5:
 **S**
 
 space-unit-1: 24
-space-unit-2:
-space-unit-3:
-space-unit-4:
-space-unit-5:
+space-unit-2: 48
+space-unit-3: 72
+space-unit-4: 96
+space-unit-5: 120
 
 **M**
 
 space-unit-1: 30
-space-unit-2:
-space-unit-3:
-space-unit-4:
-space-unit-5:
+space-unit-2: 60
+space-unit-3: 90
+space-unit-4: 120
+space-unit-5: 150
 
 **L**
 
