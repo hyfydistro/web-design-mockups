@@ -212,7 +212,11 @@ space-unit-5: 150
 
 **L**
 
+n/a
+
 **XL**
+
+n/a
 
 ## Color
 
@@ -368,7 +372,11 @@ whitespace.png : 100% (w), 272.2 px (h)
 
 **L**
 
+n/a
+
 **XL**
+
+n/a
 
 ## Cards
 
@@ -393,7 +401,11 @@ height: 79.1 px = 79px
 
 **L**
 
+n/a
+
 **XL**
+
+n/a
 
 ## Modules
 
@@ -418,4 +430,8 @@ height: 100$
 
 **L**
 
+n/a
+
 **XL**
+
+n/a
