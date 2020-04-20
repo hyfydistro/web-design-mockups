@@ -138,18 +138,18 @@ given L/R margin: 32 px (influenced by constraints)
 gutter: 30px (space-unit-1)
 No. of Column: 12
 Column width: #### (gutter * 11 - (measure / line height ))
-approx. characters: 76ch
-measure width: 677px
+approx. characters: 78ch
+measure width: 660px
 
 -----------------------------------------
 
 font base: 20px
 line-height: 20 * 1.5 = 30px (space-unit-1)
 
-H1: 29.29... =
-H2: 23.43... =
-H3 (optional):
-Body Copy:
+H1: 39.063... = 39px
+H2: 31.25... = 31px
+H3 (optional): 25px
+Body Copy: 20px
 
 Language block:
 line-height: 30
@@ -203,6 +203,12 @@ space-unit-4:
 space-unit-5:
 
 **M**
+
+space-unit-1: 30
+space-unit-2:
+space-unit-3:
+space-unit-4:
+space-unit-5:
 
 **L**
 
