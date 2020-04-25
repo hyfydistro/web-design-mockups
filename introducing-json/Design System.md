@@ -239,16 +239,16 @@ Selected color: #2987FF
 
 Body Copy color: #1A1A1A
 
-`primary-color-05` (brightest and least saturated): #F2F2F2
-`primary-color-10`: #E5E5E5
-`primary-color-20`: #CCCCCC
-`primary-color-30`: #B2B2B2
-`primary-color-40`: #999999 (In use)
-`primary-color-50`: #808080 (In use)
-`primary-color-60`: #666666
-`primary-color-70`: #4D4D4D (In use)
-`primary-color-80`: #1A1A1A (In use)
-`primary-color-90`(darkest and most saturated): #000000
+`secondary-color-05` (brightest and least saturated): #F2F2F2
+`secondary-color-10`: #E5E5E5
+`secondary-color-20`: #CCCCCC
+`secondary-color-30`: #B2B2B2
+`secondary-color-40`: #999999 (In use)
+`secondary-color-50`: #808080 (In use)
+`secondary-color-60`: #666666
+`secondary-color-70`: #4D4D4D (In use)
+`secondary-color-80`: #1A1A1A (In use)
+`secondary-color-90`(darkest and most saturated): #000000
 
 **Other**
 
