@@ -284,7 +284,7 @@ total header height: 59 px
 Top / Bottom margin: (space-unit-1)
 
 Color
-color: (`primary-color-80`)
+color: (`secondary-color-80`)
 
 * Hamburger - Cross Icon [Closed Menu]
 
@@ -293,7 +293,7 @@ width: 19.7 px
 height: 19.7 px
 
 Color
-color: (`primary-color-80`)
+color: (`secondary-color-80`)
 
 * Back to Top
 
@@ -313,13 +313,22 @@ width: 21.4 px
 height: 36 px
 
 Color
-color: (`primary-color-40`)
+color: (`secondary-color-40`)
 
 * Language Icon
 
 Area
 width: 32 px
 height: 22.2 px
+
+Color
+color: `secondary-color-80`
+
+* Logo
+
+Area
+width: 36 px
+height: 36 px
 
 # Images
 
