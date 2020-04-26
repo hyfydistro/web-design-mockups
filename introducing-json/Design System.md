@@ -130,7 +130,7 @@ Responsive Typography Size-Up [Choose popular device]
 Constraints: 960px article max-width
 
 Targeted device-width: 1024px
-Targeted device-height (opt.):
+Targeted device-height (opt.): 768px
 
 Modular Scale: 1.25
 
