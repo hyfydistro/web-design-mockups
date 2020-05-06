@@ -27,7 +27,7 @@ A: Text-heay
 
 - Hierarchy
 
-> Style Guide
+> Style Guide (/)
 
 > Design System
 
