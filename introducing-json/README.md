@@ -52,6 +52,11 @@ Read to be "skimmed"
 ### Design System
 
 - [ ] Typography
+  - [ ] font face
+  - [ ] Modular Scale
+  - [ ] A11y
+    - [ ] font size
+
 
 - [ ] Spatial System
   - [ ] space-unit-1
@@ -61,10 +66,24 @@ Read to be "skimmed"
   - [ ] space-unit-x
 
 - [ ] Grid System
+  - [ ] XS
+  - [ ] S (e.g. mobile)
+  - [ ] M (e.g. tablet)
+  - [ ] L (e.g. desktop)
+  - [ ] XL
 
 - [ ] Color System
+  - [ ] Primary color
+  - [ ] Secondary color (optional)
+  - [ ] Other (optional; If available, list below)
+  - [ ] Info (optional)
+  - [ ] A11y
+  - [ ] Theming
+
 
 ### Design patterns ???
+
+* Blog / Info Site
 
 - [ ]
 

@@ -1,0 +1,67 @@
+/* Typography stylesheet */
+
+/* TODO:
+- Breakpoints
+  - mobile, tablet, desktop
+  -
+  -
+  - Change root at breakpoints
+    */
+/* TYPOGRAPHY */
+:root {
+  /* font face */
+  --font-primary: sans-serif;
+  --font-secondary: serif;
+
+  /* Set base value */
+  --text-base-size: 1em; /* e.g. 16px */
+  --text-scale-ratio: 1.2; /* e.g. modular scale */
+
+  /* type scale */
+  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1em / var(--text-scale-ratio));
+  /* font base / normal: 1em */
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+  /* Set color text */
+  --color-text: red;
+  --color-text-heading: blue;
+
+  /* SPACE */
+  --heading-line-height: 1em;
+}
+
+/* Breakpoints */
+/* XS */
+@media all and (max-width: 375px) {
+
+}
+
+/* S */
+@media all and (min-width: 600px) {
+
+}
+
+/* S (2019 popular device-width) */
+@media all and (min-width: 768px) {
+
+}
+
+/* M */
+@media all and (min-width: 1024px) {
+
+}
+
+/* M (2019 popular device-width) */
+@media all and (min-width: 1366px) {
+
+}
+
+/* L */
+@media all and (max-width: 1440px) {
+
+}
