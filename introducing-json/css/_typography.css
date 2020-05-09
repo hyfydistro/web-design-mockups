@@ -1,4 +1,5 @@
 /* Typography stylesheet */
+/* For Modern Browsers - Created in 2020 */
 
 /* TODO:
 - Breakpoints
@@ -14,31 +15,120 @@
   --font-secondary: serif;
 
   /* Set base value */
-  --text-base-size: 1em; /* e.g. 16px */
+  --text-base-size: 1rem; /* e.g. 16px */
   --text-scale-ratio: 1.2; /* e.g. modular scale */
 
   /* type scale */
-  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
-  --text-sm: calc(1em / var(--text-scale-ratio));
+  --text-xs: calc(1rem / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1rem / var(--text-scale-ratio));
   /* font base / normal: 1em */
-  --text-md: calc(1em * var(--text-scale-ratio));
-  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-md: calc(1rem * var(--text-scale-ratio));
+  --text-lg: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+  /* Font Style: boldness */
+  --weight: xxx;
 
   /* Set color text */
-  --color-text: red;
-  --color-text-heading: blue;
+  /* Text Color */
+  --color-text-05: #F2F2F2;
+  --color-text-10: #E5E5E5;
+  --color-text-20: #CCCCCC;
+  --color-text-30: #B2B2B2;
+  --color-text-40: #999999; /* In use */
+  --color-text-50: #808080; /* In use */
+  --color-text-60: #666666;
+  --color-text-70: #4D4D4D; /* In use */
+  --color-text-80: #1A1A1A; /* In use */
+  --color-text-90: #000000;
+  /* link color */
+  --color-text-link: #004399;
+  --color-text-link-active: #002D66;
+  /* On UI components */
+  --color-module-background: xxx;
+  --color-on-menu-hover: xxx;
 
-  /* SPACE */
-  --heading-line-height: 1em;
+  /* Space */
+  --heading-h1-line-height: 1em;
+  --heading-h2-line-height: 1em;
+  --heading-h3-line-height: 1em;
+  --body-line-height: 1em;
+
+  /* Dark Theme */
+  /* Consider Color and Space */
+
+}
+
+/* Main Typography */
+html {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 27px;
+  line-height: 1.5rem;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: var(--color-text-link);
+}
+
+.link-active {
+  color: var();
+}
+
+.link-pdf {
+  text-decoration: underline;
+}
+
+.date-text {
+  color: var(--color-text-50);
+}
+
+/* Move to Color Stylesheet */
+.highlight-box {
+  background-color: #CCE2FF; /* primary-color-10 */
+}
+
+.language-module {
+  line-height: 28px;
+}
+
+footer p {
+  color: var(--color-text-50);
 }
 
 /* Breakpoints */
-/* XS */
+/* 320px - XS */
+/* Note: 320px would be the default root origin,
+where XS is relative to */
 @media all and (max-width: 375px) {
-
+  h1 { font-size: var(--text-xxl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-md); }
+  p { font-size: var(--text-sm); }
 }
 
 /* S */
