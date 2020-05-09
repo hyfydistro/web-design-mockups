@@ -174,7 +174,7 @@ Responsive Typography Size-Up [Choose popular device]
 
 n/a
 
-## Spatial System (and Size?)
+## Spatial System: Space and size
 
 font base * line-height ratio = space-unit * 1
 
