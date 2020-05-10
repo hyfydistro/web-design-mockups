@@ -11,8 +11,9 @@
 /* TYPOGRAPHY */
 :root {
   /* font face */
-  --font-primary: sans-serif;
-  --font-secondary: serif;
+  --font-heading: 'Bahnschrift', sans-serif, serif;
+  --font-body: 'Bahnschrift', sans-serif, serif;
+  --font-code-syntax: Courier, monospace, sans-serif;
 
   /* Set base value */
   --text-base-size: 1rem; /* e.g. 16px */
@@ -30,25 +31,6 @@
 
   /* Font Style: boldness */
   --weight: xxx;
-
-  /* Set color text */
-  /* Text Color */
-  --color-text-05: #F2F2F2;
-  --color-text-10: #E5E5E5;
-  --color-text-20: #CCCCCC;
-  --color-text-30: #B2B2B2;
-  --color-text-40: #999999; /* In use */
-  --color-text-50: #808080; /* In use */
-  --color-text-60: #666666;
-  --color-text-70: #4D4D4D; /* In use */
-  --color-text-80: #1A1A1A; /* In use */
-  --color-text-90: #000000;
-  /* link color */
-  --color-text-link: #004399;
-  --color-text-link-active: #002D66;
-  /* On UI components */
-  --color-module-background: xxx;
-  --color-on-menu-hover: xxx;
 
   /* Space */
   --heading-h1-line-height: 1em;
@@ -81,7 +63,10 @@ h3 {
   line-height: 1.5rem;
 }
 
-p {
+p,
+.date-text,
+a .link,
+footer p {
   font-size: 14px;
   line-height: 1.5rem;
 }
@@ -91,33 +76,12 @@ a {
   text-decoration: none;
 }
 
-.link {
-  color: var(--color-text-link);
-}
-
-.link-active {
-  color: var();
-}
-
 .link-pdf {
   text-decoration: underline;
 }
 
-.date-text {
-  color: var(--color-text-50);
-}
-
-/* Move to Color Stylesheet */
-.highlight-box {
-  background-color: #CCE2FF; /* primary-color-10 */
-}
-
-.language-module {
+.language-module p {
   line-height: 28px;
-}
-
-footer p {
-  color: var(--color-text-50);
 }
 
 /* Breakpoints */
@@ -125,10 +89,14 @@ footer p {
 /* Note: 320px would be the default root origin,
 where XS is relative to */
 @media all and (max-width: 375px) {
+  html { font-size: xxx; }
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
-  p { font-size: var(--text-sm); }
+  p,
+  .date-text,
+  a .link,
+  footer p { font-size: var(--text-sm); }
 }
 
 /* S */
