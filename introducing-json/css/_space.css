@@ -1,0 +1,20 @@
+/* spatial system stylesheet */
+/* For Modern Browsers; Support IE?? and above - Created in 2020 */
+
+:root {
+  /* Base Value */
+  --space-base-size: 1rem; /* e.g. 16px */
+  --space-scale-ratio: 1.2; /* e.g. modular scale */
+
+  /* space scale */
+  --space-xs: calc(1rem / (var(--space-scale-ratio) * var(--space-scale-ratio)));
+  --space-sm: calc(1rem / var(--space-scale-ratio));
+  /* font base / normal: 1em */
+  --space-md: calc(1rem * var(--space-scale-ratio));
+  --space-lg: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-xl: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-xxl: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-xxxl: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
+
+
+}
