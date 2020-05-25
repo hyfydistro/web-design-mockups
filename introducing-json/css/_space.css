@@ -18,3 +18,32 @@
 
 
 }
+
+/* General Layout */
+h1 {
+  margin-bottom: xxx;
+}
+
+h2 {
+  margin-bottom: xxx;
+}
+
+img {
+  margin-top: xxx;
+  margin-bottom: xxx;
+}
+
+article,
+aside,
+footer {
+  margin-top: xxx;
+  margin-bottom: xxx;
+}
+
+/* Navigation bar */
+
+/* UI Components */
+/*
+- hamburger menu
+- list items
+ */
