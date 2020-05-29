@@ -12,42 +12,100 @@
 
   /* space scale */
   --space-xs: calc(1rem / (var(--space-scale-ratio) * var(--space-scale-ratio)));
-  --space-sm: calc(1rem / var(--space-scale-ratio));
+  --space-005: calc(1rem / var(--space-scale-ratio));
   /* font base / normal: 1em */
-  --space-md: calc(1rem * var(--space-scale-ratio));
-  --space-lg: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio));
-  --space-xl: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
-  --space-xxl: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
-  --space-xxxl: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-01: calc(1rem * var(--space-scale-ratio));
+  --space-02: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-03: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-04: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-05: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
 
 
 }
 
 /* General Layout */
 h1 {
-  margin-bottom: xxx;
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-02);
 }
 
 h2 {
-  margin-bottom: xxx;
+  margin-bottom: var(--space-01);
+}
+
+p {
+  margin-bottom: var(--space-01);
 }
 
 img {
-  margin-top: xxx;
-  margin-bottom: xxx;
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-01);
 }
 
 article,
 aside,
 footer {
-  margin-top: xxx;
-  margin-bottom: xxx;
+  margin-bottom: var(--space-02);
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
 }
 
 /* Navigation bar */
 
 /* UI Components */
+
+.highlight-box {
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-02);
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+
+}
+
 /*
 - hamburger menu
 - list items
  */
+
+ .cards {
+   margin-top: var(--space-01);
+   margin-bottom: var(--space-01);
+ }
+
+ /* S */
+ /* @media all and (min-width: 600px) {
+
+ } */
+
+ /* M */
+ @media all and (max-width: 1024px) {
+   header,
+   p,
+   h1,
+   h2,
+   aside,
+   /* .highlight-box, */
+   footer {
+     margin-left: 16px;
+     margin-right: 16px;
+   }
+
+   article div .highlight-box {
+     margin-left: auto;
+     margin-right: auto;
+   }
+   .highlight-box {
+     padding: var(--space-01) 16px;
+   }
+ }
+
+/* L */
+ @media all and (min-width: 1024px) {
+   header,
+   main,
+   aside,
+   footer {
+     width: 960px;
+   }
+
+ }
