@@ -1,0 +1,25 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+/* Layout */
+/* Module */
+a[target="_blank"] {
+  text-decoration: underline;
+}
+
+a[target="_blank"]::after {
+  font-family: 'FontAwesome';
+  content: " \f08e";
+}
+
+a[target="_blank"]:hover {
+  text-decoration: none;
+}
+
+/* States */
+/* Theme */
