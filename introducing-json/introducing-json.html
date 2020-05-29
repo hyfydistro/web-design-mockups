@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/_typography.css">
   <link rel="stylesheet" href="css/_space.css">
   <link rel="stylesheet" href="css/_color.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
   <!-- <script type="text/javascript" src="script.js" defer></script> -->
 </head>
 
@@ -19,15 +21,17 @@
       <!-- title -->
     </div>
     <nav role="navigation">
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul>
-        <li><a class="link" href="#">Introducing JSON</a></li>
-        <li><a class="link" href="affiliated-technologies.html">Affiliated Technologies</a></li>
-        <li><a class="link" href="grammar.html">Grammar</a></li>
+      <!-- TODO: To add aria-label="open the menu"  or not??? -->
+      <button aria-expanded="true" aria-controls="menu">
+        <div aria-hidden="true" class="hamburger"></div>
+        Menu
+      </button>
+      <!-- TODO: Proressive Enhancement:
+        - Let menu be open, and close it with JS -->
+      <ul id="menu" role="menu">
+        <li><a role="menuitem" class="link" href="#">Introducing JSON</a></li>
+        <li><a role="menuitem" class="link" href="affiliated-technologies.html">Affiliated Technologies</a></li>
+        <li><a role="menuitem" class="link" href="grammar.html">Grammar</a></li>
         <!-- Add PDF to createObjectURL? -->
         <li><a class="link" target="_blank" id="link-pdf" href="#">[PDF] ECMA-404 The JSON Data Interchange Standard</a></li>
       </ul> <!-- End of ul -->
@@ -38,7 +42,7 @@
     <article role="article">
       <h1>Introducing JSON</h1>
 
-      <p><b>JSON</b> (JavaScript Object Notation) is a lightweight data-interchange
+      <p><abbr title="JavaScript Object Notation">JSON</abbr> (JavaScript Object Notation) is a lightweight data-interchange
         format. It is easy for humans to read and write. It is easy for machines to
         parse and generate. It is based on a subset of the
         <a target="_blank" href="http://www.ecma-international.org/publications/files/ecma-st/ECMA-262.pdf">JavaScript
