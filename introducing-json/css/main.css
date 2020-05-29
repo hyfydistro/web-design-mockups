@@ -5,9 +5,21 @@
   padding: 0;
 }
 
-/* Base */
-/* Layout */
-/* Module */
+/* ===== Base ===== */
+
+#menu li {
+  list-style: none;
+}
+
+/* ===== Layout ===== */
+
+.figures img {
+  width: 100%;
+}
+
+/* ===== Module ===== */
+
+/* External Link Icon */
 a[target="_blank"] {
   text-decoration: underline;
 }
@@ -17,9 +29,6 @@ a[target="_blank"]::after {
   content: " \f08e";
 }
 
-a[target="_blank"]:hover {
-  text-decoration: none;
-}
+/* ===== States ===== */
 
-/* States */
-/* Theme */
+/* ===== Theme ===== */
