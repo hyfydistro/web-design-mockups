@@ -11,8 +11,8 @@
   --space-scale-ratio: 1.2; /* e.g. modular scale */
 
   /* space scale */
-  --space-xs: calc(1rem / (var(--space-scale-ratio) * var(--space-scale-ratio)));
-  --space-005: calc(1rem / var(--space-scale-ratio));
+  --space-quarter: calc(1rem / (var(--space-scale-ratio) * var(--space-scale-ratio)));
+  --space-half: calc(1rem / var(--space-scale-ratio));
   /* font base / normal: 1em */
   --space-01: calc(1rem * var(--space-scale-ratio));
   --space-02: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio));
@@ -37,9 +37,9 @@ p {
   margin-bottom: var(--space-01);
 }
 
-img {
+.figures img {
   margin-top: var(--space-01);
-  margin-bottom: var(--space-01);
+  margin-bottom: var(--space-02);
 }
 
 article,
@@ -68,14 +68,25 @@ footer {
  */
 
  .cards {
+   display: block;
    margin-top: var(--space-01);
    margin-bottom: var(--space-01);
  }
 
- /* S */
- /* @media all and (min-width: 600px) {
+ .tags {
+   margin-top: var(--space-half);
+   margin-left: var(--space-half);
+   padding: var(--space-half);
+ }
 
- } */
+ /* S */
+ @media all and (min-width: 600px) {
+   /* Cards */
+   .cards {
+     /* Height x width */
+
+   }
+ }
 
  /* M */
  @media all and (max-width: 1024px) {
@@ -90,13 +101,14 @@ footer {
      margin-right: 16px;
    }
 
-   article div .highlight-box {
-     margin-left: auto;
-     margin-right: auto;
-   }
    .highlight-box {
      padding: var(--space-01) 16px;
    }
+
+    /* .figures img {
+      padding-left: 16px;
+      padding-right: 16px;
+    } */
  }
 
 /* L */
