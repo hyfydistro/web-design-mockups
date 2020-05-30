@@ -89,7 +89,6 @@ button[aria-controls="menu"] {
   height: 3px;
   background: #000;
   position: absolute;
-  top: 30px;
 }
 
 .hamburger::before,
