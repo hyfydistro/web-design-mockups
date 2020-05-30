@@ -29,6 +29,12 @@ button {
 }
 
 /* ===== Layout ===== */
+/* HEADER */
+header {
+  width: 100%;
+}
+
+/* MAIN */
 .figures img {
   width: 90%;
   /* centers image */
@@ -88,6 +94,7 @@ button[aria-controls="menu"] {
   width: 24px;
   height: 3px;
   background: #000;
+  border-radius: 25%;
   position: absolute;
 }
 
@@ -98,6 +105,7 @@ button[aria-controls="menu"] {
   width: 24px;
   height: 3px;
   background: #000;
+  border-radius: 25%;
 /* -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
 }
