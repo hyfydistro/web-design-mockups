@@ -5,20 +5,64 @@
   padding: 0;
 }
 
-/* ===== Base ===== */
+/*
+===== Table of Content =====
 
+- Base
+- Layout
+- Module
+- States
+- Themes
+- Media Queries
+ */
+
+/* ===== Base ===== */
 #menu li {
   list-style: none;
 }
 
-/* ===== Layout ===== */
+button {
+  border: none;
+  box-shadow: none;
+  background-color: inherit;
+  cursor: pointer;
+}
 
+/* ===== Layout ===== */
 .figures img {
-  width: 100%;
+  width: 90%;
+  /* centers image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight-box {
+  list-style: inside;
+}
+
+.cards {
+  display: block;
+  width: 256px;
+  height: 224px;
+}
+
+.cards__image {
+  width: 256px;
+  height: 145px;
+}
+
+.cards__text {
+  width: 256px;
+  height: 79px;
+}
+
+.tags {
+  position: absolute;
+  width: auto;
 }
 
 /* ===== Module ===== */
-
 /* External Link Icon */
 a[target="_blank"] {
   text-decoration: underline;
@@ -30,5 +74,125 @@ a[target="_blank"]::after {
 }
 
 /* ===== States ===== */
+.card:hover {
+  /* Give it a pop out effect! */
+}
+
+/* Hamburger Menu */
+button[aria-controls="menu"] {
+  width: 24px;
+  height: 17px;
+}
+
+.hamburger {
+  width: 24px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  top: 30px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: #000;
+/* -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.hamburger::before {
+  top: -9px;
+  left: 0;
+}
+
+.hamburger::after {
+  top: 9px;
+  left: 0;
+}
+
+button:hover,
+button:focus {
+  /* Change color to a blue? */
+}
+
+/* Hamburger animations */
+
+.hamburger {
+  /* animation presets */
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  /* animation presets */
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* animation when active */
+/* Makes the middle line disappear */
+.icon-container.active .hamburger {
+  background: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+/* Rotates and position the top and bottom lines */
+.icon-container.active .hamburger::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.icon-container.active .hamburger::after {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+/* #menu-list.active {
+  display: block;
+} */
 
 /* ===== Theme ===== */
+.cards {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.tags {
+  background-color: #EBEBEB
+}
+
+/* ===== Media Queries ===== */
+/* S */
+@media all and (min-width: 600px) {
+
+  /* Cards */
+  .cards {
+    /* Height x width */
+  }
+}
+
+/* M */
+@media all and (max-width: 1024px) {}
+
+/* L */
+@media all and (min-width: 1024px) {
+
+  header,
+  main,
+  aside,
+  footer {
+
+  }
+}
