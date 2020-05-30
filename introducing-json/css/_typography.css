@@ -15,8 +15,7 @@
 /* TYPOGRAPHY */
 :root {
   /* font face */
-  --font-heading: 'Bahnschrift', sans-serif, serif;
-  --font-body: 'Bahnschrift', sans-serif, serif;
+  --font-face: 'Bahnschrift', sans-serif, serif;
   --font-code-syntax: Courier, monospace, sans-serif;
 
   /* Set base value */
@@ -50,6 +49,7 @@
 /* Main Typography */
 html {
   font-size: 14px;
+  font-family: var(--font-face);
 }
 
 h1 {
@@ -73,6 +73,11 @@ a .link,
 footer p {
   font-size: 14px;
   line-height: 1.5rem;
+}
+
+/* Logo Text */
+.logo-text {
+  font-weight: normal;
 }
 
 /* Link */

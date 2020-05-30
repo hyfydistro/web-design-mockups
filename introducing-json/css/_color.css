@@ -11,17 +11,16 @@ INCLUDES:
   --primary-color: red;
 
   /* Primary Color Variation */
-  --primary-color-05: red;
-  --primary-color-01: red;
-  --primary-color-02: red;
-  --primary-color-03: red;
-  --primary-color-04: red;
-  --primary-color-05: red;
-  --primary-color-06: red;
-  --primary-color-07: red;
-  --primary-color-08: red;
-  --primary-color-09: red;
-  --primary-color-10: red;
+  --primary-color-05: #E5F1FF;
+  --primary-color-01: #CCE2FF; /* In use */
+  --primary-color-02: #99C6FF;
+  --primary-color-03: #66A9FF;
+  --primary-color-04: #2987FF; /* In use */
+  --primary-color-05: #0070FF;
+  --primary-color-06: #005ACC;
+  --primary-color-07: #004399; /* In use */
+  --primary-color-08: #002D66; /* In semi-use */
+  --primary-color-09: #001633;
 
   /* Text Color */
   --color-text-05: #F2F2F2;
@@ -41,6 +40,11 @@ INCLUDES:
   --color-module-background: xxx;
   --color-on-menu-hover: xxx;
 
+}
+
+/* Logo Text */
+.blue-colored {
+  color: var(--primary-color-04);
 }
 
 .link {
