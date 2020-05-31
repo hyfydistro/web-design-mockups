@@ -70,7 +70,7 @@ nav button[aria-controls="menu"].open {
 #menu li  {
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
-  margin-left: var(--space-01);
+  padding-left: var(--space-01);
 }
 
 /*
