@@ -32,6 +32,11 @@ button {
 /* HEADER */
 header {
   width: 100%;
+  background-color: #fff;
+  /* display properties */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -50,7 +55,11 @@ header {
   vertical-align: middle;
 }
 
-nav {
+/* Hamburger module */
+.open {
+
+  /* display: flex; */
+  /* justify-content: flex-end; */
   /* flex-direction: row-reverse; */
   /* justify-content: flex-end; */
   /* position: absolute; */
@@ -62,20 +71,60 @@ nav {
   /* justify-content: flex-end; */
 }
 
-nav #menu {
-  position: static;
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-button[aria-controls="menu"]  {
-  /* position: absolute; */
-  /* position: absolute; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  /* float: right; */
-  /* justify-content: flex-end; */
+/* Overlap WIP */
+/* nav::before {
+  content: '';
+  position: fixed;
+  width: 228px;
+  height: 100vh;
+  right: 0;
+  background-color: cyan;
+  z-index: 900;
+} */
+
+/* Sidebar */
+nav.open {
+  /* Display for items */
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  /* module position */
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  /* Diemnsions */
+  width: 228px;
+  height: 100vh;
+  background-color: cyan;
+}
+
+nav button[aria-controls="menu"].open {
+  position: fixed;
+  right: 0;
+  /* See more at '_space.css':
+  -  Menu hmaburger - Open */
+}
+
+nav ul.open {
+  margin-top: 59px;
+  /* display: block;
+  position: relative; */
 }
 
 /* MAIN */
+
+main {
+  margin-top: 59px;
+  z-index: 1;
+}
+
 /* /* TODO: TESTING BELOW */ */
 p {
   width: 41ch;

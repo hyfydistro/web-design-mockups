@@ -61,6 +61,24 @@ header {
   margin-right: var(--space-half);
 }
 
+/* Menu hmaburger - Open */
+nav button[aria-controls="menu"].open {
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-01);
+}
+
+#menu li  {
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+  margin-left: var(--space-01);
+}
+
+/*
+See '_color.css' for following effects
+- hover
+- active
+ */
+
 .highlight-box {
   margin-top: var(--space-01);
   margin-bottom: var(--space-02);
