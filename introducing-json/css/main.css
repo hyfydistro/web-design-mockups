@@ -32,11 +32,60 @@ button {
 /* HEADER */
 header {
   width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-icon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.logo-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav {
+  /* flex-direction: row-reverse; */
+  /* justify-content: flex-end; */
+  /* position: absolute; */
+  /* left: 0; */
+  /* position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  float: right; */
+  /* justify-content: flex-end; */
+}
+
+nav #menu {
+  position: static;
+}
+
+button[aria-controls="menu"]  {
+  /* position: absolute; */
+  /* position: absolute; */
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  /* float: right; */
+  /* justify-content: flex-end; */
 }
 
 /* MAIN */
+/* /* TODO: TESTING BELOW */ */
+p {
+  width: 41ch;
+  word-wrap: break-word;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .figures img {
-  width: 90%;
+  width: 100%;
   /* centers image */
   display: block;
   margin-left: auto;
@@ -170,6 +219,9 @@ button:focus {
 } */
 
 /* ===== Theme ===== */
+/* HEADER */
+
+/* MAIN */
 .cards {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
