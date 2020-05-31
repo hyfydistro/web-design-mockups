@@ -29,7 +29,7 @@ h1 {
   margin-bottom: var(--space-02);
 }
 
-h2 {
+h2:not(.logo-text) {
   margin-bottom: var(--space-01);
 }
 
@@ -53,13 +53,20 @@ footer {
 /* Navigation bar */
 
 /* UI Components */
+header {
+  margin-top: var(--space-01);
+}
+
+.logo-icon {
+  margin-right: var(--space-half);
+}
 
 .highlight-box {
   margin-top: var(--space-01);
   margin-bottom: var(--space-02);
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
-
+  /* padding-left: var(--space-01); */
 }
 
 /*
@@ -80,29 +87,42 @@ footer {
  }
 
  /* S */
- @media all and (min-width: 600px) {
+ @media all and (max-width: 600px) {
+   main,
+   /* header,
+   p,
+   h1,
+   h2, */
+   /* aside, */
+   /* .highlight-box, */
+   footer {
+     /* margin-left: 16px;
+     margin-right: 16px; */
+   }
+
+   p,
+   .highlight-box,
+   .language-wrapper {
+     /* width: 288px; */
+   }
+
    /* Cards */
    .cards {
      /* Height x width */
 
    }
+
+   /* .language-wrapper {
+     width: auto;
+   } */
  }
 
  /* M */
  @media all and (max-width: 1024px) {
-   header,
-   p,
-   h1,
-   h2,
-   aside,
-   /* .highlight-box, */
-   footer {
-     margin-left: 16px;
-     margin-right: 16px;
-   }
+
 
    .highlight-box {
-     padding: var(--space-01) 16px;
+     /* padding: var(--space-01) 16px; */
    }
 
     /* .figures img {
