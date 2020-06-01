@@ -47,13 +47,27 @@ INCLUDES:
   color: var(--primary-color-04);
 }
 
+/* HEADER: menu */
 .link {
   color: var(--color-text-link);
 }
 
+.link-pdf {
+  color: var(--primary-color-07);
+}
+
 .link:active,
-.line-pdf:active {
+.link-pdf:active {
   color: var(--color-text-link-active);
+}
+
+#menu li:hover {
+  background-color: var(--primary-color-01);
+  color: var(--primary-color-08);
+}
+
+#menu li:active {
+
 }
 
 .date-text {
@@ -61,7 +75,7 @@ INCLUDES:
 }
 
 .highlight-box {
-  background-color: #CCE2FF; /* primary-color-10 */
+  background-color: var(--primary-color-01);
 }
 
 footer p {
