@@ -33,6 +33,7 @@ button {
 header {
   width: 100%;
   background-color: #fff;
+
   /* display properties */
   overflow: hidden;
   position: fixed;
@@ -77,14 +78,17 @@ nav.open {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+
   /* module position */
   top: 0;
   right: 0;
   z-index: 999;
+
   /* Diemnsions */
   width: 228px;
   height: 100vh;
   background-color: #fff;
+
   /* Box shadows */
   -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
@@ -245,9 +249,6 @@ button:focus {
   transform: rotate(135deg);
 }
 
-/* #menu-list.active {
-  display: block;
-} */
 /* ===== Theme ===== */
 /* HEADER */
 /* MAIN */
