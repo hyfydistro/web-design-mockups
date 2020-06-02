@@ -99,7 +99,7 @@ Targeted device-height (opt.): 800px
 
 Modular Scale: 1.25
 
-given L/R margin: 32px
+given L/R margin: 16px each
 gutter: 24px ea. (space-unit-1)
 No. of Column: 8
 Column width: 46px ea.
@@ -242,7 +242,7 @@ Body Copy color: #1A1A1A
 `secondary-color-05` (brightest and least saturated): #F2F2F2
 `secondary-color-10`: #E5E5E5
 `secondary-color-20`: #CCCCCC
-`secondary-color-30`: #B2B2B2
+`secondary-color-30`: #B2B2B2 (In use)
 `secondary-color-40`: #999999 (In use)
 `secondary-color-50`: #808080 (In use)
 `secondary-color-60`: #666666
@@ -255,6 +255,15 @@ Body Copy color: #1A1A1A
 **Text Color**
 
 n/a
+
+## Visited and Highlighted current page link in menu list
+
+text-color:
+box module color: #1A1A1A 20% (#D1D1D1)
+box module color (new): #E5E5E5
+
+Overlay
+box module color: #1A1A1A 20% (#D1D1D1) 
 
 ## Logo
 
@@ -399,12 +408,82 @@ height: 224.1 px = 224px
 
 card image size
 width: 256 px
-height: 145 px = 143px
+height: 145 px
 
 card type block
 width: 256 px
 height: 79.1 px = 79px
+background color: #EBEBEB
 
+**M**
+
+card size
+width: 256 px
+height: 224.1 px = 224px
+
+card image size
+width: 256 px
+height: 145 px
+
+card tag size e.g. "video"
+width: 64px (width will differ for the amount of characters within the container)
+height: 36px
+
+card type block
+width: 256 px
+height: 79.1 px = 79px
+background color: #EBEBEB
+padding:
+
+**L**
+
+(See *M* and *S* - size does not changed here.)
+
+**XL**
+
+n/a
+
+## Modules
+
+* Hamburger Menu - Open
+
+**XS**
+
+grid system: 4; aligned with column
+
+Area
+	width: 24px
+	height: 17px
+
+single component (Those three lines that make up the hamburger)
+For each
+  width: 24px
+  height: 3px
+Distance between each single component
+  distance: 8.5px = 9px
+
+L / R padding: (space-unit-1)
+Top / Bottom margin: (space-unit-1)
+
+Color
+	color: #1A1A1A
+
+Module Area
+	width: 226.8 px (70.875$% of 320px device-width) = 227px
+	height: 100vh
+
+**S**
+
+Constraints
+Scroll position is paused. No scroll finger movement can move the page. Tapping outside the module or the cross icon to close the menu will allow you to scroll as normal.
+
+grid system: 8; aligned with column
+width: 288px
+height: 100$
+
+Module Area
+	width: 228 (go to 228px)
+	height: 100vh
 
 **M**
 
@@ -416,15 +495,18 @@ n/a
 
 n/a
 
-## Modules
-
-Hamburger Menu - Open
+* Hamburger Menu - Close
 
 **XS**
 
 grid system: 4; aligned with column
-width:
-height:
+
+Area
+width: 19.7 px
+height: 19.7 px
+
+Color
+	color: #1A1A1A
 
 **S**
 
@@ -442,5 +524,3 @@ height: 100$
 n/a
 
 **XL**
-
-n/a
