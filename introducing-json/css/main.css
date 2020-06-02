@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  z-index: 0;
 }
 
 /*
@@ -56,37 +57,19 @@ header {
 }
 
 /* Hamburger module */
-.open {
-
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  /* flex-direction: row-reverse; */
-  /* justify-content: flex-end; */
-  /* position: absolute; */
-  /* left: 0; */
-  /* position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  float: right; */
-  /* justify-content: flex-end; */
-}
-
 .overlay {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Overlap WIP */
-/* nav::before {
-  content: '';
   position: fixed;
-  width: 228px;
-  height: 100vh;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
   right: 0;
-  background-color: cyan;
-  z-index: 900;
-} */
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  cursor: pointer;
+}
 
 /* Sidebar */
 nav.open {
@@ -95,14 +78,16 @@ nav.open {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+
   /* module position */
   top: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 999;
+
   /* Diemnsions */
   width: 228px;
   height: 100vh;
-  background-color: cyan;
+  background-color: #fff;
 }
 
 nav button[aria-controls="menu"].open {
@@ -114,15 +99,13 @@ nav button[aria-controls="menu"].open {
 
 nav ul.open {
   margin-top: 59px;
-  /* display: block;
-  position: relative; */
+  position: relative;
 }
 
 /* MAIN */
 
 main {
   margin-top: 59px;
-  z-index: 1;
 }
 
 /* /* TODO: TESTING BELOW */ */
