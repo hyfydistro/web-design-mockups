@@ -16,7 +16,6 @@
 - Themes
 - Media Queries
  */
-
 /* ===== Base ===== */
 #menu li {
   list-style: none;
@@ -66,7 +65,7 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(26, 26, 26, 0.1);
   z-index: 1;
   cursor: pointer;
 }
@@ -78,16 +77,18 @@ nav.open {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-
   /* module position */
   top: 0;
   right: 0;
   z-index: 999;
-
   /* Diemnsions */
   width: 228px;
   height: 100vh;
   background-color: #fff;
+  /* Box shadows */
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
 }
 
 nav button[aria-controls="menu"].open {
@@ -103,18 +104,17 @@ nav ul.open {
 }
 
 /* MAIN */
-
 main {
   margin-top: 59px;
 }
 
-/* /* TODO: TESTING BELOW */ */
-p {
+ /* TODO: TESTING BELOW */
+/* p {
   width: 41ch;
   word-wrap: break-word;
   margin: 0 auto;
   overflow: hidden;
-}
+} */
 
 .figures img {
   width: 100%;
@@ -187,7 +187,7 @@ button[aria-controls="menu"] {
   height: 3px;
   background: #000;
   border-radius: 25%;
-/* -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
 }
 
@@ -207,7 +207,6 @@ button:focus {
 }
 
 /* Hamburger animations */
-
 .hamburger {
   /* animation presets */
   -webkit-transition: 0.5s;
@@ -249,10 +248,8 @@ button:focus {
 /* #menu-list.active {
   display: block;
 } */
-
 /* ===== Theme ===== */
 /* HEADER */
-
 /* MAIN */
 .cards {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
@@ -265,8 +262,10 @@ button:focus {
 }
 
 /* ===== Media Queries ===== */
-/* S */
+/* S - Mobile */
 @media all and (min-width: 600px) {
+  /* Menu */
+  /* States */
 
   /* Cards */
   .cards {
@@ -283,7 +282,5 @@ button:focus {
   header,
   main,
   aside,
-  footer {
-
-  }
+  footer {}
 }
