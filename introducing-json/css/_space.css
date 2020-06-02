@@ -67,7 +67,9 @@ nav button[aria-controls="menu"].open {
   margin-bottom: var(--space-01);
 }
 
-#menu li  {
+/* TODO: Hover link */
+#menu li a {
+  display: block;
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
   padding-left: var(--space-01);
