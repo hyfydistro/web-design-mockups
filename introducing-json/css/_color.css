@@ -49,25 +49,50 @@ INCLUDES:
 
 /* HEADER: menu */
 .link {
-  color: var(--color-text-link);
+  /* Default text color */
+  color: var(--color-text-80);
 }
 
-.link-pdf {
+#link-pdf,
+a[target="_blank"] {
   color: var(--primary-color-07);
 }
 
-.link:active,
-.link-pdf:active {
+/* ===== STATES */
+/* (Reminder) Order: :hover, :focus, :active */
+.link:hover {
+  background-color: var(--primary-color-01);
   color: var(--color-text-link-active);
 }
 
-#menu li:hover {
+.link:focus {
   background-color: var(--primary-color-01);
-  color: var(--primary-color-08);
+  color: var(--color-text-link-active);
+  outline: none;
 }
 
-#menu li:active {
+.link:active,
+#link-pdf:active {
+  /* color: var(--color-text-link-active); */
+  color: white;
+}
 
+/* When visited, a highlight stays,
+which indicates its current page */
+#menu ul li:nth-child(1) .active {
+  background-color: var(--color-text-30);
+}
+
+#menu li:nth-child(2).active {
+  background-color: var(--color-text-30);
+}
+
+#menu li:nth-child(3).active {
+  background-color: var(--color-text-30);
+}
+
+#menu li:nth-child(4).active {
+  background-color: var(--color-text-30);
 }
 
 .date-text {
@@ -80,4 +105,28 @@ INCLUDES:
 
 footer p {
   color: var(--color-text-50);
+}
+
+/* ===== Media Queries ===== */
+/* S - Mobile */
+@media all and (min-width: 600px) {
+  /* Menu */
+  /* States */
+
+  /* Cards */
+  .cards {
+    /* Height x width */
+  }
+}
+
+/* M */
+@media all and (max-width: 1024px) {}
+
+/* L */
+@media all and (min-width: 1024px) {
+
+  header,
+  main,
+  aside,
+  footer {}
 }
