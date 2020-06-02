@@ -24,7 +24,7 @@
 button {
   border: none;
   box-shadow: none;
-  background-color: inherit;
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -42,6 +42,7 @@ header {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  padding-right: 16px;
 }
 
 .logo-icon {
@@ -54,57 +55,6 @@ header {
 .logo-text {
   display: inline-block;
   vertical-align: middle;
-}
-
-/* Hamburger module */
-.overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(26, 26, 26, 0.1);
-  z-index: 1;
-  cursor: pointer;
-}
-
-/* Sidebar */
-nav.open {
-  /* Display for items */
-  position: fixed;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-
-  /* module position */
-  top: 0;
-  right: 0;
-  z-index: 999;
-
-  /* Diemnsions */
-  width: 228px;
-  height: 100vh;
-  background-color: #fff;
-
-  /* Box shadows */
-  -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
-  box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
-}
-
-nav button[aria-controls="menu"].open {
-  position: fixed;
-  right: 0;
-  /* See more at '_space.css':
-  -  Menu hmaburger - Open */
-}
-
-nav ul.open {
-  margin-top: 59px;
-  position: relative;
 }
 
 /* MAIN */
@@ -165,6 +115,56 @@ a[target="_blank"]::after {
 }
 
 /* ===== States ===== */
+/* Hamburger module */
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(26, 26, 26, 0.1);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Sidebar */
+nav.open {
+  /* Display for items */
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+
+  /* module position */
+  top: 0;
+  right: 0;
+  z-index: 999;
+
+  /* Diemnsions */
+  width: 228px;
+  height: 100vh;
+  background-color: #fff;
+
+  /* Box shadows */
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
+}
+
+nav button[aria-controls="menu"].open {
+  position: fixed;
+  right: 0;
+  /* See more at '_space.css':
+  -  Menu hmaburger - Open */
+}
+
+nav ul.open {
+  margin-top: 59px;
+}
+
 .card:hover {
   /* Give it a pop out effect! */
 }
@@ -191,8 +191,6 @@ button[aria-controls="menu"] {
   height: 3px;
   background: #000;
   border-radius: 25%;
-  /* -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .hamburger::before {

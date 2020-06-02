@@ -24,6 +24,10 @@
 }
 
 /* General Layout */
+body {
+  /* padding-left: 16px;
+  padding-right: 16px; */
+}
 h1 {
   margin-top: var(--space-01);
   margin-bottom: var(--space-02);
@@ -48,6 +52,22 @@ footer {
   margin-bottom: var(--space-02);
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
+
+  /* Mobile L / R margins presets (1) */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Mobile L / R margins presets (2) */
+.logo {
+  margin-left: 16px;
+}
+
+/* Mobile L / R margins presets (3) */
+/* Hamburger Menu - Hacks*/
+/* NB: Giving header  L / R margins results to something funny. i.e. this hacks (until further ado!) */
+button[aria-controls="menu"] {
+  margin-right: 16px;
 }
 
 /* Navigation bar */
@@ -67,7 +87,6 @@ nav button[aria-controls="menu"].open {
   margin-bottom: var(--space-01);
 }
 
-/* TODO: Hover link */
 #menu li a {
   display: block;
   padding-top: var(--space-01);
