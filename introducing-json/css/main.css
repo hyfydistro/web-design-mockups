@@ -115,6 +115,11 @@ a[target="_blank"]::after {
 }
 
 /* ===== States ===== */
+/* Logo */
+.logo {
+  cursor: pointer;
+}
+
 /* Hamburger module */
 .overlay {
   position: fixed;

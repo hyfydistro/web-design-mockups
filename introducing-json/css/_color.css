@@ -64,6 +64,12 @@ a[target="_blank"]:visited {
 
 /* ===== STATES */
 /* (Reminder) Order: :hover, :focus, :active */
+/* Logo */
+.logo-link:visited {
+  color: var(--color-text-80);
+}
+
+/* Menu */
 .link:hover {
   background-color: var(--primary-color-01);
   color: var(--color-text-link-active);
