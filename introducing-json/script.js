@@ -14,7 +14,11 @@ let hamburger = document.querySelector('.hamburger');
     // Accessible controls
 
 // let menuModule = document.createElement('div');
-// menuModule.className = 'menu-module';
+// menuModule.className = 'overlay';
+// menuModule.style.display = 'none'
+// document.body.appendChild(menuModule);
+
+let menuModule = document.querySelector('.overlay');
 
     navBtn.addEventListener('click', function() {
         let expanded = this.getAttribute('aria-expanded') === 'true' || false;
@@ -28,7 +32,8 @@ let hamburger = document.querySelector('.hamburger');
           nav.classList.toggle('open');
           navBtn.classList.toggle('open');
           menuList.classList.toggle('open');
-          hamburger.classList.toggle('open');
+          // hamburger.classList.toggle('open');
+          menuModule.style.display = 'block';
           // nav.classList.toggle('menu-module');
 
         } else if (menuList.style.display == 'block') {
@@ -36,11 +41,20 @@ let hamburger = document.querySelector('.hamburger');
           nav.classList.toggle('open');
           navBtn.classList.toggle('open');
           menuList.classList.toggle('open');
-          hamburger.classList.toggle('open');
+          // hamburger.classList.toggle('open');
+          menuModule.style.display = 'none';
           // nav.classList.toggle('menu-module');
         }
     });
 
+menuModule.addEventListener('click', function() {
+  menuList.style.display = 'none';
+  nav.classList.toggle('open');
+  navBtn.classList.toggle('open');
+  menuList.classList.toggle('open');
+  menuModule.style.display = 'none';
+  icon.classList.toggle('active');
+});
     // 'X' hamburger animations
 
     let icon = document.querySelector('.icon-container');
@@ -49,4 +63,12 @@ let hamburger = document.querySelector('.hamburger');
       icon.classList.toggle('active');
     });
 
-// TODO: Create overlay for menu module
+// Check current menu and
+// give color and disable click or cursor look.
+
+// add event listener,
+// if that comes back with the correct reference (href="#")
+// Give new styles (bg color, and font color; disable click and cursor look)
+// Also, everything should reset when visitng other pages of the sites.
+
+// document.addEventListener();
