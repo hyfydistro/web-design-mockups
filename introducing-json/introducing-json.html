@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="css/main.css">
   <script type="text/javascript" src="script.js" defer></script>
   <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-  <!-- <script type="text/javascript" src="script.js" defer></script> -->
 </head>
 
 <body>
@@ -20,7 +19,7 @@
     <!-- Title -->
     <div class="logo">
       <a class="logo-link" href="introducing-json.html">
-        <img class="logo-icon" src="img/logo-icon-sml-36wx36h.png" alt="json logo icon">
+        <img class="logo-icon" src="img/logo-icon-sml-36wx36h.png" alt="json logo icon" sizes="">
         <h2 class="logo-text"><span class="blue-colored">{</span>JSON<span class="blue-colored">}</span></h2>
       </a>
     </div>
@@ -68,12 +67,24 @@
         </ul>
       </div> -->
 
+<!-- TODO: Change to img w/ srcset BECAUSE picture is for art direction and srcet is for change in resolution -->
       <!-- <picture class="figures">
         <source srcset="img/object-sml-600w.png" media="(max-width: 600px)">
         <source srcset="img/object-med-1024w.png" media="(min-width: 1024px)">
         <source srcset="img/object-lge-1280w.png" media="(min-width: 1280px)">
         <img src="img/object-lge-1280w.png" alt="object graph">
-      </picture>
+      </picture> -->
+
+      <img class="figures"
+          srcset="img/object-sml-600w.png 600w,
+                  img/object-med-1024w.png 1024w,
+                  img/object-lge-1280w.png 1280w"
+           sizes="(max-width: 600px) 320px,
+                  (min-width: 1024px) 600px,
+                  (min-width: 1280px) 960px,
+                  961px"
+           src="img/object-lge-1280w.png"
+           alt="object graph">
 
       <p>An <strong>array</strong> is an ordered collection of values. An array begins
         with <code>[</code><sub>left bracket</sub> and ends
@@ -127,7 +138,7 @@
                   <source srcset="img/whitespace-med-1024w.png" media="(min-width: 1024px)">
                   <source srcset="img/whitespace-lge-1280w.png" media="(min-width: 1280px)">
                   <img src="img/whitespace-lge-1280w.png" alt="whitespace graph">
-                </picture> -->
+                </picture>
 
     </article> <!-- End of article -->
   </main> <!-- End of main -->
