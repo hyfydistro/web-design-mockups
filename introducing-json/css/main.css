@@ -1,4 +1,4 @@
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css');
+/* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'); */
 
 * {
   margin: 0;
@@ -33,7 +33,6 @@ button {
 header {
   width: 100%;
   background-color: #fff;
-
   /* display properties */
   overflow: hidden;
   position: fixed;
@@ -60,9 +59,12 @@ header {
 /* MAIN */
 main {
   margin-top: 59px;
+  position: absolute;
+  /* NB: Used because it pops out more than the menud module  */
+  z-index: -1;
 }
 
- /* TODO: TESTING BELOW */
+/* TODO: TESTING BELOW */
 /* p {
   width: 41ch;
   word-wrap: break-word;
@@ -70,12 +72,14 @@ main {
   overflow: hidden;
 } */
 
-.figures img {
-  width: 100%;
+img.figures {
+  width: calc(100% - 32px);
+  /* max-width: 960px; */
   /* centers image */
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 .highlight-box {
@@ -142,17 +146,14 @@ nav.open {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-
   /* module position */
   top: 0;
   right: 0;
   z-index: 999;
-
   /* Diemnsions */
   width: 228px;
-  height: 100vh;
+  height: 100%;
   background-color: #fff;
-
   /* Box shadows */
   -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.5);
@@ -268,9 +269,9 @@ button:focus {
 /* ===== Media Queries ===== */
 /* S - Mobile */
 @media all and (min-width: 600px) {
+
   /* Menu */
   /* States */
-
   /* Cards */
   .cards {
     /* Height x width */
