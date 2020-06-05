@@ -75,15 +75,15 @@
         <img src="img/object-lge-1280w.png" alt="object graph">
       </picture> -->
 
-      <img class="figures"
-          srcset="img/object-sml-600w.png 600w,
+      <img src="img/object-sml-600w.png"
+           class="figures"
+           srcset="img/object-sml-600w.png 600w,
                   img/object-med-1024w.png 1024w,
                   img/object-lge-1280w.png 1280w"
            sizes="(max-width: 600px) 320px,
-                  (min-width: 1024px) 600px,
-                  (min-width: 1280px) 960px,
-                  961px"
-           src="img/object-lge-1280w.png"
+                  (max-width: 1024px) 600px,
+                  (min-width: 1025px) 960px,
+                  100vw"
            alt="object graph">
 
       <p class="preset-margins">An <strong>array</strong> is an ordered collection of values. An array begins
@@ -91,54 +91,74 @@
         with <code>]</code><sub>right bracket</sub>. Values are separated
         by <code>,</code><sub>comma</sub>.</p>
 
-        <picture class="figures">
-          <source srcset="img/array-sml-600w.png" media="(max-width: 600px)">
-          <source srcset="img/array-med-1024w.png" media="(min-width: 1024px)">
-          <source srcset="img/array-lge-1280w.png" media="(min-width: 1280px)">
-          <img src="img/array-lge-1280w.png" alt="array graph">
-        </picture>
+        <img class="figures"
+            srcset="img/array-sml-600w.png 600w,
+                    img/array-med-1024w.png 1024w,
+                    img/array-lge-1280w.png 1280w"
+             sizes="(max-width: 600px) 320px,
+                    (max-width: 1024px) 600px,
+                    (min-width: 1025px) 960px,
+                    100vw"
+             src="img/array-lge-1280w.png"
+             alt="array graph">
 
         <p class="preset-margins">A <strong>value</strong> can be a <strong>string</strong> in double quotes, or a <strong>number</strong>,
           or <code>true</code> or <code>false</code> or <code>null</code>, or an <strong>object</strong> or
           an <strong>array</strong>. These structures can be nested.</p>
 
-          <picture class="figures">
-            <source srcset="img/value-sml-600w.png" media="(max-width: 600px)">
-            <source srcset="img/value-med-1024w.png" media="(min-width: 1024px)">
-            <source srcset="img/value-lge-1280w.png" media="(min-width: 1280px)">
-            <img src="img/value-lge-1280w.png" alt="value graph">
-          </picture>
+          <img class="figures"
+              srcset="img/value-sml-600w.png 600w,
+                      img/value-med-1024w.png 1024w,
+                      img/value-lge-1280w.png 1280w"
+               sizes="(max-width: 600px) 320px,
+                      (max-width: 1024px) 600px,
+                      (min-width: 1025px) 960px,
+                      100vw"
+               src="img/value-lge-1280w.png"
+               alt="value graph">
 
           <p class="preset-margins">A <strong>string</strong> is a sequence of zero or more Unicode characters, wrapped
             in double quotes, using backslash escapes. A character is represented as a
             single character string. A string is very much like a C or Java string.</p>
 
-            <picture class="figures">
-              <source srcset="img/string-sml-600w.png" media="(max-width: 600px)">
-              <source srcset="img/string-med-1024w.png" media="(min-width: 1024px)">
-              <source srcset="img/string-lge-1280w.png" media="(min-width: 1280px)">
-              <img src="img/string-lge-1280w.png" alt="string graph">
-            </picture>
+            <img class="figures"
+                srcset="img/string-sml-600w.png 600w,
+                        img/string-med-1024w.png 1024w,
+                        img/string-lge-1280w.png 1280w"
+                 sizes="(max-width: 600px) 320px,
+                        (max-width: 1024px) 600px,
+                        (min-width: 1025px) 960px,
+                        100vw"
+                 src="img/string-lge-1280w.png"
+                 alt="string graph">
 
             <p class="preset-margins">A <strong>number</strong> is very much like a C or Java number, except that the octal
               and hexadecimal formats are not used.</p>
 
-              <picture class="figures">
-                <source srcset="img/number-sml-600w.png" media="(max-width: 600px)">
-                <source srcset="img/number-med-1024w.png" media="(min-width: 1024px)">
-                <source srcset="img/number-lge-1280w.png" media="(min-width: 1280px)">
-                <img src="img/number-lge-1280w.png" alt="number graph">
-              </picture>
+              <img class="figures"
+                  srcset="img/number-sml-600w.png 600w,
+                          img/number-med-1024w.png 1024w,
+                          img/number-lge-1280w.png 1280w"
+                   sizes="(max-width: 600px) 320px,
+                          (max-width: 1024px) 600px,
+                          (min-width: 1025px) 960px,
+                          100vw"
+                   src="img/number-lge-1280w.png"
+                   alt="number graph">
 
               <p class="preset-margins">Whitespace can be inserted between any pair of tokens. Excepting
                 a few encoding details, that completely describes the language.</p>
 
-                <picture class="figures">
-                  <source srcset="img/whitespace-sml-600w.png" media="(max-width: 600px)">
-                  <source srcset="img/whitespace-med-1024w.png" media="(min-width: 1024px)">
-                  <source srcset="img/whitespace-lge-1280w.png" media="(min-width: 1280px)">
-                  <img src="img/whitespace-lge-1280w.png" alt="whitespace graph">
-                </picture>
+                <img class="figures"
+                    srcset="img/whitespace-sml-600w.png 600w,
+                            img/whitespace-med-1024w.png 1024w,
+                            img/whitespace-lge-1280w.png 1280w"
+                     sizes="(max-width: 600px) 320px,
+                            (max-width: 1024px) 600px,
+                            (min-width: 1025px) 960px,
+                            100vw"
+                     src="img/whitespace-lge-1280w.png"
+                     alt="whitespace graph">
 
     </article> <!-- End of article -->
   </main> <!-- End of main -->
