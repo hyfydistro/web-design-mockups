@@ -24,13 +24,14 @@
 }
 
 /* General Layout */
-body {
-  /* padding-left: 16px;
-  padding-right: 16px; */
-}
 h1 {
   margin-top: var(--space-01);
   margin-bottom: var(--space-02);
+}
+
+h1.preset-margins {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 h2:not(.logo-text) {
@@ -41,21 +42,33 @@ p {
   margin-bottom: var(--space-01);
 }
 
-.figures img {
-  margin-top: var(--space-01);
-  margin-bottom: var(--space-02);
+p.preset-margins {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+main {
+  position: absolute;
+  margin-top: calc(59px + var(--space-01));
+}
+
+header {
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+  /* TODO:  */
+  /* Introduce bottom box shadows */
 }
 
 article,
 aside,
 footer {
-  margin-bottom: var(--space-02);
-  padding-top: var(--space-01);
-  padding-bottom: var(--space-01);
+  /* margin-bottom: var(--space-02); */
+  /* padding-top: var(--space-01); */
+  /* padding-bottom: var(--space-01); */
 
   /* Mobile L / R margins presets (1) */
-  padding-left: 16px;
-  padding-right: 16px;
+  /* padding-left: 16px; */
+  /* padding-right: 16px; */
 }
 
 /* Mobile L / R margins presets (2) */
@@ -70,12 +83,17 @@ button[aria-controls="menu"] {
   margin-right: 16px;
 }
 
+img.figures {
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-02);
+}
+
 /* Navigation bar */
 
 /* UI Components */
-header {
+/* header {
   margin-top: var(--space-01);
-}
+} */
 
 .logo-icon {
   margin-right: var(--space-half);
@@ -163,11 +181,6 @@ See '_color.css' for following effects
    .highlight-box {
      /* padding: var(--space-01) 16px; */
    }
-
-    /* .figures img {
-      padding-left: 16px;
-      padding-right: 16px;
-    } */
  }
 
 /* L */
