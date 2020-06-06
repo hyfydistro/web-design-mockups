@@ -111,7 +111,21 @@ aside.featured {
   width: auto;
 }
 
-/* ASIDE - Language Wrapper */
+/* ASIDE - Language Container */
+/* TODO:
+- Fix alignment between columns */
+.language-container {
+  display: flex;
+  position: relative;
+}
+
+.column-1,
+.column-2 {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  line-height: 28px; /* 14px * 2 */
+}
 
 /* ===== Module ===== */
 /* External Link Icon */

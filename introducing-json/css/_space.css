@@ -119,7 +119,7 @@ See '_color.css' for following effects
 - list items
  */
 
- /* ASIDE */
+ /* ASIDE - featured */
  aside.featured {
    /* Margin Collapse with h2 above */
    margin-top: var(--space-01);
@@ -153,6 +153,12 @@ See '_color.css' for following effects
   .cards__text h3 {
     margin-bottom: var(--space-01);
   }
+
+  /* ASIDE - Language Container */
+.language-container {
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+}
 
  /* S */
  @media all and (max-width: 600px) {
