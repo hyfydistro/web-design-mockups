@@ -1,6 +1,6 @@
 let navBtn = document.querySelector('nav button');
-  let menuList = document.querySelector('#menu');
-  let nav = document.querySelector('.icon-container');
+let menuList = document.querySelector('#menu');
+let nav = document.querySelector('.icon-container');
 let hamburger = document.querySelector('.hamburger');
 
   // Default Settings
@@ -72,3 +72,12 @@ menuModule.addEventListener('click', function() {
 // Also, everything should reset when visitng other pages of the sites.
 
 // document.addEventListener();
+
+// TODO: Build a scroll listener.
+// When scroll event happens, add box shadows.
+// If view is back to the top, delete box shadows
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', function addDropShadow() {
+  header.classList.toggle('scrolling-active', window.scrollY > 0);
+});
