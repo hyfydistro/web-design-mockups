@@ -32,7 +32,6 @@ button {
 /* HEADER */
 header {
   width: 100%;
-  background-color: #fff;
   /* display properties */
   overflow: hidden;
   position: fixed;
@@ -42,6 +41,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-right: 16px;
+  z-index: 999;
 }
 
 .logo-icon {
@@ -74,7 +74,8 @@ img.figures {
   width: calc(100% - 32px);
   /* max-width: 960px; */
   /* centers image */
-  display: block;
+  /* display block gives un-alignment and interection collision with aside element*/
+  /* display: block; */
   position: relative;
   transform: translateX(-50%);
   left: 50%;
@@ -86,25 +87,23 @@ img.figures {
 }
 
 /* ASIDE */
-aside {
-  position: relative;
+aside.featured {
   display: block;
+  position: relative;
 }
 
 .cards {
-  display: block;
-  width: 256px;
-  height: 224px;
+  width: 288px;
 }
 
 .cards__image {
-  width: 256px;
-  height: 145px;
+  width: 288px;
+  height: 162px;
 }
 
 .cards__text {
-  width: 256px;
-  height: 79px;
+  width: 288px;
+  height: 89px;
 }
 
 .tags {
@@ -267,10 +266,6 @@ header.scrolling-active {
 
 /* ===== Theme ===== */
 /* HEADER */
-header {
-  background-color: #fff;
-  z-index: 999;
-}
 
 /* MAIN */
 .cards {
