@@ -123,7 +123,13 @@ See '_color.css' for following effects
   margin-bottom: var(--space-02);
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
+  padding-left: 16px;
+  padding-right: 16px;
   /* padding-left: var(--space-01); */
+}
+
+.highlight-box ul li:first-child {
+  margin-bottom: var(--space-02);
 }
 
 /*
