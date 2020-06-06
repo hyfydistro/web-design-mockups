@@ -48,8 +48,11 @@ p.preset-margins {
 }
 
 main {
-  position: absolute;
-  margin-top: calc(59px + var(--space-01));
+  /* TODO: What to do with collision aside?
+  - Put it in Main aswell? */
+  /* position: absolute; */
+  /* margin-top: calc(59px + var(--space-01)); */
+  margin-top: calc(70px + var(--space-01));
 }
 
 header {
