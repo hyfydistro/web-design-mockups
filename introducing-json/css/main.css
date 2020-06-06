@@ -86,7 +86,7 @@ img.figures {
   /* L / R paddings at '_space.css' */
 }
 
-/* ASIDE */
+/* ASIDE - featured */
 aside.featured {
   display: block;
   position: relative;
@@ -110,6 +110,8 @@ aside.featured {
   position: absolute;
   width: auto;
 }
+
+/* ASIDE - Language Wrapper */
 
 /* ===== Module ===== */
 /* External Link Icon */
@@ -175,8 +177,27 @@ nav ul.open {
   margin-top: 59px;
 }
 
-.card:hover {
-  /* Give it a pop out effect! */
+/* (1)hover -> (2)Focus -> (3)Active */
+.cards {
+  transition: transform 0.3s;
+}
+.cards:hover {
+  transform: scale(1.05);
+
+}
+
+.cards:focus {
+/* TODO:
+- Test
+- Move to '_color.css' */
+border: 1px solid #004399;
+}
+
+.cards:active {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.9);
+  transform: translate(4px, 4px);
 }
 
 /* Hamburger Menu */
