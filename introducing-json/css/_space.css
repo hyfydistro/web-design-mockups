@@ -103,7 +103,7 @@ See '_color.css' for following effects
 
 .highlight-box {
   margin-top: var(--space-01);
-  margin-bottom: var(--space-02);
+  margin-bottom: var(--space-01);
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
   padding-left: 16px;
@@ -111,7 +111,7 @@ See '_color.css' for following effects
 }
 
 .highlight-box ul li:first-child {
-  margin-bottom: var(--space-02);
+  margin-bottom: var(--space-01);
 }
 
 /*
