@@ -26,9 +26,9 @@
   --text-xs: calc(1rem / (var(--text-scale-ratio) * var(--text-scale-ratio)));
   --text-sm: calc(1rem / var(--text-scale-ratio));
   /* font base / normal: 1em */
-  --text-md: calc(1rem * var(--text-scale-ratio));
-  --text-lg: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-md: calc(1rem * var(--text-scale-ratio)); /*16.8 */
+  --text-lg: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio)); /* 20.16 */
+  --text-xl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)); /* 24.192 */
   --text-xxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
   --text-xxxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
@@ -65,6 +65,7 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 1.5rem;
+  font-weight: normal;
 }
 
 p,
@@ -98,7 +99,7 @@ a {
 /* Note: 320px would be the default root origin,
 where XS is relative to */
 @media all and (max-width: 375px) {
-  html { font-size: xxx; }
+  html { font-size: 14px; }
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
