@@ -8,7 +8,7 @@
 :root {
   /* Base Value */
   --space-base-size: 1rem; /* e.g. 16px */
-  --space-scale-ratio: 1.2; /* e.g. modular scale */
+  --space-scale-ratio: 1.5; /* e.g. modular scale */
 
   /* space scale */
   --space-quarter: calc(1rem / (var(--space-scale-ratio) * var(--space-scale-ratio)));
@@ -29,22 +29,14 @@ h1 {
   margin-bottom: var(--space-02);
 }
 
-h1.preset-margins {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
+/* Directed to target header h2. Other targets undetermined. */
 h2:not(.logo-text) {
   margin-bottom: var(--space-01);
+  margin-top: var(--space-01);
 }
 
 p {
   margin-bottom: var(--space-01);
-}
-
-p.preset-margins {
-  margin-left: 16px;
-  margin-right: 16px;
 }
 
 main {
@@ -58,20 +50,12 @@ main {
 header {
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
-  /* TODO:  */
-  /* Introduce bottom box shadows */
 }
 
-article,
-aside,
-footer {
-  /* margin-bottom: var(--space-02); */
-  /* padding-top: var(--space-01); */
-  /* padding-bottom: var(--space-01); */
-
-  /* Mobile L / R margins presets (1) */
-  /* padding-left: 16px; */
-  /* padding-right: 16px; */
+/* Mobile L / R margins presets (1) */
+.preset-margins {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 /* Mobile L / R margins presets (2) */
@@ -87,17 +71,13 @@ button[aria-controls="menu"] {
 }
 
 img.figures {
-  margin-top: var(--space-01);
-  margin-bottom: var(--space-02);
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-02);
 }
 
 /* Navigation bar */
 
 /* UI Components */
-/* header {
-  margin-top: var(--space-01);
-} */
-
 .logo-icon {
   margin-right: var(--space-half);
 }
@@ -140,10 +120,27 @@ See '_color.css' for following effects
 - list items
  */
 
- .cards {
-   display: block;
+ /* ASIDE */
+ aside.featured {
+   /* Margin Collapse with h2 above */
    margin-top: var(--space-01);
-   margin-bottom: var(--space-01);
+ }
+
+ aside.featured h2 {
+   padding-bottom: var(--space-01);
+ }
+
+ /* TODO: Make cards correctly sized to Design Sheet */
+ .cards {
+   position: relative;
+   display: block;
+   /* padding-top: var(--space-01); */
+   /* padding-bottom: var(--space-01); */
+   margin-top: var(--space-02);
+   margin-bottom: var(--space-02);
+   /* Center components */
+   margin-left: auto;
+   margin-right: auto;
  }
 
  .tags {
@@ -151,6 +148,16 @@ See '_color.css' for following effects
    margin-left: var(--space-half);
    padding: var(--space-half);
  }
+
+ .cards__text {
+   padding-left: 21px;
+   padding-top: var(--space-01);
+   padding-bottom: var(--space-01);
+ }
+
+  .cards__text h3 {
+    margin-bottom: var(--space-01);
+  }
 
  /* S */
  @media all and (max-width: 600px) {
