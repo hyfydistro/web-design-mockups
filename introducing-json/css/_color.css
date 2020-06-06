@@ -47,6 +47,10 @@ INCLUDES:
   color: var(--primary-color-04);
 }
 
+header {
+  background-color: #fff;
+}
+
 /* HEADER: menu */
 .link {
   /* Default text color */
@@ -101,6 +105,11 @@ a.link.active {
 
 .highlight-box {
   background-color: var(--primary-color-01);
+}
+
+/* Theme: Bottom borer for aside h2 */
+aside h2 {
+  border-bottom: 1px solid #B2B2B2;
 }
 
 footer p {
