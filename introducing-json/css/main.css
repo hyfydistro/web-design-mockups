@@ -58,7 +58,7 @@ header {
 
 /* MAIN */
 main {
-  /* NB: Used because it pops out more than the menud module  */
+  /* NB: Used because it pops out more than the menu module  */
   z-index: -1;
 }
 
@@ -82,6 +82,7 @@ img.figures {
 
 .highlight-box {
   list-style: inside;
+  /* L / R paddings at '_space.css' */
 }
 
 .cards {
