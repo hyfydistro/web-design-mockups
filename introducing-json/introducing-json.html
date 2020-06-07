@@ -29,7 +29,8 @@
         <div aria-hidden="true" class="hamburger"></div>
       </button>
       <!-- TODO: Proressive Enhancement:
-        - Let menu be open, and close it with JS -->
+        - Let menu be open, and close it with JS
+        - header should position relative and not transfixed -->
       <ul id="menu" role="menu">
         <li><a role="menuitem" class="link active" href="#">Introducing JSON</a></li>
         <li><a role="menuitem" class="link" href="affiliated-technologies.html">Affiliated Technologies</a></li>
@@ -195,8 +196,17 @@
     </section>
   </aside>
 
-  <!-- TODO: Turn it to a list for Accessibility! -->
-  <!-- <aside class="language-wrapper">
+  <!-- TODO: Turn it to a list for Accessibility!
+- There' s a problem with the quality of icon image
+- aria-hidden
+- proper alignment
+-->
+  <aside class="language-container preset-margins">
+    <div class="language-icon-wrapper">
+    <img class="language-icon" src="img/language-icon3-150w.png" alt="language icon">
+      <!-- Add aria-hidden -->
+    </div>
+    <div class="language-column-wrapper">
     <div class="column-1">
       <a href="hsubps://www.JSON.org/json-ar.html">العربية</a>
       <a href="https://www.JSON.org/json-bg.html">Български</a>
@@ -229,7 +239,8 @@
       <a href="https://www.JSON.org/json-tr.html">Türkçe</a>
       <a href="https://www.JSON.org/json-vi.html">Tiếng Việt</a>
     </div>
-  </aside> -->
+  </div>  <!-- End of language-column-wrapper -->
+  </aside>
 
   <footer>
     <!-- Footer notes here -->
