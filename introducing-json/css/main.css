@@ -111,6 +111,7 @@ aside.featured {
   width: auto;
 }
 
+/* ASIDE - Language Container */
 .language-container {
 
 }
@@ -143,6 +144,11 @@ aside.featured {
   flex-flow: column nowrap;
   flex-grow: 1;
   line-height: 28px; /* 14px * 2 */
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
 }
 
 /* ===== Module ===== */
