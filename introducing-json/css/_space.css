@@ -1,11 +1,11 @@
 /* spatial system stylesheet */
 /* For Modern Browsers - Created in 2020 */
 /* || What this covers (mostly):
-
 - margins
 - paddings
 - L / R outer margins
  */
+ 
 :root {
   /* Base Value */
   --space-base-size: 1rem;
