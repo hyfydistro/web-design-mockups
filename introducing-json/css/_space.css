@@ -27,6 +27,7 @@
 - texts (h1-h4; p)
 - header
 - Images (img; icons)
+- footer
 */
 h1 {
   margin-top: var(--space-01);
@@ -51,6 +52,11 @@ header {
 img.figures {
   padding-top: var(--space-01);
   padding-bottom: var(--space-02);
+}
+
+/* FOOTER */
+footer {
+  margin-bottom: var(--space-01);
 }
 
 /* || Navigation bar
@@ -138,11 +144,7 @@ aside.featured h2 {
   margin-bottom: var(--space-quarter);
 }
 
-/* FOOTER */
-footer {
-  margin-bottom: var(--space-01);
-}
-
+/* || Media Queries */
 /* S */
 @media all and (max-width: 600px) {
 
