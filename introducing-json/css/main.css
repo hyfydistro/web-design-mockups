@@ -111,12 +111,30 @@ aside.featured {
   width: auto;
 }
 
+.language-container {
+
+}
+
+.language-icon-wrapper {
+  display: block;
+  position: relative;
+}
+
+/* TODO: Fix icon alignment */
+.language-icon {
+  display: block;
+  position: relative;
+  width: 33px;
+  height: 23px;
+}
+
 /* ASIDE - Language Container */
 /* TODO:
 - Fix alignment between columns */
-.language-container {
+.language-column-wrapper {
   display: flex;
   position: relative;
+  /* justify-content: space-around; */
 }
 
 .column-1,
