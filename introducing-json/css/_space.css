@@ -158,6 +158,15 @@ See '_color.css' for following effects
 .language-container {
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
+  margin-bottom: var(--space-02);
+}
+
+.language-icon-wrapper {
+  margin-bottom: var(--space-quarter);
+}
+
+footer {
+  margin-bottom: var(--space-01);
 }
 
  /* S */
