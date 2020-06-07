@@ -115,7 +115,7 @@ aside h2 {
 /* Theme: Top / Bottom borer for language container */
 .language-container {
   border-top: 1px solid #B2B2B2;
-  border-top: 1px solid #B2B2B2;
+  border-bottom: 1px solid #B2B2B2;
 }
 
 footer p {
