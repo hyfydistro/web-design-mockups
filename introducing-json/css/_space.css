@@ -1,15 +1,17 @@
 /* spatial system stylesheet */
 /* For Modern Browsers; Support IE?? and above - Created in 2020 */
-/* TODO:
+/* || What this covers (mostly):
+
 - margins
 - paddings
+- L / R outer margins
  */
-
 :root {
   /* Base Value */
-  --space-base-size: 1rem; /* e.g. 16px */
-  --space-scale-ratio: 1.5; /* e.g. modular scale */
-
+  --space-base-size: 1rem;
+  /* e.g. 16px */
+  --space-scale-ratio: 1.5;
+  /* e.g. modular scale */
   /* space scale */
   --space-quarter: calc(1rem / (var(--space-scale-ratio) * var(--space-scale-ratio)));
   --space-half: calc(1rem / var(--space-scale-ratio));
@@ -19,11 +21,13 @@
   --space-03: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
   --space-04: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
   --space-05: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
-
-
 }
 
-/* General Layout */
+/* || General Layout
+- texts (h1-h4; p)
+- header
+- Images (img; icons)
+*/
 h1 {
   margin-top: var(--space-01);
   margin-bottom: var(--space-02);
@@ -39,35 +43,9 @@ p {
   margin-bottom: var(--space-01);
 }
 
-main {
-  /* TODO: What to do with collision aside?
-  - Put it in Main aswell? */
-  /* position: absolute; */
-  /* margin-top: calc(59px + var(--space-01)); */
-  margin-top: calc(70px + var(--space-01));
-}
-
 header {
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
-}
-
-/* Mobile L / R margins presets (1) */
-.preset-margins {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-/* Mobile L / R margins presets (2) */
-.logo {
-  margin-left: 16px;
-}
-
-/* Mobile L / R margins presets (3) */
-/* Hamburger Menu - Hacks*/
-/* NB: Giving header  L / R margins results to something funny. i.e. this hacks (until further ado!) */
-button[aria-controls="menu"] {
-  margin-right: 16px;
 }
 
 img.figures {
@@ -75,9 +53,11 @@ img.figures {
   padding-bottom: var(--space-02);
 }
 
-/* Navigation bar */
-
-/* UI Components */
+/* || Navigation bar
+- UI Components
+- Modules
+*/
+/* ===== UI Components */
 .logo-icon {
   margin-right: var(--space-half);
 }
@@ -100,61 +80,54 @@ See '_color.css' for following effects
 - hover
 - active
  */
-
+/* ===== Modules */
 .highlight-box {
   margin-top: var(--space-01);
   margin-bottom: var(--space-01);
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .highlight-box ul li:first-child {
   margin-bottom: var(--space-01);
 }
 
-/*
-- hamburger menu
-- list items
- */
+/* ASIDE - featured */
+aside.featured {
+  /* Margin Collapse with h2 above */
+  margin-top: var(--space-01);
+}
 
- /* ASIDE - featured */
- aside.featured {
-   /* Margin Collapse with h2 above */
-   margin-top: var(--space-01);
- }
+aside.featured h2 {
+  padding-bottom: var(--space-01);
+}
 
- aside.featured h2 {
-   padding-bottom: var(--space-01);
- }
+.cards {
+  position: relative;
+  display: block;
+  margin-top: var(--space-02);
+  margin-bottom: var(--space-02);
+  /* Center components */
+  margin-left: auto;
+  margin-right: auto;
+}
 
- .cards {
-   position: relative;
-   display: block;
-   margin-top: var(--space-02);
-   margin-bottom: var(--space-02);
-   /* Center components */
-   margin-left: auto;
-   margin-right: auto;
- }
+.tags {
+  margin-top: var(--space-half);
+  margin-left: var(--space-half);
+  padding: var(--space-half);
+}
 
- .tags {
-   margin-top: var(--space-half);
-   margin-left: var(--space-half);
-   padding: var(--space-half);
- }
+.cards__text {
+  padding-left: 21px;
+  margin-top: var(--space-01);
+}
 
- .cards__text {
-   padding-left: 21px;
-   margin-top: var(--space-01);
- }
+.cards__text h3 {
+  margin-bottom: var(--space-01);
+}
 
-  .cards__text h3 {
-    margin-bottom: var(--space-01);
-  }
-
-  /* ASIDE - Language Container */
+/* ASIDE - Language Container */
 .language-container {
   padding-top: var(--space-01);
   padding-bottom: var(--space-01);
@@ -165,57 +138,56 @@ See '_color.css' for following effects
   margin-bottom: var(--space-quarter);
 }
 
+/* FOOTER */
 footer {
   margin-bottom: var(--space-01);
 }
 
- /* S */
- @media all and (max-width: 600px) {
-   main,
-   /* header,
-   p,
-   h1,
-   h2, */
-   /* aside, */
-   /* .highlight-box, */
-   footer {
-     /* margin-left: 16px;
-     margin-right: 16px; */
-   }
+/* S */
+@media all and (max-width: 600px) {
 
-   p,
-   .highlight-box,
-   .language-wrapper {
-     /* width: 288px; */
-   }
+  /* Mobile L / R margins presets (1) */
+  .preset-margins {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 
-   /* Cards */
-   .cards {
-     /* Height x width */
+  /* Mobile L / R margins presets (2) */
+  .logo {
+    margin-left: 16px;
+  }
 
-   }
+  /* Mobile L / R margins presets (3) */
+  /* Hamburger Menu - Hacks*/
+  /* NB: Giving header  L / R margins results to something funny. i.e. this hacks (until further ado!) */
+  button[aria-controls="menu"] {
+    margin-right: 16px;
+  }
 
-   /* .language-wrapper {
-     width: auto;
-   } */
- }
+  main {
+    /* TODO: What to do with collision aside?
+     - Put it in Main aswell? */
+    /* position: absolute; */
+    /* margin-top: calc(59px + var(--space-01)); */
+    margin-top: calc(70px + var(--space-01));
+  }
 
- /* M */
- @media all and (max-width: 1024px) {
+  .highlight-box {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 
-
-   .highlight-box {
-     /* padding: var(--space-01) 16px; */
-   }
- }
+/* M */
+@media all and (max-width: 1024px) {}
 
 /* L */
- @media all and (min-width: 1024px) {
-   header,
-   main,
-   aside,
-   footer {
-     width: 960px;
-   }
+@media all and (min-width: 1024px) {
 
- }
+  header,
+  main,
+  aside,
+  footer {
+    width: 960px;
+  }
+}
