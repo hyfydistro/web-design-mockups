@@ -1,56 +1,64 @@
 /* Color Stylesheet */
 /* For Modern Browsers - Created in 2020 */
-/*
-INCLUDES:
+/* || INCLUDES:
 - Color Variation
   - Primary
   - Text color
-- UI Component... */
+- UI Component...
+*/
 
 :root {
-  --primary-color: red;
+  --primary-color: #2987FF;
 
   /* Primary Color Variation */
   --primary-color-05: #E5F1FF;
-  --primary-color-01: #CCE2FF; /* In use */
+  --primary-color-10: #CCE2FF; /* In use */
   --primary-color-02: #99C6FF;
   --primary-color-03: #66A9FF;
-  --primary-color-04: #2987FF; /* In use */
+  --primary-color-40: #2987FF; /* In use */
   --primary-color-05: #0070FF;
-  --primary-color-06: #005ACC;
-  --primary-color-07: #004399; /* In use */
-  --primary-color-08: #002D66; /* In semi-use */
-  --primary-color-09: #001633;
+  --primary-color-60: #005ACC;
+  --primary-color-70: #004399; /* In use */
+  --primary-color-80: #002D66; /* In semi-use */
+  --primary-color-90: #001633;
 
   /* Text Color */
   --color-text-05: #F2F2F2;
   --color-text-10: #E5E5E5;
   --color-text-20: #CCCCCC;
   --color-text-30: #B2B2B2;
-  --color-text-40: #999999; /* In use */
-  --color-text-50: #808080; /* In use */
-  --color-text-60: #666666;
+  --color-text-40: #999999; /* In use - REJECTED?  A11y Concerns */
+  --color-text-50: #808080; /* In use - REJECTED?  A11y Concerns */
+  --color-text-60: #666666; /* In use */
   --color-text-70: #4D4D4D; /* In use */
   --color-text-80: #1A1A1A; /* In use */
   --color-text-90: #000000;
-  /* link color */
-  --color-text-link: #004399;
-  --color-text-link-active: #002D66;
-  /* On UI components */
-  --color-module-background: xxx;
-  --color-on-menu-hover: xxx;
-
+  /* || link color
+  - text link color: --primary-color-70
+  - text link color ACTIVE: --primary-color-80
+  */
+  /* || On UI components
+  - module bg color
+  - on-menu hover color
+  */
 }
 
 /* Logo Text */
 .blue-colored {
-  color: var(--primary-color-04);
+  color: var(--primary-color-40);
 }
 
 header {
   background-color: #fff;
 }
 
+.logo a:focus {
+  border: 2px solid var(--primary-color-40);
+}
+
+nav button:focus {
+  border: 2px solid var(--primary-color-40);
+}
 /* HEADER: menu */
 .link {
   /* Default text color */
@@ -59,11 +67,25 @@ header {
 
 #link-pdf,
 a[target="_blank"] {
-  color: var(--primary-color-07);
+  color: var(--primary-color-70);
 }
 
+/* TODO: ADD :hover for Desktop Media Query
+- #link-pdf
+- .link
+*/
+#link-pdf:hover {
+
+}
+
+#link-pdf,
 a[target="_blank"]:visited {
-  color: var(--color-text-link-active);
+  color: var(--primary-color-80);
+}
+
+/* TODO: ENABLE :focus on #link-pdf with desktop Media Query */
+a[target="_blank"]:focus {
+  outline-color: var(--primary-color-40);
 }
 
 /* ===== STATES */
@@ -74,21 +96,23 @@ a[target="_blank"]:visited {
 }
 
 /* Menu */
+/* TODO: Move to Mobile Media Query */
 .link:hover {
-  background-color: var(--primary-color-01);
-  color: var(--color-text-link-active);
+  background-color: var(--primary-color-10);
+  color: var(--primary-color-80);
 }
 
 .link:focus {
-  background-color: var(--primary-color-01);
-  color: var(--color-text-link-active);
+  background-color: var(--primary-color-10);
+  color: var(--primary-color-80);
   outline: none;
 }
 
 .link:active,
 #link-pdf:active {
-  /* color: var(--color-text-link-active); */
-  color: white;
+  /* color: var(--primary-color-80); */
+  color: #fff;
+  /* color: var(--primary-color-10); */
 }
 
 /* When visited, a highlight stays,
@@ -104,26 +128,41 @@ a.link.active {
 }
 
 .highlight-box {
-  background-color: var(--primary-color-01);
+  background-color: var(--primary-color-10);
 }
 
 /* Theme: Bottom borer for aside h2 */
 aside h2 {
-  border-bottom: 1px solid #B2B2B2;
+  border-bottom: 1px solid var(--color-text-30);
 }
 
 /* Theme: Top / Bottom borer for language container */
 .language-container {
-  border-top: 1px solid #B2B2B2;
-  border-bottom: 1px solid #B2B2B2;
+  border-top: 1px solid var(--color-text-30);
+  border-bottom: 1px solid var(--color-text-30);
+}
+
+.column-1 a,
+.column-2 a {
+  color: var(--primary-color-70);
+}
+
+.column-1 a:visited,
+.column-2 a:visited {
+  color: var(--primary-color-80);
+}
+
+.column-1 a:focus,
+.column-2 a:focus {
+  outline-color: var(--primary-color-40);
 }
 
 footer p {
-  color: var(--color-text-50);
+  color: var(--color-text-60);
 }
 
-/* ===== Media Queries ===== */
-/* S - Mobile */
+/* || Media Queries */
+/* S */
 @media all and (min-width: 600px) {
   /* Menu */
   /* States */
