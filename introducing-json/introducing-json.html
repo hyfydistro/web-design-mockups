@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2987FF">
   <title>Introducing JSON</title>
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/_typography.css">
@@ -11,20 +12,17 @@
   <link rel="stylesheet" href="css/_color.css">
   <link rel="stylesheet" href="css/main.css">
   <script type="text/javascript" src="script.js" defer></script>
-  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 </head>
 
 <body>
-  <header>
-    <!-- Title -->
-    <div class="logo">
+  <header role="banner">
+    <div class="logo" aria-label="logo icon">
       <a class="logo-link" href="introducing-json.html">
-        <img class="logo-icon" src="img/logo-icon-sml-36wx36h.png" alt="json logo icon" sizes="">
+        <img class="logo-icon" src="img/logo-icon-sml-36wx36h.png" alt="json logo icon">
         <h2 class="logo-text"><span class="blue-colored">{</span>JSON<span class="blue-colored">}</span></h2>
       </a>
     </div>
     <nav class="icon-container" role="navigation">
-      <!-- TODO: To add aria-label="open the menu"  or not??? -->
       <button aria-expanded="true" aria-controls="menu">
         <div aria-hidden="true" class="hamburger"></div>
       </button>
@@ -32,7 +30,7 @@
         - Let menu be open, and close it with JS
         - header should position relative and not transfixed -->
       <ul id="menu" role="menu">
-        <li><a role="menuitem" class="link active" href="#">Introducing JSON</a></li>
+        <li><a role="menuitem" class="link active" href="#" tabindex="-1">Introducing JSON</a></li>
         <li><a role="menuitem" class="link" href="affiliated-technologies.html">Affiliated Technologies</a></li>
         <li><a role="menuitem" class="link" href="grammar.html">Grammar</a></li>
         <!-- Add PDF to createObjectURL? -->
@@ -43,7 +41,7 @@
   </header> <!-- End of header -->
 
   <main>
-    <article role="article">
+    <article>
       <h1 class="preset-margins">Introducing JSON</h1>
 
       <p class="preset-margins"><abbr title="JavaScript Object Notation">JSON</abbr> (JavaScript Object Notation) is a lightweight data-interchange
@@ -68,90 +66,72 @@
         </ul>
       </div>
 
-      <img src="img/object-sml-600w.png"
-           class="figures"
-           srcset="img/object-sml-600w.png 600w,
+      <img src="img/object-sml-600w.png" class="figures" srcset="img/object-sml-600w.png 600w,
                   img/object-med-1024w.png 1024w,
-                  img/object-lge-1280w.png 1280w"
-           sizes="(max-width: 600px) 320px,
+                  img/object-lge-1280w.png 1280w" sizes="(max-width: 600px) 320px,
                   (max-width: 1024px) 600px,
                   (min-width: 1025px) 960px,
                   100vw"
-           alt="object graph">
+        alt="object graph">
 
       <p class="preset-margins">An <strong>array</strong> is an ordered collection of values. An array begins
         with <code>[</code><sub>left bracket</sub> and ends
         with <code>]</code><sub>right bracket</sub>. Values are separated
         by <code>,</code><sub>comma</sub>.</p>
 
-        <img class="figures"
-            srcset="img/array-sml-600w.png 600w,
+      <img class="figures" srcset="img/array-sml-600w.png 600w,
                     img/array-med-1024w.png 1024w,
-                    img/array-lge-1280w.png 1280w"
-             sizes="(max-width: 600px) 320px,
+                    img/array-lge-1280w.png 1280w" sizes="(max-width: 600px) 320px,
                     (max-width: 1024px) 600px,
                     (min-width: 1025px) 960px,
                     100vw"
-             src="img/array-lge-1280w.png"
-             alt="array graph">
+        src="img/array-lge-1280w.png" alt="array graph">
 
-        <p class="preset-margins">A <strong>value</strong> can be a <strong>string</strong> in double quotes, or a <strong>number</strong>,
-          or <code>true</code> or <code>false</code> or <code>null</code>, or an <strong>object</strong> or
-          an <strong>array</strong>. These structures can be nested.</p>
+      <p class="preset-margins">A <strong>value</strong> can be a <strong>string</strong> in double quotes, or a <strong>number</strong>,
+        or <code>true</code> or <code>false</code> or <code>null</code>, or an <strong>object</strong> or
+        an <strong>array</strong>. These structures can be nested.</p>
 
-          <img class="figures"
-              srcset="img/value-sml-600w.png 600w,
+      <img class="figures" srcset="img/value-sml-600w.png 600w,
                       img/value-med-1024w.png 1024w,
-                      img/value-lge-1280w.png 1280w"
-               sizes="(max-width: 600px) 320px,
+                      img/value-lge-1280w.png 1280w" sizes="(max-width: 600px) 320px,
                       (max-width: 1024px) 600px,
                       (min-width: 1025px) 960px,
                       100vw"
-               src="img/value-lge-1280w.png"
-               alt="value graph">
+        src="img/value-lge-1280w.png" alt="value graph">
 
-          <p class="preset-margins">A <strong>string</strong> is a sequence of zero or more Unicode characters, wrapped
-            in double quotes, using backslash escapes. A character is represented as a
-            single character string. A string is very much like a C or Java string.</p>
+      <p class="preset-margins">A <strong>string</strong> is a sequence of zero or more Unicode characters, wrapped
+        in double quotes, using backslash escapes. A character is represented as a
+        single character string. A string is very much like a C or Java string.</p>
 
-            <img class="figures"
-                srcset="img/string-sml-600w.png 600w,
+      <img class="figures" srcset="img/string-sml-600w.png 600w,
                         img/string-med-1024w.png 1024w,
-                        img/string-lge-1280w.png 1280w"
-                 sizes="(max-width: 600px) 320px,
+                        img/string-lge-1280w.png 1280w" sizes="(max-width: 600px) 320px,
                         (max-width: 1024px) 600px,
                         (min-width: 1025px) 960px,
                         100vw"
-                 src="img/string-lge-1280w.png"
-                 alt="string graph">
+        src="img/string-lge-1280w.png" alt="string graph">
 
-            <p class="preset-margins">A <strong>number</strong> is very much like a C or Java number, except that the octal
-              and hexadecimal formats are not used.</p>
+      <p class="preset-margins">A <strong>number</strong> is very much like a C or Java number, except that the octal
+        and hexadecimal formats are not used.</p>
 
-              <img class="figures"
-                  srcset="img/number-sml-600w.png 600w,
+      <img class="figures" srcset="img/number-sml-600w.png 600w,
                           img/number-med-1024w.png 1024w,
-                          img/number-lge-1280w.png 1280w"
-                   sizes="(max-width: 600px) 320px,
+                          img/number-lge-1280w.png 1280w" sizes="(max-width: 600px) 320px,
                           (max-width: 1024px) 600px,
                           (min-width: 1025px) 960px,
                           100vw"
-                   src="img/number-lge-1280w.png"
-                   alt="number graph">
+        src="img/number-lge-1280w.png" alt="number graph">
 
-              <p class="preset-margins">Whitespace can be inserted between any pair of tokens. Excepting
-                a few encoding details, that completely describes the language.</p>
+      <p class="preset-margins">Whitespace can be inserted between any pair of tokens. Excepting
+        a few encoding details, that completely describes the language.</p>
 
-                <img class="figures"
-                    srcset="img/whitespace-sml-600w.png 600w,
+      <img class="figures" srcset="img/whitespace-sml-600w.png 600w,
                             img/whitespace-med-1024w.png 1024w,
-                            img/whitespace-lge-1280w.png 1280w"
-                     sizes="(max-width: 600px) 320px,
+                            img/whitespace-lge-1280w.png 1280w" sizes="(max-width: 600px) 320px,
                             (max-width: 1024px) 600px,
                             (min-width: 1025px) 960px,
                             100vw"
-                     src="img/whitespace-lge-1280w.png"
-                     alt="whitespace graph">
+        src="img/whitespace-lge-1280w.png" alt="whitespace graph">
 
     </article> <!-- End of article -->
   </main> <!-- End of main -->
@@ -194,56 +174,51 @@
         <p>A book written by Douglas Crockford.</p>
       </div>
     </section>
-  </aside>
+  </aside> <!-- End of aside .featured -->
 
-  <!-- TODO: Turn it to a list for Accessibility!
-- There' s a problem with the quality of icon image
-- aria-hidden
-- proper alignment
--->
   <aside class="language-container preset-margins">
     <div class="language-icon-wrapper">
-    <img class="language-icon" src="img/language-icon3-150w.png" alt="language icon" aria-hidden="true">
-      <!-- Add aria-hidden -->
+      <img class="language-icon" src="img/language-icon3-150w.png" alt="language icon" aria-hidden="true">
     </div>
-    <div class="language-column-wrapper">
-    <div class="column-1">
-      <a href="hsubps://www.JSON.org/json-ar.html">العربية</a>
-      <a href="https://www.JSON.org/json-bg.html">Български</a>
-      <a href="https://www.JSON.org/json-zh.html">中文</a>
-      <a href="https://www.JSON.org/json-cz.html">Český</a>
-      <a href="https://www.JSON.org/json-da.html">Dansk</a>
-      <a href="https://www.JSON.org/json-nl.html">Nederlands</a>
-      <a href="https://www.JSON.org/json-en.html">English</a>
-      <a href="https://www.JSON.org/json-eo.html">Esperanto</a>
-      <a href="https://www.JSON.org/json-fr.html">Français</a>
-      <a href="https://www.JSON.org/json-de.html">Deutsch</a>
-      <a href="https://www.JSON.org/json-el.html">Ελληνικά</a>
-      <a href="https://www.JSON.org/json-he.html">עברית</a>
-      <a href="https://www.JSON.org/json-hu.html">Magyar</a>
-      <a href="https://www.JSON.org/json-id.html">Indonesia</a>
-    </div>
-    <div class="column-2">
-      <a href="https://www.JSON.org/json-it.html">Italiano</a>
-      <a href="https://www.JSON.org/json-ja.html">日本</a>
-      <a href="https://www.JSON.org/json-ko.html">한국어</a>
-      <a href="https://www.JSON.org/json-fa.html">فارسی</a>
-      <a href="https://www.JSON.org/json-pl.html">Polski</a>
-      <a href="https://www.JSON.org/json-pt.html">Português</a>
-      <a href="https://www.JSON.org/json-ro.html">Română</a>
-      <a href="https://www.JSON.org/json-ru.html">Русский</a>
-      <a href="https://www.JSON.org/json-sr.html">Српско-хрватски</a>
-      <a href="https://www.JSON.org/json-sl.html">Slovenščina</a>
-      <a href="https://www.JSON.org/json-es.html">Español</a>
-      <a href="https://www.JSON.org/json-sv.html">Svenska</a>
-      <a href="https://www.JSON.org/json-tr.html">Türkçe</a>
-      <a href="https://www.JSON.org/json-vi.html">Tiếng Việt</a>
-    </div>
-  </div>  <!-- End of language-column-wrapper -->
+    <div class="language-column-wrapper" aria-label="language lists">
+      <div class="column-1">
+        <a href="hsubps://www.JSON.org/json-ar.html">العربية</a>
+        <a href="https://www.JSON.org/json-bg.html">Български</a>
+        <a href="https://www.JSON.org/json-zh.html">中文</a>
+        <a href="https://www.JSON.org/json-cz.html">Český</a>
+        <a href="https://www.JSON.org/json-da.html">Dansk</a>
+        <a href="https://www.JSON.org/json-nl.html">Nederlands</a>
+        <a href="https://www.JSON.org/json-en.html">English</a>
+        <a href="https://www.JSON.org/json-eo.html">Esperanto</a>
+        <a href="https://www.JSON.org/json-fr.html">Français</a>
+        <a href="https://www.JSON.org/json-de.html">Deutsch</a>
+        <a href="https://www.JSON.org/json-el.html">Ελληνικά</a>
+        <a href="https://www.JSON.org/json-he.html">עברית</a>
+        <a href="https://www.JSON.org/json-hu.html">Magyar</a>
+        <a href="https://www.JSON.org/json-id.html">Indonesia</a>
+      </div>
+      <div class="column-2">
+        <a href="https://www.JSON.org/json-it.html">Italiano</a>
+        <a href="https://www.JSON.org/json-ja.html">日本</a>
+        <a href="https://www.JSON.org/json-ko.html">한국어</a>
+        <a href="https://www.JSON.org/json-fa.html">فارسی</a>
+        <a href="https://www.JSON.org/json-pl.html">Polski</a>
+        <a href="https://www.JSON.org/json-pt.html">Português</a>
+        <a href="https://www.JSON.org/json-ro.html">Română</a>
+        <a href="https://www.JSON.org/json-ru.html">Русский</a>
+        <a href="https://www.JSON.org/json-sr.html">Српско-хрватски</a>
+        <a href="https://www.JSON.org/json-sl.html">Slovenščina</a>
+        <a href="https://www.JSON.org/json-es.html">Español</a>
+        <a href="https://www.JSON.org/json-sv.html">Svenska</a>
+        <a href="https://www.JSON.org/json-tr.html">Türkçe</a>
+        <a href="https://www.JSON.org/json-vi.html">Tiếng Việt</a>
+      </div>
+    </div> <!-- End of language-column-wrapper -->
   </aside>
 
   <footer class="preset-margins">
     <!-- Lint to License page, add hover/ Focus / ACtive effect -->
+    <!-- Add better contrast color -->
     <p><a href="LICENSE.MD">Terms of Use</a> * Prototyped by Caroline Rozali @hyfyooie</p>
   </footer> <!-- End of footer -->
 </body>
