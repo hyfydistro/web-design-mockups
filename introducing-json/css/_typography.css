@@ -1,5 +1,14 @@
 /* Typography stylesheet */
 /* For Modern Browsers - Created in 2020 */
+/* || INCLUDES
+- font face
+  - default
+  - code syntax
+- font sizes
+  - moodular scale
+- line-height (NOT DETERMINED)
+- font weight (NOT DETERMINED)
+ */
 
 /* TODO:
 - Breakpoints
@@ -10,9 +19,8 @@
       a {...}
       a:hover, a:visited, a:focus {...}
       a:active {...}
-  - Also, ALTHOUGHT according to the UI mockup you made the abbreviation 'JSON' bold... DO NOT do that here - REJECTED!
     */
-/* TYPOGRAPHY */
+
 :root {
   /* font face */
   --font-face: 'Bahnschrift', sans-serif, serif;
@@ -20,7 +28,7 @@
 
   /* Set base value */
   --text-base-size: 1rem; /* e.g. 16px */
-  --text-scale-ratio: 1.2; /* e.g. modular scale */
+  --text-scale-ratio: 1.25; /* e.g. modular scale */
 
   /* type scale */
   --text-xs: calc(1rem / (var(--text-scale-ratio) * var(--text-scale-ratio)));
@@ -32,9 +40,11 @@
   --text-xxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
   --text-xxxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
+  /* WIP */
   /* Font Style: boldness */
   --weight: xxx;
 
+  /* WIP */
   /* Space */
   --heading-h1-line-height: 1em;
   --heading-h2-line-height: 1em;
@@ -43,8 +53,13 @@
 
   /* Dark Theme */
   /* Consider Color and Space */
-
 }
+
+/* || Contents
+- html (root)
+- headings (h1-h3)
+- Semantics
+*/
 
 /* Main Typography */
 html {
@@ -98,8 +113,8 @@ a {
 /* 320px - XS */
 /* Note: 320px would be the default root origin,
 where XS is relative to */
-@media all and (max-width: 375px) {
-  html { font-size: 14px; }
+@media all and (min-width: 375px) {
+  html { font-size: 15px; }
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
@@ -111,12 +126,26 @@ where XS is relative to */
 
 /* S */
 @media all and (min-width: 600px) {
-
+  html { font-size: 16px; }
+  h1 { font-size: var(--text-xxl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-md); }
+  p,
+  .date-text,
+  a .link,
+  footer p { font-size: var(--text-sm); }
 }
 
 /* S (2019 popular device-width) */
 @media all and (min-width: 768px) {
-
+  html { font-size: 16px; }
+  h1 { font-size: var(--text-xxl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-md); }
+  p,
+  .date-text,
+  a .link,
+  footer p { font-size: var(--text-sm); }
 }
 
 /* M */
