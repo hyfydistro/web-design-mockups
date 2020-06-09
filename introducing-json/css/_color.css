@@ -23,16 +23,18 @@
   --primary-color-90: #001633;
 
   /* Text Color */
-  --color-text-05: #F2F2F2;
-  --color-text-10: #E5E5E5;
-  --color-text-20: #CCCCCC;
-  --color-text-30: #B2B2B2;
-  --color-text-40: #999999; /* In use - REJECTED?  A11y Concerns */
-  --color-text-50: #808080; /* In use - REJECTED?  A11y Concerns */
-  --color-text-60: #666666; /* In use */
-  --color-text-70: #4D4D4D; /* In use */
-  --color-text-80: #1A1A1A; /* In use */
-  --color-text-90: #000000;
+  --text-color-05: #F2F2F2;
+  --text-color-10: #E5E5E5;
+  --text-color-20: #CCCCCC;
+  --text-color-30: #B2B2B2;
+  --text-color-40: #999999; /* In use - REJECTED?  A11y Concerns */
+  --text-color-50: #808080; /* In use - REJECTED?  A11y Concerns */
+  --text-color-60: #666666; /* In use */
+  --text-color-70: #4D4D4D; /* In use */
+  --text-color-80: #1A1A1A; /* In use */
+  --text-color-90: #000000;
+
+  /* NOTE */
   /* || link color
   - text link color: --primary-color-70
   - text link color ACTIVE: --primary-color-80
@@ -43,11 +45,15 @@
   */
 }
 
-/* Logo Text */
-.blue-colored {
-  color: var(--primary-color-40);
-}
+/* || Contents
+- HEADER
+- MAIN
+- ASIDE - featured
+- ASIDE - Language-container
+- FOOTER
+*/
 
+/* ===== HEADER */
 header {
   background-color: #fff;
 }
@@ -56,13 +62,19 @@ header {
   border: 2px solid var(--primary-color-40);
 }
 
-nav button:focus {
-  border: 2px solid var(--primary-color-40);
+/* Logo Text */
+.blue-colored {
+  color: var(--primary-color-40);
 }
-/* HEADER: menu */
+
+.logo-link:visited {
+  /* Disables default links visited color */
+  color: var(--text-color-80);
+}
+
+/* ===== NAV */
 .link {
-  /* Default text color */
-  color: var(--color-text-80);
+  color: var(--text-color-80);
 }
 
 #link-pdf,
@@ -70,12 +82,13 @@ a[target="_blank"] {
   color: var(--primary-color-70);
 }
 
-/* TODO: ADD :hover for Desktop Media Query
-- #link-pdf
-- .link
-*/
-#link-pdf:hover {
+/* ===== MAIN */
+.date-text {
+  color: var(--text-color-50);
+}
 
+a[target="_blank"]:hover {
+  text-decoration: none;
 }
 
 #link-pdf,
@@ -83,63 +96,20 @@ a[target="_blank"]:visited {
   color: var(--primary-color-80);
 }
 
-/* TODO: ENABLE :focus on #link-pdf with desktop Media Query */
-a[target="_blank"]:focus {
-  outline-color: var(--primary-color-40);
-}
-
-/* ===== STATES */
-/* (Reminder) Order: :hover, :focus, :active */
-/* Logo */
-.logo-link:visited {
-  color: var(--color-text-80);
-}
-
-/* Menu */
-/* TODO: Move to Mobile Media Query */
-.link:hover {
-  background-color: var(--primary-color-10);
-  color: var(--primary-color-80);
-}
-
-.link:focus {
-  background-color: var(--primary-color-10);
-  color: var(--primary-color-80);
-  outline: none;
-}
-
-.link:active,
-#link-pdf:active {
-  /* color: var(--primary-color-80); */
-  color: #fff;
-  /* color: var(--primary-color-10); */
-}
-
-/* When visited, a highlight stays,
-which indicates its current page */
-a.link.active {
-  background-color: var(--color-text-10);
-  color: var(--color-text-80);
-  cursor: default;
-}
-
-.date-text {
-  color: var(--color-text-50);
-}
-
 .highlight-box {
   background-color: var(--primary-color-10);
 }
 
+/* ===== ASIDE */
 /* Theme: Bottom borer for aside h2 */
 aside h2 {
-  border-bottom: 1px solid var(--color-text-30);
+  border-bottom: 1px solid var(--text-color-30);
 }
 
 /* Theme: Top / Bottom borer for language container */
 .language-container {
-  border-top: 1px solid var(--color-text-30);
-  border-bottom: 1px solid var(--color-text-30);
+  border-top: 1px solid var(--text-color-30);
+  border-bottom: 1px solid var(--text-color-30);
 }
 
 .column-1 a,
@@ -157,30 +127,86 @@ aside h2 {
   outline-color: var(--primary-color-40);
 }
 
+/* ===== FOOTER */
+
 footer p {
-  color: var(--color-text-60);
+  color: var(--text-color-60);
+}
+
+footer a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: var(--text-color-60);
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer a:focus {
+  outline-color: var(--primary-color-40);
 }
 
 /* || Media Queries */
-/* S */
-@media all and (min-width: 600px) {
-  /* Menu */
-  /* States */
+/* S - M */
+/* MOBILE, TABLET */
+@media all and (max-width: 960px) {
+  /* HEADER - NAV */
+  nav button:focus {
+    border: 2px solid var(--primary-color-40);
+  }
 
-  /* Cards */
-  .cards {
-    /* Height x width */
+  .link:hover {
+    background-color: var(--primary-color-10);
+    color: var(--primary-color-80);
+  }
+
+  .link:focus {
+    background-color: var(--primary-color-10);
+    color: var(--primary-color-80);
+    outline: none;
+  }
+
+  .link:active,
+  #link-pdf:active {
+    color: #fff;
+  }
+
+  /* When visited, a highlight stays,
+  which indicates its current page */
+  a.link.active {
+    background-color: var(--text-color-10);
+    color: var(--text-color-80);
   }
 }
 
 /* M */
-@media all and (max-width: 1024px) {}
+@media all and (max-width: 1024px) {
+
+}
 
 /* L */
 @media all and (min-width: 1024px) {
+  /* TODO: ADD :hover for Desktop Media Query
+  - #link-pdf
+  - .link
+  */
+  #link-pdf:hover {
+    /* Suggestions:
+    - Add underline
+    - Cahnge color and bg color too??? */
+  }
 
-  header,
-  main,
-  aside,
-  footer {}
+  .link:hover {
+
+  }
+
+  /* TODO: ENABLE :focus on #link-pdf with desktop Media Query */
+  a[target="_blank"]:focus {
+    outline-color: var(--primary-color-40);
+  }
+
 }
