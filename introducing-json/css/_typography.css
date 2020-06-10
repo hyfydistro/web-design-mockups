@@ -27,7 +27,7 @@
   --font-code-syntax: Courier, monospace, sans-serif;
 
   /* Set base value */
-  --text-base-size: 1rem; /* e.g. 16px */
+  --base-font-size: 14px;
   --text-scale-ratio: 1.25; /* e.g. modular scale */
 
   /* type scale */
@@ -42,7 +42,7 @@
 
   /* WIP */
   /* Font Style: boldness */
-  --weight: xxx;
+  --weight: 1rem;
 
   /* WIP */
   /* Space */
@@ -58,12 +58,12 @@
 /* || Contents
 - html (root)
 - headings (h1-h3)
-- Semantics
+- Miscellaneous
 */
 
 /* Main Typography */
 html {
-  font-size: 14px;
+  font-size: var(--base-font-size);
   font-family: var(--font-face);
 }
 
@@ -87,7 +87,7 @@ p,
 .date-text,
 a .link,
 footer p {
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -118,10 +118,14 @@ where XS is relative to */
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
-  p,
+  /* p,
   .date-text,
   a .link,
-  footer p { font-size: var(--text-sm); }
+  .highlight-box ul li,
+  footer p { font-size: var(--text-sm); } */
+  /* main p,
+  .highlight-box ul li,
+  .highlight-box { width: 53ch; } */
 }
 
 /* S */
@@ -130,28 +134,48 @@ where XS is relative to */
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
-  p,
+  /* p,
   .date-text,
   a .link,
-  footer p { font-size: var(--text-sm); }
+  footer p { font-size: var(--text-sm); } */
+  /* main p,
+  .highlight-box ul li,
+  .highlight-box { width: 70ch; } */
 }
 
 /* S (2019 popular device-width) */
 @media all and (min-width: 768px) {
-  html { font-size: 16px; }
+  html { font-size: 20px; }
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
-  p,
+  /* p,
   .date-text,
   a .link,
-  footer p { font-size: var(--text-sm); }
+  footer p { font-size: var(--text-sm); } */
+  /* main p,
+  .highlight-box ul li,
+  .highlight-box { width: 70ch; } */
 }
 
 /* M */
 @media all and (min-width: 1024px) {
-
+    html { font-size: 20px; }
+    h1 { font-size: var(--text-xxl); }
+    h2 { font-size: var(--text-xl); }
+    h3 { font-size: var(--text-md); }
+    /* p,
+    .date-text,
+    a .link,
+    footer p { font-size: var(--text-sm); } */
+    /* main p,
+    .highlight-box ul li,
+    .highlight-box { width: 70ch; } */
+  }
 }
+
+/* WARNING */
+/* OKAY. STOP THE FONT SIzE INCREASE HERE. ANYMORE IS TOO HUGE! */
 
 /* M (2019 popular device-width) */
 @media all and (min-width: 1366px) {

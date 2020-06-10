@@ -192,7 +192,32 @@ nav button[aria-controls="menu"].open {
 }
 
 /* M */
-@media all and (max-width: 1024px) {}
+@media all and (min-width: 601px) and (max-width: 960px) {
+  /* Mobile L / R margins presets (1) */
+  .preset-margins {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  /* Mobile L / R margins presets (2) */
+  .logo {
+    margin-left: 32px;
+  }
+
+  /* Mobile L / R margins presets (3) */
+  button[aria-controls="menu"] {
+    margin-right: 32px;
+  }
+
+  main {
+    margin-top: calc(96px + var(--space-01));
+  }
+
+  .highlight-box {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 
 /* L */
 @media all and (min-width: 1024px) {
