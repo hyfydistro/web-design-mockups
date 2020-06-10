@@ -133,11 +133,6 @@ footer p {
   color: var(--text-color-60);
 }
 
-footer a {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 footer a:visited {
   color: var(--text-color-60);
 }
@@ -184,7 +179,7 @@ footer a:focus {
 }
 
 /* M */
-@media all and (max-width: 1024px) {
+@media all and (min-width: 601px) and (max-width: 1024px) {
 
 }
 
