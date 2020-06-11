@@ -82,6 +82,10 @@ a[target="_blank"] {
   color: var(--primary-color-70);
 }
 
+.passage-links:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
 /* ===== MAIN */
 .date-text {
   color: var(--text-color-50);
@@ -106,6 +110,14 @@ aside h2 {
   border-bottom: 1px solid var(--text-color-30);
 }
 
+.cards-wrapper:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
+.cards-wrapper {
+  color: var(--text-color-80);
+}
+
 /* Theme: Top / Bottom borer for language container */
 .language-container {
   border-top: 1px solid var(--text-color-30);
@@ -124,7 +136,7 @@ aside h2 {
 
 .column-1 a:focus,
 .column-2 a:focus {
-  outline-color: var(--primary-color-40);
+  outline: 2px solid var(--primary-color-40);
 }
 
 /* ===== FOOTER */
@@ -142,7 +154,7 @@ footer a:hover {
 }
 
 footer a:focus {
-  outline-color: var(--primary-color-40);
+  outline: 2px solid var(--primary-color-40);
 }
 
 /* || Media Queries */
