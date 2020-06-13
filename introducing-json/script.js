@@ -1,83 +1,117 @@
+// document.documentElement.clientWidth
+
+// If window's width is greater than 960px, apply the following
+//  // TODO: WIP
+// window.addEventListener('resize', mobileToTabletEvents);
+//
+// const mq = window.matchMedia("(max-width: 960px)");
+//
+// let width = document.body.clientWidth;
+//
+// function mobileToTabletEvents() {
+//   // if (mq.matches) {
+//   if (width < 960) {
+//     // if (window.screen.availWidth < 960) {
+//     // if (window.screen.width < 960) {
+//
+//
+//
+//   }
+// }
+
+// Defined Varibales
+// Menu components
 let navBtn = document.querySelector('nav button');
 let menuList = document.querySelector('#menu');
 let nav = document.querySelector('.icon-container');
 let hamburger = document.querySelector('.hamburger');
-
-  // Default Settings
-
-  document.addEventListener('DOMContentLoaded', function(event) {
-    menuList.setAttribute('aria-hidden', true);
-    menuList.style.display = 'none';
-    navBtn.setAttribute('aria-expanded', false);
-  });
-
-    // Accessible controls
-
-// let menuModule = document.createElement('div');
-// menuModule.className = 'overlay';
-// menuModule.style.display = 'none'
-// document.body.appendChild(menuModule);
-
+// Overlay
 let menuModule = document.querySelector('.overlay');
+// Signify menu is close
+let menuBoolean = false;
+// Icon container
+let icon = document.querySelector('.icon-container');
+// (Related to scroll event listener)
+let header = document.querySelector('header');
+// (WAI-ARIA target)
+let lastListItem = menuList.querySelector('#link-pdf');
 
-    navBtn.addEventListener('click', function() {
-        let expanded = this.getAttribute('aria-expanded') === 'true' || false;
-        this.setAttribute('aria-expanded', !expanded);
-        let ariaHidden = menuList.getAttribute('aria-hidden') === 'true' || false;
-        menuList.setAttribute('aria-hidden', !ariaHidden);
 
-        // Display and hides lists on click event listerner
-        if (menuList.style.display == 'none') {
-          menuList.style.display = 'block';
-          nav.classList.toggle('open');
-          navBtn.classList.toggle('open');
-          menuList.classList.toggle('open');
-          // hamburger.classList.toggle('open');
-          menuModule.style.display = 'block';
-          // nav.classList.toggle('menu-module');
+// Default Settings / Resets / Progressive Enhancement
 
-        } else if (menuList.style.display == 'block') {
-          menuList.style.display = 'none';
-          nav.classList.toggle('open');
-          navBtn.classList.toggle('open');
-          menuList.classList.toggle('open');
-          // hamburger.classList.toggle('open');
-          menuModule.style.display = 'none';
-          // nav.classList.toggle('menu-module');
-        }
-    });
-
-menuModule.addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function(event) {
+  menuList.setAttribute('aria-hidden', true);
   menuList.style.display = 'none';
+  navBtn.setAttribute('aria-expanded', false);
+});
+
+
+// Accessible controls
+navBtn.addEventListener('click', function() {
+  let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+  this.setAttribute('aria-expanded', !expanded);
+  let ariaHidden = menuList.getAttribute('aria-hidden') === 'true' || false;
+  menuList.setAttribute('aria-hidden', !ariaHidden);
+
+  // Display and hides lists on click event listerner
+  menuStylesToggle();
+});
+
+function menuStylesToggle() {
+  if (menuList.style.display == 'none') {
+    openMenu();
+  } else if (menuList.style.display == 'block') {
+    closeMenu();
+  }
+}
+
+function openMenu() {
+  menuModule.style.display = 'block';
+  menuList.style.display = 'block';
+  menuList.classList.toggle('open');
   nav.classList.toggle('open');
   navBtn.classList.toggle('open');
-  menuList.classList.toggle('open');
+  menuBoolean = true;
+}
+
+function closeMenu() {
   menuModule.style.display = 'none';
+  menuList.style.display = 'none';
+  menuList.classList.toggle('open');
+  nav.classList.toggle('open');
+  navBtn.classList.toggle('open');
+  menuBoolean = false;
+}
+
+// Assign an 'escape' key to menu when opened in mobile-tablet view.
+window.addEventListener('keydown', escapeMenuBtn);
+
+function escapeMenuBtn(e) {
+  if (e.keyCode === 27 && menuBoolean === true) {
+    closeMenu();
+  }
+}
+
+menuModule.addEventListener('click', function() {
+  closeMenu();
   icon.classList.toggle('active');
 });
-    // 'X' hamburger animations
 
-    let icon = document.querySelector('.icon-container');
+// 'X' hamburger animations
+navBtn.addEventListener("click", function() {
+  icon.classList.toggle('active');
+});
 
-    navBtn.addEventListener("click", function() {
-      icon.classList.toggle('active');
-    });
-
-// Check current menu and
-// give color and disable click or cursor look.
-
-// add event listener,
-// if that comes back with the correct reference (href="#")
-// Give new styles (bg color, and font color; disable click and cursor look)
-// Also, everything should reset when visitng other pages of the sites.
-
-// document.addEventListener();
-
-// TODO: Build a scroll listener.
-// When scroll event happens, add box shadows.
-// If view is back to the top, delete box shadows
-let header = document.querySelector('header');
-
+// Add box shadow when on scroll.
+// If view is back to start, box shadow disappears.
 window.addEventListener('scroll', function addDropShadow() {
   header.classList.toggle('scrolling-active', window.scrollY > 0);
+});
+
+// WAI-ARIA Support Feature
+lastListItem.addEventListener('keydown', function(e) {
+  if (e.keyCode === 9) {
+    // INCIDENTLY goes to the first list item available!
+    navBtn.focus();
+  }
 });
