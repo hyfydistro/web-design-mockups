@@ -1,7 +1,7 @@
 // document.documentElement.clientWidth
-
+//
 // If window's width is greater than 960px, apply the following
-//  // TODO: WIP
+ // TODO: WIP
 // window.addEventListener('resize', mobileToTabletEvents);
 //
 // const mq = window.matchMedia("(max-width: 960px)");
@@ -18,6 +18,24 @@
 //
 //   }
 // }
+
+window.addEventListener('load', checkView);
+
+function checkView() {
+  const mq = window.matchMedia("(max-width: 960px)");
+  // let width = document.body.clientWidth;
+  let width = document.documentElement.clientWidth;
+  console.log(width);
+
+  if (mq.matches) {
+    // TEST
+  // if (width < 960) {
+    console.log("Hello world");
+    console.log(width);
+
+    // Initialise setup
+  }
+}
 
 // Defined Varibales
 // Menu components
@@ -38,8 +56,7 @@ let lastListItem = menuList.querySelector('#link-pdf');
 
 
 // Default Settings / Resets / Progressive Enhancement
-
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
   menuList.setAttribute('aria-hidden', true);
   menuList.style.display = 'none';
   navBtn.setAttribute('aria-expanded', false);
@@ -89,6 +106,7 @@ window.addEventListener('keydown', escapeMenuBtn);
 function escapeMenuBtn(e) {
   if (e.keyCode === 27 && menuBoolean === true) {
     closeMenu();
+    icon.classList.toggle('active');
   }
 }
 
