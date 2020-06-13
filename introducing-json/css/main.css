@@ -409,6 +409,14 @@ footer a {
   .cards__text {
     height: auto;
     width: 100%;
+    white-space: nowrap;
+  }
+
+  /* Prevents text overflow that changes the .cards dimensions.
+  It was either this solution of cur some words at the html file. */
+  .cards__text p {
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 

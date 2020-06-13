@@ -231,28 +231,18 @@ nav button[aria-controls="menu"].open {
     padding-left: 32px;
     padding-right: 32px;
   }
-
-  /* Cards */
-  /* .cards-wrapper:nth-child(-n + 2) {
-    margin-right: var(--space-02);
-  }
-
-  .cards-wrapper:nth-child(n + 3) {
-    margin-left: var(--space-02);
-  } */
-
-  aside.featured .cards-group {
-    column-gap: var(--space-02);
-    /* margin-bottom: var(--space-02); */
-  }
-
 }
 
 @media all and (min-width: 640px) {
+  /* Cards */
   aside.featured .cards-group {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
+  }
+
+  aside.featured .cards-group {
+    column-gap: var(--space-02);
   }
 }
 
