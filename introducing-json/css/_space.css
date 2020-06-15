@@ -152,6 +152,7 @@ nav button[aria-controls="menu"].open {
   /* Center components */
   /* margin-left: auto;
   margin-right: auto; */
+  /* margin-bottom: var(--space-02); */
 }
 
 .tags {
@@ -246,6 +247,38 @@ nav button[aria-controls="menu"].open {
   }
 }
 
+/* TODO:  UNDER CONSIDERATION */
+@media all and (min-width: 690px) {
+  aside.featured h2 {
+    padding-left: var(--space-01);
+  }
+
+  .cards-group {
+    padding-left: var(--space-01);
+    padding-right: var(--space-01);
+  }
+
+  .column-1,
+  .language-icon-wrapper {
+    padding-left: var(--space-01);
+  }
+}
+
+@media all and (min-width: 960px) {
+  /* QUICK FIX (HACKS) for unusual reaction for the following elements */
+  .cards__text {
+    padding-bottom: var(--space-01);
+  }
+
+  .cards__text p {
+    margin-bottom: 0;
+  }
+
+  .highlight-box {
+    padding-left: var(--space-01);
+    padding-right: var(--space-01);
+  }
+}
 
 /* L */
 @media all and (min-width: 1024px) {
