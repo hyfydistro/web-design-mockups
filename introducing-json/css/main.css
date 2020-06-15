@@ -1,9 +1,7 @@
 /* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'); */
 
 /* TODO:
-- Position the cards for Tablet Display
-- Ready for desktop view
-- FIgure out why it assumes mobile view on desktop size
+- Add Back to Top element
 */
 
 /* || Contents
@@ -142,7 +140,6 @@ aside.featured {
 /* FOOTER */
 footer {
   text-align: center;
-  /* TODO: Add Hover / focus / Active states */
 }
 
 /* ===== Module */
@@ -206,7 +203,6 @@ nav ul.open {
 }
 .cards:hover {
   transform: scale(1.05);
-
 }
 
 .cards:active {
@@ -342,30 +338,6 @@ footer a {
 
 /* ===== Media Queries ===== */
 /* S - Mobile */
-@media all and (min-width: 600px) {
-
-  /* p {
-    width: 53ch;
-    word-wrap: break-word;
-    margin: 0 auto;
-    overflow: hidden;
-  } */
-
-  /* .highlight-box {
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  } */
-
-  /* Menu */
-  /* States */
-  /* Cards */
-  .cards {
-    /* Height x width */
-  }
-}
-
 @media all and (min-width: 640px) {
   /* Change display for .cards */
   aside.featured .cards-group {
@@ -400,8 +372,6 @@ footer a {
     width: auto;
     height: auto;
   }
-
-
 
   section.cards {
     height: auto;

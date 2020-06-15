@@ -190,13 +190,8 @@ footer a:focus {
   }
 }
 
-/* M */
-@media all and (min-width: 601px) and (max-width: 1024px) {
-
-}
-
 /* L */
-@media all and (min-width: 1024px) {
+@media all and (min-width: 960px) {
   /* TODO: ADD :hover for Desktop Media Query
   - #link-pdf
   - .link
@@ -207,13 +202,14 @@ footer a:focus {
     - Cahnge color and bg color too??? */
   }
 
-  .link:hover {
-
+  .link:hover:not(.active) {
+    text-decoration: underline;
   }
 
   /* TODO: ENABLE :focus on #link-pdf with desktop Media Query */
-  a[target="_blank"]:focus {
-    outline-color: var(--primary-color-40);
+  a[target="_blank"]:focus,
+  .link:focus {
+    outline: 2px solid var(--primary-color-40);
   }
 
 }
