@@ -119,11 +119,15 @@ Body Copy: 16px
 Language block:
 line-height: 40px
 
-...
+-----------------------------------------
 
 Responsive Typography Size-Up [Choose popular device]
 
 2019 popular **S** device-width: 768px
+
+approx. characters: 70ch
+
+font base: 20px
 
 **M**
 
@@ -165,6 +169,8 @@ Responsive Typography Size-Up [Choose popular device]
 Constraints: 960px article max-width
 
 Targeted device-width: 1440px (max width)
+
+character count?
 
 ...
 
@@ -263,7 +269,7 @@ box module color: #1A1A1A 20% (#D1D1D1)
 box module color (new): #E5E5E5
 
 Overlay
-box module color: #1A1A1A 20% (#D1D1D1) 
+box module color: #1A1A1A 20% (#D1D1D1)
 
 ## Logo
 
@@ -406,14 +412,31 @@ card size
 width: 256 px
 height: 224.1 px = 224px
 
+288w x 252h (reference from Affinity copy)
+
 card image size
 width: 256 px
 height: 145 px
+
+288w x 162h (reference from Affinity copy)
 
 card type block
 width: 256 px
 height: 79.1 px = 79px
 background color: #EBEBEB
+
+288w x 89h (reference from Affinity copy)
+
+Left-Padding: 21px
+
+h3: 18px
+
+p: 14px
+
+1.5 Modular scale
+14 x 1.5 = 21
+
+padding all round is 21px
 
 **M**
 
@@ -516,6 +539,26 @@ Scroll position is paused. No scroll finger movement can move the page. Tapping 
 grid system: 8; aligned with column
 width: 288px
 height: 100$
+
+**M**
+
+**L**
+
+n/a
+
+**XL**
+
+## Language Container Columns
+
+**XS**
+
+Area
+width: 133.5px = 134px
+height: (see influence factors)
+
+line-height: 28px
+
+**S**
 
 **M**
 

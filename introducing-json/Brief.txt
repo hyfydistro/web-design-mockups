@@ -60,3 +60,19 @@ As a User:
 Don't hide the <nav>, if anything. Hide the <ul> instead.
 
 [A11y Matters - Mobile Nav](https://www.a11ymatters.com/pattern/mobile-nav/)
+
+--------------------------------------------------------------------------------
+
+TODO:
+
+Add the following meta tags to tell the site that it is mobile app compatible.
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-starturl" content="/">
+	link the homepage of the app. e.g. /index.html
+meta name="theme-color" content="#f48c5b">
+	write color in hex code
+
+<link rel="manifest" href="/manifest.json">
