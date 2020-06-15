@@ -158,6 +158,17 @@ where XS is relative to */
   .highlight-box { width: 70ch; } */
 }
 
+@media all and (min-width: 960px) {
+  .active {
+    font-weight: bold;
+  }
+
+  main h1 {
+    font-weight: normal;
+    text-align: center;
+  }
+}
+
 /* M */
 @media all and (min-width: 1024px) {
     html { font-size: 20px; }
@@ -176,6 +187,8 @@ where XS is relative to */
 
 /* WARNING */
 /* OKAY. STOP THE FONT SIzE INCREASE HERE. ANYMORE IS TOO HUGE! */
+
+/* TODO: Fix Typography Size at breakpoints */
 
 /* M (2019 popular device-width) */
 @media all and (min-width: 1366px) {
