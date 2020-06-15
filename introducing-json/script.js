@@ -224,7 +224,7 @@ function changeView() {
     // Uncheck checkView
       // Document Setup
       menuList.setAttribute('aria-hidden', false);
-      // menuList.style.display = 'block';
+      menuList.style.display = 'block';
       navBtn.setAttribute('aria-expanded', true);
 
       // Accessible controls
