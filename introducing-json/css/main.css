@@ -1,8 +1,8 @@
 /* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'); */
 
 /* TODO:
-- Add Back to Top element
-*/
+- Fix heavy fontawesome load
+- add more contents to other pages */
 
 /* || Contents
 - Resets
@@ -191,6 +191,8 @@ nav button[aria-controls="menu"].open {
   right: 0;
   /* See more at '_space.css':
   -  Menu hmaburger - Open */
+  outline: none;
+  border: none;
 }
 
 nav ul.open {
@@ -216,6 +218,8 @@ nav ul.open {
 button[aria-controls="menu"] {
   width: 24px;
   height: 17px;
+  outline: none;
+  border: none;
 }
 
 .hamburger {
@@ -302,8 +306,28 @@ header.scrolling-active {
   text-decoration: underline;
 }
 
+.back-to-top {
+  display: none;
+}
+
+.back-to-top.reveal {
+  display: block;
+  position: fixed;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  filter: saturate(2) brightness(95%);
+}
+
 /* ===== Theme */
 /* HEADER */
+a.logo-link:focus {
+  outline: none;
+  border: none;
+  /* 'color' change found at '_color.css' */
+}
+
 a.link.active:hover {
   cursor: default;
 }
