@@ -15,7 +15,7 @@
   --primary-color-10: #CCE2FF; /* In use */
   --primary-color-02: #99C6FF;
   --primary-color-03: #66A9FF;
-  --primary-color-40: #2987FF; /* In use */
+  --primary-color-40: #2987FF; /* In use - aka "Main Color" */
   --primary-color-05: #0070FF;
   --primary-color-60: #005ACC;
   --primary-color-70: #004399; /* In use */
@@ -58,8 +58,8 @@ header {
   background-color: #fff;
 }
 
-.logo a:focus {
-  border: 2px solid var(--primary-color-40);
+a.logo-link:focus {
+  color: var(--primary-color-40);
 }
 
 /* Logo Text */
@@ -202,7 +202,7 @@ footer a:focus {
     - Cahnge color and bg color too??? */
   }
 
-  .link:hover:not(.active) {
+  .link:hover:not(.active):not(#link-pdf) {
     text-decoration: underline;
   }
 
