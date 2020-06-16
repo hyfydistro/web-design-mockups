@@ -170,6 +170,11 @@ nav button[aria-controls="menu"].open {
   margin-bottom: var(--space-01);
 }
 
+.back-to-top {
+  right: var(--space-01);
+  bottom: var(--space-01);
+}
+
 /* || Media Queries */
 /* S */
 @media all and (max-width: 600px) {

@@ -27,6 +27,8 @@ let lastListItem = menuList.querySelector('#link-pdf');
 // Media Queries
 const maxWidth = window.matchMedia("(max-width: 960px)");
 const minWidth = window.matchMedia("(min-width: 961px)");
+// Back To Top Icon
+let topIcon = document.querySelector('.back-to-top');
 
 window.addEventListener('load', checkView);
 window.addEventListener('resize', changeView);
@@ -177,8 +179,17 @@ function changeView() {
 
     console.log('Undo on Resize - Pass2');
   }
-
 }
+
+// Listen for a certain scroll down to reveal Back To Top icon
+window.addEventListener('scroll', function revealIcon() {
+  // when two pages down of viewport size, reveal icon
+  topIcon.classList.toggle('reveal', window.scrollY > 0);
+});
+
+topIcon.addEventListener('click', function topLink() {
+  window.scrollTo(0, 0);
+});
 
 // Defined Function
 function menuStylesToggle() {
