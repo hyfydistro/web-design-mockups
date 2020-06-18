@@ -28,10 +28,20 @@
   color: var(--primary-color-80);
 }
 
+.alphabet li a.disabled {
+  color: var(--text-color-60);
+  text-decoration: none;
+  cursor: default;
+}
+
 .title-block {
   border-top: 1px solid var(--text-color-30);
   border-bottom: 1px solid var(--text-color-30);
   margin-bottom: var(--space-01);
+}
+
+ul.index-list {
+  margin-bottom: var(--space-02);
 }
 
 ul.index-list h3 {
@@ -50,7 +60,6 @@ ul.index-list ul li {
 }
 
 ul.index-list a {
-  /* padding-left: var(--space-01); */
   margin-left: var(--space-01);
   color: var(--primary-color-70);
   text-decoration: underline;
