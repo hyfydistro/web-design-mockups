@@ -2,7 +2,15 @@
 
 /* TODO:
 - Fix heavy fontawesome load
-- add more contents to other pages */
+- add more contents to other pages
+
+- PWA
+  - Min for icon image is 512x512 - UPDATE IT!
+  - sw
+    - tutorials
+    https://www.youtube.com/watch?v=ksXwaWHCW6k
+    https://www.youtube.com/watch?v=E8BeSSdIUW4
+    */
 
 /* || Contents
 - Resets
@@ -424,11 +432,10 @@ footer a {
   main p {
     width: 690px;
     max-width: 690px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  .preset-margins {
+  main h1.preset-margins,
+  p.preset-margins {
     margin-left: auto;
     margin-right: auto;
   }
