@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2987FF">
+  <title>Introducing JSON</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/_typography.css">
+  <link rel="stylesheet" href="css/_space.css">
+  <link rel="stylesheet" href="css/_color.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body>
+  <header role="banner">
+    <div class="logo" aria-label="logo icon">
+      <a class="logo-link" href="introducing-json.html">
+        <img class="logo-icon" src="img/logo-icon-sml-36wx36h.png" alt="json logo icon">
+        <h2 class="logo-text"><span class="blue-colored">{</span>JSON<span class="blue-colored">}</span></h2>
+      </a>
+    </div>
+    <nav class="icon-container" role="navigation">
+      <button aria-expanded="true" aria-controls="menu">
+        <div aria-hidden="true" class="hamburger"></div>
+      </button>
+      <ul id="menu" role="menu">
+        <li><a role="menuitem" class="link active" href="#" tabindex="-1">Introducing JSON</a></li>
+        <li><a role="menuitem" class="link" href="affiliated-technologies.html">Affiliated Technologies</a></li>
+        <li><a role="menuitem" class="link" href="grammar.html">Grammar</a></li>
+        <!-- Add PDF to createObjectURL? -->
+        <li><a class="link" target="_blank" id="link-pdf" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">[PDF] ECMA-404 The JSON Data Interchange Standard</a></li>
+      </ul> <!-- End of ul -->
+    </nav> <!-- End of nav -->
+    <div class="overlay"></div>
+  </header> <!-- End of header -->
+
+  <main>
+    <article>
+      <h1>Grammar (McKeeman Form)</h1>
+
+      <section class="intro-statement">
+        <time>2020-01-09</time>
+        <p>(This is an excerpt from Chapter 22 of <a href="https://howjavascriptworks.com/" target="_blank">How JavaScript Works</a>.)</p>
+        <p>McKeeman Form is a notation for expressing grammars. It was proposed by <a href="http://www.cs.dartmouth.edu/~mckeeman/">Bill McKeeman</a> of Dartmouth College. It is a simplified Backus-Naur Form with significant whitespace and minimal
+          use of metacharacters.</p>
+      </section>
+
+      <h2>Grammar</h2>
+      <p>We can express the grammar of McKeeman Form in McKeeman Form.</p>
+      <!-- TODO:
+- Style <dfn> with a different type font and remove italics -->
+      <p>A <dfn>grammar</dfn> is a list of one or more rules.</p>
+      <div class="highlight-box">
+        <pre>
+<code>> grammar</code>
+
+<code>  > rules</code>
+        </pre>
+      </div>
+      <!-- TODO:
+- Add font family courier to  <code> -->
+      <p>The Unicode code point <code>U+0020</code> is used as the <dfn>space</dfn>.
+        The Unicode code point <code>U+000A</code> is used as the <dfn>newline</dfn>.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> space</code>
+
+<code>  > '0020'</code>
+
+<code>> newline</code>
+
+<code>  > '000A'</code>
+        </pre>
+      </div>
+
+      <p>A <dfn>name</dfn> is a sequence of letters or <code>_</code><sub>underbar</sub>.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> name</code>
+
+<code>  > letter</code>
+
+<code>  > letter name</code>
+<!-- TODO:  Correct this in display UI  portfolio - from 'newline' to 'letter' -->
+<code>> letter</code>
+
+<code>> 'a'</code> <code>.</code> <code>'z'</code>
+
+<code>> 'A'</code> <code>.</code> <code>'Z'</code>
+<!-- TODO: Add missing content to display UI portfolio -->
+<code>> '_'</code>
+        </pre>
+      </div>
+
+      <p>An <dfn>indentation</dfn> is four spaces.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> indentation</code>
+
+<code>  > space space space space</code>
+        </pre>
+      </div>
+
+      <p>Each of the <dfn>rules</dfn> is separated by a <dfn>newline</dfn>. A <dfn>rule</dfn> has a <dfn>name</dfn> on one line, with <dfn>alternatives</dfn> indented below it.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> rules</code>
+
+<code>  > rule</code>
+
+<code>  > rule newline rules</code>
+        </pre>
+      </div>
+
+      <p>If the first line after the <dfn>name</dfn> of a <dfn>rule</dfn> is <code>""</code>, then the <dfn>rule</dfn> may match <dfn>nothing</dfn>.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> nothing</code>
+
+<code>  > ""</code>
+
+<code>  > indentation '"' '"' newline</code>
+        </pre>
+      </div>
+
+      <p>Each <dfn>alternative</dfn> is indented on its own line. Each <dfn>alternative</dfn> contains <dfn>items</dfn> followed by a <dfn>newline</dfn>.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> alternatives</code>
+
+<code>  > alternative</code>
+
+<code>  > alternative alternatives</code>
+
+<code>> alternative</code>
+
+<code>  > indentation items newline</code>
+        </pre>
+      </div>
+
+      <p>The <dfn>items</dfn> are separated by spaces. An <dfn>item</dfn> is a <dfn>literal</dfn> or the <dfn>name</dfn> of a <dfn>rule</dfn>.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> items</code>
+
+<code>  > item</code>
+
+<code>  > item space items</code>
+
+<code>> item</code>
+
+<code>  > literal</code>
+
+<code>  > name</code>
+
+<code>> literal</code>
+
+<code>  > singleton</code>
+<!-- TODO: Fix speling error in UI display -->
+<code>  > range exclude</code>
+
+<code>  > '"' characters '"'</code>
+        </pre>
+      </div>
+
+      <p>Any single Unicode code point except the 32 control codes may be placed within the single quotes. The <dfn>hexcode</dfn> of any Unicode code point may also be placed within the single quotes. A <dfn>hexcode</dfn> can contain 4, 5, or 6
+        hexadecimal digits.</p>
+
+        <div class="highlight-box">
+          <pre>
+  <code>> singleton</code>
+
+  <code>  > ''' codepoint '''</code>
+
+  <code>> codepoint</code>
+
+  <code>  > ' ' . '10FFFF'</code>
+
+  <code>  > hexcode</code>
+
+  <code>> hexcode</code>
+
+  <code>  > "10" hex hex hex hex</code>
+
+  <code>  > hex hex hex hex</code>
+
+  <code>  > hex hex hex hex</code>
+
+  <code>> hex</code>
+
+  <code>  > '0'</code> <code>.</code> <code>'9'</code>
+
+  <code>  > 'A'</code> <code>.</code> <code>'F'</code>
+          </pre>
+        </div>
+
+      <p>A <dfn>range</dfn> is specified as a <dfn>singleton</dfn>, a <code>.</code><sub>period</sub>, and another <dfn>singleton</dfn>. Literal ranges can optionally be followed by <code>-</code><sub>minus sign</sub> and characters to be
+        excluded.</p>
+
+        <div class="highlight-box">
+          <pre>
+  <code>> range</code>
+
+  <code>  > singleton space '.' space singleton</code>
+
+  <code>> exclude</code>
+
+  <code>  > ""</code>
+
+  <code>  > space '-' space singleton exclude</code>
+
+  <code>  > space '-' space range exclude</code>
+          </pre>
+        </div>
+
+      <p>A <dfn>character</dfn> wrapped in <code>"</code><sub>double quote</sub> can be any of the Unicode code points except the 32 control codes and <code>"</code><sub>double quote</sub>. The definition of <dfn>character</dfn> shows an
+        example of a codepoint range and exclude.</p>
+
+        <div class="highlight-box">
+          <pre>
+  <code>> characters</code>
+
+  <code>  > character</code>
+
+  <code>  > character characters</code>
+
+  <code>> character</code>
+
+  <code>  > ' ' . '10FFFF' - '"'</code>
+          </pre>
+        </div>
+
+      <h2>JSON</h2>
+
+      <p>This is the JSON grammar in McKeeman Form.</p>
+
+      <div class="highlight-box">
+        <pre>
+<code>> json</code>
+
+<code>  > element</code>
+
+<code>> value</code>
+
+<code>  > object</code>
+
+<code>  > array</code>
+
+<code>  > string</code>
+
+<code>  > number</code>
+
+<code>  > "true"</code>
+
+<code>  > "false"</code>
+
+<code>  > "null"</code>
+
+<code>> object</code>
+
+<code>  > '{' ws '}'</code>
+
+<code>  > '{' members '}'</code>
+
+<code>> members</code>
+
+<code>  > member</code>
+
+<code>  > member ',' members</code>
+
+<code>> member</code>
+
+<code>  > ws string ws ':' element</code>
+
+<code>> array</code>
+
+<code>  > '[' ws ']'</code>
+
+<code>  > '[' elements ']'</code>
+
+<code>> elements</code>
+
+<code>  > element</code>
+
+<code>  > element ',' elements</code>
+
+<code>> element</code>
+
+<code>  > ws value ws</code>
+
+<code>> string</code>
+
+<code>  > '"' characters '"'</code>
+
+<code>> characters</code>
+
+<code>  > ""</code>
+
+<code>  > character characters</code>
+
+<code>> character</code>
+
+<code>  > '0020' . '10FFFF' - '"' - '\'</code>
+
+<code>  > '\' escape</code>
+
+<code>> escape</code>
+
+<code>  > '"'</code>
+
+<code>  > '\'</code>
+
+<code>  > '/'</code>
+
+<code>  > 'b'</code>
+
+<code>  > 'f'</code>
+
+<code>  > 'n'</code>
+
+<code>  > 'r'</code>
+
+<code>  > 't'</code>
+
+<code>  > 'u' hex hex hex hex</code>
+
+<code>> hex</code>
+
+<code>  > digit</code>
+
+<code>  > 'A' . 'F'</code>
+
+<code>  > 'a' . 'f'</code>
+
+<code>> number</code>
+
+<code>  > integer fraction exponent</code>
+
+<code>> integer</code>
+
+<code>  > digit</code>
+
+<code>  > onenine digits</code>
+
+<code>  > '-' digit</code>
+
+<code>  > '-' onenine digits</code>
+
+<code>> digits</code>
+
+<code>  > digit</code>
+
+<code>  > digit digits</code>
+
+<code>> digit</code>
+
+<code>  > '0'</code>
+
+<code>  > onenine</code>
+
+<code>> onenine</code>
+
+<code>  > '1' . '9'</code>
+
+<code>> fraction</code>
+
+<code>  > ""</code>
+
+<code>  > '.' digits</code>
+
+<code>> exponent</code>
+
+<code>  > ""</code>
+
+<code>  > 'E' sign digits</code>
+
+<code>  > 'e' sign digits</code>
+
+<code>> sign</code>
+
+<code>  > ""</code>
+
+<code>  > '+'</code>
+
+<code>  > '-'</code>
+
+<code>> ws</code>
+
+<code>  > ""</code>
+
+<code>  > '0020' ws</code>
+
+<code>  > '000A' ws</code>
+
+<code>  > '000D' ws</code>
+
+<code>  > '0009' ws</code>
+        </pre>
+      </div>
+
+      <a href="https://www.crockford.com/mckeeman.html" target="_blank">See original site.</a>
+    </article> <!-- End of article -->
+  </main> <!-- End of main -->
+
+  <aside class="featured" role="complementary">
+    <h2 class="preset-margins">More on JSON</h2>
+
+    <div class="cards-group preset-margins">
+      <a class="cards-wrapper" href="https://www.youtube.com/playlist?list=PLEzQf147-uEoNCeDlRrXv6ClsLDN-HtNm">
+        <section class="cards">
+          <p class="tags">Video</p>
+          <img class="cards__image" src="img/json-conference.jpg" alt="a json conferece featuring Douglas Crockford"></img>
+          <div class="cards__text">
+            <h3>JSON Conference</h3>
+            <p>Videos on JSON Conference.</p>
+          </div>
+        </section>
+      </a>
+
+      <a class="cards-wrapper" href="https://www.youtube.com/playlist?list=PLEzQf147-uEpz3sHeMRx0UF7OHCXk0HOZ">
+        <section class="cards">
+          <p class="tags">Video</p>
+          <img class="cards__image" src="img/json-logo.jpg" alt="json logo"></img>
+          <div class="cards__text">
+            <h3>JSON Logo Development</h3>
+            <p>Videos on JSON logo designs.</p>
+          </div>
+        </section>
+      </a>
+
+      <a class="cards-wrapper" href="http://www.infoq.com/presentations/Heretical-Open-Source">
+        <section class="cards">
+          <p class="tags">Article</p>
+          <img class="cards__image" src="img/json-article.png" alt="a preview of the json article"></img>
+          <div class="cards__text">
+            <h3>Heresy</h3>
+            <p>A debate around XML and JSON.</p>
+          </div>
+        </section>
+      </a>
+
+      <a class="cards-wrapper" href="https://www.howjavascriptworks.com">
+        <section class="cards">
+          <p class="tags">Sale</p>
+          <img class="cards__image" src="img/book-poster.png" alt="'how javascript works' book cover"></img>
+          <div class="cards__text">
+            <h3>'How JavaScript Works'</h3>
+            <p>A book written by Douglas Crockford.</p>
+          </div>
+        </section>
+      </a>
+    </div> <!-- End of .cards-group -->
+
+  </aside> <!-- End of aside .featured -->
+  <aside class="language-container preset-margins">
+    <div class="language-icon-wrapper">
+      <img class="language-icon" src="img/language-icon3-150w.png" alt="language icon" aria-hidden="true">
+    </div>
+    <div class="language-column-wrapper" aria-label="language lists">
+      <div class="column-1">
+        <a href="hsubps://www.JSON.org/json-ar.html">العربية</a>
+        <a href="https://www.JSON.org/json-bg.html">Български</a>
+        <a href="https://www.JSON.org/json-zh.html">中文</a>
+        <a href="https://www.JSON.org/json-cz.html">Český</a>
+        <a href="https://www.JSON.org/json-da.html">Dansk</a>
+        <a href="https://www.JSON.org/json-nl.html">Nederlands</a>
+        <a href="https://www.JSON.org/json-en.html">English</a>
+        <a href="https://www.JSON.org/json-eo.html">Esperanto</a>
+        <a href="https://www.JSON.org/json-fr.html">Français</a>
+        <a href="https://www.JSON.org/json-de.html">Deutsch</a>
+        <a href="https://www.JSON.org/json-el.html">Ελληνικά</a>
+        <a href="https://www.JSON.org/json-he.html">עברית</a>
+        <a href="https://www.JSON.org/json-hu.html">Magyar</a>
+        <a href="https://www.JSON.org/json-id.html">Indonesia</a>
+      </div>
+      <div class="column-2">
+        <a href="https://www.JSON.org/json-it.html">Italiano</a>
+        <a href="https://www.JSON.org/json-ja.html">日本</a>
+        <a href="https://www.JSON.org/json-ko.html">한국어</a>
+        <a href="https://www.JSON.org/json-fa.html">فارسی</a>
+        <a href="https://www.JSON.org/json-pl.html">Polski</a>
+        <a href="https://www.JSON.org/json-pt.html">Português</a>
+        <a href="https://www.JSON.org/json-ro.html">Română</a>
+        <a href="https://www.JSON.org/json-ru.html">Русский</a>
+        <a href="https://www.JSON.org/json-sr.html">Српско-хрватски</a>
+        <a href="https://www.JSON.org/json-sl.html">Slovenščina</a>
+        <a href="https://www.JSON.org/json-es.html">Español</a>
+        <a href="https://www.JSON.org/json-sv.html">Svenska</a>
+        <a href="https://www.JSON.org/json-tr.html">Türkçe</a>
+        <a href="https://www.JSON.org/json-vi.html">Tiếng Việt</a>
+      </div>
+    </div> <!-- End of language-column-wrapper -->
+  </aside>
+
+  <footer class="preset-margins">
+    <p><a href="LICENSE.MD">Terms of Use</a> &bull; Prototyped by Caroline Rozali @hyfyooie</p>
+  </footer> <!-- End of footer -->
+
+  <div class="back-to-top">
+    <img src="img/back-to-top-icon-58wx58h.png" alt="back to top" aria-hidden="true">
+  </div>
+</body>
+
+</html>
