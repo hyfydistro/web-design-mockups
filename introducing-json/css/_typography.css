@@ -91,6 +91,14 @@ footer p {
   line-height: 1.5rem;
 }
 
+code {
+  font-family: courier, 'Bahnschrift', sans-serif;
+}
+
+dfn {
+  font-family: courier, 'Bahnschrift', sans-serif;
+  font-style: normal;
+}
 /* Logo Text */
 .logo-text {
   font-weight: normal;
