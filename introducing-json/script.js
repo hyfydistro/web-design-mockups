@@ -35,6 +35,10 @@ window.addEventListener('resize', changeView);
 
 function checkView() {
 
+  // Register Service Worker
+  registerSW();
+
+
   if (maxWidth.matches) {
     // Initialise setup
 
@@ -73,11 +77,7 @@ function checkView() {
 
     // Add box shadow when on scroll.
     // If view is back to start, box shadow disappears.
-    window.addEventListener('scroll', function addDropShadow() {
-      if (maxWidth.matches) {
-        header.classList.toggle('scrolling-active', window.scrollY > 0);
-      }
-    });
+    window.addEventListener('scroll', addDropShadow);
 
     // WAI-ARIA Support Feature
     lastListItem.addEventListener('keydown', function(e) {
@@ -143,11 +143,7 @@ function changeView() {
 
     // Add box shadow when on scroll.
     // If view is back to start, box shadow disappears.
-    window.addEventListener('scroll', function addDropShadow() {
-      if (maxWidth.matches) {
-        header.classList.toggle('scrolling-active', window.scrollY > 0);
-      }
-    });
+    window.addEventListener('scroll', addDropShadow);
 
     // WAI-ARIA Support Feature
     lastListItem.addEventListener('keydown', function(e) {
@@ -173,9 +169,7 @@ function changeView() {
 
     // Remove box shadow when on scroll.
     // If view is back to start, box shadow disappears.
-    window.removeEventListener('scroll', function addDropShadow() {
-      header.classList.toggle('scrolling-active', window.scrollY > 0);
-    });
+    // window.removeEventListener('scroll', addDropShadow);
 
     console.log('Undo on Resize - Pass2');
   }
@@ -224,5 +218,30 @@ function escapeMenuBtn(e) {
       closeMenu();
       icon.classList.toggle('active');
     }
+  }
+}
+
+function addDropShadow() {
+  if (maxWidth.matches) {
+    header.classList.add('scrolling-active', window.scrollY > 0);
+    console.log("Box Shadow created");
+  } else {
+    if (minWidth.matches) {
+      header.classList.remove('scrolling-active');
+      console.log("Box Shadow removed");
+    }
+  }
+}
+
+// Service Worker
+async function registerSW() {
+  if ('serviceWorker' in navigator) {
+    console.log("SW is supported");
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(reg => console.log('Service Worker: Registered'))
+        .catch(err => console.log(`Service Worker: Error: ${err}`));
+    });
   }
 }
