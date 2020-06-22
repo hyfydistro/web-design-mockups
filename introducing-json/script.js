@@ -224,11 +224,9 @@ function escapeMenuBtn(e) {
 function addDropShadow() {
   if (maxWidth.matches) {
     header.classList.add('scrolling-active', window.scrollY > 0);
-    console.log("Box Shadow created");
   } else {
     if (minWidth.matches) {
       header.classList.remove('scrolling-active');
-      console.log("Box Shadow removed");
     }
   }
 }
