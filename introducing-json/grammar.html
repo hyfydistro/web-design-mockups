@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/_space.css">
   <link rel="stylesheet" href="css/_color.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/grammar.css">
   <script type="text/javascript" src="script.js" defer></script>
 </head>
 
@@ -27,9 +28,9 @@
         <div aria-hidden="true" class="hamburger"></div>
       </button>
       <ul id="menu" role="menu">
-        <li><a role="menuitem" class="link active" href="#" tabindex="-1">Introducing JSON</a></li>
+        <li><a role="menuitem" class="link" href="introducing-json.html" tabindex="-1">Introducing JSON</a></li>
         <li><a role="menuitem" class="link" href="affiliated-technologies.html">Affiliated Technologies</a></li>
-        <li><a role="menuitem" class="link" href="grammar.html">Grammar</a></li>
+        <li><a role="menuitem" class="link active" href="#">Grammar</a></li>
         <!-- Add PDF to createObjectURL? -->
         <li><a class="link" target="_blank" id="link-pdf" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">[PDF] ECMA-404 The JSON Data Interchange Standard</a></li>
       </ul> <!-- End of ul -->
@@ -39,376 +40,356 @@
 
   <main>
     <article>
-      <h1>Grammar (McKeeman Form)</h1>
+      <h1 class="preset-margins">Grammar (McKeeman Form)</h1>
 
-      <section class="intro-statement">
+      <section class="intro-statement preset-margins">
         <time>2020-01-09</time>
         <p>(This is an excerpt from Chapter 22 of <a href="https://howjavascriptworks.com/" target="_blank">How JavaScript Works</a>.)</p>
         <p>McKeeman Form is a notation for expressing grammars. It was proposed by <a href="http://www.cs.dartmouth.edu/~mckeeman/">Bill McKeeman</a> of Dartmouth College. It is a simplified Backus-Naur Form with significant whitespace and minimal
           use of metacharacters.</p>
       </section>
 
-      <h2>Grammar</h2>
-      <p>We can express the grammar of McKeeman Form in McKeeman Form.</p>
-      <!-- TODO:
-- Style <dfn> with a different type font and remove italics -->
-      <p>A <dfn>grammar</dfn> is a list of one or more rules.</p>
-      <div class="highlight-box">
-        <pre>
-<code>> grammar</code>
-
-<code>  > rules</code>
-        </pre>
-      </div>
-      <!-- TODO:
-- Add font family courier to  <code> -->
-      <p>The Unicode code point <code>U+0020</code> is used as the <dfn>space</dfn>.
-        The Unicode code point <code>U+000A</code> is used as the <dfn>newline</dfn>.</p>
-
-      <div class="highlight-box">
-        <pre>
-<code>> space</code>
-
-<code>  > '0020'</code>
-
-<code>> newline</code>
-
-<code>  > '000A'</code>
-        </pre>
-      </div>
-
-      <p>A <dfn>name</dfn> is a sequence of letters or <code>_</code><sub>underbar</sub>.</p>
-
-      <div class="highlight-box">
-        <pre>
-<code>> name</code>
-
-<code>  > letter</code>
-
-<code>  > letter name</code>
-<!-- TODO:  Correct this in display UI  portfolio - from 'newline' to 'letter' -->
-<code>> letter</code>
-
-<code>> 'a'</code> <code>.</code> <code>'z'</code>
-
-<code>> 'A'</code> <code>.</code> <code>'Z'</code>
-<!-- TODO: Add missing content to display UI portfolio -->
-<code>> '_'</code>
-        </pre>
-      </div>
-
-      <p>An <dfn>indentation</dfn> is four spaces.</p>
-
-      <div class="highlight-box">
-        <pre>
-<code>> indentation</code>
-
-<code>  > space space space space</code>
-        </pre>
-      </div>
-
-      <p>Each of the <dfn>rules</dfn> is separated by a <dfn>newline</dfn>. A <dfn>rule</dfn> has a <dfn>name</dfn> on one line, with <dfn>alternatives</dfn> indented below it.</p>
-
-      <div class="highlight-box">
-        <pre>
-<code>> rules</code>
-
-<code>  > rule</code>
-
-<code>  > rule newline rules</code>
-        </pre>
-      </div>
-
-      <p>If the first line after the <dfn>name</dfn> of a <dfn>rule</dfn> is <code>""</code>, then the <dfn>rule</dfn> may match <dfn>nothing</dfn>.</p>
-
-      <div class="highlight-box">
-        <pre>
-<code>> nothing</code>
-
-<code>  > ""</code>
-
-<code>  > indentation '"' '"' newline</code>
-        </pre>
-      </div>
-
-      <p>Each <dfn>alternative</dfn> is indented on its own line. Each <dfn>alternative</dfn> contains <dfn>items</dfn> followed by a <dfn>newline</dfn>.</p>
-
-      <div class="highlight-box">
-        <pre>
-<code>> alternatives</code>
-
-<code>  > alternative</code>
-
-<code>  > alternative alternatives</code>
-
-<code>> alternative</code>
-
-<code>  > indentation items newline</code>
-        </pre>
-      </div>
-
-      <p>The <dfn>items</dfn> are separated by spaces. An <dfn>item</dfn> is a <dfn>literal</dfn> or the <dfn>name</dfn> of a <dfn>rule</dfn>.</p>
-
-      <div class="highlight-box">
-        <pre>
-<code>> items</code>
-
-<code>  > item</code>
-
-<code>  > item space items</code>
-
-<code>> item</code>
-
-<code>  > literal</code>
-
-<code>  > name</code>
-
-<code>> literal</code>
-
-<code>  > singleton</code>
-<!-- TODO: Fix speling error in UI display -->
-<code>  > range exclude</code>
-
-<code>  > '"' characters '"'</code>
-        </pre>
-      </div>
-
-      <p>Any single Unicode code point except the 32 control codes may be placed within the single quotes. The <dfn>hexcode</dfn> of any Unicode code point may also be placed within the single quotes. A <dfn>hexcode</dfn> can contain 4, 5, or 6
-        hexadecimal digits.</p>
+      <section class="grammar-block">
+        <h2 class="preset-margins underlined">Grammar</h2>
+        <p class="preset-margins">We can express the grammar of McKeeman Form in McKeeman Form.</p>
+        <!-- TODO:
+  - Style <dfn> with a different type font and remove italics -->
+        <p class="preset-margins">A <dfn>grammar</dfn> is a list of one or more rules.</p>
+        <div class="highlight-box">
+            <p><code>> grammar</code></p>
+            <p><code>  > rules</code></p>
+        </div>
+        <!-- TODO:
+  - Add font family courier to  <code> -->
+        <p class="preset-margins">The Unicode code point <code>U+0020</code> is used as the <dfn>space</dfn>.
+          The Unicode code point <code>U+000A</code> is used as the <dfn>newline</dfn>.</p>
 
         <div class="highlight-box">
-          <pre>
-  <code>> singleton</code>
+  <p><code>> space</code></p>
 
-  <code>  > ''' codepoint '''</code>
+  <p><code>  > '0020'</code></p>
 
-  <code>> codepoint</code>
+  <p><code>> newline</code></p>
 
-  <code>  > ' ' . '10FFFF'</code>
-
-  <code>  > hexcode</code>
-
-  <code>> hexcode</code>
-
-  <code>  > "10" hex hex hex hex</code>
-
-  <code>  > hex hex hex hex</code>
-
-  <code>  > hex hex hex hex</code>
-
-  <code>> hex</code>
-
-  <code>  > '0'</code> <code>.</code> <code>'9'</code>
-
-  <code>  > 'A'</code> <code>.</code> <code>'F'</code>
-          </pre>
+  <p><code>  > '000A'</code></p>
         </div>
 
-      <p>A <dfn>range</dfn> is specified as a <dfn>singleton</dfn>, a <code>.</code><sub>period</sub>, and another <dfn>singleton</dfn>. Literal ranges can optionally be followed by <code>-</code><sub>minus sign</sub> and characters to be
-        excluded.</p>
+        <p class="preset-margins">A <dfn>name</dfn> is a sequence of letters or <code>_</code><sub>underbar</sub>.</p>
 
         <div class="highlight-box">
-          <pre>
-  <code>> range</code>
+  <p><code>> name</code></p>
 
-  <code>  > singleton space '.' space singleton</code>
+  <p><code>  > letter</code></p>
 
-  <code>> exclude</code>
+  <p><code>  > letter name</code></p>
+  <!-- TODO:  Correct this in display UI  portfolio - from 'newline' to 'letter' -->
+  <p><code>> letter</code></p>
 
-  <code>  > ""</code>
+  <p><code>> 'a' . 'z'</code></p>
 
-  <code>  > space '-' space singleton exclude</code>
-
-  <code>  > space '-' space range exclude</code>
-          </pre>
+  <p><code>> 'A' . 'Z'</code></p>
+  <!-- TODO: Add missing content to display UI portfolio -->
+  <p><code>> '_'</code></p>
         </div>
 
-      <p>A <dfn>character</dfn> wrapped in <code>"</code><sub>double quote</sub> can be any of the Unicode code points except the 32 control codes and <code>"</code><sub>double quote</sub>. The definition of <dfn>character</dfn> shows an
-        example of a codepoint range and exclude.</p>
+        <p class="preset-margins">An <dfn>indentation</dfn> is four spaces.</p>
 
         <div class="highlight-box">
-          <pre>
-  <code>> characters</code>
+  <p><code>> indentation</code></p>
 
-  <code>  > character</code>
-
-  <code>  > character characters</code>
-
-  <code>> character</code>
-
-  <code>  > ' ' . '10FFFF' - '"'</code>
-          </pre>
+  <p><code>  > space space space space</code></p>
         </div>
 
-      <h2>JSON</h2>
+        <p class="preset-margins">Each of the <dfn>rules</dfn> is separated by a <dfn>newline</dfn>. A <dfn>rule</dfn> has a <dfn>name</dfn> on one line, with <dfn>alternatives</dfn> indented below it.</p>
 
-      <p>This is the JSON grammar in McKeeman Form.</p>
+        <div class="highlight-box">
+  <p><code>> rules</code></p>
 
-      <div class="highlight-box">
-        <pre>
-<code>> json</code>
+  <p><code>  > rule</code></p>
 
-<code>  > element</code>
+  <p><code>  > rule newline rules</code></p>
+        </div>
 
-<code>> value</code>
+        <p class="preset-margins">If the first line after the <dfn>name</dfn> of a <dfn>rule</dfn> is <code>""</code>, then the <dfn>rule</dfn> may match <dfn>nothing</dfn>.</p>
 
-<code>  > object</code>
+        <div class="highlight-box">
+  <p><code>> nothing</code></p>
 
-<code>  > array</code>
+  <p><code>  > ""</code></p>
 
-<code>  > string</code>
+  <p><code>  > indentation '"' '"' newline</code></p>
+        </div>
 
-<code>  > number</code>
+        <p class="preset-margins">Each <dfn>alternative</dfn> is indented on its own line. Each <dfn>alternative</dfn> contains <dfn>items</dfn> followed by a <dfn>newline</dfn>.</p>
 
-<code>  > "true"</code>
+        <div class="highlight-box">
+  <p><code>> alternatives</code></p>
 
-<code>  > "false"</code>
+  <p><code>  > alternative</code></p>
 
-<code>  > "null"</code>
+  <p><code>  > alternative alternatives</code></p>
 
-<code>> object</code>
+  <p><code>> alternative</code></p>
 
-<code>  > '{' ws '}'</code>
+  <p><code>  > indentation items newline</code></p>
+        </div>
 
-<code>  > '{' members '}'</code>
+        <p class="preset-margins">The <dfn>items</dfn> are separated by spaces. An <dfn>item</dfn> is a <dfn>literal</dfn> or the <dfn>name</dfn> of a <dfn>rule</dfn>.</p>
 
-<code>> members</code>
+        <div class="highlight-box">
+  <p><code>> items</code></p>
 
-<code>  > member</code>
+  <p><code>  > item</code></p>
 
-<code>  > member ',' members</code>
+  <p><code>  > item space items</code></p>
 
-<code>> member</code>
+  <p><code>> item</code></p>
 
-<code>  > ws string ws ':' element</code>
+  <p><code>  > literal</code></p>
 
-<code>> array</code>
+  <p><code>  > name</code></p>
 
-<code>  > '[' ws ']'</code>
+  <p><code>> literal</code></p>
 
-<code>  > '[' elements ']'</code>
+  <p><code>  > singleton</code></p>
+  <!-- TODO: Fix speling error in UI display -->
+  <p><code>  > range exclude</code></p>
 
-<code>> elements</code>
+  <p><code>  > '"' characters '"'</code></p>
+        </div>
 
-<code>  > element</code>
+        <p class="preset-margins">Any single Unicode code point except the 32 control codes may be placed within the single quotes. The <dfn>hexcode</dfn> of any Unicode code point may also be placed within the single quotes. A <dfn>hexcode</dfn> can contain 4, 5, or 6
+          hexadecimal digits.</p>
 
-<code>  > element ',' elements</code>
+          <div class="highlight-box">
+    <p><code>> singleton</code></p>
 
-<code>> element</code>
+    <p><code>  > ''' codepoint '''</code></p>
 
-<code>  > ws value ws</code>
+    <p><code>> codepoint</code>
 
-<code>> string</code>
+    <p><code>  > ' ' . '10FFFF'</code></p>
 
-<code>  > '"' characters '"'</code>
+    <p><code>  > hexcode</code></p>
 
-<code>> characters</code>
+    <p><code>> hexcode</code></p>
 
-<code>  > ""</code>
+    <p><code>  > "10" hex hex hex hex</code></p>
 
-<code>  > character characters</code>
+    <p><code>  > hex hex hex hex</code></p>
 
-<code>> character</code>
+    <p><code>  > hex hex hex hex</code></p>
 
-<code>  > '0020' . '10FFFF' - '"' - '\'</code>
+    <p><code>> hex</code></p>
 
-<code>  > '\' escape</code>
+    <p><code>  > '0' . '9'</code></p>
 
-<code>> escape</code>
+    <p><code>  > 'A' . 'F'</code></p>
+          </div>
 
-<code>  > '"'</code>
+        <p class="preset-margins">A <dfn>range</dfn> is specified as a <dfn>singleton</dfn>, a <code>.</code><sub>period</sub>, and another <dfn>singleton</dfn>. Literal ranges can optionally be followed by <code>-</code><sub>minus sign</sub> and characters to be
+          excluded.</p>
 
-<code>  > '\'</code>
+          <div class="highlight-box">
+    <p><code>> range</code></p>
 
-<code>  > '/'</code>
+    <p><code>  > singleton space '.' space singleton</code></p>
 
-<code>  > 'b'</code>
+    <p><code>> exclude</code></p>
 
-<code>  > 'f'</code>
+    <p><code>  > ""</code></p>
 
-<code>  > 'n'</code>
+    <p><code>  > space '-' space singleton exclude</code></p>
 
-<code>  > 'r'</code>
+    <p><code>  > space '-' space range exclude</code></p>
+          </div>
 
-<code>  > 't'</code>
+        <p class="preset-margins">A <dfn>character</dfn> wrapped in <code>"</code><sub>double quote</sub> can be any of the Unicode code points except the 32 control codes and <code>"</code><sub>double quote</sub>. The definition of <dfn>character</dfn> shows an
+          example of a codepoint range and exclude.</p>
 
-<code>  > 'u' hex hex hex hex</code>
+          <div class="highlight-box">
+    <p><code>> characters</code></p>
 
-<code>> hex</code>
+    <p><code>  > character</code></p>
 
-<code>  > digit</code>
+    <p><code>  > character characters</code></p>
 
-<code>  > 'A' . 'F'</code>
+    <p><code>> character</code></p>
 
-<code>  > 'a' . 'f'</code>
+    <p><code>  > ' ' . '10FFFF' - '"'</code></p>
+          </div>
+      </section>
 
-<code>> number</code>
+      <section class="json-block">
 
-<code>  > integer fraction exponent</code>
+              <h2 class="preset-margins underlined">JSON</h2>
 
-<code>> integer</code>
+              <p class="preset-margins">This is the JSON grammar in McKeeman Form.</p>
 
-<code>  > digit</code>
+              <div class="highlight-box">
+        <p><code>> json</code></p>
 
-<code>  > onenine digits</code>
+        <p><code>  > element</code></p>
 
-<code>  > '-' digit</code>
+        <p><code>> value</code></p>
 
-<code>  > '-' onenine digits</code>
+        <p><code>  > object</code></p>
 
-<code>> digits</code>
+        <p><code>  > array</code></p>
 
-<code>  > digit</code>
+        <p><code>  > string</code></p>
 
-<code>  > digit digits</code>
+        <p><code>  > number</code></p>
 
-<code>> digit</code>
+        <p><code>  > "true"</code></p>
 
-<code>  > '0'</code>
+        <p><code>  > "false"</code></p>
 
-<code>  > onenine</code>
+        <p><code>  > "null"</code></p>
 
-<code>> onenine</code>
+        <p><code>> object</code></p>
 
-<code>  > '1' . '9'</code>
+        <p><code>  > '{' ws '}'</code></p>
 
-<code>> fraction</code>
+        <p><code>  > '{' members '}'</code></p>
 
-<code>  > ""</code>
+        <p><code>> members</code></p>
 
-<code>  > '.' digits</code>
+        <p><code>  > member</code></p>
 
-<code>> exponent</code>
+        <p><code>  > member ',' members</code></p>
 
-<code>  > ""</code>
+        <p><code>> member</code></p>
 
-<code>  > 'E' sign digits</code>
+        <p><code>  > ws string ws ':' element</code></p>
 
-<code>  > 'e' sign digits</code>
+        <p><code>> array</code></p>
 
-<code>> sign</code>
+        <p><code>  > '[' ws ']'</code></p>
 
-<code>  > ""</code>
+        <p><code>  > '[' elements ']'</code></p>
 
-<code>  > '+'</code>
+        <p><code>> elements</code></p>
 
-<code>  > '-'</code>
+        <p><code>  > element</code></p>
 
-<code>> ws</code>
+        <p><code>  > element ',' elements</code></p>
 
-<code>  > ""</code>
+        <p><code>> element</code></p>
 
-<code>  > '0020' ws</code>
+        <p><code>  > ws value ws</code></p>
 
-<code>  > '000A' ws</code>
+        <p><code>> string</code></p>
 
-<code>  > '000D' ws</code>
+        <p><code>  > '"' characters '"'</code></p>
 
-<code>  > '0009' ws</code>
-        </pre>
-      </div>
+        <p><code>> characters</code></p>
 
-      <a href="https://www.crockford.com/mckeeman.html" target="_blank">See original site.</a>
+        <p><code>  > ""</code></p>
+
+        <p><code>  > character characters</code></p>
+
+        <p><code>> character</code></p>
+
+        <p><code>  > '0020' . '10FFFF' - '"' - '\'</code></p>
+
+        <p><code>  > '\' escape</code></p>
+
+        <p><code>> escape</code></p>
+
+        <p><code>  > '"'</code></p>
+
+        <p><code>  > '\'</code></p>
+
+        <p><code>  > '/'</code></p>
+
+        <p><code>  > 'b'</code></p>
+
+        <p><code>  > 'f'</code></p>
+
+        <p><code>  > 'n'</code></p>
+
+        <p><code>  > 'r'</code></p>
+
+        <p><code>  > 't'</code></p>
+
+        <p><code>  > 'u' hex hex hex hex</code></p>
+
+        <p><code>> hex</code></p>
+
+        <p><code>  > digit</code></p>
+
+        <p><code>  > 'A' . 'F'</code></p>
+
+        <p><code>  > 'a' . 'f'</code></p>
+
+        <p><code>> number</code></p>
+
+        <p><code>  > integer fraction exponent</code></p>
+
+        <p><code>> integer</code></p>
+
+        <p><code>  > digit</code></p>
+
+        <p><code>  > onenine digits</code></p>
+
+        <p><code>  > '-' digit</code></p>
+
+        <p><code>  > '-' onenine digits</code></p>
+
+        <p><code>> digits</code></p>
+
+        <p><code>  > digit</code></p>
+
+        <p><code>  > digit digits</code></p>
+
+        <p><code>> digit</code></p>
+
+        <p><code>  > '0'</code></p>
+
+        <p><code>  > onenine</code></p>
+
+        <p><code>> onenine</code></p>
+
+        <p><code>  > '1' . '9'</code></p>
+
+        <p><code>> fraction</code></p>
+
+        <p><code>  > ""</code></p>
+
+        <p><code>  > '.' digits</code></p>
+
+        <p><code>> exponent</code></p>
+
+        <p><code>  > ""</code></p>
+
+        <p><code>  > 'E' sign digits</code></p>
+
+        <p><code>  > 'e' sign digits</code></p>
+
+        <p><code>> sign</code></p>
+
+        <p><code>  > ""</code></p>
+
+        <p><code>  > '+'</code></p>
+
+        <p><code>  > '-'</code></p>
+
+        <p><code>> ws</code></p>
+
+        <p><code>  > ""</code></p>
+
+        <p><code>  > '0020' ws</code></p>
+
+        <p><code>  > '000A' ws</code></p>
+
+        <p><code>  > '000D' ws</code></p>
+
+        <p><code>  > '0009' ws</code></p>
+              </div>
+
+              <a class="preset-margins original-link" href="https://www.crockford.com/mckeeman.html" target="_blank">See original site.</a>
+      </section>
     </article> <!-- End of article -->
   </main> <!-- End of main -->
 
@@ -503,7 +484,7 @@
   </aside>
 
   <footer class="preset-margins">
-    <p><a href="LICENSE.MD">Terms of Use</a> &bull; Prototyped by Caroline Rozali @hyfyooie</p>
+    <p><a href="LICENSE.MD">Terms of Use</a> &bull; Developed by Caroline Rozali @hyfyooie</p>
   </footer> <!-- End of footer -->
 
   <div class="back-to-top">
