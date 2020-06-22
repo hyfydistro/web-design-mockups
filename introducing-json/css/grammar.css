@@ -1,0 +1,33 @@
+/* MAIN */
+section {
+  margin-bottom: var(--space-03);
+}
+
+div.highlight-box {
+  width: 100%;
+}
+
+div.highlight-box p {
+  overflow-wrap: break-word;
+}
+
+div.highlight-box p code {
+  white-space: pre-wrap;
+}
+
+div.highlight-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Media Queries */
+@media all and (min-width: 690px) {
+  .intro-statement,
+  .grammar-block,
+  .json-block,
+  .original-link {
+    width: 690px;
+    max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

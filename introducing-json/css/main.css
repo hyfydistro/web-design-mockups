@@ -10,6 +10,10 @@
     - tutorials
     https://www.youtube.com/watch?v=ksXwaWHCW6k
     https://www.youtube.com/watch?v=E8BeSSdIUW4
+
+- Change style for Back To Top button
+  - When not hover, filter with a grey scale - black and white
+  - when hover on, use normal color
     */
 
 /* || Contents
@@ -341,6 +345,11 @@ a.link.active:hover {
 }
 
 /* MAIN */
+.underlined {
+  padding-bottom: var(--space-01);
+  border-bottom: 1px solid var(--text-color-30);
+}
+
 /* External Link Icon */
 a[target="_blank"] {
   text-decoration: underline;
