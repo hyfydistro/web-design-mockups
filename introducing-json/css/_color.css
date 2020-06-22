@@ -106,7 +106,7 @@ a[target="_blank"]:visited {
 
 /* ===== ASIDE */
 /* Theme: Bottom borer for aside h2 */
-aside h2 {
+.underlined {
   border-bottom: 1px solid var(--text-color-30);
 }
 

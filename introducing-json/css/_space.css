@@ -52,7 +52,7 @@ h2:not(.logo-text) {
 }
 
 /* ASIDE header - h2 */
-aside.featured h2 {
+.underlined {
   padding-bottom: var(--space-01);
 }
 
@@ -254,7 +254,7 @@ nav button[aria-controls="menu"].open {
 
 /* TODO:  UNDER CONSIDERATION */
 @media all and (min-width: 690px) {
-  aside.featured h2 {
+  .underlined {
     padding-left: var(--space-01);
   }
 
