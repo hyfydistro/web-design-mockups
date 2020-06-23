@@ -11,9 +11,6 @@
     https://www.youtube.com/watch?v=ksXwaWHCW6k
     https://www.youtube.com/watch?v=E8BeSSdIUW4
 
-- Change style for Back To Top button
-  - When not hover, filter with a grey scale - black and white
-  - when hover on, use normal color
     */
 
 /* || Contents
@@ -320,6 +317,7 @@ header.scrolling-active {
 
 .back-to-top {
   display: none;
+  filter:grayscale(100%);
 }
 
 .back-to-top.reveal {
@@ -329,7 +327,7 @@ header.scrolling-active {
 }
 
 .back-to-top:hover {
-  filter: saturate(2) brightness(95%);
+  filter: none;
 }
 
 /* ===== Theme */
