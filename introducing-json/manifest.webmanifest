@@ -1,0 +1,24 @@
+{
+  "short_name": "IntroducingJSON",
+  "name": "Introducing JSON",
+  "start_url": "/introducing-json.html",
+
+  "theme_color": "#2987FF",
+  "background_color": "#2987FF",
+
+  "display": "standalone",
+  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "/img/json-144wx144h.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/json-160wx160h.png",
+      "sizes": "160x160",
+      "type": "image/png"
+    }
+  ]
+}
