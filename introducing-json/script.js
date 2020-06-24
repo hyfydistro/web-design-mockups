@@ -35,10 +35,6 @@ window.addEventListener('resize', changeView);
 
 function checkView() {
 
-  // Register Service Worker
-  registerSW();
-
-
   if (maxWidth.matches) {
     // Initialise setup
 
@@ -232,14 +228,12 @@ function addDropShadow() {
 }
 
 // Service Worker
-async function registerSW() {
   if ('serviceWorker' in navigator) {
     console.log("SW is supported");
     window.addEventListener('load', () => {
       navigator.serviceWorker
-        .register('/sw.js')
+        .register('sw.js')
         .then(reg => console.log('Service Worker: Registered'))
         .catch(err => console.log(`Service Worker: Error: ${err}`));
     });
   }
-}
