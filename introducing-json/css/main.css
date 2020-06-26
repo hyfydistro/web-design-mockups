@@ -2,16 +2,16 @@
 
 /* TODO:
 - Fix heavy fontawesome load
-- add more contents to other pages
-
-- PWA
-  - Min for icon image is 512x512 - UPDATE IT!
-  - sw
-    - tutorials
-    https://www.youtube.com/watch?v=ksXwaWHCW6k
-    https://www.youtube.com/watch?v=E8BeSSdIUW4
-
-    */
+- Rearrange files to order
+  - script.js to new js folder
+    - change name to 'main.js'
+    - Update location of script in all html files
+  - Divide main.css with 'introducing-json.css'
+  - Delete any other media queries written and unused
+- Set up for Deployment
+  - minify
+  - GitHub Page or Netlify
+*/
 
 /* || Contents
 - Resets
