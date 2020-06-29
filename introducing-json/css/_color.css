@@ -8,30 +8,30 @@
 */
 
 :root {
-  --primary-color: #2987FF;
+  --primary-color: #2987ff;
 
   /* Primary Color Variation */
-  --primary-color-05: #E5F1FF;
-  --primary-color-10: #CCE2FF; /* In use */
-  --primary-color-02: #99C6FF;
-  --primary-color-03: #66A9FF;
-  --primary-color-40: #2987FF; /* In use - aka "Main Color" */
-  --primary-color-05: #0070FF;
-  --primary-color-60: #005ACC;
+  --primary-color-05: #e5f1ff;
+  --primary-color-10: #cce2ff; /* In use */
+  --primary-color-02: #99c6ff;
+  --primary-color-03: #66a9ff;
+  --primary-color-40: #2987ff; /* In use - aka "Main Color" */
+  --primary-color-05: #0070ff;
+  --primary-color-60: #005acc;
   --primary-color-70: #004399; /* In use */
-  --primary-color-80: #002D66; /* In semi-use */
+  --primary-color-80: #002d66; /* In semi-use */
   --primary-color-90: #001633;
 
   /* Text Color */
-  --text-color-05: #F2F2F2;
-  --text-color-10: #E5E5E5;
-  --text-color-20: #CCCCCC;
-  --text-color-30: #B2B2B2;
+  --text-color-05: #f2f2f2;
+  --text-color-10: #e5e5e5;
+  --text-color-20: #cccccc;
+  --text-color-30: #b2b2b2;
   --text-color-40: #999999; /* In use - REJECTED?  A11y Concerns */
   --text-color-50: #808080; /* In use - REJECTED?  A11y Concerns */
   --text-color-60: #666666; /* In use */
-  --text-color-70: #4D4D4D; /* In use */
-  --text-color-80: #1A1A1A; /* In use */
+  --text-color-70: #4d4d4d; /* In use */
+  --text-color-80: #1a1a1a; /* In use */
   --text-color-90: #000000;
 
   /* NOTE */
@@ -167,12 +167,12 @@ footer a:focus {
 /* MOBILE, TABLET */
 @media all and (max-width: 960px) {
   /* HEADER - NAV */
-  .link:hover {
+  a.link:hover {
     background-color: var(--primary-color-10);
     color: var(--primary-color-80);
   }
 
-  .link:focus {
+  a.link:focus {
     background-color: var(--primary-color-10);
     color: var(--primary-color-80);
     outline: none;
@@ -193,23 +193,12 @@ footer a:focus {
 
 /* L */
 @media all and (min-width: 960px) {
-  /* TODO: ADD :hover for Desktop Media Query
-  - #link-pdf
-  - .link
-  */
-  #link-pdf:hover {
-    /* Suggestions:
-    - Add underline
-    - Cahnge color and bg color too??? */
-  }
-
   .link:hover:not(.active):not(#link-pdf) {
     text-decoration: underline;
   }
 
-  /* TODO: ENABLE :focus on #link-pdf with desktop Media Query */
-  #link-pdf {
+  #link-pdf:hover,
+  #link-pdf:focus {
     outline: 2px solid var(--primary-color-40);
   }
-
 }
