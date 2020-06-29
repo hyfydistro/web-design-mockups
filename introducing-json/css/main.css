@@ -1,17 +1,4 @@
-/* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'); */
-
-/* TODO:
-- Fix heavy fontawesome load
-- Rearrange files to order
-  - script.js to new js folder
-    - change name to 'main.js'
-    - Update location of script in all html files
-  - Divide main.css with 'introducing-json.css'
-  - Delete any other media queries written and unused
-- Set up for Deployment
-  - minify
-  - GitHub Page or Netlify
-*/
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css");
 
 /* || Contents
 - Resets
