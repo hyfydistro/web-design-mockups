@@ -2,22 +2,25 @@
 
 This mockup supports the following:
 
-- [ ] Responsive mobile/ tablet/ laptop - **R**
+- [x] Responsive mobile/ tablet/ laptop - **R**
 
-- [ ] Ally (Web Accessibility) - **A11y** (Undetermined)
+- [x] Ally (Web Accessibility) - **A11y** (Undetermined)
 
 - [ ] Old Browser Support - **OBS** [REJECTED]
-  Reasons: Targeting programmers and developers.
+      Reasons: Targeting programmers and developers.
 
 ## Design Structure
 
 CSS
 
 Using modern technology for responsive designs
+
 - Flexbox
+- columns
 
 Responsive Images
 Use:
+
 - `<picture>` [REJECTED]
 - `<img>`
 - `srcset` (attribute)
@@ -28,134 +31,93 @@ Use:
 
 **Web Development**
 
-- [ ] develop the hamburger menu
-  - [/] Create the burger
-  - [/] Add functionality to the burger, i.e. animate
-  - [/] Stylise burger w header
-  - [/] Get an overlay when menu is open, and close when click on menu-button or outside.
-  - Replace the space for li padding to <a> padding i.e. clickable???
-  - [/] hover link text
-  - [ ] Center images and its class...!
-  - [ ] Clean code time!
-  - [ ] a11y available - TEST!
-  - [ ] Progressive Enhancement
-
-- [ ] Fill in the content
-  - [ ] Introducing JSON
-  - [ ] Affiliated Technologies
-  - [ ] Grammar
-
-- [ ] Layout Style (position, width / height, space, etc.)
-  - [ ] Introducing JSON
-  - [ ] Affiliated Technologies
-  - [ ] Grammar
-
-- [ ] Color / Theme Style
-  - [ ] Introducing JSON
-  - [ ] Affiliated Technologies
-  - [ ] Grammar
-
-- [ ] Add a bookmark icon, accessibility and functionality to the indexes at 'Affiliated Technologies.html' file.
-  - [ ] bmk icon,
-  - [ ] a11y,
-  - [ ] functionality.
-
-- Add hover effect (probably color change) to links (a[target="\_blank" excluded]).
-
-- [ ] Add content from resource, and ajdust any weird ones...!
-- [ ] Oragnise before moving to tablet and desktop design
-
 **UI Designs**
 
-- [/] Change italic to bold; sans serif doesn't do italic to differentiate (also, improves a11y).
-- [/] Add bookmark links
-- [/] Add external links
+- [ ] Update Interface change
+
+  - [ ] color of grey-ed menu bar (mobile and tablet)
+
 - [ ] Update in Social Medias
-  - [/] ArtStation
-  - [/] DeviantArt
-  - [/] Dribble
+  - [ ] ArtStation
+  - [ ] DeviantArt
+  - [ ] Dribble
   - [ ] Instagram
 
 ## Other information
 
-* Type of Site: Blog / Info Site; Text-Heavy.
+### Type of Site:
 
-Read to be "skimmed"
+- Blog / Info Site; Text-Heavy.
 
-* Themes: Formal
+- Read to be "skimmed".
+
+### Themes:
+
+Formal
 
 ## Process
 
 ### Design Goals
 
-- [ ] 1. Business Goals
-
-- [ ] User Goals ???
-
-- [ ] n-1. Design Goals
-
-### Wireframe
-
-- [ ] Contents / Reference collected
-
-- [ ] Determine Hierarchy
+- Performance
+- Fit for Purpose
+- Brand Image
+- Engagement
 
 ### Style Guide
 
-- [ ] 1. Typography
-  - [ ] XS : 320px device-width minimum
-  - [ ] S (Mobile)
-  - [ ] M (Tablet)
-  - [ ] L (Desktop)
+- [x] 1. Typography
+
+  - [x] XS : 320px device-width minimum
+  - [x] S (Mobile)
+  - [x] M (Tablet)
+  - [x] L (Desktop)
   - [ ] XL
 
-- [ ] Images
+- [x] Images
 
-- [ ] n-1. Color
-  - [ ] Primary Color, "on" surface and variation
-  - [ ] Secondary Color, "on" surface and variation
-  - [ ] Text Color and variation
+- [x] n-1. Color
+  - [x] Primary Color, "on" surface and variation
+  - [x] Secondary Color, "on" surface and variation
+  - [x] Text Color and variation
+  - [ ] Dark Theme
   - [ ] Other
 
 ### Design System
 
-- [ ] Typography
-  - [ ] font face
-  - [ ] Modular Scale
-  - [ ] A11y
-    - [ ] font size
+- [x] Typography
+  - [x] font face
+  - [x] Modular Scale
+  - [x] A11y
+    - [x] font size
 
+* [x] Spatial System
 
-- [ ] Spatial System
-  - [ ] space-unit-1
-  - [ ] space-unit-2
-  - [ ] space-unit-3
-  - [ ] space-unit-4
-  - [ ] space-unit-x
+  - [x] space-unit-1
+  - [x] space-unit-2
+  - [x] space-unit-3
+  - [x] space-unit-4
+  - [ ] space-unit-x :speech_balloon: --Never Used.
 
-- [ ] Grid System
+* [ ] Grid System
+
   - [ ] XS
   - [ ] S (e.g. mobile)
   - [ ] M (e.g. tablet)
   - [ ] L (e.g. desktop)
   - [ ] XL
 
-- [ ] Color System
-  - [ ] Primary color
-  - [ ] Secondary color (optional)
+* [x] Color System
+  - [x] Primary color
+  - [x] Secondary color (optional)
   - [ ] Other (optional; If available, list below)
-  - [ ] Info (optional)
-  - [ ] A11y
+  - [ ] Info (optional) :speech_balloon: --Static site. i.e. Redundant.
+  - [x] A11y
   - [ ] Theming
 
+### Design patterns
 
-### Design patterns ???
-
-* Blog / Info Site
-
-- [ ]
-
-???
+- F-Pattern
 
 ## Reference
 
