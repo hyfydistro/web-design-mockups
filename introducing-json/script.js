@@ -84,14 +84,14 @@ function checkView() {
       }
     });
 
-    console.log("Set Things up - Pass1");
+    // * console.log("Set Things up - Pass1");
   } else if (minWidth.matches) {
     // Document Setup
     menuList.setAttribute("aria-hidden", false);
     // menuList.style.display = 'block';
     navBtn.setAttribute("aria-expanded", true);
 
-    console.log("Set Nothing up - Pass1");
+    // * console.log("Set Nothing up - Pass1");
   }
 }
 
@@ -148,7 +148,7 @@ function changeView() {
     });
 
     // Assign an 'escape' key to menu when opened in mobile-tablet view.
-    console.log("Redo on Resize - Pass2");
+    // * console.log("Redo on Resize - Pass2");
   } else if (minWidth.matches) {
     // width over 960 change view
     // Document Setup
@@ -161,7 +161,7 @@ function changeView() {
     // If view is back to start, box shadow disappears.
     // window.removeEventListener('scroll', addDropShadow);
 
-    console.log("Undo on Resize - Pass2");
+    // * console.log("Undo on Resize - Pass2");
   }
 }
 
@@ -223,7 +223,7 @@ function addDropShadow() {
 
 // Service Worker
 if ("serviceWorker" in navigator) {
-  console.log("SW is supported");
+  // * console.log("SW is supported");
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("sw.js")
