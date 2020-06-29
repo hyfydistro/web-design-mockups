@@ -197,7 +197,10 @@ footer a:focus {
     text-decoration: underline;
   }
 
-  #link-pdf:hover,
+  #link-pdf:hover {
+    text-decoration: none;
+  }
+
   #link-pdf:focus {
     outline: 2px solid var(--primary-color-40);
   }
