@@ -248,7 +248,6 @@ nav button[aria-controls="menu"].open {
   }
 }
 
-/* TODO:  UNDER CONSIDERATION */
 @media all and (min-width: 690px) {
   .underlined {
     padding-left: var(--space-01);
@@ -286,15 +285,5 @@ nav button[aria-controls="menu"].open {
     margin-top: var(--space-01);
     margin-bottom: var(--space-01);
     margin-left: var(--space-01);
-  }
-}
-
-/* L */
-@media all and (min-width: 1024px) {
-  header,
-  main,
-  aside,
-  footer {
-    width: 960px;
   }
 }
