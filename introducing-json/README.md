@@ -11,7 +11,7 @@ This mockup supports the following:
 
 ## Design Structure
 
-CSS
+### CSS
 
 Using modern technology for responsive designs
 
