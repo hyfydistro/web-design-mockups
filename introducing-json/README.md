@@ -4,7 +4,7 @@ This mockup supports the following:
 
 - [x] Responsive mobile/ tablet/ laptop - **R**
 
-- [x] Ally (Web Accessibility) - **A11y** (Undetermined)
+- [x] Ally (Web Accessibility) - **A11y**
 
 - [ ] Old Browser Support - **OBS** [REJECTED]
       Reasons: Targeting programmers and developers.
