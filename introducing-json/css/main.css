@@ -146,9 +146,15 @@ aside.featured {
   line-height: 28px; /* 14px * 2 */
 }
 
+.column-1 a,
+.column-2 a {
+  margin-right: auto;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
+  width: auto;
 }
 
 /* ===== Module */
@@ -240,7 +246,7 @@ button[aria-controls="menu"] {
 
 .hamburger::before,
 .hamburger::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 24px;
   height: 3px;
@@ -310,8 +316,8 @@ button:focus .hamburger::after {
 /* Apply dropd shadow styles after scroll */
 header.scrolling-active {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow:    0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow:         0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* FOOTER */
@@ -321,7 +327,7 @@ header.scrolling-active {
 
 .back-to-top {
   display: none;
-  filter:grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .back-to-top.reveal {
@@ -358,7 +364,7 @@ a[target="_blank"] {
 }
 
 a[target="_blank"]::after {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   content: " \f08e";
 }
 
@@ -370,7 +376,7 @@ a[target="_blank"]::after {
 }
 
 .tags {
-  background-color: #EBEBEB
+  background-color: #ebebeb;
 }
 
 /* FOOTER */
@@ -395,7 +401,6 @@ footer a {
     /* NB: Used because it pops out more than the menu module  */
     z-index: -1;
   }
-
 }
 
 /* M */
@@ -458,11 +463,15 @@ footer a {
     margin-right: auto;
   }
 
+  .column-1 a,
+  .column-2 a {
+    margin: auto;
+  }
 }
 
 /* L */
 @media all and (min-width: 960px) {
-  header{
+  header {
     width: 960px;
     max-width: 960px;
     margin: 0 auto;
@@ -499,9 +508,9 @@ footer a {
     max-width: 960px;
   }
 
+  .cards-wrapper,
   .cards {
     width: 425.5px;
     height: 318px;
   }
-
 }

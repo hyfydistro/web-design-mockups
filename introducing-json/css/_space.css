@@ -13,14 +13,26 @@
   --space-scale-ratio: 1.5;
   /* e.g. modular scale */
   /* space scale */
-  --space-quarter: calc(1rem / (var(--space-scale-ratio) * var(--space-scale-ratio)));
+  --space-quarter: calc(
+    1rem / (var(--space-scale-ratio) * var(--space-scale-ratio))
+  );
   --space-half: calc(1rem / var(--space-scale-ratio));
   /* font base / normal: 1em */
   --space-01: calc(1rem * var(--space-scale-ratio));
   --space-02: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio));
-  --space-03: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
-  --space-04: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
-  --space-05: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-03: calc(
+    1rem * var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio)
+  );
+  --space-04: calc(
+    1rem * var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio) * var(--space-scale-ratio)
+  );
+  --space-05: calc(
+    1rem * var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio)
+  );
 }
 
 /* || General Layout (Contents)
@@ -113,8 +125,8 @@ nav button[aria-controls="menu"].open {
 
 /* ASIDE - language-container component */
 .language-icon-wrapper {
-   margin-bottom: var(--space-quarter);
- }
+  margin-bottom: var(--space-quarter);
+}
 
 /* ===== Modules */
 /* Highlight-box */
@@ -144,17 +156,6 @@ nav button[aria-controls="menu"].open {
   margin-right: auto;
 }
 
-.cards {
-  /* position: relative;
-  display: block;
-  margin-top: var(--space-02);
-  margin-bottom: var(--space-02); */
-  /* Center components */
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* margin-bottom: var(--space-02); */
-}
-
 .tags {
   margin-top: var(--space-half);
   margin-left: var(--space-half);
@@ -178,7 +179,6 @@ nav button[aria-controls="menu"].open {
 /* || Media Queries */
 /* S */
 @media all and (max-width: 600px) {
-
   /* Mobile L / R margins presets (1) */
   .preset-margins {
     margin-left: 16px;
@@ -198,10 +198,6 @@ nav button[aria-controls="menu"].open {
   }
 
   main {
-    /* TODO: What to do with collision aside?
-     - Put it in Main aswell? */
-    /* position: absolute; */
-    /* margin-top: calc(59px + var(--space-01)); */
     margin-top: calc(70px + var(--space-01));
   }
 
@@ -295,7 +291,6 @@ nav button[aria-controls="menu"].open {
 
 /* L */
 @media all and (min-width: 1024px) {
-
   header,
   main,
   aside,
