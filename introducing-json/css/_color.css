@@ -100,6 +100,11 @@ a[target="_blank"]:visited {
   color: var(--primary-color-80);
 }
 
+a[target="_blank"]:focus,
+.link:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
 .highlight-box {
   background-color: var(--primary-color-10);
 }
@@ -162,10 +167,6 @@ footer a:focus {
 /* MOBILE, TABLET */
 @media all and (max-width: 960px) {
   /* HEADER - NAV */
-  nav button:focus {
-    border: 2px solid var(--primary-color-40);
-  }
-
   .link:hover {
     background-color: var(--primary-color-10);
     color: var(--primary-color-80);
@@ -207,8 +208,7 @@ footer a:focus {
   }
 
   /* TODO: ENABLE :focus on #link-pdf with desktop Media Query */
-  a[target="_blank"]:focus,
-  .link:focus {
+  #link-pdf {
     outline: 2px solid var(--primary-color-40);
   }
 

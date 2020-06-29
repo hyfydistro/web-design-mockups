@@ -208,7 +208,6 @@ nav ul.open {
   margin-top: 59px;
 }
 
-/* (1)hover -> (2)Focus -> (3)Active */
 .cards {
   transition: transform 0.3s;
 }
@@ -259,9 +258,14 @@ button[aria-controls="menu"] {
   left: 0;
 }
 
-button:hover,
-button:focus {
-  /* Change color to a blue? */
+button:hover .hamburger,
+button:hover .hamburger::before,
+button:hover .hamburger::after,
+button:focus .hamburger,
+button:focus .hamburger::before,
+button:focus .hamburger::after {
+  background-blend-mode: screen;
+  background-color: var(--primary-color-40);
 }
 
 /* Hamburger animations */
