@@ -19,7 +19,7 @@ div.highlight-box p:last-child {
   margin-bottom: 0;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES */
 @media all and (min-width: 690px) {
   .intro-statement,
   .grammar-block,

@@ -1,6 +1,6 @@
 /* Typography stylesheet */
 /* For Modern Browsers - Created in 2020 */
-/* || INCLUDES
+/* || INCLUDES:
 - font face
   - default
   - code syntax
@@ -9,17 +9,6 @@
 - line-height (NOT DETERMINED)
 - font weight (NOT DETERMINED)
  */
-
-/* TODO:
-- Breakpoints
-  - mobile, tablet, desktop
-  - ...
-  - Change root at breakpoints
-  - a11y: links
-      a {...}
-      a:hover, a:visited, a:focus {...}
-      a:active {...}
-    */
 
 :root {
   /* font face */
@@ -52,7 +41,7 @@
   --body-line-height: 1em;
 
   /* Dark Theme */
-  /* Consider Color and Space */
+  /* ? Consider Color and Space */
 }
 
 /* || Contents
@@ -61,12 +50,13 @@
 - Miscellaneous
 */
 
-/* Main Typography */
+/* ===== HTML (root) */
 html {
   font-size: var(--base-font-size);
   font-family: var(--font-face);
 }
 
+/* ===== Headings (H1-H3) */
 h1 {
   font-size: 27px;
   line-height: 1.5rem;
@@ -83,6 +73,7 @@ h3 {
   font-weight: normal;
 }
 
+/* ===== Miscellaneous */
 p,
 .date-text,
 a .link,
@@ -117,23 +108,17 @@ a {
   line-height: 28px;
 }
 
-/* Breakpoints */
+/* MEDIA QUERIES */
 /* 320px - XS */
-/* Note: 320px would be the default root origin,
-where XS is relative to */
+/* 
+Note: 320px would be the default root origin,
+where XS is relative to 
+*/
 @media all and (min-width: 375px) {
   html { font-size: 15px; }
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
-  /* p,
-  .date-text,
-  a .link,
-  .highlight-box ul li,
-  footer p { font-size: var(--text-sm); } */
-  /* main p,
-  .highlight-box ul li,
-  .highlight-box { width: 53ch; } */
 }
 
 /* S */
@@ -142,13 +127,6 @@ where XS is relative to */
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
-  /* p,
-  .date-text,
-  a .link,
-  footer p { font-size: var(--text-sm); } */
-  /* main p,
-  .highlight-box ul li,
-  .highlight-box { width: 70ch; } */
 }
 
 /* S (2019 popular device-width) */
@@ -157,13 +135,6 @@ where XS is relative to */
   h1 { font-size: var(--text-xxl); }
   h2 { font-size: var(--text-xl); }
   h3 { font-size: var(--text-md); }
-  /* p,
-  .date-text,
-  a .link,
-  footer p { font-size: var(--text-sm); } */
-  /* main p,
-  .highlight-box ul li,
-  .highlight-box { width: 70ch; } */
 }
 
 @media all and (min-width: 960px) {
@@ -183,27 +154,5 @@ where XS is relative to */
     h1 { font-size: var(--text-xxl); }
     h2 { font-size: var(--text-xl); }
     h3 { font-size: var(--text-md); }
-    /* p,
-    .date-text,
-    a .link,
-    footer p { font-size: var(--text-sm); } */
-    /* main p,
-    .highlight-box ul li,
-    .highlight-box { width: 70ch; } */
   }
-}
-
-/* WARNING */
-/* OKAY. STOP THE FONT SIzE INCREASE HERE. ANYMORE IS TOO HUGE! */
-
-/* TODO: Fix Typography Size at breakpoints */
-
-/* M (2019 popular device-width) */
-@media all and (min-width: 1366px) {
-
-}
-
-/* L */
-@media all and (max-width: 1440px) {
-
 }
