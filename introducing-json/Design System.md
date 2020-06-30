@@ -2,6 +2,11 @@
 
 `tokens`, and naming conventions, and much more?
 
+- Typography
+- Spatial System
+- Color
+- Miscellaneous
+
 ## Typography
 
 Modular Scale: 1.25
