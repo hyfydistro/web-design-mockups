@@ -57,6 +57,7 @@ header {
 .logo-text {
   display: inline-block;
   vertical-align: middle;
+  color: var(--text-color-80);
 }
 
 /* MAIN */

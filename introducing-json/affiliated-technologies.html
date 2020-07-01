@@ -7,11 +7,11 @@
   <meta name="theme-color" content="#2987FF">
   <title>Introducing JSON</title>
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/_typography.css">
-  <link rel="stylesheet" href="css/_space.css">
-  <link rel="stylesheet" href="css/_color.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/affiliated-technologies.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/space.css">
+  <link rel="stylesheet" href="./css/color.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/affiliated-technologies.css">
   <link rel="manifest" href="manifest.webmanifest">
   <script type="text/javascript" src="script.js" defer></script>
 </head>
@@ -19,7 +19,7 @@
 <body>
   <header role="banner">
     <div class="logo" aria-label="logo icon">
-      <a class="logo-link" href="introducing-json.html">
+      <a class="logo-link" href="index.html">
         <img class="logo-icon" src="img/logo-icon-sml-36wx36h.png" alt="json logo icon">
         <h2 class="logo-text"><span class="blue-colored">{</span>JSON<span class="blue-colored">}</span></h2>
       </a>
@@ -29,10 +29,12 @@
         <div aria-hidden="true" class="hamburger"></div>
       </button>
       <ul id="menu" role="menu">
-        <li><a role="menuitem" class="link" href="introducing-json.html">Introducing JSON</a></li>
+        <li><a role="menuitem" class="link" href="index.html">Introducing JSON</a></li>
         <li><a role="menuitem" class="link active" href="#" tabindex="-1">Affiliated Technologies</a></li>
         <li><a role="menuitem" class="link" href="grammar.html">Grammar</a></li>
-        <li><a class="link" target="_blank" id="link-pdf" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">[PDF] ECMA-404 The JSON Data Interchange Standard</a></li>
+        <li><a class="link" target="_blank" id="link-pdf"
+            href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">[PDF] ECMA-404 The JSON
+            Data Interchange Standard</a></li>
       </ul> <!-- End of ul -->
     </nav> <!-- End of nav -->
     <div class="overlay"></div>
@@ -78,159 +80,166 @@
         <div id="num" class="title-block">
           <h2>#</h2>
         </div>
-      <ul class="index-list">
-        <li>
-          <h3>8th</h3>
-          <ul>
-            <li><a href="https://8th-dev.com/json.html">json</a></li>
-          </ul>
-        </li>
-      </ul>
+        <ul class="index-list">
+          <li>
+            <h3>8th</h3>
+            <ul>
+              <li><a href="https://8th-dev.com/json.html">json</a></li>
+            </ul>
+          </li>
+        </ul>
 
         <div id="a" class="title-block">
           <h2>A</h2>
         </div>
         <ul class="index-list">
-        <li>
-          <h3>ActionScript</h3>
-          <ul>
-            <li><a href="http://github.com/mikechambers/as3corelib">ActionScript3</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Ada</h3>
-          <ul>
-            <li><a href="http://docs.adacore.com/gnatcoll-docs/json.html">GNATCOLL.JSON</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>AdvPL</h3>
-          <ul>
-            <li><a href="https://github.com/imsys/JSON-ADVPL">JSON-ADVPL</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>APL</h3>
-          <ul>
-            <li><a href="http://help.dyalog.com/latest/#Language/System Functions/json.htm">⎕JSON</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>ASP</h3>
-          <ul>
-            <li><a href="https://github.com/tugrul/aspjson">JSON for ASP</a></li>
-            <li><a href="http://www.webdevbros.net/2007/04/26/generate-json-from-asp-datatypes/">JSON ASP utility class</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>AWK</h3>
-          <ul>
-            <li><a href="https://github.com/step-/JSON.awk">JSON.awk</a></li>
-            <li><a href="https://github.com/Andy753421/rhawk/blob/master/json.awk">rhawk</a></li>
-          </ul>
-        </li>
-      </ul>
+          <li>
+            <h3>ActionScript</h3>
+            <ul>
+              <li><a href="http://github.com/mikechambers/as3corelib">ActionScript3</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>Ada</h3>
+            <ul>
+              <li><a href="http://docs.adacore.com/gnatcoll-docs/json.html">GNATCOLL.JSON</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>AdvPL</h3>
+            <ul>
+              <li><a href="https://github.com/imsys/JSON-ADVPL">JSON-ADVPL</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>APL</h3>
+            <ul>
+              <li><a href="http://help.dyalog.com/latest/#Language/System Functions/json.htm">⎕JSON</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>ASP</h3>
+            <ul>
+              <li><a href="https://github.com/tugrul/aspjson">JSON for ASP</a></li>
+              <li><a href="http://www.webdevbros.net/2007/04/26/generate-json-from-asp-datatypes/">JSON ASP utility
+                  class</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>AWK</h3>
+            <ul>
+              <li><a href="https://github.com/step-/JSON.awk">JSON.awk</a></li>
+              <li><a href="https://github.com/Andy753421/rhawk/blob/master/json.awk">rhawk</a></li>
+            </ul>
+          </li>
+        </ul>
 
         <div id="b" class="title-block">
           <h2>B</h2>
         </div>
         <ul class="index-list">
-        <li>
-          <h3>BlitzMax</h3>
-          <ul>
-            <li><a href="https://github.com/Trylobot/bmx-rjson">bmx-rjson</a></li>
-          </ul>
-        </li>
-      </ul>
+          <li>
+            <h3>BlitzMax</h3>
+            <ul>
+              <li><a href="https://github.com/Trylobot/bmx-rjson">bmx-rjson</a></li>
+            </ul>
+          </li>
+        </ul>
 
-      <div id="c" class="title-block">
-        <h2>C</h2>
-      </div>
-      <ul class="index-list">
-        <li>
-          <h3>C</h3>
-          <ul>
-            <li><a href="https://github.com/douglascrockford/JSON-c">JSON_checker</a></li>
-            <li><a href="http://lloyd.github.com/yajl/">YAJL</a></li>
-            <li><a href="http://github.com/koanlogic/libu/blob/master/srcs/toolbox/json.c">LibU</a></li>
-            <li><a href="https://github.com/jehiah/json-c">json-c</a></li>
-            <li><a href="https://github.com/udp/json-parser">json-parser</a></li>
-            <li><a href="https://github.com/mnunberg/jsonsl">jsonsl</a></li>
-            <li><a href="https://github.com/netmail-open/wjelement">WJElement</a></li>
-            <li><a href="http://sourceforge.net/projects/mjson/">M's JSON parser</a></li>
-            <li><a href="http://github.com/DaveGamble/cJSON">cJSON</a></li>
-            <li><a href="http://www.digip.org/jansson/">Jansson</a></li>
-            <li><a href="https://github.com/zserge/jsmn">jsmn</a></li>
-            <li><a href="http://kgabis.github.com/parson/">parson</a></li>
-            <li><a href="https://github.com/esnme/ujson4c/">ujson4c</a></li>
-            <li><a href="https://bitbucket.org/yarosla/nxjson/src">nxjson</a></li>
-            <li><a href="https://github.com/cesanta/frozen">frozen</a></li>
-            <li><a href="http://www.catb.org/esr/microjson/">microjson</a></li>
-            <li><a href="https://github.com/cpq/mjson">mjson</a></li>
-            <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>C++</h3>
-          <ul>
-            <li><a href="https://github.com/johnezang/JSONKit">JSONKit</a></li>
-            <li><a href="https://github.com/pibara/jsonme--">jsonme--</a></li>
-            <li><a href="https://github.com/Loki-Astari/ThorsSerializer">ThorsSerializer</a></li>
-            <li><a href="https://github.com/anhero/JsonBox">JsonBox</a></li>
-            <li><a href="https://github.com/YasserAsmi/jvar">jvar</a></li>
-            <li><a href="https://github.com/miloyip/rapidjson">rapidjson</a></li>
-            <li><a href="https://github.com/nlohmann/json">JSON for Modern C++</a></li>
-            <li><a href="https://giacomodrago.github.io/minijson/">minijson</a></li>
-            <li><a href="https://github.com/danielaparker/jsoncons">jsoncons</a></li>
-            <li><a href="https://github.com/open-source-parsers/jsoncpp">jsoncpp</a></li>
-            <li><a href="https://github.com/jgarzik/univalue">univalue</a></li>
-            <li><a href="https://arduinojson.org/">ArduinoJson</a></li>
-            <li><a href="http://qjson.sourceforge.net/">QJson</a></li>
-            <li><a href="http://cajun-jsonapi.sourceforge.net/">CAJUN</a></li>
-            <li><a href="http://sourceforge.net/projects/libjson/">libjson</a></li>
-            <li><a href="http://fossil.wanderinghorse.net/repos/nosjob/index.cgi/index">nosjob</a></li>
-            <li><a href="https://bitbucket.org/tunnuz/json">JSON++</a></li>
-            <li><a href="https://realtimelogic.com/products/json/">JSON library for IoT</a></li>
-            <li><a href="https://github.com/QtMark/qmjson">qmjson</a></li>
-            <li><a href="http://doc.qt.io/qt-5/json.html">JSON Support in Qt</a></li>
-            <li><a href="https://doublejim.github.io/">JsonWax for Qt</a></li>
-            <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
-            <li><a href="https://github.com/HaniAmmar/Qentem-Engine">Qentem-Engine
-              </a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>C#</h3>
-          <ul>
-            <li><a href="http://www.codeproject.com/KB/IP/fastJSON.aspx">fastJSON</a></li>
-            <li><a href="http://www.raboof.com/projects/jsonchecker/">JSON_checker</a></li>
-            <li><a href="https://bitbucket.org/raboof/jayrock/wiki/Home">Jayrock</a></li>
-            <li><a href="http://james.newtonking.com/projects/json-net.aspx">Json.NET - LINQ to JSON</a></li>
-            <li><a href="http://sourceforge.net/projects/csjson">JSON for .NET</a></li>
-            <li><a href="https://github.com/gregsdennis/Manatee.Json">Manatee Json</a></li>
-            <li><a href="https://github.com/ysharplanguage/FastJsonParser">FastJsonParser</a></li>
-            <li><a href="https://github.com/MarcosLopezC/LightJson">LightJson</a></li>
-            <li><a href="https://github.com/steffen-liersch/liersch.json">liersch.json</a></li>
-            <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Clojure</h3>
-          <ul>
-            <li><a href="http://clojure.github.com/data.json/">data.json</a> </li>
-          </ul>
-        </li>
-        <li>
-          <h3>Cobol</h3>
-          <ul>
-            <li><a href="http://www.xmlthunder.com/">XML Thunder</a></li>
-            <li><a href="http://www.redversconsulting.com/cobol_json_interface.php">Redvers COBOL JSON Interface</a></li>
-          </ul>
-        </li>
+        <div id="c" class="title-block">
+          <h2>C</h2>
+        </div>
+        <ul class="index-list">
+          <li>
+            <h3>C</h3>
+            <ul>
+              <li><a href="https://github.com/douglascrockford/JSON-c">JSON_checker</a></li>
+              <li><a href="http://lloyd.github.com/yajl/">YAJL</a></li>
+              <li><a href="http://github.com/koanlogic/libu/blob/master/srcs/toolbox/json.c">LibU</a></li>
+              <li><a href="https://github.com/jehiah/json-c">json-c</a></li>
+              <li><a href="https://github.com/udp/json-parser">json-parser</a></li>
+              <li><a href="https://github.com/mnunberg/jsonsl">jsonsl</a></li>
+              <li><a href="https://github.com/netmail-open/wjelement">WJElement</a></li>
+              <li><a href="http://sourceforge.net/projects/mjson/">M's JSON parser</a></li>
+              <li><a href="http://github.com/DaveGamble/cJSON">cJSON</a></li>
+              <li><a href="http://www.digip.org/jansson/">Jansson</a></li>
+              <li><a href="https://github.com/zserge/jsmn">jsmn</a></li>
+              <li><a href="http://kgabis.github.com/parson/">parson</a></li>
+              <li><a href="https://github.com/esnme/ujson4c/">ujson4c</a></li>
+              <li><a href="https://bitbucket.org/yarosla/nxjson/src">nxjson</a></li>
+              <li><a href="https://github.com/cesanta/frozen">frozen</a></li>
+              <li><a href="http://www.catb.org/esr/microjson/">microjson</a></li>
+              <li><a href="https://github.com/cpq/mjson">mjson</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>C++</h3>
+            <ul>
+              <li><a href="https://github.com/johnezang/JSONKit">JSONKit</a></li>
+              <li><a href="https://github.com/pibara/jsonme--">jsonme--</a></li>
+              <li><a href="https://github.com/Loki-Astari/ThorsSerializer">ThorsSerializer</a></li>
+              <li><a href="https://github.com/anhero/JsonBox">JsonBox</a></li>
+              <li><a href="https://github.com/YasserAsmi/jvar">jvar</a></li>
+              <li><a href="https://github.com/miloyip/rapidjson">rapidjson</a></li>
+              <li><a href="https://github.com/nlohmann/json">JSON for Modern C++</a></li>
+              <li><a href="https://giacomodrago.github.io/minijson/">minijson</a></li>
+              <li><a href="https://github.com/danielaparker/jsoncons">jsoncons</a></li>
+              <li><a href="https://github.com/open-source-parsers/jsoncpp">jsoncpp</a></li>
+              <li><a href="https://github.com/jgarzik/univalue">univalue</a></li>
+              <li><a href="https://arduinojson.org/">ArduinoJson</a></li>
+              <li><a href="http://qjson.sourceforge.net/">QJson</a></li>
+              <li><a href="http://cajun-jsonapi.sourceforge.net/">CAJUN</a></li>
+              <li><a href="http://sourceforge.net/projects/libjson/">libjson</a></li>
+              <li><a href="http://fossil.wanderinghorse.net/repos/nosjob/index.cgi/index">nosjob</a></li>
+              <li><a href="https://bitbucket.org/tunnuz/json">JSON++</a></li>
+              <li><a href="https://realtimelogic.com/products/json/">JSON library for IoT</a></li>
+              <li><a href="https://github.com/QtMark/qmjson">qmjson</a></li>
+              <li><a href="http://doc.qt.io/qt-5/json.html">JSON Support in Qt</a></li>
+              <li><a href="https://doublejim.github.io/">JsonWax for Qt</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
+              <li><a href="https://github.com/HaniAmmar/Qentem-Engine">Qentem-Engine
+                </a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>C#</h3>
+            <ul>
+              <li><a href="http://www.codeproject.com/KB/IP/fastJSON.aspx">fastJSON</a></li>
+              <li><a href="http://www.raboof.com/projects/jsonchecker/">JSON_checker</a></li>
+              <li><a href="https://bitbucket.org/raboof/jayrock/wiki/Home">Jayrock</a></li>
+              <li><a href="http://james.newtonking.com/projects/json-net.aspx">Json.NET - LINQ to JSON</a></li>
+              <li><a href="http://sourceforge.net/projects/csjson">JSON for .NET</a></li>
+              <li><a href="https://github.com/gregsdennis/Manatee.Json">Manatee Json</a></li>
+              <li><a href="https://github.com/ysharplanguage/FastJsonParser">FastJsonParser</a></li>
+              <li><a href="https://github.com/MarcosLopezC/LightJson">LightJson</a></li>
+              <li><a href="https://github.com/steffen-liersch/liersch.json">liersch.json</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>Clojure</h3>
+            <ul>
+              <li><a href="http://clojure.github.com/data.json/">data.json</a> </li>
+            </ul>
+          </li>
+          <li>
+            <h3>Cobol</h3>
+            <ul>
+              <li><a href="http://www.xmlthunder.com/">XML Thunder</a></li>
+              <li><a href="http://www.redversconsulting.com/cobol_json_interface.php">Redvers COBOL JSON Interface</a>
+              </li>
+            </ul>
+          </li>
           <li>
             <h3>ColdFusion</h3>
             <ul>
-              <li><a href="http://help.adobe.com/en_US/ColdFusion/10.0/CFMLRef/WSc3ff6d0ea77859461172e0811cbec22c24-79fa.html">SerializeJSON</a> </li>
+              <li><a
+                  href="http://help.adobe.com/en_US/ColdFusion/10.0/CFMLRef/WSc3ff6d0ea77859461172e0811cbec22c24-79fa.html">SerializeJSON</a>
+              </li>
               <li><a href="http://tojson.riaforge.org/">toJSON</a></li>
             </ul>
           </li>
@@ -358,7 +367,8 @@
               <li><a href="http://johnzon.incubator.apache.org/">Apache johnzon</a></li>
               <li><a href="http://owlike.github.io/genson/">Genson</a></li>
               <li><a href="https://github.com/coconut2015/cookjson">cookjson</a></li>
-              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
             </ul>
           </li>
           <li>
@@ -368,7 +378,8 @@
               <li><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></li>
               <li><a href="https://github.com/dscape/clarinet">clarinet</a></li>
               <li><a href="http://oboejs.com/">Oboe.js</a></li>
-              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -380,7 +391,8 @@
           <li>
             <h3>LabVIEW</h3>
             <ul>
-              <li><a href="http://zone.ni.com/reference/en-XX/help/371361K-01/glang/flat_unflat_string/">flatten</a></li>
+              <li><a href="http://zone.ni.com/reference/en-XX/help/371361K-01/glang/flat_unflat_string/">flatten</a>
+              </li>
             </ul>
           </li>
           <li>
@@ -400,7 +412,8 @@
           <li>
             <h3>LotusScript</h3>
             <ul>
-              <li><a href="http://www.openntf.org/Projects/pmt.nsf/ProjectHome?ReadForm&amp;Query=JSON%20LS">JSON LS</a></li>
+              <li><a href="http://www.openntf.org/Projects/pmt.nsf/ProjectHome?ReadForm&amp;Query=JSON%20LS">JSON LS</a>
+              </li>
             </ul>
           </li>
           <li>
@@ -457,7 +470,9 @@
           <li>
             <h3>Objective C</h3>
             <ul>
-              <li><a href="https://developer.apple.com/library/ios/documentation/foundation/reference/nsjsonserialization_class/Reference/Reference.html">NSJSONSerialization</a></li>
+              <li><a
+                  href="https://developer.apple.com/library/ios/documentation/foundation/reference/nsjsonserialization_class/Reference/Reference.html">NSJSONSerialization</a>
+              </li>
               <li><a href="https://github.com/stig/json-framework/">json-framework</a></li>
               <li><a href="https://github.com/johnezang/JSONKit">JSONKit</a></li>
               <li><a href="https://github.com/gabriel/yajl-objc">yajl-objc</a></li>
@@ -510,7 +525,9 @@
             <h3>Pike</h3>
             <ul>
               <li><a href="http://modules.gotpike.org/module_info.html?module_id=33">Public.Parser.JSON</a></li>
-              <li><a href="http://modules.gotpike.org/module_info.html?select=0.2&amp;module_id=43">Public.Parser.JSON2</a></li>
+              <li><a
+                  href="http://modules.gotpike.org/module_info.html?select=0.2&amp;module_id=43">Public.Parser.JSON2</a>
+              </li>
             </ul>
           </li>
           <li>
@@ -523,7 +540,8 @@
           <li>
             <h3>Prolog</h3>
             <ul>
-              <li><a href="http://www.jekejeke.ch/idatab/doclet/prod/en/docs/05_run/10_docu/05_frequent/07_theories/10_advanced/07_json.html">Jekejeke</a>
+              <li><a
+                  href="http://www.jekejeke.ch/idatab/doclet/prod/en/docs/05_run/10_docu/05_frequent/07_theories/10_advanced/07_json.html">Jekejeke</a>
               </li>
             </ul>
           </li>
@@ -548,7 +566,8 @@
               <li><a href="http://pykler.github.com/yajl-py/">Yajl-Py</a></li>
               <li><a href="https://github.com/esnme/ultrajson">ultrajson</a></li>
               <li><a href="http://pypi.python.org/pypi/metamagic.json/">metamagic.json</a></li>
-              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -594,7 +613,8 @@
             <ul>
               <li><a href="http://github.com/brianmario/yajl-ruby">yajl-ruby</a></li>
               <li><a href="https://github.com/dgraham/json-stream">json-stream</a></li>
-              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -612,8 +632,11 @@
           <li>
             <h3>Scheme</h3>
             <ul>
-              <li><a href="http://www.lshift.net/blog/2005/08/22/json-for-mzscheme-and-a-portable-packrat-parsing-combinator-library">MZScheme</a></li>
-              <li><a href="http://planet.plt-scheme.org/display.ss?package=json.plt&amp;owner=dherman">PLT Scheme</a></li>
+              <li><a
+                  href="http://www.lshift.net/blog/2005/08/22/json-for-mzscheme-and-a-portable-packrat-parsing-combinator-library">MZScheme</a>
+              </li>
+              <li><a href="http://planet.plt-scheme.org/display.ss?package=json.plt&amp;owner=dherman">PLT Scheme</a>
+              </li>
             </ul>
           </li>
           <li>
@@ -627,7 +650,8 @@
           <li>
             <h3>Squeak</h3>
             <ul>
-              <li><a href="http://map1.squeakfoundation.org/sm/package/d38bdc2d-e52a-4167-ae73-2cf438c65c2f">Squeak</a></li>
+              <li><a href="http://map1.squeakfoundation.org/sm/package/d38bdc2d-e52a-4167-ae73-2cf438c65c2f">Squeak</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -652,21 +676,25 @@
             <h3>Visual Basic</h3>
             <ul>
               <li><a href="http://www.ediy.co.nz/vbjson-json-parser-library-in-vb6-xidc55680.html">VB-JSON</a></li>
-              <li><a href="http://www.pozzware.com/pozzware/Corsi/Programmazione/VB.NET/JSON%20Library.aspx">PW.JSON</a></li>
+              <li><a href="http://www.pozzware.com/pozzware/Corsi/Programmazione/VB.NET/JSON%20Library.aspx">PW.JSON</a>
+              </li>
               <li><a href="https://github.com/dday9/.NET-JSON-Transformer">.NET-JSON-Transformer</a></li>
-              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a></li>
+              <li><a href="https://repo.progsbase.com/repoviewer/no.inductive.idea10.programs/JSON/latest">progbase</a>
+              </li>
             </ul>
           </li>
           <li>
             <h3>Visual FoxPro</h3>
             <ul>
               <li><a href="http://www.foxweb.com/document/index.htm?page=/document/fwJSONObject.htm">fwJSON</a></li>
-              <li><a href="http://www.sweetpotatosoftware.com/SPSBlog/PermaLink,guid,5f96efd7-f350-4bc8-86c5-caffd9e833eb.aspx">JSON</a></li>
+              <li><a
+                  href="http://www.sweetpotatosoftware.com/SPSBlog/PermaLink,guid,5f96efd7-f350-4bc8-86c5-caffd9e833eb.aspx">JSON</a>
+              </li>
               <li><a href="https://github.com/sait/vfpjson">vfpjson</a></li>
             </ul>
           </li>
         </ul>
-        </div> <!-- End of .index-list -->
+      </div> <!-- End of .index-list -->
 
     </article> <!-- End of article -->
   </main> <!-- End of main -->
@@ -678,7 +706,8 @@
       <a class="cards-wrapper" href="https://www.youtube.com/playlist?list=PLEzQf147-uEoNCeDlRrXv6ClsLDN-HtNm">
         <section class="cards">
           <p class="tags">Video</p>
-          <img class="cards__image" src="img/json-conference.jpg" alt="a json conferece featuring Douglas Crockford"></img>
+          <img class="cards__image" src="img/json-conference.jpg"
+            alt="a json conferece featuring Douglas Crockford"></img>
           <div class="cards__text">
             <h3>JSON Conference</h3>
             <p>Videos on JSON Conference.</p>
@@ -762,7 +791,8 @@
   </aside>
 
   <footer class="preset-margins">
-    <p><a href="LICENSE.MD">Terms of Use</a> &bull; Developed by Caroline Rozali @hyfyooie</p>
+    <p><a href="https://github.com/hyfyooie/introducing-json/blob/master/LICENSE.md">Terms of Use</a> &bull; Developed
+      by Caroline Rozali @hyfyooie</p>
   </footer> <!-- End of footer -->
 
   <div class="back-to-top">

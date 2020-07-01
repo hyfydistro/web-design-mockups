@@ -1,16 +1,17 @@
 const cacheName = "v1";
 
 const cacheAssets = [
-  "introducing-json.html",
+  "index.html",
   "affiliated-technologies.html",
   "grammar.html",
   "script.js",
   "css/main.css",
-  "css/_typography.css",
-  "css/_space.css",
-  "css/_color.css",
+  "css/typography.css",
+  "css/space.css",
+  "css/color.css",
   "css/affiliated-technologies.css",
   "css/grammar.css",
+  "css/fonts/bahnschrift.ttf",
   "img/favicon.ico",
   "img/logo-icon-sml-36wx36h.png",
   "img/array-sml-600w.png",

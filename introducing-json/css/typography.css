@@ -9,6 +9,10 @@
 - line-height (NOT DETERMINED)
 - font weight (NOT DETERMINED)
  */
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('fonts/bahnschrift.ttf');
+}
 
 :root {
   /* font face */

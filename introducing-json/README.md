@@ -9,6 +9,8 @@ This mockup supports the following:
 - [ ] Old Browser Support - **OBS** [REJECTED]
       Reasons: Targeting programmers and developers.
 
+- [ ] Available at GitHub Pages (SOONN)
+
 ## Design Structure
 
 ### CSS

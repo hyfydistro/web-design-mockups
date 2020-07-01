@@ -7,11 +7,11 @@
   <meta name="theme-color" content="#2987FF">
   <title>Introducing JSON</title>
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/_typography.css">
-  <link rel="stylesheet" href="css/_space.css">
-  <link rel="stylesheet" href="css/_color.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/grammar.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/space.css">
+  <link rel="stylesheet" href="./css/color.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/grammar.css">
   <link rel="manifest" href="manifest.webmanifest">
   <script type="text/javascript" src="script.js" defer></script>
 </head>
@@ -19,7 +19,7 @@
 <body>
   <header role="banner">
     <div class="logo" aria-label="logo icon">
-      <a class="logo-link" href="introducing-json.html">
+      <a class="logo-link" href="index.html">
         <img class="logo-icon" src="img/logo-icon-sml-36wx36h.png" alt="json logo icon">
         <h2 class="logo-text"><span class="blue-colored">{</span>JSON<span class="blue-colored">}</span></h2>
       </a>
@@ -29,10 +29,12 @@
         <div aria-hidden="true" class="hamburger"></div>
       </button>
       <ul id="menu" role="menu">
-        <li><a role="menuitem" class="link" href="introducing-json.html">Introducing JSON</a></li>
+        <li><a role="menuitem" class="link" href="index.html">Introducing JSON</a></li>
         <li><a role="menuitem" class="link" href="affiliated-technologies.html">Affiliated Technologies</a></li>
         <li><a role="menuitem" class="link active" href="#" tabindex="-1">Grammar</a></li>
-        <li><a class="link" target="_blank" id="link-pdf" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">[PDF] ECMA-404 The JSON Data Interchange Standard</a></li>
+        <li><a class="link" target="_blank" id="link-pdf"
+            href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">[PDF] ECMA-404 The JSON
+            Data Interchange Standard</a></li>
       </ul> <!-- End of ul -->
     </nav> <!-- End of nav -->
     <div class="overlay"></div>
@@ -44,8 +46,11 @@
 
       <section class="intro-statement preset-margins">
         <time>2020-01-09</time>
-        <p>(This is an excerpt from Chapter 22 of <a href="https://howjavascriptworks.com/" target="_blank">How JavaScript Works</a>.)</p>
-        <p>McKeeman Form is a notation for expressing grammars. It was proposed by <a href="http://www.cs.dartmouth.edu/~mckeeman/" target="_blank">Bill McKeeman</a> of Dartmouth College. It is a simplified Backus-Naur Form with significant whitespace and minimal
+        <p>(This is an excerpt from Chapter 22 of <a href="https://howjavascriptworks.com/" target="_blank">How
+            JavaScript Works</a>.)</p>
+        <p>McKeeman Form is a notation for expressing grammars. It was proposed by <a
+            href="http://www.cs.dartmouth.edu/~mckeeman/" target="_blank">Bill McKeeman</a> of Dartmouth College. It is
+          a simplified Backus-Naur Form with significant whitespace and minimal
           use of metacharacters.</p>
       </section>
 
@@ -54,337 +59,348 @@
         <p class="preset-margins">We can express the grammar of McKeeman Form in McKeeman Form.</p>
         <p class="preset-margins">A <dfn>grammar</dfn> is a list of one or more rules.</p>
         <div class="highlight-box">
-            <p><code>> grammar</code></p>
-            <p><code>  > rules</code></p>
+          <p><code>> grammar</code></p>
+          <p><code>  > rules</code></p>
         </div>
         <p class="preset-margins">The Unicode code point <code>U+0020</code> is used as the <dfn>space</dfn>.
           The Unicode code point <code>U+000A</code> is used as the <dfn>newline</dfn>.</p>
 
         <div class="highlight-box">
-  <p><code>> space</code></p>
+          <p><code>> space</code></p>
 
-  <p><code>  > '0020'</code></p>
+          <p><code>  > '0020'</code></p>
 
-  <p><code>> newline</code></p>
+          <p><code>> newline</code></p>
 
-  <p><code>  > '000A'</code></p>
+          <p><code>  > '000A'</code></p>
         </div>
 
         <p class="preset-margins">A <dfn>name</dfn> is a sequence of letters or <code>_</code><sub>underbar</sub>.</p>
 
         <div class="highlight-box">
-  <p><code>> name</code></p>
+          <p><code>> name</code></p>
 
-  <p><code>  > letter</code></p>
+          <p><code>  > letter</code></p>
 
-  <p><code>  > letter name</code></p>
+          <p><code>  > letter name</code></p>
 
-  <p><code>> letter</code></p>
+          <p><code>> letter</code></p>
 
-  <p><code>> 'a' . 'z'</code></p>
+          <p><code>> 'a' . 'z'</code></p>
 
-  <p><code>> 'A' . 'Z'</code></p>
+          <p><code>> 'A' . 'Z'</code></p>
 
-  <p><code>> '_'</code></p>
+          <p><code>> '_'</code></p>
         </div>
 
         <p class="preset-margins">An <dfn>indentation</dfn> is four spaces.</p>
 
         <div class="highlight-box">
-  <p><code>> indentation</code></p>
+          <p><code>> indentation</code></p>
 
-  <p><code>  > space space space space</code></p>
+          <p><code>  > space space space space</code></p>
         </div>
 
-        <p class="preset-margins">Each of the <dfn>rules</dfn> is separated by a <dfn>newline</dfn>. A <dfn>rule</dfn> has a <dfn>name</dfn> on one line, with <dfn>alternatives</dfn> indented below it.</p>
+        <p class="preset-margins">Each of the <dfn>rules</dfn> is separated by a <dfn>newline</dfn>. A <dfn>rule</dfn>
+          has a <dfn>name</dfn> on one line, with <dfn>alternatives</dfn> indented below it.</p>
 
         <div class="highlight-box">
-  <p><code>> rules</code></p>
+          <p><code>> rules</code></p>
 
-  <p><code>  > rule</code></p>
+          <p><code>  > rule</code></p>
 
-  <p><code>  > rule newline rules</code></p>
+          <p><code>  > rule newline rules</code></p>
         </div>
 
-        <p class="preset-margins">If the first line after the <dfn>name</dfn> of a <dfn>rule</dfn> is <code>""</code>, then the <dfn>rule</dfn> may match <dfn>nothing</dfn>.</p>
+        <p class="preset-margins">If the first line after the <dfn>name</dfn> of a <dfn>rule</dfn> is <code>""</code>,
+          then the <dfn>rule</dfn> may match <dfn>nothing</dfn>.</p>
 
         <div class="highlight-box">
-  <p><code>> nothing</code></p>
+          <p><code>> nothing</code></p>
 
-  <p><code>  > ""</code></p>
+          <p><code>  > ""</code></p>
 
-  <p><code>  > indentation '"' '"' newline</code></p>
+          <p><code>  > indentation '"' '"' newline</code></p>
         </div>
 
-        <p class="preset-margins">Each <dfn>alternative</dfn> is indented on its own line. Each <dfn>alternative</dfn> contains <dfn>items</dfn> followed by a <dfn>newline</dfn>.</p>
+        <p class="preset-margins">Each <dfn>alternative</dfn> is indented on its own line. Each <dfn>alternative</dfn>
+          contains <dfn>items</dfn> followed by a <dfn>newline</dfn>.</p>
 
         <div class="highlight-box">
-  <p><code>> alternatives</code></p>
+          <p><code>> alternatives</code></p>
 
-  <p><code>  > alternative</code></p>
+          <p><code>  > alternative</code></p>
 
-  <p><code>  > alternative alternatives</code></p>
+          <p><code>  > alternative alternatives</code></p>
 
-  <p><code>> alternative</code></p>
+          <p><code>> alternative</code></p>
 
-  <p><code>  > indentation items newline</code></p>
+          <p><code>  > indentation items newline</code></p>
         </div>
 
-        <p class="preset-margins">The <dfn>items</dfn> are separated by spaces. An <dfn>item</dfn> is a <dfn>literal</dfn> or the <dfn>name</dfn> of a <dfn>rule</dfn>.</p>
+        <p class="preset-margins">The <dfn>items</dfn> are separated by spaces. An <dfn>item</dfn> is a
+          <dfn>literal</dfn> or the <dfn>name</dfn> of a <dfn>rule</dfn>.</p>
 
         <div class="highlight-box">
-  <p><code>> items</code></p>
+          <p><code>> items</code></p>
 
-  <p><code>  > item</code></p>
+          <p><code>  > item</code></p>
 
-  <p><code>  > item space items</code></p>
+          <p><code>  > item space items</code></p>
 
-  <p><code>> item</code></p>
+          <p><code>> item</code></p>
 
-  <p><code>  > literal</code></p>
+          <p><code>  > literal</code></p>
 
-  <p><code>  > name</code></p>
+          <p><code>  > name</code></p>
 
-  <p><code>> literal</code></p>
+          <p><code>> literal</code></p>
 
-  <p><code>  > singleton</code></p>
+          <p><code>  > singleton</code></p>
 
-  <p><code>  > range exclude</code></p>
+          <p><code>  > range exclude</code></p>
 
-  <p><code>  > '"' characters '"'</code></p>
+          <p><code>  > '"' characters '"'</code></p>
         </div>
 
-        <p class="preset-margins">Any single Unicode code point except the 32 control codes may be placed within the single quotes. The <dfn>hexcode</dfn> of any Unicode code point may also be placed within the single quotes. A <dfn>hexcode</dfn> can contain 4, 5, or 6
+        <p class="preset-margins">Any single Unicode code point except the 32 control codes may be placed within the
+          single quotes. The <dfn>hexcode</dfn> of any Unicode code point may also be placed within the single quotes. A
+          <dfn>hexcode</dfn> can contain 4, 5, or 6
           hexadecimal digits.</p>
 
-          <div class="highlight-box">
-    <p><code>> singleton</code></p>
+        <div class="highlight-box">
+          <p><code>> singleton</code></p>
 
-    <p><code>  > ''' codepoint '''</code></p>
+          <p><code>  > ''' codepoint '''</code></p>
 
-    <p><code>> codepoint</code>
+          <p><code>> codepoint</code>
 
-    <p><code>  > ' ' . '10FFFF'</code></p>
+          <p><code>  > ' ' . '10FFFF'</code></p>
 
-    <p><code>  > hexcode</code></p>
+          <p><code>  > hexcode</code></p>
 
-    <p><code>> hexcode</code></p>
+          <p><code>> hexcode</code></p>
 
-    <p><code>  > "10" hex hex hex hex</code></p>
+          <p><code>  > "10" hex hex hex hex</code></p>
 
-    <p><code>  > hex hex hex hex</code></p>
+          <p><code>  > hex hex hex hex</code></p>
 
-    <p><code>  > hex hex hex hex</code></p>
+          <p><code>  > hex hex hex hex</code></p>
 
-    <p><code>> hex</code></p>
+          <p><code>> hex</code></p>
 
-    <p><code>  > '0' . '9'</code></p>
+          <p><code>  > '0' . '9'</code></p>
 
-    <p><code>  > 'A' . 'F'</code></p>
-          </div>
+          <p><code>  > 'A' . 'F'</code></p>
+        </div>
 
-        <p class="preset-margins">A <dfn>range</dfn> is specified as a <dfn>singleton</dfn>, a <code>.</code><sub>period</sub>, and another <dfn>singleton</dfn>. Literal ranges can optionally be followed by <code>-</code><sub>minus sign</sub> and characters to be
+        <p class="preset-margins">A <dfn>range</dfn> is specified as a <dfn>singleton</dfn>, a
+          <code>.</code><sub>period</sub>, and another <dfn>singleton</dfn>. Literal ranges can optionally be followed
+          by <code>-</code><sub>minus sign</sub> and characters to be
           excluded.</p>
 
-          <div class="highlight-box">
-    <p><code>> range</code></p>
+        <div class="highlight-box">
+          <p><code>> range</code></p>
 
-    <p><code>  > singleton space '.' space singleton</code></p>
+          <p><code>  > singleton space '.' space singleton</code></p>
 
-    <p><code>> exclude</code></p>
+          <p><code>> exclude</code></p>
 
-    <p><code>  > ""</code></p>
+          <p><code>  > ""</code></p>
 
-    <p><code>  > space '-' space singleton exclude</code></p>
+          <p><code>  > space '-' space singleton exclude</code></p>
 
-    <p><code>  > space '-' space range exclude</code></p>
-          </div>
+          <p><code>  > space '-' space range exclude</code></p>
+        </div>
 
-        <p class="preset-margins">A <dfn>character</dfn> wrapped in <code>"</code><sub>double quote</sub> can be any of the Unicode code points except the 32 control codes and <code>"</code><sub>double quote</sub>. The definition of <dfn>character</dfn> shows an
+        <p class="preset-margins">A <dfn>character</dfn> wrapped in <code>"</code><sub>double quote</sub> can be any of
+          the Unicode code points except the 32 control codes and <code>"</code><sub>double quote</sub>. The definition
+          of <dfn>character</dfn> shows an
           example of a codepoint range and exclude.</p>
 
-          <div class="highlight-box">
-    <p><code>> characters</code></p>
+        <div class="highlight-box">
+          <p><code>> characters</code></p>
 
-    <p><code>  > character</code></p>
+          <p><code>  > character</code></p>
 
-    <p><code>  > character characters</code></p>
+          <p><code>  > character characters</code></p>
 
-    <p><code>> character</code></p>
+          <p><code>> character</code></p>
 
-    <p><code>  > ' ' . '10FFFF' - '"'</code></p>
-          </div>
+          <p><code>  > ' ' . '10FFFF' - '"'</code></p>
+        </div>
       </section>
 
       <section class="json-block">
 
-              <h2 class="preset-margins underlined">JSON</h2>
+        <h2 class="preset-margins underlined">JSON</h2>
 
-              <p class="preset-margins">This is the JSON grammar in McKeeman Form.</p>
+        <p class="preset-margins">This is the JSON grammar in McKeeman Form.</p>
 
-              <div class="highlight-box">
-        <p><code>> json</code></p>
+        <div class="highlight-box">
+          <p><code>> json</code></p>
 
-        <p><code>  > element</code></p>
+          <p><code>  > element</code></p>
 
-        <p><code>> value</code></p>
+          <p><code>> value</code></p>
 
-        <p><code>  > object</code></p>
+          <p><code>  > object</code></p>
 
-        <p><code>  > array</code></p>
+          <p><code>  > array</code></p>
 
-        <p><code>  > string</code></p>
+          <p><code>  > string</code></p>
 
-        <p><code>  > number</code></p>
+          <p><code>  > number</code></p>
 
-        <p><code>  > "true"</code></p>
+          <p><code>  > "true"</code></p>
 
-        <p><code>  > "false"</code></p>
+          <p><code>  > "false"</code></p>
 
-        <p><code>  > "null"</code></p>
+          <p><code>  > "null"</code></p>
 
-        <p><code>> object</code></p>
+          <p><code>> object</code></p>
 
-        <p><code>  > '{' ws '}'</code></p>
+          <p><code>  > '{' ws '}'</code></p>
 
-        <p><code>  > '{' members '}'</code></p>
+          <p><code>  > '{' members '}'</code></p>
 
-        <p><code>> members</code></p>
+          <p><code>> members</code></p>
 
-        <p><code>  > member</code></p>
+          <p><code>  > member</code></p>
 
-        <p><code>  > member ',' members</code></p>
+          <p><code>  > member ',' members</code></p>
 
-        <p><code>> member</code></p>
+          <p><code>> member</code></p>
 
-        <p><code>  > ws string ws ':' element</code></p>
+          <p><code>  > ws string ws ':' element</code></p>
 
-        <p><code>> array</code></p>
+          <p><code>> array</code></p>
 
-        <p><code>  > '[' ws ']'</code></p>
+          <p><code>  > '[' ws ']'</code></p>
 
-        <p><code>  > '[' elements ']'</code></p>
+          <p><code>  > '[' elements ']'</code></p>
 
-        <p><code>> elements</code></p>
+          <p><code>> elements</code></p>
 
-        <p><code>  > element</code></p>
+          <p><code>  > element</code></p>
 
-        <p><code>  > element ',' elements</code></p>
+          <p><code>  > element ',' elements</code></p>
 
-        <p><code>> element</code></p>
+          <p><code>> element</code></p>
 
-        <p><code>  > ws value ws</code></p>
+          <p><code>  > ws value ws</code></p>
 
-        <p><code>> string</code></p>
+          <p><code>> string</code></p>
 
-        <p><code>  > '"' characters '"'</code></p>
+          <p><code>  > '"' characters '"'</code></p>
 
-        <p><code>> characters</code></p>
+          <p><code>> characters</code></p>
 
-        <p><code>  > ""</code></p>
+          <p><code>  > ""</code></p>
 
-        <p><code>  > character characters</code></p>
+          <p><code>  > character characters</code></p>
 
-        <p><code>> character</code></p>
+          <p><code>> character</code></p>
 
-        <p><code>  > '0020' . '10FFFF' - '"' - '\'</code></p>
+          <p><code>  > '0020' . '10FFFF' - '"' - '\'</code></p>
 
-        <p><code>  > '\' escape</code></p>
+          <p><code>  > '\' escape</code></p>
 
-        <p><code>> escape</code></p>
+          <p><code>> escape</code></p>
 
-        <p><code>  > '"'</code></p>
+          <p><code>  > '"'</code></p>
 
-        <p><code>  > '\'</code></p>
+          <p><code>  > '\'</code></p>
 
-        <p><code>  > '/'</code></p>
+          <p><code>  > '/'</code></p>
 
-        <p><code>  > 'b'</code></p>
+          <p><code>  > 'b'</code></p>
 
-        <p><code>  > 'f'</code></p>
+          <p><code>  > 'f'</code></p>
 
-        <p><code>  > 'n'</code></p>
+          <p><code>  > 'n'</code></p>
 
-        <p><code>  > 'r'</code></p>
+          <p><code>  > 'r'</code></p>
 
-        <p><code>  > 't'</code></p>
+          <p><code>  > 't'</code></p>
 
-        <p><code>  > 'u' hex hex hex hex</code></p>
+          <p><code>  > 'u' hex hex hex hex</code></p>
 
-        <p><code>> hex</code></p>
+          <p><code>> hex</code></p>
 
-        <p><code>  > digit</code></p>
+          <p><code>  > digit</code></p>
 
-        <p><code>  > 'A' . 'F'</code></p>
+          <p><code>  > 'A' . 'F'</code></p>
 
-        <p><code>  > 'a' . 'f'</code></p>
+          <p><code>  > 'a' . 'f'</code></p>
 
-        <p><code>> number</code></p>
+          <p><code>> number</code></p>
 
-        <p><code>  > integer fraction exponent</code></p>
+          <p><code>  > integer fraction exponent</code></p>
 
-        <p><code>> integer</code></p>
+          <p><code>> integer</code></p>
 
-        <p><code>  > digit</code></p>
+          <p><code>  > digit</code></p>
 
-        <p><code>  > onenine digits</code></p>
+          <p><code>  > onenine digits</code></p>
 
-        <p><code>  > '-' digit</code></p>
+          <p><code>  > '-' digit</code></p>
 
-        <p><code>  > '-' onenine digits</code></p>
+          <p><code>  > '-' onenine digits</code></p>
 
-        <p><code>> digits</code></p>
+          <p><code>> digits</code></p>
 
-        <p><code>  > digit</code></p>
+          <p><code>  > digit</code></p>
 
-        <p><code>  > digit digits</code></p>
+          <p><code>  > digit digits</code></p>
 
-        <p><code>> digit</code></p>
+          <p><code>> digit</code></p>
 
-        <p><code>  > '0'</code></p>
+          <p><code>  > '0'</code></p>
 
-        <p><code>  > onenine</code></p>
+          <p><code>  > onenine</code></p>
 
-        <p><code>> onenine</code></p>
+          <p><code>> onenine</code></p>
 
-        <p><code>  > '1' . '9'</code></p>
+          <p><code>  > '1' . '9'</code></p>
 
-        <p><code>> fraction</code></p>
+          <p><code>> fraction</code></p>
 
-        <p><code>  > ""</code></p>
+          <p><code>  > ""</code></p>
 
-        <p><code>  > '.' digits</code></p>
+          <p><code>  > '.' digits</code></p>
 
-        <p><code>> exponent</code></p>
+          <p><code>> exponent</code></p>
 
-        <p><code>  > ""</code></p>
+          <p><code>  > ""</code></p>
 
-        <p><code>  > 'E' sign digits</code></p>
+          <p><code>  > 'E' sign digits</code></p>
 
-        <p><code>  > 'e' sign digits</code></p>
+          <p><code>  > 'e' sign digits</code></p>
 
-        <p><code>> sign</code></p>
+          <p><code>> sign</code></p>
 
-        <p><code>  > ""</code></p>
+          <p><code>  > ""</code></p>
 
-        <p><code>  > '+'</code></p>
+          <p><code>  > '+'</code></p>
 
-        <p><code>  > '-'</code></p>
+          <p><code>  > '-'</code></p>
 
-        <p><code>> ws</code></p>
+          <p><code>> ws</code></p>
 
-        <p><code>  > ""</code></p>
+          <p><code>  > ""</code></p>
 
-        <p><code>  > '0020' ws</code></p>
+          <p><code>  > '0020' ws</code></p>
 
-        <p><code>  > '000A' ws</code></p>
+          <p><code>  > '000A' ws</code></p>
 
-        <p><code>  > '000D' ws</code></p>
+          <p><code>  > '000D' ws</code></p>
 
-        <p><code>  > '0009' ws</code></p>
-              </div>
+          <p><code>  > '0009' ws</code></p>
+        </div>
 
-              <a class="preset-margins original-link" href="https://www.crockford.com/mckeeman.html" target="_blank">See original site.</a>
+        <a class="preset-margins original-link" href="https://www.crockford.com/mckeeman.html" target="_blank">See
+          original site.</a>
       </section>
     </article> <!-- End of article -->
   </main> <!-- End of main -->
@@ -396,7 +412,8 @@
       <a class="cards-wrapper" href="https://www.youtube.com/playlist?list=PLEzQf147-uEoNCeDlRrXv6ClsLDN-HtNm">
         <section class="cards">
           <p class="tags">Video</p>
-          <img class="cards__image" src="img/json-conference.jpg" alt="a json conferece featuring Douglas Crockford"></img>
+          <img class="cards__image" src="img/json-conference.jpg"
+            alt="a json conferece featuring Douglas Crockford"></img>
           <div class="cards__text">
             <h3>JSON Conference</h3>
             <p>Videos on JSON Conference.</p>
@@ -480,7 +497,8 @@
   </aside>
 
   <footer class="preset-margins">
-    <p><a href="LICENSE.MD">Terms of Use</a> &bull; Developed by Caroline Rozali @hyfyooie</p>
+    <p><a href="https://github.com/hyfyooie/introducing-json/blob/master/LICENSE.md">Terms of Use</a> &bull; Developed
+      by Caroline Rozali @hyfyooie</p>
   </footer> <!-- End of footer -->
 
   <div class="back-to-top">

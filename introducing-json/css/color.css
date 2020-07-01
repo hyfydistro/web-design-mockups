@@ -87,6 +87,10 @@ a[target="_blank"] {
 }
 
 /* ===== MAIN */
+h2.logo-text:hover {
+  color: var(--primary-color-40);
+}
+
 .date-text {
   color: var(--text-color-50);
 }
@@ -150,8 +154,8 @@ footer p {
   color: var(--text-color-60);
 }
 
-footer a:visited {
-  color: var(--text-color-60);
+footer a {
+  color: var(--text-color-60)
 }
 
 footer a:hover {
