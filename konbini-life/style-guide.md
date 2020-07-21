@@ -12,18 +12,18 @@ Font family:
 
 (1) Landing Page
 
-Modular Scale:
+Modular Scale: 1.5
 
-Font base:
+Font base: 16px
 
-h1 -
-h2 -
-h3 -
-p -
+h1 - 54px
+h2 - 36px
+h3 - 24px
+p - 16px
 
 Measure:
 
-Line height:
+Line height: 1.5 * 16px
 
 
 *Other*
@@ -33,18 +33,18 @@ Tracking:
 
 (2) Body
 
-Modular Scale:
+Modular Scale: 1.414
 
-Font base:
+Font base: 16px
 
-h1 -
-h2 -
-h3 -
-p -
+h1 - 45px
+h2 - 32px
+h3 - 23px
+p - 16px
 
 Measure:
 
-Line height:
+Line height: 1.5 * 16px
 
 
 *Other*
@@ -160,3 +160,64 @@ From light to dark order.
 `warning-color`:
 `info-color`:
 `failure-color`:
+
+
+## UI Components
+
+### Images
+
+*Small size*
+
+width: 600px
+height (optional):
+
+
+*Medium size*
+
+width: 1024px
+height (optional):
+
+
+*Large size*
+
+width: 1280px
+height (optional):
+
+
+### Icons
+
+- [ ] itch.io
+- [ ] 2Birds
+- [ ] Social Medias
+    - [ ] Twitter
+    - [ ] Facebook
+
+
+#### itch.io
+
+*Small size*
+
+(For Mobile)
+
+width:
+height:
+
+
+*Medium size*
+
+(For Tablet-Desktop)
+
+width:
+height:
+
+[End]
+
+
+#### 2Birds
+
+(See *Typography*.)
+
+
+### Buttons
+
+- [ ] "Free To Play" button

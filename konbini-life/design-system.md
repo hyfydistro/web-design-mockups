@@ -17,8 +17,9 @@ Flex box / Grid system
 
 *Mobile*
 
-width:
-height (optional):
+[Minimum Device]
+width: 320px (min.)
+height (optional): 568px
 
 Columns: 4x
 Column gap:
