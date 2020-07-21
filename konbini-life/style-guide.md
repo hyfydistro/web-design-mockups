@@ -8,7 +8,11 @@
 
 ## Typography
 
+* Design Goals: Unique + Modern
+
 Font family:
+secondary font family (optional):
+Web Safe font:
 
 (1) Landing Page
 
@@ -54,14 +58,14 @@ Tracking:
 
 (3) Footer ONLY
 
-Modular Scale:
+Modular Scale: 1.2
 
-Font base:
+Font base: 12px
 
-h1 -
-h2 -
-h3 -
-p -
+h1 - 21px
+h2 - 17px (consider use)
+h3 - 14px
+p - 14px (consider use)
 
 Measure:
 
@@ -75,7 +79,8 @@ Tracking:
 
 ## Space
 
-Line height * 1.5
+font base * 1.5 = Line height
+16px * 1.5
 
 `space-lv1`:
 `space-lv2`:
@@ -183,6 +188,55 @@ height (optional):
 width: 1280px
 height (optional):
 
+
+#### Source Checklist
+
+- [ ] Hero image
+    - [ ] S
+    - [ ] M
+    - [ ] L
+- [ ] Intro image
+    - [ ] S
+    - [ ] M
+    - [ ] L
+- [ ] Characters Images
+    - [ ] Natsu
+        - [ ] S
+        - [ ] M
+        - [ ] L
+    - [ ] Grouchy
+        - [ ] S
+        - [ ] M
+        - [ ] L
+    - [ ] Glasses
+        - [ ] S
+        - [ ] M
+        - [ ] L
+    - [ ] Prince
+        - [ ] S
+        - [ ] M
+        - [ ] L
+    - [ ] Hoody
+        - [ ] S
+        - [ ] M
+        - [ ] L
+- [ ] Gallery image
+    - [ ] Gallery image#1
+        - [ ] S
+        - [ ] M
+        - [ ] L
+    - [ ] Gallery image#2
+        - [ ] S
+        - [ ] M
+        - [ ] L
+    - [ ] Gallery image#3
+        - [ ] S
+        - [ ] M
+        - [ ] L
+- [ ] Information image
+- [ ] Social medias image
+    - [ ] twitter x1
+    - [ ] facebook x1
 
 ### Icons
 
