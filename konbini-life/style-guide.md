@@ -5,16 +5,41 @@
 - [ ] Color
 - [ ] Other UI Components
 
+* This is personalised, based on the original styles.
 
 ## Typography
 
 * Design Goals: Unique + Modern
 
 Font family:
+    Modular Scale: 1.5
+        - Arista Pro Trial (Bold; Tracking: +86%)
+            h1-h2
+            display title
+        - Century Gothic (Bold; Caps; Tracking: +50%)
+            h3
+            CTA: "FREE TO PLAY" / "DOWNLOAD"
+    Modular Scale: 1.414
+        - Century Gothic (Bold; Tracking: +25%)
+            h1-h2
+        - Century Gothic (Tracking: +30%)
+            p-h3
+Game UI (exclusive):
+    - Arista Pro Trial
+    - Nirmala UI (BOLD)
+    - Nirmala UI
 secondary font family (optional):
 Web Safe font:
+    - Arial
+    - sans serif
+    - Helvetica
+
+
+### Desktop
 
 (1) Landing Page
+
+- [ ] TESTED (PROTOTYPED)
 
 Modular Scale: 1.5
 
@@ -32,10 +57,12 @@ Line height: 1.5 * 16px
 
 *Other*
 
-Tracking:
+Tracking: 86%
 
 
 (2) Body
+
+- [ ] TESTED (PROTOTYPED)
 
 Modular Scale: 1.414
 
@@ -58,14 +85,162 @@ Tracking:
 
 (3) Footer ONLY
 
-Modular Scale: 1.2
+- [ ] TESTED (PROTOTYPED)
+
+Modular Scale: 1.25
 
 Font base: 12px
 
 h1 - 21px
 h2 - 17px (consider use)
 h3 - 14px
-p - 14px (consider use)
+p - 12px (consider use)
+
+Measure:
+
+Line height:
+
+
+*Other*
+
+Tracking:
+
+
+### Mobile
+
+[INCOMPLETE]
+
+(1) Landing Page
+
+- [ ] TESTED (PROTOTYPED)
+
+Modular Scale: 1.5
+
+Font base: 16px
+
+h1 - 54px
+h2 - 36px
+h3 - 24px
+p - 16px
+
+Measure:
+
+Line height: 1.5 * 16px
+
+
+*Other*
+
+Tracking: 86%
+
+
+(2) Body
+
+- [ ] TESTED (PROTOTYPED)
+
+Modular Scale: 1.414
+
+Font base: 16px
+
+h1 - 45px
+h2 - 32px
+h3 - 23px
+p - 16px
+
+Measure:
+
+Line height: 1.5 * 16px
+
+
+*Other*
+
+Tracking:
+
+
+(3) Footer ONLY
+
+- [ ] TESTED (PROTOTYPED)
+
+Modular Scale: 1.25
+
+Font base: 12px
+
+h1 - 21px
+h2 - 17px (consider use)
+h3 - 14px
+p - 12px (consider use)
+
+Measure:
+
+Line height:
+
+
+*Other*
+
+Tracking:
+
+
+### Tablet
+
+[INCOMPLETE]
+
+(1) Landing Page
+
+- [ ] TESTED (PROTOTYPED)
+
+Modular Scale: 1.5
+
+Font base: 16px
+
+h1 - 54px
+h2 - 36px
+h3 - 24px
+p - 16px
+
+Measure:
+
+Line height: 1.5 * 16px
+
+
+*Other*
+
+Tracking: 86%
+
+
+(2) Body
+
+- [ ] TESTED (PROTOTYPED)
+
+Modular Scale: 1.414
+
+Font base: 16px
+
+h1 - 45px
+h2 - 32px
+h3 - 23px
+p - 16px
+
+Measure:
+
+Line height: 1.5 * 16px
+
+
+*Other*
+
+Tracking:
+
+
+(3) Footer ONLY
+
+- [ ] TESTED (PROTOTYPED)
+
+Modular Scale: 1.25
+
+Font base: 12px
+
+h1 - 21px
+h2 - 17px (consider use)
+h3 - 14px
+p - 12px (consider use)
 
 Measure:
 
@@ -118,6 +293,7 @@ From light to dark order.
 `primary-color-80`:
 `primary-color-90`:
 
+FF015B (Cool Pink)
 
 ### Secondary Color Variations
 
@@ -149,7 +325,30 @@ From light to dark order.
 `text-color-90`:
 
 
-### Information Color
+#### Characters Color
+
+* Natsu
+
+`natsu-color`:
+
+* Grouchy
+
+`grouchy-color`:
+
+* Glasses
+
+`glasses-color`:
+
+* Prince
+
+`prince-color`:
+
+* Hoody
+
+`hoody-color`:
+
+
+### Information Color [REDUNDANT]
 
 *Light Mode*
 
@@ -192,62 +391,110 @@ height (optional):
 #### Source Checklist
 
 - [ ] Hero image
-    - [ ] S
-    - [ ] M
+    - [x] S
+        600w
+    - [x] M
+        800w (max.)
     - [ ] L
 - [ ] Intro image
-    - [ ] S
-    - [ ] M
+    - [x] S
+        600w
+    - [x] M
+        800w (max.)
     - [ ] L
 - [ ] Characters Images
     - [ ] Natsu
-        - [ ] S
+        - [x] S
+            235w
         - [ ] M
         - [ ] L
     - [ ] Grouchy
-        - [ ] S
+        - [x] S
+            192w
         - [ ] M
         - [ ] L
     - [ ] Glasses
-        - [ ] S
+        - [x] S
+            188w
         - [ ] M
         - [ ] L
     - [ ] Prince
-        - [ ] S
+        - [x] S
+            190w
         - [ ] M
         - [ ] L
-    - [ ] Hoody
+    - [ ] Hoody (Call it hidden character???)
         - [ ] S
         - [ ] M
         - [ ] L
 - [ ] Gallery image
     - [ ] Gallery image#1
-        - [ ] S
-        - [ ] M
+        - [x] S
+            600w
+        - [x] M
+            800w
         - [ ] L
     - [ ] Gallery image#2
-        - [ ] S
-        - [ ] M
+        - [x] S
+            600w
+        - [x] M
+            800w
         - [ ] L
     - [ ] Gallery image#3
-        - [ ] S
-        - [ ] M
+        - [x] S
+            600w
+        - [x] M
+            800w
         - [ ] L
 - [ ] Information image
+    - [x] S
+        600w
+    - [x] M
+        800w
+    - [ ] L
 - [ ] Social medias image
-    - [ ] twitter x1
-    - [ ] facebook x1
+    - [x] twitter x1
+        .svg
+        .png
+    - [x] facebook x1
+        .svg
+        .png
+
 
 ### Icons
 
-- [ ] itch.io
+- [x] itch.io
+    - badge
+        .svg
+        .png
+    - logo
+        .svg
+        .png
 - [ ] 2Birds
-- [ ] Social Medias
-    - [ ] Twitter
-    - [ ] Facebook
+    (See *Typography*.)
+- [x] Social Medias
+    - [x] Twitter
+        .svg
+        .png
+        - [x] Credit
+        <a href="https://iconscout.com/icons/twitter" target="_blank">Twitter Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur">Maninder Kaur</a> on <a href="https://iconscout.com">Iconscout</a>
+    - [x] Facebook
+        .svg
+        .png
+        - [x] Credit
+        <a href="https://iconscout.com/icons/twitter" target="_blank">Twitter Icon</a> by <a href="https://iconscout.com/contributors/iconscout">Iconscout Freebies</a> on <a href="https://iconscout.com">Iconscout</a>
 
 
 #### itch.io
+
+* Badge
+
+original size: 1198w x 369h
+
+* Logo
+
+original size: 1200w x 1080h
+
 
 *Small size*
 
@@ -256,6 +503,7 @@ height (optional):
 width:
 height:
 
+**Dependent on typography**
 
 *Medium size*
 
@@ -264,12 +512,37 @@ height:
 width:
 height:
 
+**Dependent on typography**
+
 [End]
 
 
 #### 2Birds
 
 (See *Typography*.)
+
+
+#### Social Medias
+
+*Twitter*
+
+original size: 64w x 64h
+
+Determined size for Mobile:
+
+Determined size for Tablet:
+
+Determined size for Desktop:
+
+*Facebook*
+
+original size: 64w x 64h
+
+Determined size for Mobile:
+
+Determined size for Tablet:
+
+Determined size for Desktop:
 
 
 ### Buttons
