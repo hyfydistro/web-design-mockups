@@ -114,18 +114,51 @@ Tracking:
 
 - [ ] TESTED (PROTOTYPED)
 
-Modular Scale: 1.5
+Modular Scale: "8pt system"
 
-Font base: 16px
+Font base: 12px
 
-h1 - 54px
-h2 - 36px
-h3 - 24px
-p - 16px
+h1 - 20px
+    katakana BOLD 1px
+h2 - 18px
+h3 - 14px
+p - 12px
+small - 10px
+
+line height: 12 * 1.5 = 18px
+
+>>>TRY>>>
+
+Modular Scale: 1.2 >> TRY for "body page"
+
+Font base: 12px
+
+h1 - 21px
+h2 - 17px
+h3 - 14px
+    - synopsis body copy
+    line height: 1.8 * 12 = 22
+p - 12px
+small - 10px
+
+>>>TRY>>>
+
+Modular Scale: 1.25 >> TRY for "landing page"
+
+Font base: 12px
+
+h1 - 24px
+h2 - 19px
+h3 - 15px
+p - 12px
+small - 10px
+
+
+* Sizes are round off to largest whole integer.
 
 Measure:
 
-Line height: 1.5 * 16px
+Line height: 1.5 * 12px
 
 
 *Other*
@@ -137,14 +170,18 @@ Tracking: 86%
 
 - [ ] TESTED (PROTOTYPED)
 
-Modular Scale: 1.414
+Modular Scale: "8pt system"
 
 Font base: 16px
 
-h1 - 45px
-h2 - 32px
-h3 - 23px
+h1 - 24px
+h2 - 22px
+h3 - 18px
+h4 - 16 (BOLD)
 p - 16px
+    button (Caps; Bold)
+small - 14px
+xsmall - 12px
 
 Measure:
 
@@ -164,10 +201,10 @@ Modular Scale: 1.25
 
 Font base: 12px
 
-h1 - 21px
-h2 - 17px (consider use)
-h3 - 14px
-p - 12px (consider use)
+h1 - 32px
+h2 - 24px
+h3 - 16px (consider use)
+p - 8px (consider use)
 
 Measure:
 
@@ -331,21 +368,38 @@ From light to dark order.
 
 `natsu-color`:
 
+Light - #FF0057
+Dark - #FF669A
+
 * Grouchy
 
 `grouchy-color`:
+
+Light - #218C1A
+Dark - #6AEA71
 
 * Glasses
 
 `glasses-color`:
 
+Light - #A343B8
+Dark - #C484D2
+
 * Prince
 
 `prince-color`:
 
+Light - #ED931F
+Dark - #EE992B
+
 * Hoody
 
 `hoody-color`:
+
+Light - #F8584C
+Dark - #F97167
+
+* On-Hover Color that was used in game: #F1EF79
 
 
 ### Information Color [REDUNDANT]
