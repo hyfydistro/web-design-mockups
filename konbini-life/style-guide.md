@@ -20,7 +20,10 @@ Font family:
             h3
             CTA: "FREE TO PLAY" / "DOWNLOAD"
     Modular Scale: 1.414
-        - Century Gothic (Bold; Tracking: +25%)
+        - Arista Pro Trial (Bold; Tracking: +86%)
+            h1-h2
+            display title
+        - Century Gothic (Bold; Tracking: +25%) [REJECTED]
             h1-h2
         - Century Gothic (Tracking: +30%)
             p-h3
@@ -52,12 +55,24 @@ p - 16px
 
 Measure:
 
-Line height: 1.5 * 16px
+Line height: 1.5 * 16px = 24px
 
 
 *Other*
 
 Tracking: 86%
+
+*Logo-Type*
+
+bar
+    - 5px top and bottom distance
+        * 2.25 = 11.25px
+    - 2.8px height
+        * 2.25 = 6.3px
+    - mobile font size: 24px
+    - vs font size 54
+
+54:24 = 2.25
 
 
 (2) Body
@@ -72,10 +87,12 @@ h1 - 45px
 h2 - 32px
 h3 - 23px
 p - 16px
+small
+tiny - 12px (arbitrary)
 
 Measure:
 
-Line height: 1.5 * 16px
+Line height: 1.5 * 16px = 24px
 
 
 *Other*
@@ -108,13 +125,11 @@ Tracking:
 
 ### Mobile
 
-[INCOMPLETE]
-
 (1) Landing Page
 
 - [ ] TESTED (PROTOTYPED)
 
-Modular Scale: "8pt system"
+Modular Scale: "8pt system" [REJECTED]
 
 Font base: 12px
 
@@ -129,21 +144,7 @@ line height: 12 * 1.5 = 18px
 
 >>>TRY>>>
 
-Modular Scale: 1.2 >> TRY for "body page"
-
-Font base: 12px
-
-h1 - 21px
-h2 - 17px
-h3 - 14px
-    - synopsis body copy
-    line height: 1.8 * 12 = 22
-p - 12px
-small - 10px
-
->>>TRY>>>
-
-Modular Scale: 1.25 >> TRY for "landing page"
+Modular Scale: 1.25 >> TRY for "landing page" [ACCEPTED]
 
 Font base: 12px
 
@@ -152,6 +153,7 @@ h2 - 19px
 h3 - 15px
 p - 12px
 small - 10px
+    footer
 
 
 * Sizes are round off to largest whole integer.
@@ -168,52 +170,32 @@ Tracking: 86%
 
 (2) Body
 
-- [ ] TESTED (PROTOTYPED)
+- [x] TESTED (PROTOTYPED)
 
-Modular Scale: "8pt system"
+>>>TRY>>>
 
-Font base: 16px
+Modular Scale: 1.2 >> TRY for "body page" [ACCEPTED]
 
-h1 - 24px
-h2 - 22px
-h3 - 18px
-h4 - 16 (BOLD)
-p - 16px
-    button (Caps; Bold)
-small - 14px
-xsmall - 12px
+Font base: 12px
 
-Measure:
-
-Line height: 1.5 * 16px
-
+h1 - 21px
+h2 - 17px
+h3 - 14px
+    - synopsis body copy
+    line height: 1.8 * 12 = 22
+p - 12px
+small - 10px
 
 *Other*
 
-Tracking:
+Tracking: (depends on font family and hierarchy)
 
 
 (3) Footer ONLY
 
 - [ ] TESTED (PROTOTYPED)
 
-Modular Scale: 1.25
-
-Font base: 12px
-
-h1 - 32px
-h2 - 24px
-h3 - 16px (consider use)
-p - 8px (consider use)
-
-Measure:
-
-Line height:
-
-
-*Other*
-
-Tracking:
+(see *body*.)
 
 
 ### Tablet
@@ -224,14 +206,20 @@ Tracking:
 
 - [ ] TESTED (PROTOTYPED)
 
+After flunking out of University, Natsu has been working the night
+
 Modular Scale: 1.5
 
-Font base: 16px
+>>>TRY>>>
+
+Font base: 18px
 
 h1 - 54px
 h2 - 36px
 h3 - 24px
-p - 16px
+p - 18px
+Small - 16px
+Tiny - 12px
 
 Measure:
 
@@ -294,7 +282,7 @@ Tracking:
 font base * 1.5 = Line height
 16px * 1.5
 
-`space-lv1`:
+`space-lv1`: 18
 `space-lv2`:
 `space-lv3`:
 `space-lv4`:
@@ -378,6 +366,10 @@ Dark - #FF669A
 Light - #218C1A
 Dark - #6AEA71
 
+NEW
+"On" light surface
+    #1E8118
+
 * Glasses
 
 `glasses-color`:
@@ -391,6 +383,13 @@ Dark - #C484D2
 
 Light - #ED931F
 Dark - #EE992B
+
+title
+
+NEW
+"On" light surface
+text
+    #1E8118
 
 * Hoody
 
@@ -537,6 +536,7 @@ height (optional):
         .png
         - [x] Credit
         <a href="https://iconscout.com/icons/twitter" target="_blank">Twitter Icon</a> by <a href="https://iconscout.com/contributors/iconscout">Iconscout Freebies</a> on <a href="https://iconscout.com">Iconscout</a>
+- [x] email ("letter")
 
 
 #### itch.io
@@ -598,7 +598,18 @@ Determined size for Tablet:
 
 Determined size for Desktop:
 
+#### email
+
+max. 36
+
+Determined size for Mobile:
+
+Determined size for Tablet:
+
+Determined size for Desktop:
+
 
 ### Buttons
 
-- [ ] "Free To Play" button
+- [ ] "Free To Play" button [REJECTED]
+- [ ] "DOWNLOAD" button
