@@ -43,3 +43,8 @@ Columns: 12x
 Column gap:
 L / R Margins:
 
+
+### Sections
+
+10px height difference with diagonal cut.
+
