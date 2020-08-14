@@ -359,6 +359,10 @@ From light to dark order.
 Light - #FF0057
 Dark - #FF669A
 
+NEW
+"On" yellow light surface
+    #C70046
+
 * Grouchy
 
 `grouchy-color`:
@@ -370,12 +374,19 @@ NEW
 "On" light surface
     #1E8118
 
+"On" yellow light surface for text
+    #14770E
+
 * Glasses
 
 `glasses-color`:
 
 Light - #A343B8
 Dark - #C484D2
+
+NEW
+"On" yellow light surface for text
+    #771D8B
 
 * Prince
 
@@ -390,6 +401,9 @@ NEW
 "On" light surface
 text
     #1E8118
+
+"On" yellow light surface for text
+    #91570D
 
 * Hoody
 
