@@ -622,6 +622,13 @@ Determined size for Tablet:
 
 Determined size for Desktop:
 
+### Other
+
+Determined size for Mobile:
+36w
+
+Determined size for Tablet / Desktop:
+64w
 
 ### Buttons
 
