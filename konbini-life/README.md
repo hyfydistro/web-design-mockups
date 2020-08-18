@@ -23,3 +23,42 @@ This mockup supports the following:
 
 - [ ] Available at GitHub Pages (SOON)
 
+
+## Prerequisite(s)
+
+- Node.JS (version 8 or above)
+- NPM
+- Gulp Command Line Utility
+```
+npm install -g gulp-cli
+```
+
+## Installations
+
+To install dev dependencies:
+```
+npm install
+```
+
+NPM Packages used:
+
+- Gulp
+```
+npm install -D gulp
+```
+
+- Sass
+    * Transpile sass code into CSS.
+```
+npm install -D gulp-sass
+```
+
+- BrowserSync
+```
+npm install -D browser-sync
+```
+
+Shorthand for Packages (all in one line):
+```
+npm i -D gulp gulp-sass browser-sync
+```

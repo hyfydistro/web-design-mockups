@@ -42,8 +42,6 @@ Web Safe font:
 
 (1) Landing Page
 
-- [ ] TESTED (PROTOTYPED)
-
 Modular Scale: 1.5
 
 Font base: 16px
@@ -76,8 +74,6 @@ bar
 
 
 (2) Body
-
-- [ ] TESTED (PROTOTYPED)
 
 Modular Scale: 1.414
 
@@ -127,23 +123,6 @@ Tracking:
 
 (1) Landing Page
 
-- [ ] TESTED (PROTOTYPED)
-
-Modular Scale: "8pt system" [REJECTED]
-
-Font base: 12px
-
-h1 - 20px
-    katakana BOLD 1px
-h2 - 18px
-h3 - 14px
-p - 12px
-small - 10px
-
-line height: 12 * 1.5 = 18px
-
->>>TRY>>>
-
 Modular Scale: 1.25 >> TRY for "landing page" [ACCEPTED]
 
 Font base: 12px
@@ -154,7 +133,6 @@ h3 - 15px
 p - 12px
 small - 10px
     footer
-
 
 * Sizes are round off to largest whole integer.
 
@@ -200,11 +178,7 @@ Tracking: (depends on font family and hierarchy)
 
 ### Tablet
 
-[INCOMPLETE]
-
 (1) Landing Page
-
-- [ ] TESTED (PROTOTYPED)
 
 After flunking out of University, Natsu has been working the night
 
@@ -632,5 +606,4 @@ Determined size for Tablet / Desktop:
 
 ### Buttons
 
-- [ ] "Free To Play" button [REJECTED]
 - [ ] "DOWNLOAD" button
