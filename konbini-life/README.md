@@ -47,7 +47,7 @@ NPM Packages used:
 npm install -D gulp
 ```
 
-- Sass
+- Sass (Gulp)
     * Transpile sass code into CSS.
 ```
 npm install -D gulp-sass
@@ -58,7 +58,45 @@ npm install -D gulp-sass
 npm install -D browser-sync
 ```
 
+- Image Min (Gulp)
+    * Minify PNG, JPEG, GIF and SVG images.
+```
+npm install --save-dev gulp-imagemin
+```
+
+- CSS Nano (Gulp)
+    * Minify CSS
+```
+npm install gulp-cssnano --save-dev
+```
+
+- Concat (Gulp)
+    * Combine whole CSS files into one; Combine whole JS files into one.
+    * This benefits by reducing the amount of HTTP requests.
+```
+npm install --save-dev gulp-concat
+```
+
+- HTMLMinifier (to minify your HTML)
+- CSSNano and csso (to minify CSS)
+- UglifyJS (to minify JavaScript)
+- Gulp Source Maps
+- Gulp Concat
+- Gulp Clean CSS
+- Uglify for JavaScriptMinification
+- Line Ending Corrector
+- Rename (for minified files) - gulp-rename
+- and more
+
+
 Shorthand for Packages (all in one line):
 ```
 npm i -D gulp gulp-sass browser-sync
 ```
+
+
+**Extras**
+
+- gulpif
+    * Since plugin operations shouldn't be file-type-aware, you may need a plugin like gulp-if to transform subsets of files.
+    * [See Conditional Plugins example](https://gulpjs.com/docs/en/getting-started/using-plugins/)
