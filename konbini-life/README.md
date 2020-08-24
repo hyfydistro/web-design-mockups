@@ -55,7 +55,7 @@ npm i gulp-html-minifier
 
 *Sass / SCSS /CSS*
 
-- Sass (Gulp)
+- Sass (Gulp) [REJECTED]
     * Transpile sass code into CSS.
 ```
 npm install -D gulp-sass
@@ -67,15 +67,30 @@ npm install -D gulp-sass
 npm install gulp-dart-sass --save-dev
 ```
 
-- Autoprefixer (Gulp)
+- Autoprefixer (Gulp) [REJECTED]
 ```
 npm install -D gulp-autoprefixer
 ```
 
-- CSS Nano (Gulp)
+- Autoprefixer
+    * To be configured with `gulp-postcss`
+    * For Modern Browsers: 'last 2 versions'
+    * For Older Browsers: 'IE8'
+```
+npm i -D autoprefixer
+```
+
+- CSS Nano (Gulp) [REJECTED]
     * Minify CSS
 ```
 npm install gulp-cssnano --save-dev
+```
+
+- CSS Nano
+    * Minify CSS
+    * To be configured with `gulp-postcss`
+```
+npm i -D cssnano
 ```
 
 - PostCSS (Gulp)
