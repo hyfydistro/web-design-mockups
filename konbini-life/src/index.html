@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konbini Life</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
     <!--[if lt IE 9]>
     <script src="./assets/js/html5shiv.js"></script>
     <![endif]-->
@@ -13,7 +15,6 @@
     <link href="style.oldie.css" rel="stylesheet">
     Please upgrade to a modern browser. [Download Google Chrome](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwvvj5BRDkARIsAGD9vlKrsJd5weM-ATHUVtg8KtOLvotH5BOcbV5Hcui7o3WkDxWBQCqBgGkaAhOvEALw_wcB&gclsrc=aw.ds)
     <![endif]-->
-
 </head>
 
 <body>
@@ -31,7 +32,7 @@
             <picture>
                 <source media="(min-width: 600px)" srcset="./images/hero-800w.jpg">
                 <source media="(min-width: 320px)" srcset="./images/hero-600w.jpg">
-                <img src="./images/hero-600w.jpg" alt="hero image">
+                <img src="images/hero-800w.jpg" alt="hero image">
             </picture>
 
             <section class="logomark">
@@ -41,112 +42,210 @@
 
             <h3>A Visual Novel by 2Birds for iluJAM</h3>
 
-            <a href="/downloads/Konbini_Life_v1_DEMO-all.zip" download>DOWNLOAD</a>
+            <a class="download-btn" href="https://2birds.itch.io/konbini-life" target="_blank" rel="noopener noreferrer">DOWNLOAD</a>
 
             <div class="arrow-down"></div>
         </header>
 
         <main>
             <section>
-                <h2>Synopsis</h2>
-                <p></p>
+                <picture>
+                    <source media="(min-width: 600px)" srcset="images/intro-800w.jpg">
+                    <source media="(min-width: 320px)" srcset="images/intro-600w.jpg">
+                    <img src="images/intro-800w.jpg" alt="konbini mart">
+                </picture>
+
+                <h2 class="subheading">Synopsis</h2>
+                <p>After flunking out of University, Natsu has been working the night shift at the local MegaKonbiniMart to make ends meet. She's got an annoying co-worker who calls her "Flunkee-chan" whose sole purpose in life is to make her miserable. There's the creepy businessman who's only interests are of the 2D persuasion, and he can't help scaring away other customers. The foreigner who buys snacks in bulk and is hiding a secret. And then there's signs of a customer with sticky fingers.</p>
             </section>
 
             <section>
                 <div class="characters natsu">
-                    <div class="character-name">
-
+                    <!-- todo
+                        - Add background image ??? -->
+                    <div class="character-title">
+                        <h2>Natsu Nakamura</h2>
+                        <h2>"Flunkee Chan"</h2>
+                        <h2>(It's You!)</h2>
                     </div>
                     <div class="character-text">
-
+                        <p>It's not the ideal situation, but at least it's paying the bills</p>
                     </div>
-                    <picture>
-                        <source media="" srcset="">
-                        <source media="" srcset="">
-                        <img src="" alt="">
-                    </picture>
-                </div>
+                    <img src="images/natsu-bl-med-337w.png"
+                        alt="character Natsu Nakamura"
+                        srcset="images/natsu-bl-sml-339w.png 339w,
+                                images/natsu-bl-med-337w.png 337w"
+                        sizes="(min-width: 320px) 339px,
+                               (min-width: 600px) 337px">
+                </div> <!--End of character Natsu-->
 
-                <h2>Characters</h2>
+                <h2 class="subheading">Characters</h2>
 
-                <div class="characters Grouchy">
-                    <div class="character-name">
-
+                <div class="characters grouchy">
+                    <div class="character-title">
+                        <h2>Hiroto Sagawa</h2>
+                        <h2>"Grouchy"</h2>
+                        <h2>Co-Worker</h2>
                     </div>
 
-                    <picture>
-                        <source media="" srcset="">
-                        <source media="" srcset="">
-                        <img src="" alt="">
-                    </picture>
-
+                    <img src="images/grouchy-bl-med-296w.png"
+                        alt="character Hiroto Sagawa"
+                        srcset="images/grouchy-bl-sml-210w.png 210w,
+                                images/grouchy-bl-med-296w.png 296w"
+                        sizes="(min-width: 320px) 210px,
+                               (min-width: 600px) 296px">
                     <div class="character-text">
-                        <p></p>
+                        <p> Grouchy has been on your back since day one. His attitude wswings from an A-Grade employee to a temperamental toddler when you are around. Your lack of enthusiasm towards work tends to be his trigger.</p>
+                        <p>He's younger than you are but has been at MegaKonbiniMart longer so he is your senpai.</p>
+                        <p>For him, the Konbini is his life.</p>
+                    </div>
+                </div> <!--End of character Grouchy-->
+
+                <div class="characters glasses">
+                    <div class="character-title">
+                        <h2>Otaku Businessman</h2>
+                        <h2>"Glasses"</h2>
+                        <h2>Customer</h2>
                     </div>
 
-                </div>
+                    <img src="images/glasses-bl-med-314w.png"
+                        alt="character Otaku Businessman"
+                        srcset="images/glasses-bl-sml-206w.png 206w,
+                                images/glasses-bl-med-314w.png 314w"
+                        sizes="(min-width: 320px) 206px,
+                               (min-width: 600px) 314px">
+                    <div class="character-text">
+                        <p>Glasses has been hanging around the Konbini for awhile now, he can always be found reading in the magazine aisle. He's particularly enamored by a Magic Girl manga series to which he can talk about at great length.</p>
+                        <p>He's a little awkward, and can come across as creepy but you know he is just a harmless otaku.</p>
+                        <p>You don't know much else about him.</p>
+                    </div>
+                </div> <!--End of character Glasses-->
 
-                <div class="sales-pitch text"></div>
+                <div class="characters prince">
+                    <div class="character-title">
+                        <h2>Foreigner</h2>
+                        <h2>"Prince"</h2>
+                        <h2>Customer</h2>
+                    </div>
+
+                    <img src="images/prince-bl-med-293w.png"
+                        alt="character Foreigner"
+                        srcset="images/prince-bl-sml-208w.png 208w,
+                                images/prince-bl-med-293w.png 293w"
+                        sizes="(min-width: 320px) 208px,
+                               (min-width: 600px) 293px">
+                    <div class="character-text">
+                        <p>Prince has been stopping by the Konbini every night since he arrived in Japan. He enjoys the simple things and has found he has a particular fondness for Instant Ramen. He is a little ignorant at times but is well meaning.</p>
+                        <p>He says he's a University student taking a gap year, but you are finding that hard to believe.</p>
+                    </div>
+                </div> <!--End of character Prince-->
+
+                <div class="characters prince">
+                    <div class="character-title">
+                        <h2>Sticky Fingers</h2>
+                        <h2>"Hoody"</h2>
+                        <h2>Customer?</h2>
+                    </div>
+
+                    <img src="images/hoody-bl-med-460w.png"
+                        alt="character Sticky Fingers"
+                        srcset="images/hoody-bl-sml-214w.png 214w,
+                                images/hoody-bl-med-460w.png 460w"
+                        sizes="(min-width: 320px) 214px,
+                               (min-width: 600px) 460px">
+                    <div class="character-text">
+                        <p>Prince has been stopping by the Konbini every night since he arrived in Japan. He enjoys the simple things and has found he has a particular fondness for Instant Ramen. He is a little ignorant at times but is well meaning.</p>
+                        <p>He says he's a University student taking a gap year, but you are finding that hard to believe.</p>
+                    </div>
+                </div> <!--End of character Prince-->
+                <div class="sales-pitch text">
+                    <!-- Similar to h2 size
+                    in mobile 17px -->
+                    <p class="large-text">At least 15k words, and counting</p>
+                    <p class="large-text">3 Character Branches - Grouchy, Glasses, and Prince.</p>
+                    <p class="large-text">6 Endings - 2 per character</p>
+                    <p class="large-text bold">Stretch Goals:</p>
+                    <p class="large-text">A fourth character branch - <strong>Hoody</strong></p>
+                    <p class="large-text">2 more endings</p>
+                    <p class="large-text">CGs</p>
+                </div>
             </section>
 
             <section class="gallery">
-                <h2>Gallery</h2>
+                <h2 class="subheading">Gallery</h2>
 
                 <picture>
-                    <source media="" srcset="">
-                    <source media="" srcset="">
-                    <img src="" alt="">
+                    <source media="(min-width: 320px)" srcset="images/gallery1-600w.jpg">
+                    <source media="(min-width: 600px)" srcset="images/gallery1-800w.jpg">
+                    <img src="images/gallery1-800w.jpg" alt="gallery 1 out of 2">
                 </picture>
 
                 <picture>
-                    <source media="" srcset="">
-                    <source media="" srcset="">
-                    <img src="" alt="">
+                    <source media="(min-width: 320px)" srcset="images/gallery2-600w.jpg">
+                    <source media="(min-width: 600px)" srcset="images/gallery2-800w.jpg">
+                    <img src="images/gallery2-800w.jpg" alt="gallery 2 out of 2">
                 </picture>
             </section>
 
             <section class="information">
-                <h2>Information</h2>
+                <h2 class="subheading">Information</h2>
 
-                <picture class="album-cover">
-                    <source media="" srcset="">
-                    <source media="" srcset="">
-                    <img src="" alt="">
-                </picture>
+                <img class="album-cover"
+                src="images/startscreen-800w.v2.jpg"
+                alt="character Foreigner"
+                srcset="images/startscreen-600w.v2.jpg 600w,
+                        images/startscreen-800w.v2.jpg 800w"
+                sizes="(min-width: 320px) 600px,
+                       (min-width: 600px) 800px">
 
                 <div class="info-box">
-                    <p></p>
-                    <p></p>
+                    <p><span class="uppercase">TITLE</span>: Konbini Life</p>
+                    <p><span class="uppercase">PLATFORMS</span>: Windows, macOS, Linux</p>
+                    <p><span class="uppercase">LANGUAGE</span>: English text</p>
+                    <p><span class="uppercase">DEVELOPER</span>: 2Birds</p>
+                    <p><span class="uppercase">RELEASE DATE</span>: Jul 03, 2016</p>
+                    <p><span class="uppercase">GENRE</span>: Visual Novel, Otome</p>
+                    <p><span class="uppercase">TAGS</span>: anime, comedy, drama, otome, romance</p>
                 </div>
 
-                <a href="http://">
-                    <img src="" alt="itch.io">
+                <a class="itchio-btn" href="https://2birds.itch.io/konbini-life" target="_blank"  rel="noopener noreferrer">
+                    <img src="images/badge-pink.svg" title="visit itch.io" alt="itch.io badge">
                 </a>
 
-                <a class="download-btn" href="http://">Download</a>
+                <a class="download-btn" href="https://2birds.itch.io/konbini-life" target="_blank" rel="noopener noreferrer">Download</a>
                 <p>Konbini_Life_v1_DEMO.zip 38MB</p>
                 <span class="support-os">
                     <span title="Download for Windows" class="icon icon-windows"></span>
-                    <span title="Download for macOS" class="icon icon-linux"></span>
-                    <span title="Download for Linux" class="icon icon-apple"></span>
+                    <span title="Download for macOS" class="icon icon-apple"></span>
+                    <span title="Download for Linux" class="icon icon-linux"></span>
                 </span>
 
                 <p class="text text-bold">Share on</p>
 
-                <a href="https://twitter.com/intent/tweet?button_hashtag=share&ref_src=twsrc%5Etfw">Tweet</a>
-                <a href="https://twitter.com/intent/tweet?button_hashtag=share&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-text="Check out the Otome Game - Konbini Life! " data-url="https://2birds.itch.io/konbini-life" data-related="2birdsgames" data-lang="en" data-show-count="false"></a>
+                <div class="share-btn-container">
+                    <a href="https://www.facebook.com/sharer.php?u=https://2birds.itch.io/konbini-life" target="_blank" rel="noopener noreferrer" class="share-button twitter-btn" title="share on twitter">
+                    <img src="images/twitter-circle.svg" alt="twitter share button">
+                    </a>
 
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Check out the Otome Game - Konbini Life!" data-url="https://2birds.itch.io/konbini-life" data-hashtags="KonbiniLife #otomegame #visualnovel #7eleven " data-related="2birdsgames" data-lang="en" data-dnt="true" data-show-count="false">
-                <img src="./images/twitter-circle.svg" alt=""></a>
+                    <a href="https://twitter.com/share?url=https://www.facebook.com/sharer.php?u=https://2birds.itch.io/konbini-life&text=Check out the otome game Konbini Life&via=2birdsgames&hashtags=otomegame,freetoplay" target="_blank" rel="noopener noreferrer" class="share-button facebook-btn" title="share on twitter">
+                    <img src="images/facebook.svg" alt="facebook share button">
+                    </a>
+                </div>
 
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </section>
         </main>
 
-        <footer></footer>
+        <footer>
+            <section class="email-container">
+                <p class="email-text">Send any bugs or feedback to <a href="mailto:2BirdsGames@gamil.com">2BirdsGames@gamil.com</a></p>
+            </section>
+
+            <section class="copywrite-container">
+                <p>Website developed by Caroline Rozali @hyfyline • Based on 2Birds game "Konbini Life"</p>
+            </section>
+        </footer>
     </article>
 
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+    <script async src="assets/js/main.js"></script>
 </body>
 
 </html>
