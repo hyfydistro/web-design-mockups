@@ -204,3 +204,13 @@ npm i -D gulp gulp-sass browser-sync
 ## Credits
 
 - [Gulp 4 Starter(SCSS, Babel, BrowserSync)](https://youtu.be/3R5Coj4JxTo)
+
+- _Crunchify_ - [Social Share URLs for Handy Reference: Facebook, WhatsApp, Twitter, Buffer, Google+, LinkedIn & lot more](https://crunchify.com/list-of-all-social-sharing-urls-for-handy-reference-social-media-sharing-buttons-without-javascript/)
+
+- _Medium_ - [How to fix target=”_blank” links: a security and performance issue in web pages](https://medium.com/sedeo/how-to-fix-target-blank-a-security-and-performance-issue-in-web-pages-2118eba1ce2f)
+
+- For More than one directory of JS files - [Gulp for Beginners](https://css-tricks.com/gulp-for-beginners/)
+
+- Find open ports - [ERROR: 'localhost could not be reached on port 8080' when port 8080 is not available for Tobii Pro Lab [33837]](https://support.pstnet.com/hc/en-us/articles/360040975414-ERROR-localhost-could-not-be-reached-on-port-8080-when-port-8080-is-not-available-for-Tobii-Pro-Lab-33837-)
+
+- How to kill open ports - [How do I kill the process currently using a port on localhost in Windows?](https://stackoverflow.com/questions/39632667/how-do-i-kill-the-process-currently-using-a-port-on-localhost-in-windows)

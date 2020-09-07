@@ -13,7 +13,7 @@
 
 Font family:
     Modular Scale: 1.5
-        - Arista Pro Trial (Bold; Tracking: +86%)
+        - Arista Pro Trial (Bold; Tracking: +86% / approx. 11px)
             h1-h2
             display title
         - Century Gothic (Bold; Caps; Tracking: +50%)
@@ -27,7 +27,16 @@ Font family:
             h1-h2
         - Century Gothic (Tracking: +30%)
             p-h3
-Game UI (exclusive):
+    Modular Scale: 1.25
+        - Arista Pro Trial (Bold; Tracking: +86% / approx. 5px)
+            h1-h2
+            display title
+    Modular Scale: 1.2
+        - Arista Pro Trial (Bold; Tracking: +86% / approx. 4px)
+            h1-h2
+            display title
+
+            Game UI (exclusive):
     - Arista Pro Trial
     - Nirmala UI (BOLD)
     - Nirmala UI
@@ -252,13 +261,23 @@ Tracking:
 
 
 ## Space
+Mobile
+font base * 1.5 = Line height
+12px * 1.5
 
+`space-lv1`: 18
+`space-lv2`: 27
+`space-lv3`: 40.5
+`space-lv4`: 60.75
+`space-lv5`: 91.125
+
+Tablet-Desktop
 font base * 1.5 = Line height
 16px * 1.5
 
-`space-lv1`: 18
-`space-lv2`:
-`space-lv3`:
+`space-lv1`: 24
+`space-lv2`: 36
+`space-lv3`: 54
 `space-lv4`:
 `space-lv5`:
 
