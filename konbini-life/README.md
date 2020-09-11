@@ -214,3 +214,9 @@ npm i -D gulp gulp-sass browser-sync
 - Find open ports - [ERROR: 'localhost could not be reached on port 8080' when port 8080 is not available for Tobii Pro Lab [33837]](https://support.pstnet.com/hc/en-us/articles/360040975414-ERROR-localhost-could-not-be-reached-on-port-8080-when-port-8080-is-not-available-for-Tobii-Pro-Lab-33837-)
 
 - How to kill open ports - [How do I kill the process currently using a port on localhost in Windows?](https://stackoverflow.com/questions/39632667/how-do-i-kill-the-process-currently-using-a-port-on-localhost-in-windows)
+
+- [Responsive Images With the HTML Picture Element](https://alligator.io/html/picture-element/)
+
+- [Animated Down Arrow CSS3 | XO PIXEL](https://youtu.be/HisZIORbN0s)
+
+- [Fade and scroll items into view while scrolling](https://youtu.be/huVJW23JHKQ)

@@ -20,23 +20,16 @@
 <body>
     <article>
         <header>
-            <!--
-            todo:
-            hero image
-            logomark
-            text
-            cta: Download
-            arrow icon to prompt scrolling down
-         -->
-
             <picture class="hero-wallpaper">
                 <source media="(max-width: 600px)" srcset="images/hero-600w.jpg" sizes="100vw">
                 <img src="images/hero-800w.jpg" alt="hero image">
             </picture>
 
             <section class="logomark">
-                <h1 class="title-japanese">コンビニライフ</h1>
+                <h1 class="title-japanese" lang="ja">コンビニライフ</h1>
+                <span class="line line-top"></span>
                 <h1 class="title-english">KONBINI LIFE</h1>
+                <span class="line line-bottom"></span>
             </section>
 
             <h3>A Visual Novel by 2Birds for iluJAM</h3>
@@ -47,17 +40,24 @@
         </header>
 
         <main>
-            <section class="synopsis">
+            <section class="container-synopsis">
                 <picture class="intro-img">
                     <source media="(max-width: 600px)" srcset="images/intro-ad-320w.jpg" sizes="100vw">
                     <img src="images/intro-ad-600w.jpg" alt="konbini mart">
                 </picture>
 
-                <h2 class="subheading">Synopsis</h2>
-                <p>After flunking out of University, Natsu has been working the night shift at the local MegaKonbiniMart to make ends meet. She's got an annoying co-worker who calls her "Flunkee-chan" whose sole purpose in life is to make her miserable. There's the creepy businessman who's only interests are of the 2D persuasion, and he can't help scaring away other customers. The foreigner who buys snacks in bulk and is hiding a secret. And then there's signs of a customer with sticky fingers.</p>
+                <div class="text-frame">
+                    <div class="subheading-containter fade-in">
+                        <span class="line line-top"></span>
+                        <h2 class="subheading">Synopsis</h2>
+                        <span class="line line-bottom"></span>
+                    </div>
+                    <p class="fade-in">After flunking out of University, Natsu has been working the night shift at the local MegaKonbiniMart to make ends meet. She's got an annoying co-worker who calls her "Flunkee-chan" whose sole purpose in life is to make her miserable. There's the creepy businessman who's only interests are of the 2D persuasion, and he can't help scaring away other customers. The foreigner who buys snacks in bulk and is hiding a secret. And then there's signs of a customer with sticky fingers.</p>
+                </div>
+
             </section>
 
-            <section class="characters">
+            <section class="container-characters">
                 <div class="characters natsu">
                     <!-- todo
                         - Add background image ??? -->
@@ -131,20 +131,21 @@
                         <p>He says he's a University student taking a gap year, but you are finding that hard to believe.</p>
                     </div>
                 </div> <!--End of character Prince-->
-                <div class="sales-pitch text">
-                    <!-- Similar to h2 size
-                    in mobile 17px -->
-                    <p class="large-text">At least 15k words, and counting</p>
-                    <p class="large-text">3 Character Branches - Grouchy, Glasses, and Prince.</p>
-                    <p class="large-text">6 Endings - 2 per character</p>
-                    <p class="large-text bold">Stretch Goals:</p>
-                    <p class="large-text">A fourth character branch - <strong>Hoody</strong></p>
-                    <p class="large-text">2 more endings</p>
-                    <p class="large-text">CGs</p>
-                </div>
             </section>
 
-            <section class="gallery">
+            <section class="container-sales-pitch text">
+                <!-- Similar to h2 size
+                in mobile 17px -->
+                <p class="large-text">At least 15k words, and counting</p>
+                <p class="large-text">3 Character Branches - Grouchy, Glasses, and Prince.</p>
+                <p class="large-text">6 Endings - 2 per character</p>
+                <p class="large-text bold">Stretch Goals:</p>
+                <p class="large-text">A fourth character branch - <strong>Hoody</strong></p>
+                <p class="large-text">2 more endings</p>
+                <p class="large-text">CGs</p>
+            </section>
+
+            <section class="container-gallery">
                 <h2 class="subheading">Gallery</h2>
 
                 <picture>
@@ -158,7 +159,7 @@
                 </picture>
             </section>
 
-            <section class="information">
+            <section class="container-information">
                 <h2 class="subheading">Information</h2>
 
                 <img class="album-cover"
@@ -206,11 +207,11 @@
         </main>
 
         <footer>
-            <section class="email-container">
+            <section class="container-email">
                 <p class="email-text">Send any bugs or feedback to <a href="mailto:2BirdsGames@gamil.com">2BirdsGames@gamil.com</a></p>
             </section>
 
-            <section class="copywrite-container">
+            <section class="container-copywrite">
                 <p>Website developed by Caroline Rozali @hyfyline • Based on 2Birds game "Konbini Life"</p>
             </section>
         </footer>
