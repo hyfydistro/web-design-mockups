@@ -135,6 +135,17 @@ main
         .hoody img
             width: 460px
 
+    // BLOCK: "SALES PITCH"
+.container-sales-pitch
+    // todo: change to desktop spacing
+    // @include space.mobile-padding-preset
+    // padding-top: space.$mobile-space-lv-4
+    // padding-bottom: space.$mobile-space-lv-3
+    text-align: center
+    color: #fff
+    p:not(:last-child)
+        // margin-bottom: space.$mobile-space-lv-1
+
 // MOBILE VIEW
 @media (max-width: 600px)
     main
@@ -398,6 +409,7 @@ main
                     top: 150px
         // HOODY
         div.characters.hoody
+            padding-bottom: space.$mobile-space-lv-2
             .character-title
                 &::before
                     content: ''
@@ -418,7 +430,7 @@ main
                     background: no-repeat url(../../images/hoody-wallpaper-icons.png)
                     background-size: 800px
                     position: absolute
-                    bottom: 0px
+                    bottom: 30px
                 &::before
                     z-index: 1
                     content: ''
@@ -427,8 +439,7 @@ main
                     background: no-repeat url(../../images/hoody-wallpaper-icons-reverse.png)
                     background-size: 800px
                     position: absolute
-                    top: 110px
-                    top: 139px
+                    top: 152px
         .natsu img
             width: 239.5px
         .grouchy img
@@ -439,6 +450,15 @@ main
             width: 208px
         .hoody img
             width: 214px
+        .container-sales-pitch
+            @include space.mobile-padding-preset
+            padding-top: space.$mobile-space-lv-4
+            padding-bottom: space.$mobile-space-lv-3
+            p:not(:last-child)
+                margin-bottom: space.$mobile-space-lv-1
+        // SECTION: "SYNOPSIS"
+        .container-gallery
+
 
 // Specificity: "characters' wallpaper" hotfix
 @media (max-width: 380px)
@@ -467,7 +487,7 @@ main
                 &::before
                     top: 160px
         // HOODY
-        div.characters.hoody
-            .character-image
-                &::before
-                    top: 150px
+        // div.characters.hoody
+        //     .character-image
+        //         &::before
+        //             top: 150px
