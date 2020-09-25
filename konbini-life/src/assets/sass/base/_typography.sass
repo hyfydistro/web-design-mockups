@@ -1,0 +1,134 @@
+// todo: Define modular scale for type in responsive design
+
+@font-face
+    font-family: "Century Gothic"
+    src: url("../fonts/GOTHIC.TTF") format("truetype")
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: "Century Gothic"
+    src: url("../fonts/GOTHICB.TTF") format("truetype")
+    font-weight: bold
+    font-style: normal
+
+@font-face
+    font-family: "Arista Pro Bold Trial"
+    src: url("../fonts/Arista-Pro-Bold-trial.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
+
+// FONT FACE
+$primary-display-fontface: "Arista Pro Bold Trial", sans-serif,'Times New Roman'
+$primary-header-fontface: "Century Gothic Bold", sans-serif,'Times New Roman'
+$primary-text-fontface: "Century Gothic Regular", sans-serif,'Times New Roman'
+
+// BASE VALUE
+$mobile-base-font-size: 12px
+$mobile-base-body-font-size: 14px
+$desktop-base-font-size: 16px
+
+// MDOULAR-SCALE
+// Mobile
+$mobile-header-text-scale-ratio: 1.25
+$mobile-body-text-scale-ratio: 1.2
+// Tablet-Desktop
+$desktop-header-text-scale-ratio: 1.5
+$desktop-body-text-scale-ratio: 1.414
+
+// DEFAULT || DESKTOP-TABLET VIEW
+html
+    // Modular Scale: 1.5
+    font-size: $desktop-base-font-size
+    h1
+        font-family: "Arista Pro Bold Trial"
+        letter-spacing: 11px
+    h2
+        font-family: "Century Gothic"
+        font-weight: bold
+    h3
+        font-family: "Century Gothic"
+        font-weight: normal
+    p
+        font-family: "Century Gothic"
+        font-weight: normal
+        font-size: $desktop-base-font-size
+        line-height: 1.5
+    header
+        h1
+            font-size: calc(1rem * #{$desktop-header-text-scale-ratio} * #{$desktop-header-text-scale-ratio} * #{$desktop-header-text-scale-ratio})
+        h2
+            font-size: calc(1rem * #{$desktop-header-text-scale-ratio} * #{$desktop-header-text-scale-ratio})
+        h3
+            font-size: calc(1rem * #{$desktop-header-text-scale-ratio})
+    main
+        h1
+            font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
+        // ! WARNING: PRONE TO ERROR
+        h2,
+        .large-text
+            font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
+        h3
+            font-size: calc(1rem * #{$desktop-body-text-scale-ratio})
+
+h1,
+.subheading
+    font-family: $primary-display-fontface
+    text-transform: uppercase
+.bold
+    font-weight: 900
+
+// Modular Scale: 1.25
+// h1 - 24px
+// h2 - 19px
+// h3 - 15px
+// p - 12px
+
+@media (max-width: 600px)
+    html
+        font-size: $mobile-base-font-size
+        p
+            font-size: $mobile-base-font-size
+        header
+            h1
+                font-size: calc(1rem * #{$mobile-header-text-scale-ratio} * #{$mobile-header-text-scale-ratio} * #{$mobile-header-text-scale-ratio})
+                letter-spacing: 3px
+                word-spacing: -3px
+            h1.title-japanese
+                    letter-spacing: 1px
+            h2
+                font-size: calc(1rem * #{$mobile-header-text-scale-ratio} * #{$mobile-header-text-scale-ratio})
+            h3
+                font-size: calc(1rem * #{$mobile-header-text-scale-ratio})
+        main
+            h1
+                font-size: calc(1rem * #{$mobile-body-text-scale-ratio} * #{$mobile-body-text-scale-ratio} * #{$mobile-body-text-scale-ratio})
+            .large-text
+                font-size: calc(1rem * #{$mobile-body-text-scale-ratio} * #{$mobile-body-text-scale-ratio})
+            h2
+                font-size: calc(#{$mobile-base-body-font-size} * #{$mobile-body-text-scale-ratio} * #{$mobile-body-text-scale-ratio})
+            h3
+                font-size: calc(#{$mobile-base-body-font-size} * #{$mobile-body-text-scale-ratio})
+            .container-synopsis
+                h2
+                    letter-spacing: 3px
+                p
+                    font-size: $mobile-base-body-font-size
+            .container-characters
+                h2.subheading
+                    letter-spacing: 3px
+                p
+                    font-size: $mobile-base-body-font-size
+            .container-information
+                p
+                    font-size: $mobile-base-body-font-size
+        footer
+            .container-email
+                p
+                    font-size: $mobile-base-body-font-size
+
+    h1,
+    h2.subheading
+        letter-spacing: 4px
+
+

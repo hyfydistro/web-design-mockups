@@ -1,0 +1,34 @@
+@use '../base/space' as *
+
+.arrow-down
+    position: relative
+    display: block
+    margin: 0 auto
+    text-align: center
+    &::after
+        content: ""
+        width: 29px
+        height: 29px
+        position: absolute
+        margin: auto
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        border-right: 4px solid #fff
+        border-bottom: 4px solid #fff
+        transform: rotate(45deg)
+        animation: 1.8s arrow infinite ease
+
+@keyframes arrow
+    0%, 100%
+        top: 0px
+    50%
+        top: 10px
+
+@media (max-width: 600px)
+    .arrow-down
+        margin-top: $mobile-space-lv-2
+        &::after
+            width: 21px
+            height: 21px

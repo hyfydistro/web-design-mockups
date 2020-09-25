@@ -1,0 +1,61 @@
+@use '../base/typography' as typography
+@use '../base/space' as space
+@use '../base/color' as *
+
+// =======
+// BUTTONS
+// =======
+
+// DEFAULT | DESKTOP-TABLET VIEW
+
+// TEXT BUTTONS
+a.download-btn
+    display: block
+    // TYPOGRAPHY STYLES
+    font-size: calc(1rem * #{typography.$desktop-body-text-scale-ratio})
+    font-family: typography.$primary-text-fontface
+    font-weight: bold
+    color: #fff
+    background-color: $primary-color-50
+    // PADDING
+    padding-top: space.$desktop-space-lv-1
+    padding-bottom: space.$desktop-space-lv-1
+    padding-right: space.$desktop-space-lv-2
+    padding-left: space.$desktop-space-lv-2
+    // DIMENSIONS
+    width: 166.3px
+    border-radius: 50px
+    border: solid #fff 1px
+    &:hover
+        background-color: $primary-color-60
+        cursor: pointer
+    &:focus
+        outline: none
+        background-color: $primary-color-60
+    &:active
+        background-color: $primary-color-40
+
+// LINK BUTTONS
+a.itchio-btn
+    img
+        position: relative
+        width: 207.7px
+        height: 64px
+        &:active
+            top: 4px
+            left: 4px
+
+// SHARE BUTTONS
+a.share-button img
+    width: 36px
+    height: 36px
+
+// MOBILE VIEW
+@media (max-width: 600px)
+    // TEXT BUTTONS
+    a.download-btn
+        // PADDING
+        padding-top: space.$mobile-space-lv-1
+        padding-bottom: space.$mobile-space-lv-1
+        padding-right: space.$mobile-space-lv-2
+        padding-left: space.$mobile-space-lv-2
