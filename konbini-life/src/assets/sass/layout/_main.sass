@@ -135,7 +135,7 @@ main
         .hoody img
             width: 460px
 
-    // BLOCK: "SALES PITCH"
+// BLOCK: "SALES PITCH"
 .container-sales-pitch
     // todo: change to desktop spacing
     // @include space.mobile-padding-preset
@@ -145,6 +145,50 @@ main
     color: #fff
     p:not(:last-child)
         // margin-bottom: space.$mobile-space-lv-1
+
+// SECTION: "GALLERY"
+        // todo: write over for desktopresposnsive spacing
+.container-gallery
+    .container-frame
+        border-style: solid
+        border-color: $primary-color-50
+        &::after
+            content: ''
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: $primary-color-50
+            filter: opacity(30%)
+
+//     h2.subheading
+//         font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
+//         // display: block
+//     div.subheading-container
+//         // margin-top: space.$mobile-space-lv-3
+//         display: block
+//         text-align: center
+//     .line
+//         display: inline-block
+//         // *to be determined
+//         height: 2.6px
+//         width: 134px
+//         border-radius: 25px
+//         background-color: #000
+//     span.line.line-top
+//         // margin-bottom: 8.4px
+//         // * to be determined
+//     span.line.line-bottom
+//         // * to be determined
+//         // margin-top: 8.4px
+// SECTION: "INFORMATION"
+// todod:
+// - subeahding
+// - typography spacing
+// .container-information
 
 // MOBILE VIEW
 @media (max-width: 600px)
@@ -456,8 +500,43 @@ main
             padding-bottom: space.$mobile-space-lv-3
             p:not(:last-child)
                 margin-bottom: space.$mobile-space-lv-1
-        // SECTION: "SYNOPSIS"
+        // SECTION: "GALLERY"
         .container-gallery
+            padding-bottom: space.$mobile-space-lv-4
+            h2.subheading
+                font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
+            div.subheading-container
+                margin-top: space.$mobile-space-lv-4
+                margin-bottom: space.$mobile-space-lv-2
+                display: block
+                text-align: center
+            .line
+                display: inline-block
+                height: 2.6px
+                width: 127px
+                border-radius: 25px
+                background-color: #000
+            span.line.line-top
+                margin-bottom: 8.4px
+            span.line.line-bottom
+                margin-top: 8.4px
+            .container-frame
+                position: relative
+                display: block
+                margin-left: auto
+                margin-right: auto
+                @include space.mobile-margin-preset
+                border-width: 14px
+            picture,
+            picture img
+                vertical-align: bottom
+                width: 100%
+                height: 100%
+        .container-gallery .container-frame:nth-child(2)
+            margin-bottom: space.$mobile-space-lv-2
+        // SECTION: "GALLERY"
+// .container-information
+        .container-information
 
 
 // Specificity: "characters' wallpaper" hotfix
