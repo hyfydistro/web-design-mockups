@@ -27,13 +27,13 @@ a.download-btn
     border-radius: 50px
     border: solid #fff 1px
     &:hover
-        background-color: $primary-color-60
+        background-color: $primary-color-40
         cursor: pointer
     &:focus
         outline: none
         background-color: $primary-color-60
     &:active
-        background-color: $primary-color-40
+        background-color: $primary-color-60
 
 // LINK BUTTONS
 a.itchio-btn
@@ -49,6 +49,14 @@ a.itchio-btn
 a.share-button img
     width: 36px
     height: 36px
+a.twitter-btn img,
+a.facebook-btn img
+    &:active
+        top: 4px
+        left: 4px
+    &:hover
+        filter: saturate(150%)
+        transform: scale(1.2)
 
 // MOBILE VIEW
 @media (max-width: 600px)
