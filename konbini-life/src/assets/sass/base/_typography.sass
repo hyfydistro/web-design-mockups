@@ -77,6 +77,8 @@ h1,
     text-transform: uppercase
 .bold
     font-weight: 900
+.text-bold
+    font-weight: 900
 
 // Modular Scale: 1.25
 // h1 - 24px
@@ -122,6 +124,8 @@ h1,
             .container-information
                 p
                     font-size: $mobile-base-body-font-size
+                .text
+                    font-size: calc(#{$mobile-base-body-font-size} * #{$mobile-body-text-scale-ratio})
         footer
             .container-email
                 p
