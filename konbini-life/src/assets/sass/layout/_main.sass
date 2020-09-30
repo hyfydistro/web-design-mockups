@@ -163,6 +163,10 @@ main
             bottom: 0
             background: $primary-color-50
             filter: opacity(30%)
+            transition: 0.2s
+        &:hover
+            &::after
+                filter: opacity(0)
 
 //     h2.subheading
 //         font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
@@ -231,14 +235,14 @@ main
                 margin-top: space.$mobile-space-lv-1
         // SECTION: "CHARACTERS"
         .container-characters
+            padding-bottom: space.$mobile-space-lv-4
             .subheading-container
                 margin-top: space.$mobile-space-lv-4
                 margin-bottom: space.$mobile-space-lv-2
             .character-title h3.bold
                 padding-bottom: space.$mobile-space-lv-half
             .line
-                // width: 154px
-                width: 168px
+                width: 179px
                 height: 2.6px
                 border-radius: 25px
             span.line.line-top
@@ -496,8 +500,8 @@ main
             width: 214px
         .container-sales-pitch
             @include space.mobile-padding-preset
-            padding-top: space.$mobile-space-lv-4
-            padding-bottom: space.$mobile-space-lv-3
+            padding-top: space.$mobile-space-lv-5
+            padding-bottom: space.$mobile-space-lv-4
             p:not(:last-child)
                 margin-bottom: space.$mobile-space-lv-1
         // SECTION: "GALLERY"
@@ -507,14 +511,14 @@ main
             h2.subheading
                 font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
             div.subheading-container
-                margin-top: space.$mobile-space-lv-4
+                margin-top: space.$mobile-space-lv-5
                 margin-bottom: space.$mobile-space-lv-2
                 display: block
                 text-align: center
             .line
                 display: inline-block
                 height: 2.6px
-                width: 127px
+                width: 133px
                 border-radius: 25px
                 background-color: #000
             span.line.line-top
@@ -522,11 +526,12 @@ main
             span.line.line-bottom
                 margin-top: 8.4px
             .container-frame
+                @include space.mobile-margin-preset
                 position: relative
                 display: block
+                width: 300px
                 margin-left: auto
                 margin-right: auto
-                @include space.mobile-margin-preset
                 border-width: 14px
             picture,
             picture img
@@ -552,7 +557,7 @@ main
             .line
                 display: inline-block
                 height: 2.6px
-                width: 190px
+                width: 199px
                 border-radius: 25px
                 background-color: #fff
             span.line.line-top

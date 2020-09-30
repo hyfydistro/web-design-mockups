@@ -27,16 +27,17 @@ header
         display: block
         text-align: center
         margin: $desktop-space-lv-2 auto 0 auto
+    // todo: line for desktop size
     .line
         display: inline-block
-        width: 168px
-        height: 2.6px
+        // width: 177px
+        // height: 2.6px
         background-color: #fff
         border-radius: 25px
-    span.line.line-top
-        margin-bottom: 8.4px
-    span.line.line-bottom
-        margin-top: 8.4px
+    // span.line.line-top
+    //     margin-bottom: 8.4px
+    // span.line.line-bottom
+    //     margin-top: 8.4px
 
 // MOBILE VIEW
 @media (max-width: 600px)
@@ -51,5 +52,11 @@ header
         h3
             margin-top: $mobile-space-lv-3
         a.download-btn
-            margin: $mobile-space-lv-2 auto 0 auto
-
+            margin: $mobile-space-lv-3 auto 0 auto
+        .line
+            width: 177px
+            height: 2.6px
+        span.line.line-top
+            margin-bottom: 8.4px
+        span.line.line-bottom
+            margin-top: 8.4px
