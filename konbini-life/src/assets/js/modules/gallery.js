@@ -1,5 +1,7 @@
 console.log("Initialise gallery script...");
 
+// * Possible to refactor with 'documentSelectorAll' and bracket indexation
+
 // gallery #1
 const gallery1 = document.querySelector('.container-frame-one');
 const gallery1Image = document.querySelector('.container-frame-one img');
@@ -19,7 +21,6 @@ const closeBtn1 = document.querySelector('.module-one .close');
 const closeBtn2 = document.querySelector('.module-two .close');
 
 const salesPitchContainer = document.querySelector('.container-sales-pitch');
-// const overlay = document.querySelector('.overlay');
 
 // click event for gallery #1
 gallery1.addEventListener('click', function() {

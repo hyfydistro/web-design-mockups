@@ -1,0 +1,22 @@
+// SLIDERS
+// Elements slide in from the side of the screen.
+// class 'from-right'
+// class 'from-left'
+
+main
+    .container-characters
+        // .slide-in
+        //     transition: transform 400ms ease-in
+        .from-left
+            transform: translateX(-50%)
+        .from-right
+            transform: translate(50%)
+        .from-left,
+        .from-right
+            // transition: transform 400ms ease-in, transform 400ms ease-in
+            transition: opacity 250ms ease-in, transform 400ms ease-in
+            opacity: 0
+        .from-left.appear,
+        .from-right.appear
+            transform: translateX(0)
+            opacity: 1
