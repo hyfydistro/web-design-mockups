@@ -10,10 +10,15 @@ header
     height: 100vh
     background-color: $primary-color-50
     color: #fff
+    text-align: center
     picture.hero-wallpaper,
     picture.hero-wallpaper img
         width: 100%
-        height: 30vh
+        max-width: 1024px
+        // height: 30vh
+        height: 307px
+        margin-left: auto
+        margin-right: auto
     .logomark
         display: block
         text-align: center
@@ -30,14 +35,15 @@ header
     // todo: line for desktop size
     .line
         display: inline-block
-        // width: 177px
-        // height: 2.6px
+        width: 468px
+        height: 5.2px
         background-color: #fff
         border-radius: 25px
-    // span.line.line-top
-    //     margin-bottom: 8.4px
-    // span.line.line-bottom
-    //     margin-top: 8.4px
+    span.line.line-top
+        margin-bottom: 8.4px
+    span.line.line-bottom
+        margin-top: 8.4px
+
 
 // MOBILE VIEW
 @media (max-width: 600px)

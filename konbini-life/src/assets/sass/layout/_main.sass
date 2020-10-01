@@ -23,18 +23,43 @@ main
         background-color: #000
         .text-frame
             position: relative
+            padding-top: space.$desktop-space-lv-1
+            padding-bottom: space.$desktop-space-lv-1
             background-color: rgba(0, 0, 0, 0.6)
         .subheading-containter
             text-align: center
         .line
             display: inline-block
             background-color: #fff
+            width: 219.9px
+            height: 5.2px
+            border-radius: 25px
         span.line.line-top
             margin-bottom: 8.4px
         span.line.line-bottom
             margin-top: 8.4px
         p
             line-height: 1.8
+            margin-top: space.$desktop-space-lv-1
+
+        // EXAMPLE
+        // SECTION: "CHARACTERS"
+        // .container-characters
+        //     padding-bottom: space.$mobile-space-lv-4
+        //     .subheading-container
+        //         margin-top: space.$mobile-space-lv-4
+        //         margin-bottom: space.$mobile-space-lv-2
+        //     .character-title h3.bold
+        //         padding-bottom: space.$mobile-space-lv-half
+        //     .line
+        //         width: 179px
+        //         height: 2.6px
+        //         border-radius: 25px
+        //     span.line.line-top
+        //         margin-bottom: 8.4px
+        //     span.line.line-bottom
+        //         margin-top: 8.4px
+        // Stylise: character heading block dimensions
 
 // SECTION: "CHARACTERS"
 .container-characters
@@ -46,24 +71,28 @@ main
         position: relative
         display: block
         color: #fff
+    .character-title h3.bold
+        padding-bottom: space.$desktop-space-lv-half
     .character-title h2:nth-child(-n+2)
         font-weight: 900
     .character-title h2:last-child
         font-weight: 400
-        // todo refactor to mobile category
-    div.subheading-container
+    .subheading-container
         display: block
         text-align: center
+        margin-top: space.$desktop-space-lv-4
+        margin-bottom: space.$desktop-space-lv-2
     .line
         display: inline-block
-        // *to be determined
-        // width: 134px
         background-color: #000
+        width: 219.9px
+        height: 5.2px
+        border-radius: 25px
     span.line.line-top
-        // margin-bottom: 8.4px
-        // * to be determined
+        margin-bottom: 8.4px
     span.line.line-bottom
-        // * to be determined
+        margin-top: 8.4px
+
         // margin-top: 8.4px
     // Apply to ALL character div
     // div.characters.natsu,
@@ -194,12 +223,21 @@ main
 // - typography spacing
 // .container-information
 
+// TABLET VIEW
+@media (max-width: 1024px)
+    main
+        // SECTION: "SYNOPSIS"
+        .container-synopsis
+            .text-frame
+                @include space.tablet-padding-preset
+                bottom: calc(70px + 37.9px + (#{space.$desktop-space-lv-1} * 2))
+
 // MOBILE VIEW
 @media (max-width: 600px)
     main
         position: relative
         display: block
-        // SECTION: "SYNOPSIS"
+    // SECTION: "SYNOPSIS"
         .container-synopsis
             // height: calc(775.4px - 93px)
             // auto height = 775.4px
@@ -266,8 +304,6 @@ main
                 display: block
                 margin-left: auto
                 margin-right: auto
-                // margin: space.$mobile-space-lv-2 auto space.$mobile-space-lv-2
-                // padding-top: space.$mobile-space-lv-2
                 clear: both
             .character-text
                 margin-top: space.$mobile-space-lv-1
@@ -288,12 +324,6 @@ main
                 padding: space.$mobile-space-lv-1 space.$mobile-space-lv-2 space.$mobile-space-lv-1 space.$mobile-space-lv-half
                 h3:nth-last-child(-n+2)
                     padding-right: space.$mobile-space-lv-1
-            // .character-text
-            //     margin-top: space.$mobile-space-lv-1
-            // img
-            //     position: relative
-            //     display: block
-            //     margin: space.$mobile-space-lv-2 auto space.$mobile-space-lv-2
         // Stylise: text rotation angle
         div.characters.natsu,
         div.characters.glasses,
@@ -386,7 +416,6 @@ main
                     top: 236px
         // GLASSES
         div.characters.glasses
-            // margin-top: space.$mobile-space-lv-5
             .character-title
                 &::before
                     content: ''
@@ -508,7 +537,6 @@ main
             p:not(:last-child)
                 margin-bottom: space.$mobile-space-lv-1
         // SECTION: "GALLERY"
-        // todo: hover effect
         .container-gallery
             padding-bottom: space.$mobile-space-lv-4
             h2.subheading
@@ -544,7 +572,6 @@ main
         .container-gallery .container-frame:nth-child(2)
             margin-bottom: space.$mobile-space-lv-2
         // SECTION: "INFORMATION"
-        //* WIP
         .container-information
             @include space.mobile-padding-preset
             padding-top: space.$mobile-space-lv-2
@@ -610,7 +637,6 @@ main
             a.twitter-btn img
                 position: relative
                 margin-right: space.$mobile-space-lv-1
-            // todo: add effect on share-btn
 
 // Specificity: "characters' wallpaper" hotfix
 @media (max-width: 380px)

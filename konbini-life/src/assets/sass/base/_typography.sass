@@ -36,6 +36,10 @@ $mobile-body-text-scale-ratio: 1.2
 $desktop-header-text-scale-ratio: 1.5
 $desktop-body-text-scale-ratio: 1.414
 
+// todo:
+// Use mobile ratio for screen wiht cramped height
+// use normal with screen height larger than ... 768??
+
 // DEFAULT || DESKTOP-TABLET VIEW
 html
     // Modular Scale: 1.5
@@ -86,7 +90,7 @@ h1,
 // h3 - 15px
 // p - 12px
 
-@media (max-width: 600px)
+@media (max-width: 600px), (max-height: 768px)
     html
         font-size: $mobile-base-font-size
         p
