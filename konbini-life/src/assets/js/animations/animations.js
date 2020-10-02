@@ -6,7 +6,7 @@ const sliders = document.querySelectorAll('.slide-in');
 // Configurations: appear when the entire content is in view
 const appearOptions = {
     threshold: 1,
-    rootMargin: "0px 0px -180px 0px"
+    rootMargin: "0px 0px -100px 0px"
 };
 
 // Slide in Configurations

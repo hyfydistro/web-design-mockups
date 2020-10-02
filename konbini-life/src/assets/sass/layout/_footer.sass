@@ -2,9 +2,27 @@
 @use '../base/color' as *
 @use '../base/space' as space
 
-// footer
+// ======
+// FOOTER
+// ======
 
-// MOBILE VIEW
+// # DESKTOP VIEW
+footer
+    text-align: center
+    padding-top: space.$desktop-space-lv-5
+    .container-email
+        margin-bottom: space.$desktop-space-lv-4
+        a
+            color: #000
+            text-decoration: underline
+            cursor: pointer
+            &:hover
+                text-decoration: none
+    .container-copywrite
+        padding-top: space.$desktop-space-lv-2
+        padding-bottom: space.$desktop-space-lv-2
+
+// # MOBILE VIEW
 @media (max-width: 600px)
     footer
         text-align: center

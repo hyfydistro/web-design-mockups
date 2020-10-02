@@ -197,11 +197,35 @@ main
         margin-bottom: space.$desktop-space-lv-1
 
 // SECTION: "GALLERY"
-        // todo: write over for desktopresposnsive spacing
 .container-gallery
+    padding-bottom: space.$desktop-space-lv-4
+    h2.subheading
+        font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
+    div.subheading-container
+        margin-top: space.$mobile-space-lv-5
+        margin-bottom: space.$mobile-space-lv-2
+        display: block
+        text-align: center
+    .line
+        display: inline-block
+        height: 5.2px
+        width: 202.067px
+        border-radius: 25px
+        background-color: #000
+    span.line.line-top
+        margin-bottom: 8.4px
+    span.line.line-bottom
+        margin-top: 8.4px
     .container-frame
         border-style: solid
+        border-width: 14px
         border-color: $primary-color-50
+        position: relative
+        display: block
+        margin-left: auto
+        margin-right: auto
+        width: 535px
+        max-width: 600px
         &::after
             content: ''
             position: absolute
@@ -217,95 +241,122 @@ main
         &:hover
             &::after
                 filter: opacity(0)
-
-//     h2.subheading
-//         font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
-//         // display: block
-//     div.subheading-container
-//         // margin-top: space.$mobile-space-lv-3
-//         display: block
-//         text-align: center
-//     .line
-//         display: inline-block
-//         // *to be determined
-//         height: 2.6px
-//         width: 134px
-//         border-radius: 25px
-//         background-color: #000
-//     span.line.line-top
-//         // margin-bottom: 8.4px
-//         // * to be determined
-//     span.line.line-bottom
-//         // * to be determined
-//         // margin-top: 8.4px
-
-
-// EXAMPLE
-        // SECTION: "GALLERY"
-        // .container-gallery
-        //     padding-bottom: space.$mobile-space-lv-4
-        //     h2.subheading
-        //         font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
-        //     div.subheading-container
-        //         margin-top: space.$mobile-space-lv-5
-        //         margin-bottom: space.$mobile-space-lv-2
-        //         display: block
-        //         text-align: center
-        //     .line
-        //         display: inline-block
-        //         height: 2.6px
-        //         width: 133px
-        //         border-radius: 25px
-        //         background-color: #000
-        //     span.line.line-top
-        //         margin-bottom: 8.4px
-        //     span.line.line-bottom
-        //         margin-top: 8.4px
-        //     .container-frame
-        //         @include space.mobile-margin-preset
-        //         position: relative
-        //         display: block
-        //         width: 300px
-        //         margin-left: auto
-        //         margin-right: auto
-        //         border-width: 14px
-        //     picture,
-        //     picture img
-        //         vertical-align: bottom
-        //         width: 100%
-        //         height: 100%
-        // .container-gallery .container-frame:nth-child(2)
-        //     margin-bottom: space.$mobile-space-lv-2
-
-
+        picture,
+        picture img
+            vertical-align: bottom
+            width: 100%
+            height: 100%
+.container-gallery .container-frame:nth-child(2)
+    margin-bottom: space.$desktop-space-lv-2
 // SECTION: "INFORMATION"
-// todod:
-// - subeahding
-// - typography spacing
-// .container-information
+.container-information
+    padding-top: space.$desktop-space-lv-2
+    padding-bottom: space.$desktop-space-lv-4
+    color: #fff
+    h2.subheading
+        font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
+    div.subheading-container
+        margin-top: space.$desktop-space-lv-4
+        margin-bottom: space.$desktop-space-lv-2
+        display: block
+        text-align: center
+    .line
+        display: inline-block
+        height: 5.2px
+        width: 301.8px
+        border-radius: 25px
+        background-color: #fff
+    span.line.line-top
+        margin-bottom: 8.4px
+    span.line.line-bottom
+        margin-top: 8.4px
+    .album-cover
+        width: 320px
+        height: 250px
+        border: 4px #fff solid
+        margin-bottom: space.$desktop-space-lv-2
+        // todo: change view for desktop
+        // e.g. flebox row direction
+    .info-box
+        position: relative
+        display: block
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: space.$desktop-space-lv-3
+        p
+            margin-bottom: space.$desktop-space-lv-1
+    a.itchio-btn img
+        position: relative
+        display: block
+        margin-bottom: space.$desktop-space-lv-3
+        margin-left: auto
+        margin-right: auto
+    a.download-btn
+        position: relative
+        display: block
+        margin-bottom: space.$desktop-space-lv-1
+        margin-left: auto
+        margin-right: auto
+    a.download-btn + p
+        text-align: center
+        margin-bottom: space.$desktop-space-lv-1
+    .support-os
+        position: relative
+        display: block
+        text-align: center
+        margin-bottom: space.$desktop-space-lv-3
+    span.icon
+        margin-right: space.$desktop-space-lv-half
+    .text
+        text-align: center
+        margin-bottom: space.$desktop-space-lv-1
+    .share-btn-container
+        position: relative
+        display: block
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+    a.twitter-btn img
+        position: relative
+        margin-right: space.$desktop-space-lv-1
+
 
 // TABLET VIEW
-@media (max-width: 1024px)
+@media screen and (max-width: 1024px)
     main
         // SECTION: "SYNOPSIS"
         .container-synopsis
+            .intro-img img
+                width: 100%
             .text-frame
                 @include space.tablet-padding-preset
                 bottom: calc(70px + 37.9px + (#{space.$desktop-space-lv-1} * 2))
+        // SECTION: "CHARACTERS"
         .container-characters
             .character-title,
             .character-text
                 @include space.tablet-margin-preset
+        // SECTION: "SALES-PITCH"
         .container-sales-pitch
             @include space.tablet-padding-preset
+        // SECTION: "GALLERY"
+        .container-gallery
+            @include space.tablet-padding-preset
+        // SECTION: "INFORMATION"
+        .container-information
+            @include space.tablet-padding-preset
+            .info-box
+                width: 240px
+
+
 
 
 // MOBILE VIEW
-@media (max-width: 600px)
+@media screen and (max-width: 600px)
     main
         position: relative
         display: block
-    // SECTION: "SYNOPSIS"
+        // SECTION: "SYNOPSIS"
         .container-synopsis
             // height: calc(775.4px - 93px)
             // auto height = 775.4px
@@ -707,7 +758,7 @@ main
                 margin-right: space.$mobile-space-lv-1
 
 // Specificity: "characters' wallpaper" hotfix
-@media (max-width: 380px)
+@media screen and (max-width: 380px)
     main
         // GROUCHY
         div.characters.grouchy
