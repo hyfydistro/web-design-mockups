@@ -42,27 +42,9 @@ main
             line-height: 1.8
             margin-top: space.$desktop-space-lv-1
 
-        // EXAMPLE
-        // SECTION: "CHARACTERS"
-        // .container-characters
-        //     padding-bottom: space.$mobile-space-lv-4
-        //     .subheading-container
-        //         margin-top: space.$mobile-space-lv-4
-        //         margin-bottom: space.$mobile-space-lv-2
-        //     .character-title h3.bold
-        //         padding-bottom: space.$mobile-space-lv-half
-        //     .line
-        //         width: 179px
-        //         height: 2.6px
-        //         border-radius: 25px
-        //     span.line.line-top
-        //         margin-bottom: 8.4px
-        //     span.line.line-bottom
-        //         margin-top: 8.4px
-        // Stylise: character heading block dimensions
-
 // SECTION: "CHARACTERS"
 .container-characters
+    padding-bottom: space.$desktop-space-lv-4
     h2.subheading
         font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
     h2
@@ -85,15 +67,13 @@ main
     .line
         display: inline-block
         background-color: #000
-        width: 219.9px
+        width: 285.567px
         height: 5.2px
         border-radius: 25px
     span.line.line-top
         margin-bottom: 8.4px
     span.line.line-bottom
         margin-top: 8.4px
-
-        // margin-top: 8.4px
     // Apply to ALL character div
     // div.characters.natsu,
     // div.characters.grouchy,
@@ -103,27 +83,26 @@ main
     //     div.character-image img
     //         position: relative
     //         display: block
-    div.characters.natsu
-        .character-title
-            display: inline-block
-            // margin-top: space.$mobile-space-lv-5
-            // padding: space.$mobile-space-lv-1 space.$mobile-space-lv-2 space.$mobile-space-lv-1 space.$mobile-space-lv-half
-            // background-color: $primary-color-50
-            h3
-                // transform: rotate(-1.8deg)
-            h3:nth-child(n+2)
-                // padding-left: space.$mobile-space-lv-1
-        .character-text
-            // color: $primary-color-60
-            // margin-top: space.$mobile-space-lv-1
-        img
-            // margin: space.$mobile-space-lv-2 auto 0
     // NATSU
     div.characters.natsu
         .character-title
+            display: inline-block
+            margin-top: space.$desktop-space-lv-5
+            padding: space.$desktop-space-lv-1 space.$desktop-space-lv-2 space.$desktop-space-lv-1 space.$desktop-space-lv-half
             background-color: $primary-color-50
+            h3
+                transform: rotate(-1.8deg)
+            h3:nth-child(n+2)
+                padding-left: space.$desktop-space-lv-1
         .character-text
+            position: absolute
             color: $primary-color-60
+            width: 190px
+            margin-top: space.$desktop-space-lv-1
+        img
+            position: relative
+            display: block
+            margin: space.$desktop-space-lv-2 auto 0
     // GROUCHY
     div.characters.grouchy
         .character-title
@@ -146,6 +125,56 @@ main
     div.characters.hoody
         .character-title
             background-color: $hoody-primary-color
+    // Stylise: character element dimensions
+    div.characters.natsu,
+    div.characters.grouchy,
+    div.characters.prince
+        .character-title
+            display: inline-block
+            padding: space.$desktop-space-lv-1 space.$desktop-space-lv-4 space.$desktop-space-lv-1 space.$desktop-space-lv-half
+            h3
+                transform: rotate(-1.8deg)
+            h3:nth-child(n+2)
+                padding-left: space.$desktop-space-lv-1
+    div.characters.grouchy,
+    div.characters.glasses,
+    div.characters.prince
+        .character-text
+            margin-top: space.$desktop-space-lv-1
+            margin-bottom: space.$mobile-space-lv-4
+    div.characters.glasses,
+    div.characters.hoody
+        .character-title
+            display: inline-block
+            padding: space.$desktop-space-lv-1 space.$desktop-space-lv-half space.$desktop-space-lv-1 space.$desktop-space-lv-4
+            float: right
+            clear: right
+            display: block
+            text-align: right
+            h3
+                transform: rotate(1.8deg)
+            h3:nth-child(n+2)
+                padding-right: space.$desktop-space-lv-1
+        img
+            position: relative
+            display: block
+            clear: both
+    div.characters.grouchy,
+    div.characters.prince,
+    div.characters.glasses,
+    div.characters.hoody
+        .character-image img
+            margin-left: auto
+            margin-right: auto
+            position: relative
+            display: block
+        .character-image
+            padding-top: space.$desktop-space-lv-2
+            padding-bottom: space.$desktop-space-lv-2
+    div.characters.glasses,
+    div.characters.hoody,
+        .character-image img
+            padding-top: space.$desktop-space-lv-2
     .characters
         .natsu img
             width: 296px
@@ -157,23 +186,15 @@ main
             width: 293px
         .hoody img
             width: 460px
-    // ANIMATIONS
-    .fade-in
-        opacity: 0
-        transition: opacity 250ms ease-in
-    .fade-in.appear
-        opacity: 1
 
 // BLOCK: "SALES PITCH"
 .container-sales-pitch
-    // todo: change to desktop spacing
-    // @include space.mobile-padding-preset
-    // padding-top: space.$mobile-space-lv-4
-    // padding-bottom: space.$mobile-space-lv-3
+    padding-top: space.$desktop-space-lv-5
+    padding-bottom: space.$desktop-space-lv-5
     text-align: center
     color: #fff
     p:not(:last-child)
-        // margin-bottom: space.$mobile-space-lv-1
+        margin-bottom: space.$desktop-space-lv-1
 
 // SECTION: "GALLERY"
         // todo: write over for desktopresposnsive spacing
@@ -217,6 +238,46 @@ main
 //     span.line.line-bottom
 //         // * to be determined
 //         // margin-top: 8.4px
+
+
+// EXAMPLE
+        // SECTION: "GALLERY"
+        // .container-gallery
+        //     padding-bottom: space.$mobile-space-lv-4
+        //     h2.subheading
+        //         font-size: calc(1rem * #{$desktop-body-text-scale-ratio} * #{$desktop-body-text-scale-ratio})
+        //     div.subheading-container
+        //         margin-top: space.$mobile-space-lv-5
+        //         margin-bottom: space.$mobile-space-lv-2
+        //         display: block
+        //         text-align: center
+        //     .line
+        //         display: inline-block
+        //         height: 2.6px
+        //         width: 133px
+        //         border-radius: 25px
+        //         background-color: #000
+        //     span.line.line-top
+        //         margin-bottom: 8.4px
+        //     span.line.line-bottom
+        //         margin-top: 8.4px
+        //     .container-frame
+        //         @include space.mobile-margin-preset
+        //         position: relative
+        //         display: block
+        //         width: 300px
+        //         margin-left: auto
+        //         margin-right: auto
+        //         border-width: 14px
+        //     picture,
+        //     picture img
+        //         vertical-align: bottom
+        //         width: 100%
+        //         height: 100%
+        // .container-gallery .container-frame:nth-child(2)
+        //     margin-bottom: space.$mobile-space-lv-2
+
+
 // SECTION: "INFORMATION"
 // todod:
 // - subeahding
@@ -231,6 +292,13 @@ main
             .text-frame
                 @include space.tablet-padding-preset
                 bottom: calc(70px + 37.9px + (#{space.$desktop-space-lv-1} * 2))
+        .container-characters
+            .character-title,
+            .character-text
+                @include space.tablet-margin-preset
+        .container-sales-pitch
+            @include space.tablet-padding-preset
+
 
 // MOBILE VIEW
 @media (max-width: 600px)
