@@ -1,5 +1,3 @@
-// todo: Define modular scale for type in responsive design
-
 @font-face
     font-family: "Century Gothic"
     src: url("../fonts/GOTHIC.TTF") format("truetype")
@@ -36,11 +34,8 @@ $mobile-body-text-scale-ratio: 1.2
 $desktop-header-text-scale-ratio: 1.5
 $desktop-body-text-scale-ratio: 1.414
 
-// todo:
-// Use mobile ratio for screen wiht cramped height
-// use normal with screen height larger than ... 768??
 
-// DEFAULT || DESKTOP-TABLET VIEW
+// # DEFAULT || DESKTOP-TABLET VIEW
 html
     // Modular Scale: 1.5
     font-size: $desktop-base-font-size
@@ -93,6 +88,7 @@ h1,
 // h3 - 15px
 // p - 12px
 
+// # MOBILE VIEW AND LIMITS
 @media (max-width: 600px), (max-height: 768px)
     html
         font-size: $mobile-base-font-size
