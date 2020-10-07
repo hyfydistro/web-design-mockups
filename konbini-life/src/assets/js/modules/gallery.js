@@ -22,7 +22,7 @@ const closeBtn2 = document.querySelector('.module-two .close');
 
 const salesPitchContainer = document.querySelector('.container-sales-pitch');
 
-// click event for gallery #1
+// # Click Event for Gallery #1
 gallery1.addEventListener('click', function() {
     module1.style.display = 'block';
     salesPitchContainer.style.zIndex= '-1';
@@ -42,7 +42,7 @@ closeBtn1.addEventListener('click', function() {
     enableScroll();
 })
 
-// click event for gallery #2
+// # Click Event for Gallery #2
 gallery2.addEventListener('click', function() {
     module2.style.display = 'block';
     salesPitchContainer.style.zIndex= '-1';

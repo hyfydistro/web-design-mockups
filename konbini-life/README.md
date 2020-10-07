@@ -2,11 +2,17 @@
 
 This mockup supports the following:
 
-- [ ] Responsive mobile / tablet / laptop - **R**
+- [*] Responsive mobile / tablet / laptop - **R**
+    Recommended:
+        - 380w x 568h (min)
+        - 768w x 1024h
+        - 1440w x 900h (max)
+
+    * Other view dimensions or angles may suffer. :smiling_imp:
 
 - [ ] Ally (Web Accessibility) - **A11y**
     - [ ] Screenreaders
-    - [ ] Color accessible
+    - [*] Color accessible
 
 - [ ] Old Browser Support - **OBS** [REJECTED]
       Reasons: Targeting gamers.
@@ -19,10 +25,15 @@ This mockup supports the following:
     - CSS PE
     - JavaScript PE
 
-
-
 - [ ] Available at GitHub Pages (SOON)
 
+## Browsers Compatibility
+
+Less than IE10 may suffer viewing experience. (Until further ado.) >> TRY MODERNIZR
+
+* Tested on the following browsers:
+    - FireFox
+    - Google Chrome
 
 ## Prerequisite(s)
 
@@ -220,3 +231,7 @@ npm i -D gulp gulp-sass browser-sync
 - [Animated Down Arrow CSS3 | XO PIXEL](https://youtu.be/HisZIORbN0s)
 
 - [Fade and scroll items into view while scrolling](https://youtu.be/huVJW23JHKQ)
+
+- [prevent scroll when viewing](https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily)
+
+- [How to Write Media Queries with JavaScript Code](https://www.sitepoint.com/javascript-media-queries/)

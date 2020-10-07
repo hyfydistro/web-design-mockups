@@ -1235,13 +1235,31 @@ div.characters.hoody
 
 // ? Specificity: "subheading line element width and height size" hotfix
 // ? WIP
-// @media screen and (max-height: 768px), (max-height: 600px)
-//     header,
-//     .container-synopsis,
-//     .container-characters,
-//     .container-gallery,
-//     .container-information
-//         .subheading-container
-//             .line
-//                 width: 120px
-//                 height: 2.6px
+@media screen and (max-width: 600px), (max-height: 768px)
+    .container-synopsis
+        .line
+            width: 120px !important
+            height: 2.6px
+    .container-characters
+        .line
+            width: 179px !important
+            height: 2.6px
+    .container-gallery
+        .line
+            width: 133px !important
+            height: 2.6px
+    .container-information
+        .line
+            width: 199px !important
+            height: 2.6px
+
+        // .line
+        //     display: inline-block
+        //     background-color: #fff
+        //     width: 219.9px
+        //     height: 5.2px
+        //     border-radius: 25px
+        // span.line.line-top
+        //     margin-bottom: 8.4px
+        // span.line.line-bottom
+        //     margin-top: 8.4px
