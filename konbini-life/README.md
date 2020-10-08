@@ -235,3 +235,7 @@ npm i -D gulp gulp-sass browser-sync
 - [prevent scroll when viewing](https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily)
 
 - [How to Write Media Queries with JavaScript Code](https://www.sitepoint.com/javascript-media-queries/)
+
+## License
+
+MIT License

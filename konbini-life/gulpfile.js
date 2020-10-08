@@ -62,7 +62,8 @@ const paths = {
     },
     scripts: {
         jsSRC: "",
-        jsDEST: "./dist/assets/js/"
+        jsDEST: "./dist/assets/js/",
+        jsOldieDEST: "./dist.oldie/assets/js/"
     },
     images: {
         favicon: "",
@@ -194,6 +195,18 @@ function transpileJs() {
         .pipe(browserSync.stream());
 }
 
+// IE 8 Support
+function transpileJsForOlderBrowser() {
+    return src(scriptWatchFiles)
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: [['@babel/preset-env', {targets: {browsers: ['ie >= 7']}}]]
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(dest('src/assets/js.oldie'))
+        .pipe(browserSync.stream());
+}
+
 // ============
 // MINIFICATION
 // ============
@@ -219,9 +232,9 @@ function cssMinifyForOlderBrowsers() {
         cssnano()
     ];
 
-    return src('./src/assets/css/*.css')
-    .postcss(plugins)
-    .pipe(dest('./dist/assets/css.oldie/*.css'))
+    return src('./src/assets/css.oldie/*.css')
+    .pipe(postcss(plugins))
+    .pipe(dest('./dist.oldie/assets/css'))
 }
 
 // Minify Files for Modern Browsers
@@ -237,12 +250,12 @@ function minifyFilesForOlderBrowsers() {
 }
 
 
-// * For Older Browsers
+// # For Older Browsers
 // From IE8
 
 function stylesForOlderBrowsers() {
     const plugins = [
-        autoprefixeHr(),
+        autoprefixer(),
         oldie()
     ];
 
@@ -276,6 +289,15 @@ function concatJS() {
     .pipe(dest(paths.scripts.jsDEST));
 }
 
+// For Older Browser
+// Pass to folder 'js.oldie'
+function concatJSForOlderBrowsers() {
+    return src('src/assets/js.oldie/*.js')
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(dest(paths.scripts.jsOldieDEST));
+}
+
 function cleanDist() {
 
 }
@@ -295,6 +317,21 @@ function dev() {
     // Run function when any sass file changes
     watch('src/assets/sass/**/*.sass', compileSassToCss);
     watch(scriptWatchFiles, transpileJs);
+    // watch(scriptWatchFiles).on('change', browserSync.reload);
+    watch('src/*.html').on('change', browserSync.reload);
+}
+
+function devOldie() {
+    browserSync.init({
+        server: {
+            baseDir: './dist.oldie/',
+            index: 'index.html'
+        }
+    });
+
+    // Run function when any sass file changes
+    watch('src/assets/sass/**/*.sass', [compileSassToCss, stylesForOlderBrowsers, cssMinifyForOlderBrowsers]);
+    watch(scriptWatchFiles, [transpileJs, transpileJsForOlderBrowser, concatJSForOlderBrowsers]);
     // watch(scriptWatchFiles).on('change', browserSync.reload);
     watch('src/*.html').on('change', browserSync.reload);
 }
@@ -334,9 +371,18 @@ exports.minifyImages = minifyImages;
 exports.cssMinifyForModernBrowsers = cssMinifyForModernBrowsers;
 exports.cssMinifyForOlderBrowsers = cssMinifyForOlderBrowsers;
 exports.concatJS =concatJS;
+// Older Browser Support
+// CSS
+exports.stylesForOlderBrowsers = stylesForOlderBrowsers; // Transpile for IE8
+exports.cssMinifyForOlderBrowsers = cssMinifyForOlderBrowsers; // Minify
+// JS
+exports.transpileJsForOlderBrowser = transpileJsForOlderBrowser; // Transpile for IE8
+exports.concatJSForOlderBrowsers = concatJSForOlderBrowsers; // Concat all JS files + Minified
 
 // DEVELOPMENT
 exports.dev = series(parallel(compileSassToCss, transpileJs), dev);
+// ? Include transpilation for older browser? Seems like a lot of load power on use.
+exports.devOldie = series(parallel(compileSassToCss, transpileJs), devOldie);
 
 // PRODUCTION
 // For Modern Browsers
@@ -355,9 +401,14 @@ exports.default = parallel(copyHtml, minifyImages, copyFavicon, copyFonts, cssMi
 // Transpile SASS to CSS
 //  - compileSassToCss [*]
 // Transpile CSS for IE 8
-//  - ...
+//  - oldie (for CSS)
+//      - Transpile [*]
+//      - Minify [*]
+// ? You might need to write CSS for IE
+// Tranpiler JS for IE 8 [*]
+//  - Uglify + Concat JS for Older Browser [ ]
 // Minify CSS for Modern Browsers [*]
-// Minify CSS for Older Browsers [ ]
+// Minify CSS for Older Browsers [*]
 // TanspileJS
 //  - Uglify (Minify) [*]
 //  - Concat (Sourced into 1 file) [*]
@@ -368,4 +419,7 @@ exports.default = parallel(copyHtml, minifyImages, copyFavicon, copyFonts, cssMi
 //  - imagemin [*]
 // copyFonts [*]
 
-// What is concat for???
+// For Older Browser
+// Use @support bc animation does not work.
+// Modernizr? >> gulp-modernizr
+// https://www.npmjs.com/package/gulp-modernizr
