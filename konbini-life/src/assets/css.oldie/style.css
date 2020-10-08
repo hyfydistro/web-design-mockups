@@ -1,0 +1,1466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/GOTHIC.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/GOTHICB.TTF") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arista Pro Bold Trial";
+  src: url("../fonts/Arista-Pro-Bold-trial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 16px;
+}
+html h1 {
+  font-family: "Arista Pro Bold Trial";
+  letter-spacing: 11px;
+}
+html h2 {
+  font-family: "Century Gothic";
+  font-weight: bold;
+}
+html h3 {
+  font-family: "Century Gothic";
+  font-weight: normal;
+}
+html p {
+  font-family: "Century Gothic";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+html header h1 {
+  font-size: 40.5px;
+}
+html header h2 {
+  font-size: 27px;
+}
+html header h3 {
+  font-size: 18px;
+}
+html main h1 {
+  font-size: 33.925px;
+}
+html main h2,
+html main .large-text {
+  font-size: 23.992px;
+}
+html main h3 {
+  font-size: 16.968px;
+}
+html main .container-information .text {
+  font-size: 16.968px;
+}
+
+h1,
+.subheading {
+  font-family: "Arista Pro Bold Trial", sans-serif, "Times New Roman";
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.text-bold {
+  font-weight: 900;
+}
+
+html {
+    font-size: 12px;
+  }
+
+html p {
+    font-size: 12px;
+  }
+
+html header h1 {
+    font-size: 23.437px;
+    letter-spacing: 3px;
+    word-spacing: -3px;
+  }
+
+html header h1.title-japanese {
+    letter-spacing: 1px;
+  }
+
+html header h2 {
+    font-size: 18.75px;
+  }
+
+html header h3 {
+    font-size: 15px;
+  }
+
+html main h1 {
+    font-size: 20.736px;
+  }
+
+html main .large-text {
+    font-size: 17.28px;
+  }
+
+html main h2 {
+    font-size: 20.16px;
+  }
+
+html main h3 {
+    font-size: 16.8px;
+  }
+
+html main .container-synopsis h2 {
+    letter-spacing: 3px;
+  }
+
+html main .container-synopsis p {
+    font-size: 14px;
+  }
+
+html main .container-characters h2.subheading {
+    letter-spacing: 3px;
+  }
+
+html main .container-characters p {
+    font-size: 14px;
+  }
+
+html main .container-information p {
+    font-size: 14px;
+  }
+
+html main .container-information .text {
+    font-size: 16.8px;
+  }
+
+html footer .container-email p {
+    font-size: 14px;
+  }
+
+h1,
+h2.subheading {
+    letter-spacing: 4px;
+  }
+a.download-btn {
+  display: block;
+  font-size: 16.968px;
+  font-family: "Century Gothic Regular", sans-serif, "Times New Roman";
+  font-weight: bold;
+  color: #fff;
+  background-color: #FF015B;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 36px;
+  padding-left: 36px;
+  width: 207.7px;
+  border-radius: 50px;
+  border: solid #fff 1px;
+}
+a.download-btn:hover {
+  background-color: #FF337B;
+  cursor: pointer;
+}
+a.download-btn:focus {
+  outline: none;
+  background-color: #CC0048;
+}
+a.download-btn:active {
+  background-color: #CC0048;
+}
+
+a.itchio-btn img {
+  position: relative;
+  width: 207.7px;
+  height: 64px;
+}
+a.itchio-btn img:active {
+  top: 4px;
+  left: 4px;
+}
+
+a.share-button img {
+  width: 36px;
+  height: 36px;
+}
+
+a.twitter-btn img:active,
+a.facebook-btn img:active {
+  top: 4px;
+  left: 4px;
+}
+a.twitter-btn img:hover,
+a.facebook-btn img:hover {
+  -webkit-filter: saturate(150%);
+          filter: saturate(150%);
+  transform: scale(1.2);
+}
+
+a.download-btn {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 27px;
+    padding-left: 27px;
+    width: 166.3px;
+  }
+.icon-windows:before {
+  content: "";
+  background: url(../../images/windows-white.svg);
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-apple:before {
+  content: "";
+  background: url(../../images/apple-white.svg);
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-linux:before {
+  content: "";
+  background: url(../../images/linux-white.svg);
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.email-text:before {
+  content: "";
+  background: url(../../images/icon-email-line-pink.png);
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  margin-right: 8px;
+}
+
+.arrow-down {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+}
+.arrow-down:after {
+  content: "";
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  transform: rotate(45deg);
+  -webkit-animation: 1.8s arrow infinite ease;
+          animation: 1.8s arrow infinite ease;
+}
+
+@-webkit-keyframes arrow {
+  0%, 100% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+}
+
+@keyframes arrow {
+  0%, 100% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+}
+.container-frame {
+  cursor: pointer;
+}
+
+.module-one,
+.module-two {
+  position: fixed;
+  z-index: 99;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+.module-content {
+  margin: auto;
+  display: block;
+  width: 80vw !important;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main .container-synopsis .fade-in,
+main .container-characters .fade-in,
+main .container-sales-pitch .fade-in,
+main .container-gallery .fade-in {
+  filter: alpha(opacity=0);
+  transition: opacity 250ms ease-in;
+}
+main .container-synopsis .fade-in.appear,
+main .container-characters .fade-in.appear,
+main .container-sales-pitch .fade-in.appear,
+main .container-gallery .fade-in.appear {
+  filter: alpha(opacity=100);
+}
+
+main .container-characters .from-left {
+  transform: translateX(-50%);
+}
+main .container-characters .from-right {
+  transform: translate(50%);
+}
+main .container-characters .from-left,
+main .container-characters .from-right {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  filter: alpha(opacity=0);
+}
+main .container-characters .from-left.appear,
+main .container-characters .from-right.appear {
+  transform: translateX(0);
+  filter: alpha(opacity=100);
+}
+
+header {
+  z-index: 99;
+}
+header:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(4deg);
+  z-index: -1;
+}
+
+section.container-synopsis {
+  z-index: 88;
+}
+
+section.container-synopsis {
+  background-color: #000;
+}
+
+section.container-characters {
+  background-color: #fff;
+  z-index: 77;
+}
+
+section.container-sales-pitch {
+  background-color: #FF015B;
+  z-index: 66;
+}
+
+section.container-synopsis,
+section.container-characters,
+section.container-sales-pitch {
+  position: relative;
+  width: 100%;
+}
+section.container-synopsis:after,
+section.container-characters:after,
+section.container-sales-pitch:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(4deg);
+  z-index: -1;
+}
+
+section.container-gallery {
+  background-color: #fff;
+  z-index: 55;
+}
+
+section.container-information {
+  background-color: #FF015B;
+  z-index: 44;
+}
+
+section.container-gallery,
+section.container-information {
+  position: relative;
+  width: 100%;
+}
+section.container-gallery:after,
+section.container-information:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top right;
+  transform: skewY(-2deg);
+  z-index: -1;
+}
+
+section.container-email {
+  background-color: #fff;
+}
+
+section.container-copywrite {
+  background-color: #FFCCDE;
+  color: #660024;
+}
+
+header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: #FF015B;
+  color: #fff;
+  text-align: center;
+}
+header picture.hero-wallpaper,
+header picture.hero-wallpaper img {
+  width: 100%;
+  max-width: 1024px;
+  height: 307px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header .logomark {
+  display: block;
+  text-align: center;
+}
+header .logomark h1.title-japanese {
+  margin-top: 54px;
+}
+header h3 {
+  text-align: center;
+  display: block;
+  margin-top: 36px;
+}
+header a.download-btn {
+  display: block;
+  text-align: center;
+  margin: 36px auto 0 auto;
+}
+header .line {
+  display: inline-block;
+  width: 468px;
+  height: 5.2px;
+  background-color: #fff;
+  border-radius: 25px;
+}
+header span.line.line-top {
+  margin-bottom: 8.4px;
+}
+header span.line.line-bottom {
+  margin-top: 8.4px;
+}
+
+header picture.hero-wallpaper,
+header picture.hero-wallpaper img {
+    height: 40vh;
+    width: 100%;
+  }
+
+header .logomark h1.title-japanese {
+    margin-top: 40.5px;
+  }
+
+header h3 {
+    margin-top: 40.5px;
+  }
+
+header a.download-btn {
+    margin: 40.5px auto 0 auto;
+  }
+
+header .line {
+    width: 177px;
+    height: 2.6px;
+  }
+
+header span.line.line-top {
+    margin-bottom: 8.4px;
+  }
+
+header span.line.line-bottom {
+    margin-top: 8.4px;
+  }
+.subheading {
+  letter-spacing: 8px;
+}
+
+main .container-synopsis {
+  width: 100%;
+  height: 710px;
+  color: #fff;
+  background-color: #000;
+}
+main .container-synopsis .formatter-synopsis {
+  position: relative;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+}
+main .container-synopsis .intro-img {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  top: 40px;
+}
+main .container-synopsis .text-frame {
+  width: 615px;
+  position: absolute;
+  top: 245px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #000000;
+}
+main .container-synopsis .subheading-containter {
+  text-align: center;
+}
+main .container-synopsis .line {
+  display: inline-block;
+  background-color: #fff;
+  width: 219.9px;
+  height: 5.2px;
+  border-radius: 25px;
+}
+main .container-synopsis span.line.line-top {
+  margin-bottom: 8.4px;
+}
+main .container-synopsis span.line.line-bottom {
+  margin-top: 8.4px;
+}
+main .container-synopsis p {
+  line-height: 1.8;
+  margin-top: 24px;
+}
+
+.container-characters {
+  padding-bottom: 81px;
+}
+.container-characters h2.subheading {
+  font-size: 23.992px;
+}
+.container-characters .character-title {
+  position: relative;
+  display: block;
+  color: #fff;
+}
+.container-characters .character-title h3.bold {
+  padding-bottom: 10.66667px;
+}
+.container-characters .character-title :first-child + h2 {
+  font-weight: 900;
+}
+.container-characters .character-title h2:last-child {
+  font-weight: 400;
+}
+.container-characters .subheading-container {
+  display: block;
+  text-align: center;
+  margin-top: 121.5px;
+  margin-bottom: 121.5px;
+}
+.container-characters .line {
+  display: inline-block;
+  background-color: #000;
+  width: 285.567px;
+  height: 5.2px;
+  border-radius: 25px;
+}
+.container-characters span.line.line-top {
+  margin-bottom: 8.4px;
+}
+.container-characters span.line.line-bottom {
+  margin-top: 8.4px;
+}
+.container-characters .characters {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  margin-bottom: 81px;
+}
+.container-characters .character-text {
+  background-color: #fff;
+  padding: 36px 24px;
+  width: 465px;
+  z-index: 99;
+}
+.container-characters .character-text p {
+  margin-bottom: 24px;
+}
+.container-characters .formatter-reverse {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+.container-characters .formatter {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.container-characters div.characters.natsu .character-title {
+  display: inline-block;
+  margin-top: 121.5px;
+  padding: 24px 36px 24px 10.66667px;
+  background-color: #FF015B;
+}
+.container-characters div.characters.natsu .character-title h3 {
+  transform: rotate(-1.8deg);
+}
+.container-characters div.characters.natsu .character-title :first-child + h3 {
+  padding-left: 24px;
+}
+.container-characters div.characters.natsu .character-text {
+  position: absolute;
+  color: #CC0048;
+  width: 190px;
+  margin-top: 24px;
+}
+.container-characters div.characters.natsu img {
+  position: relative;
+  display: block;
+  margin: 36px auto 0;
+}
+.container-characters div.characters.grouchy .character-title {
+  background-color: #218C1A;
+}
+.container-characters div.characters.grouchy .character-text {
+  color: #14770E;
+}
+.container-characters div.characters.glasses .character-title {
+  background-color: #A130B9;
+}
+.container-characters div.characters.glasses .character-title + * {
+  clear: both;
+}
+.container-characters div.characters.glasses .character-text {
+  color: #771D8B;
+}
+.container-characters div.characters.prince .character-title {
+  background-color: #ED931F;
+}
+.container-characters div.characters.prince .character-text {
+  color: #91570D;
+}
+.container-characters div.characters.hoody .character-title {
+  background-color: #F8584C;
+}
+.container-characters div.characters.natsu .character-title,
+.container-characters div.characters.grouchy .character-title,
+.container-characters div.characters.prince .character-title {
+  display: inline-block;
+  padding: 24px 81px 24px 10.66667px;
+}
+.container-characters div.characters.natsu .character-title h3,
+.container-characters div.characters.grouchy .character-title h3,
+.container-characters div.characters.prince .character-title h3 {
+  transform: rotate(-1.8deg);
+}
+.container-characters div.characters.natsu .character-title :first-child + h3,
+.container-characters div.characters.grouchy .character-title :first-child + h3,
+.container-characters div.characters.prince .character-title :first-child + h3 {
+  padding-left: 24px;
+}
+.container-characters div.characters.grouchy .character-text,
+.container-characters div.characters.glasses .character-text,
+.container-characters div.characters.prince .character-text {
+  margin-top: 24px;
+  margin-bottom: 60.75px;
+}
+.container-characters div.characters.glasses .character-title,
+.container-characters div.characters.hoody .character-title {
+  display: inline-block;
+  padding: 24px 10.66667px 24px 81px;
+  float: right;
+  clear: right;
+  display: block;
+  text-align: right;
+}
+.container-characters div.characters.glasses .character-title h3,
+.container-characters div.characters.hoody .character-title h3 {
+  transform: rotate(1.8deg);
+}
+.container-characters div.characters.glasses .character-title :first-child + h3,
+.container-characters div.characters.hoody .character-title :first-child + h3 {
+  padding-right: 24px;
+}
+.container-characters div.characters.glasses img,
+.container-characters div.characters.hoody img {
+  position: relative;
+  display: block;
+  clear: both;
+}
+.container-characters div.characters.grouchy .character-image img,
+.container-characters div.characters.prince .character-image img,
+.container-characters div.characters.glasses .character-image img,
+.container-characters div.characters.hoody .character-image img {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: block;
+}
+.container-characters div.characters.grouchy .character-image,
+.container-characters div.characters.prince .character-image,
+.container-characters div.characters.glasses .character-image,
+.container-characters div.characters.hoody .character-image {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.container-characters div.characters.grouchy .character-text,
+.container-characters div.characters.prince .character-text,
+.container-characters div.characters.glasses .character-text,
+.container-characters div.characters.hoody .character-text {
+  height: 300px;
+}
+.container-characters div.characters.glasses,
+.container-characters div.characters.hoody,
+.container-characters .character-image img {
+  padding-top: 36px;
+}
+.container-characters .characters.natsu img {
+  width: 296px;
+}
+.container-characters .characters.grouchy img {
+  width: 296px;
+}
+.container-characters .characters.glasses img {
+  width: 314px;
+}
+.container-characters .characters.prince img {
+  width: 293px;
+}
+.container-characters .characters.hoody img {
+  width: 460px;
+}
+
+div.characters .character-title:after {
+  z-index: -99;
+}
+
+div.characters.natsu {
+  width: 100%;
+  margin-top: 91.125px;
+}
+div.characters.natsu .character-title:after {
+  content: "";
+  width: 1440px;
+  height: 43px;
+  background: repeat url(../../images/natsu-wallpaper-icons.png);
+  background-size: 700px;
+  position: absolute;
+  left: -250px;
+  top: 32px;
+}
+div.characters.natsu .character-image {
+  width: 100%;
+}
+div.characters.natsu .character-image img {
+  z-index: 999;
+}
+div.characters.natsu .character-image:after {
+  z-index: 1;
+  content: "";
+  width: 1440px;
+  height: 47px;
+  background: repeat url(../../images/natsu-wallpaper-icons.png);
+  background-size: 750px;
+  position: absolute;
+  bottom: 160px;
+  left: -250px;
+}
+
+div.characters.grouchy .character-title:after {
+  content: "";
+  width: 2000px;
+  height: 43px;
+  background: repeat url(../../images/grouchy-wallpaper-icons-reverse.png);
+  background-size: 700px;
+  position: absolute;
+  left: -300px;
+  top: 53px;
+}
+div.characters.grouchy .character-image img {
+  z-index: 999;
+}
+div.characters.grouchy .character-image:after {
+  z-index: -999;
+  content: "";
+  width: 1440px;
+  height: 45px;
+  background: repeat url(../../images/grouchy-wallpaper-icons.png);
+  background-size: 750px;
+  position: absolute;
+  left: -836px;
+  bottom: 66px;
+}
+div.characters.grouchy .character-image:before {
+  z-index: -999;
+  content: "";
+  width: 1440px;
+  height: 45px;
+  background: repeat url(../../images/grouchy-wallpaper-icons-reverse.png);
+  background-size: 750px;
+  position: absolute;
+  left: -836px;
+  top: 119px;
+}
+
+div.characters.glasses .character-title:before {
+  content: "";
+  width: 1440px;
+  height: 45px;
+  background: repeat url(../../images/glasses-wallpaper-icons.png);
+  background-size: 750px;
+  position: absolute;
+  top: 50px;
+  right: -244px;
+}
+div.characters.glasses .character-image img {
+  z-index: 999;
+}
+div.characters.glasses .character-image:after {
+  z-index: 1;
+  content: "";
+  width: 1440px;
+  height: 45px;
+  background: repeat url(../../images/glasses-wallpaper-icons.png);
+  background-size: 750px;
+  position: absolute;
+  bottom: 55px;
+  left: -288px;
+}
+div.characters.glasses .character-image:before {
+  z-index: 1;
+  content: "";
+  width: 1440px;
+  height: 45px;
+  background: repeat url(../../images/glasses-wallpaper-icons-reverse.png);
+  background-size: 750px;
+  position: absolute;
+  left: -288px;
+}
+
+div.characters.prince .character-title:after {
+  content: "";
+  width: 2000px;
+  height: 44px;
+  background: repeat url(../../images/prince-wallpaper-icons.png);
+  background-size: 700px;
+  position: absolute;
+  left: -300px;
+  top: 49px;
+}
+div.characters.prince .character-image img {
+  z-index: 999;
+}
+div.characters.prince .character-image:after {
+  z-index: 1;
+  content: "";
+  width: 1440px;
+  height: 48px;
+  background: repeat url(../../images/prince-wallpaper-icons.png);
+  background-size: 750px;
+  position: absolute;
+  bottom: 59px;
+  left: -836px;
+}
+div.characters.prince .character-image:before {
+  z-index: 1;
+  content: "";
+  width: 1440px;
+  height: 48px;
+  background: repeat url(../../images/prince-wallpaper-icons-reverse.png);
+  background-size: 750px;
+  position: absolute;
+  left: -836px;
+  top: 124px;
+}
+
+div.characters.hoody {
+  padding-bottom: 27px;
+}
+div.characters.hoody .character-title:before {
+  content: "";
+  width: 1440px;
+  height: 51px;
+  background: repeat url(../../images/hoody-wallpaper-icons.png);
+  background-size: 800px;
+  position: absolute;
+  top: 59px;
+  right: -244px;
+}
+div.characters.hoody .character-image img {
+  z-index: 999;
+}
+div.characters.hoody .character-image:after {
+  z-index: 1Spec;
+  content: "";
+  width: 1440px;
+  height: 51px;
+  background: repeat url(../../images/hoody-wallpaper-icons.png);
+  background-size: 800px;
+  position: absolute;
+  bottom: 61px;
+  right: -244px;
+}
+div.characters.hoody .character-image:before {
+  z-index: 1;
+  content: "";
+  width: 1440px;
+  height: 50px;
+  background: repeat url(../../images/hoody-wallpaper-icons-reverse.png);
+  background-size: 800px;
+  position: absolute;
+  top: 236px;
+  right: -244px;
+}
+
+.container-sales-pitch {
+  padding-top: 243px;
+  padding-bottom: 121.5px;
+  text-align: center;
+  color: #fff;
+}
+ {
+  margin-bottom: 24px;
+}
+
+.container-gallery {
+  padding-top: 121.5px;
+  padding-bottom: 121.5px;
+}
+.container-gallery h2.subheading {
+  font-size: 23.992px;
+}
+.container-gallery div.subheading-container {
+  margin-top: 121.5px;
+  margin-bottom: 54px;
+  display: block;
+  text-align: center;
+}
+.container-gallery .line {
+  display: inline-block;
+  height: 5.2px;
+  width: 202.067px;
+  border-radius: 25px;
+  background-color: #000;
+}
+.container-gallery span.line.line-top {
+  margin-bottom: 8.4px;
+}
+.container-gallery span.line.line-bottom {
+  margin-top: 8.4px;
+}
+.container-gallery .container-frame {
+  border-style: solid;
+  border-width: 14px;
+  border-color: #FF015B;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 535px;
+  max-width: 600px;
+}
+.container-gallery .container-frame:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FF015B;
+  -webkit-filter: opacity(30%);
+          filter: opacity(30%);
+  transition: 0.2s;
+}
+.container-gallery .container-frame:hover:after {
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+}
+.container-gallery .container-frame picture,
+.container-gallery .container-frame picture img {
+  vertical-align: bottom;
+  width: 100%;
+  height: 100%;
+}
+
+.container-gallery :first-child + .container-frame {
+  margin-bottom: 36px;
+}
+
+.container-information {
+  padding-top: 175.5px;
+  padding-bottom: 81px;
+  color: #fff;
+}
+.container-information h2.subheading {
+  font-size: 23.992px;
+}
+.container-information div.subheading-container {
+  margin-top: 81px;
+  margin-bottom: 54px;
+  display: block;
+  text-align: center;
+}
+.container-information .line {
+  display: inline-block;
+  height: 5.2px;
+  width: 301.8px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+.container-information span.line.line-top {
+  margin-bottom: 8.4px;
+}
+.container-information span.line.line-bottom {
+  margin-top: 8.4px;
+}
+.container-information .album-cover {
+  width: 320px;
+  height: 250px;
+  border: 4px #fff solid;
+  margin-bottom: 36px;
+}
+.container-information .info-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-information .info-box__text {
+  position: relative;
+  display: block;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 54px;
+}
+.container-information .info-box__text p {
+  margin-bottom: 24px;
+}
+.container-information a.itchio-btn img {
+  position: relative;
+  display: block;
+  margin-bottom: 54px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-information a.download-btn {
+  position: relative;
+  display: block;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-information a.download-btn + p {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.container-information .support-os {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 54px;
+}
+.container-information span.icon {
+  margin-right: 10.66667px;
+}
+.container-information .text {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.container-information .share-btn-container {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.container-information a.twitter-btn img {
+  position: relative;
+  margin-right: 24px;
+}
+
+main .container-synopsis {
+    height: auto;
+  }
+
+main .container-synopsis .intro-img {
+    display: block;
+    top: 0;
+  }
+
+main .container-synopsis .intro-img img {
+    width: 100%;
+  }
+
+main .container-synopsis .text-frame {
+    padding-left: 32px;
+    padding-right: 32px;
+    bottom: 155.9px;
+    position: relative;
+    width: auto;
+    top: auto;
+  }
+
+main .container-characters .character-title,
+main .container-characters .character-text {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+main .container-characters .character-text,
+main .container-characters .character-image {
+    display: block;
+    width: auto;
+  }
+
+main .container-characters .formatter-reverse {
+    display: block;
+  }
+
+main .container-characters .formatter {
+    display: block;
+  }
+
+main .character-image {
+    position: relative;
+    display: block;
+  }
+
+main div.characters.natsu {
+    margin-top: 91.125px;
+  }
+
+main div.characters.natsu .character-title:after {
+    content: "";
+    width: 1016px;
+    height: 43px;
+    background: repeat url(../../images/natsu-wallpaper-icons.png);
+    background-size: 700px;
+    position: absolute;
+    left: 215.1px;
+    top: 32px;
+  }
+
+main div.characters.natsu .character-image img {
+    z-index: 999;
+  }
+
+main div.characters.natsu .character-image:after {
+    z-index: 1;
+    content: "";
+    width: 1016px;
+    height: 47px;
+    background: repeat url(../../images/natsu-wallpaper-icons.png);
+    background-size: 750px;
+    position: absolute;
+    bottom: 160px;
+    left: 0;
+  }
+
+main div.characters.grouchy .character-title:after {
+    content: "";
+    width: 1016px;
+    height: 43px;
+    background: repeat url(../../images/grouchy-wallpaper-icons-reverse.png);
+    background-size: 700px;
+    position: absolute;
+    left: 215.1px;
+    top: 53px;
+  }
+
+main div.characters.grouchy .character-text {
+    display: block;
+    width: auto;
+  }
+
+main div.characters.grouchy .character-image {
+    display: block;
+    float: none;
+  }
+
+main div.characters.grouchy .character-image img {
+    z-index: 999;
+  }
+
+main div.characters.grouchy .character-image:after {
+    z-index: 1;
+    content: "";
+    width: 1016px;
+    height: 45px;
+    background: repeat url(../../images/grouchy-wallpaper-icons.png);
+    background-size: 750px;
+    position: absolute;
+    bottom: 66px;
+    left: -16px;
+  }
+
+main div.characters.grouchy .character-image:before {
+    z-index: 1;
+    content: "";
+    width: 1016px;
+    height: 45px;
+    background: repeat url(../../images/grouchy-wallpaper-icons-reverse.png);
+    background-size: 750px;
+    position: absolute;
+    top: 119px;
+    left: 0;
+  }
+
+main div.characters.glasses .character-title:before {
+    content: "";
+    width: 1060px;
+    height: 45px;
+    background: repeat url(../../images/glasses-wallpaper-icons.png);
+    background-size: 750px;
+    position: absolute;
+    top: 50px;
+    right: -92px;
+  }
+
+main div.characters.glasses .character-image img {
+    z-index: 999;
+  }
+
+main div.characters.glasses .character-image:after {
+    z-index: 1;
+    content: "";
+    width: 1060px;
+    height: 45px;
+    background: repeat url(../../images/glasses-wallpaper-icons.png);
+    background-size: 750px;
+    position: absolute;
+    bottom: 55px;
+    left: -16px;
+  }
+
+main div.characters.glasses .character-image:before {
+    z-index: 1;
+    content: "";
+    width: 1060px;
+    height: 45px;
+    background: repeat url(../../images/glasses-wallpaper-icons-reverse.png);
+    background-size: 750px;
+    position: absolute;
+    left: 0;
+    top: 232px;
+  }
+
+main div.characters.prince .character-title:after {
+    content: "";
+    width: 1016px;
+    height: 44px;
+    background: repeat url(../../images/prince-wallpaper-icons.png);
+    background-size: 700px;
+    position: absolute;
+    left: 215.1px;
+    top: 49px;
+  }
+
+main div.characters.prince .character-image img {
+    z-index: 999;
+  }
+
+main div.characters.prince .character-image:after {
+    z-index: 1;
+    content: "";
+    width: 1016px;
+    height: 48px;
+    background: repeat url(../../images/prince-wallpaper-icons.png);
+    background-size: 750px;
+    position: absolute;
+    bottom: 49px;
+    left: -16px;
+  }
+
+main div.characters.prince .character-image:before {
+    z-index: 1;
+    content: "";
+    width: 1016px;
+    height: 48px;
+    background: repeat url(../../images/prince-wallpaper-icons-reverse.png);
+    background-size: 750px;
+    position: absolute;
+    left: 0;
+    top: 124px;
+  }
+
+main div.characters.hoody {
+    padding-bottom: 27px;
+  }
+
+main div.characters.hoody .character-title:before {
+    content: "";
+    width: 1016px;
+    height: 51px;
+    background: repeat url(../../images/hoody-wallpaper-icons.png);
+    background-size: 800px;
+    position: absolute;
+    top: 59px;
+    right: 0;
+  }
+
+main div.characters.hoody .character-image img {
+    z-index: 999;
+  }
+
+main div.characters.hoody .character-image:after {
+    z-index: 1Spec;
+    content: "";
+    width: 1028px;
+    height: 51px;
+    background: repeat url(../../images/hoody-wallpaper-icons.png);
+    background-size: 800px;
+    position: absolute;
+    bottom: 61px;
+    left: 0;
+  }
+
+main div.characters.hoody .character-image:before {
+    z-index: 1;
+    content: "";
+    width: 1028px;
+    height: 50px;
+    background: repeat url(../../images/hoody-wallpaper-icons-reverse.png);
+    background-size: 800px;
+    position: absolute;
+    top: 236px;
+    lefT: 0;
+  }
+
+main .container-sales-pitch {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+main .container-gallery {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+main .container-information {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+main .container-information .album-cover {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+main .container-information .info-box__text {
+    width: 240px;
+  }
+.container-synopsis .line {
+    width: 120px !important;
+    height: 2.6px;
+  }
+.container-characters .line {
+    width: 179px !important;
+    height: 2.6px;
+  }
+.container-gallery .line {
+    width: 133px !important;
+    height: 2.6px;
+  }
+.container-information .line {
+    width: 199px !important;
+    height: 2.6px;
+  }
+footer {
+  text-align: center;
+  padding-top: 121.5px;
+}
+footer .container-email {
+  margin-bottom: 81px;
+}
+footer .container-email a {
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .container-email a:hover {
+  text-decoration: none;
+}
+footer .container-copywrite {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+/* BASE */
+/* COMPONENTS */
+/* LAYOUT */
