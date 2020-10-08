@@ -29,7 +29,7 @@ const sliderOptions = {
 
 // # Sliders Event Listener
 
-const slideInOnScroll = new IntersectionObserver(function(entries, slideInOnScroll) {
+const slideInOnScroll = new IntersectionObserver(function (entries, slideInOnScroll) {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
             return;
@@ -51,7 +51,7 @@ const mq = window.matchMedia("(max-width: 600px)");
 if (mq.matches) {
     // ! UNDER TESTING
     console.log("media query working");
-    const appearOnScrollMobileView = new IntersectionObserver(function(entries, appearOnScroll) {
+    const appearOnScrollMobileView = new IntersectionObserver(function (entries, appearOnScroll) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 return;
@@ -66,7 +66,7 @@ if (mq.matches) {
         appearOnScrollMobileView.observe(fader);
     })
 } else {
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 return;
