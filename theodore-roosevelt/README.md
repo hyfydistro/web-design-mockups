@@ -54,3 +54,6 @@ Less than IE8 may suffer viewing experience. Used another stylesheet for IE brow
 Using the latest browser. e.g. Chrome, Firefox.
 
 It is possible Microsoft Edge will work well (because it runs on the same engine as Chrome - the V8 engine).
+
+
+## Development Installation(s)
