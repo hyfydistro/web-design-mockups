@@ -1,9 +1,9 @@
 # Style Guide
 
-- [ ] Typography
-- [ ] Space
-- [ ] Color
-- [ ] Other UI Components
+- [x] Typography
+- [x] Space
+- [x] Color
+- [x] Other UI Components
 
 * This is personalised, based on the original styles.
 
