@@ -32,7 +32,7 @@ Basic Devices
 
 - [ ] Ally (Web Accessibility) - **A11y**
     - [ ] Screenreaders
-    - [ x ] Color accessible
+    - [x] Color accessible
 
 - [ ] Old Browser Support - **OBS**
 
