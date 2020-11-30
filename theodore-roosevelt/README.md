@@ -1,7 +1,7 @@
 # Theodore Roosevelt (a tribute page)
 
 
-## (Web Design and Web Development ) Brief
+## (Web Design and Web Development) Brief
 
 Type of website: Marketing, Blog / Info-Site
 
@@ -78,9 +78,9 @@ It is possible Microsoft Edge will work well (because it runs on the same engine
 
 * gulp
 * gulp-html-minifier
-* gulp-dart-sas
+* gulp-dart-sass
 * gulp-autoprefixer
-* gulp-cssnano
+* gulp-clean-css
 * gulp-postcss
 * gulp-babel
 * gulp-babel@next @babel/core
@@ -91,13 +91,30 @@ It is possible Microsoft Edge will work well (because it runs on the same engine
 * gulp-concat
 * gulp-rename
 
-* cssnano
-* autoprefixer
+Q. What version of babel you want to transpile to?
+
+* cssnano >> TRY clean-css (gulp-clean-css) which is more light
+* autoprefixer >> TRY gulp-autoprefixer
 * browser-sync
 
+```
+npm install --save-dev gulp-html-minifier gulp-dart-sass gulp-autoprefixer gulp-clean-css gulp-postcss gulp-sourcemaps gulp-uglify gulp-terser gulp-imagemin gulp-concat gulp-rename
+```
+
+```
+gulp-babel gulp-babel@next @babel/core
+```
 
 
 ## Credits
 
 - [](https://www.compart.com/en/unicode/search?q=arrow#characters)
 - [Create your design system, part 4: Spacing](https://medium.com/codyhouse/create-your-design-system-part-4-spacing-895c9213e2b9)
+- [gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css)
+- [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)
+
+### Inspirations
+
+- [Pure Html and CSS vertical Timeline Design - How To Create a Timeline - Tutorial](https://youtu.be/X6aMWDDJlJg)
+- [How To Create a Vertical Timeline Using HTML & CSS](https://www.youtube.com/watch?v=zNccqv0g6Q4&ab_channel=WEBCIFAR)
+- [Full Screen Image Slider With HTML, CSS & JS](https://youtu.be/7ZO2RTMNSAY)
