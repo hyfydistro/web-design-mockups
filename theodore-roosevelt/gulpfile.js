@@ -171,7 +171,7 @@ function watchDevFiles() {
     });
 
     // Run function when any sass file changes
-    watch('src/styles/sass/**/*.sass', compileSassToCss);
+    watch('./src/styles/sass/**/*.sass', compileSassToCss);
     watch(paths.scripts.jsSRC, transpileJs);
     // watch(paths.scripts.jsSR).on('change', browserSync.reload); // ? Test if it works this way as well
     watch('src/*.html').on('change', browserSync.reload);

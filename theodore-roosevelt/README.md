@@ -79,30 +79,35 @@ It is possible Microsoft Edge will work well (because it runs on the same engine
 * gulp
 * gulp-html-minifier
 * gulp-dart-sass
-* gulp-autoprefixer
-* gulp-clean-css
+* autoprefixer
+* clean-css
 * gulp-postcss
-* gulp-babel
 * gulp-babel@next @babel/core
 * gulp-uglify
 * gulp-terser
 * gulp-imagemin
 * gulp-sourcemaps
 * gulp-concat
-* gulp-rename
+* gulp-rename (NOT INCLUDED; Optional)
+* browser-sync
 
 Q. What version of babel you want to transpile to?
 
-* cssnano >> TRY clean-css (gulp-clean-css) which is more light
-* autoprefixer >> TRY gulp-autoprefixer
+* cssnano >> clean-css (as plugins for gulp-postcss)
+* autoprefixer (as plugins for gulp-postcss)
 * browser-sync
 
 ```
-npm install --save-dev gulp-html-minifier gulp-dart-sass gulp-autoprefixer gulp-clean-css gulp-postcss gulp-sourcemaps gulp-uglify gulp-terser gulp-imagemin gulp-concat gulp-rename
+npm install --save-dev gulp gulp-html-minifier gulp-dart-sass autoprefixer clean-css gulp-postcss gulp-sourcemaps gulp-uglify gulp-terser gulp-imagemin gulp-concat browser-sync
 ```
 
+* gulp-babel
+* gulp-babel@next
+* @babel/core
+* @babel/preset-env (enables transforms for ES2015+)
+
 ```
-gulp-babel gulp-babel@next @babel/core
+npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 ```
 
 
