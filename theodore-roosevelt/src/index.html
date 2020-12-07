@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caroline Rozali">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <picture class="hero-wallpaper">
+                <source media="(max-width: 600px)" srcset="images/hero-sml-600w.png" sizes="100vw">
+                <source media="(max-width: 1024px)" srcset="images/hero-med-600w.jpg" sizes="100vw">
+                <img src="images/hero-bl-800w.jpg" alt="hero image">
+            </picture>
+            <div class="container-title">
+                <h1>Theodore Roosevelt</h1>
+                <div class="quote-box">
+                    <h2>“Speak softly and carry a big stick; you will go far.”</h2>
+                </div>
+            </div>
+        </div>
+        <div class="gradient-screen"></div>
+    </header>
+
+    <section class="summary-one">
+        <p>He remains the youngest person to become President of the United States. Roosevelt was a leader of the
+            progressive movement, and he championed his "Square Deal" domestic policies, promising the average citizen
+            fairness, breaking of trusts, regulation of railroads, and pure food and drugs.</p>
+    </section>
+
+    <main>
+        <h2>Timeline</h2>
+<!-- todo:
+    -a dd more content,
+    - add slide number indicator,
+
+    Add Changes:
+    - Wrap new div in anchor tag 'read-more-btn' with class name 'container-read-more-btn'
+    - -->
+
+        <!-- <div class="timeline">
+            <div class="timeline-body">
+                <div class="timeline-item">
+                    <div class="content">
+                        <h3 class="date">0000</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veritatis porro earum dolor alias nihil pariatur accusamus exercitationem eius? Provident, debitis harum! Eligendi laborum nam a adipisci in dolores corrupti?</p>
+                        <a href="#" class="read-more-btn">READ MORE <span class="double-arrow-symbol">&raquo;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container-timeline">
+            <div class="timeline-body">
+                <div class="timeline-item start">
+                    <div class="content">
+                        <h3 class="date">0000</h3>
+                        <div class="text-box">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veritatis porro earum
+                                dolor alias nihil pariatur accusamus exercitationem eius? Provident, debitis <span class="dots">...</span><span class="more">
+                                harum! Eligendi laborum nam a adipisci in dolores corrupti?</span></p>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="gallery__module"></div>
+                                <div class="gallery__content">
+                                    <div class="gallery__image">
+                                        <img src="images/tr-age11-paris-209w.jpg" alt="Theodore Roosevelt 11 years old at Paris.">
+                                        <div class="container-prev"><a class="prev"></a></div>
+                                        <a class="next"></a>
+                                    </div>
+                                    <div class="gallery__text">T.R. 11 years old. (Paris) </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-read-more-btn">
+                            <a class="read-more-btn">READ MORE <span class="double-arrow-symbol">&raquo;</span></a>
+                        </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="content">
+                        <h3 class="date">0000</h3>
+                        <div class="text-box">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veritatis porro earum
+                                dolor alias nihil pariatur accusamus exercitationem eius? Provident, debitis harum!<span class="dots">...</span><span class="more">
+                                Eligendi laborum nam a adipisci in dolores corrupti?</span></p>
+                        </div>
+                        <a class="read-more-btn">READ MORE <span class="double-arrow-symbol">&raquo;</span></a>
+                    </div>
+                </div>
+
+                <div class="timeline-item end">
+                    <div class="content">
+                        <h3 class="date">0000</h3>
+                        <div class="text-box">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veritatis porro earum
+                                dolor alias nihil pariatur accusamus exercitationem eius? Provident, debitis harum!
+                                Eligendi laborum nam a adipisci in dolores corrupti?</p>
+                        </div>
+                        <a class="read-more-btn">READ MORE <span class="double-arrow-symbol">&raquo;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2020 • Website developed by Caroline Rozali • <a
+                href="https://www.linkedin.com/in/caroline-rozali/">Linkedin</a> • <a
+                href="https://github.com/hyfyline">Github</a> • <a href="https://dribbble.com/spectredox">Dribble</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

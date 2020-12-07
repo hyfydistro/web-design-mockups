@@ -25,3 +25,26 @@ $desktop-space-lv-2: calc(#{$desktop-base-font-size} * #{$line-height} * #{$line
 $desktop-space-lv-3: calc(#{$desktop-base-font-size} * #{$line-height} * #{$line-height} * #{$line-height})
 $desktop-space-lv-4: calc(#{$desktop-base-font-size} * #{$line-height} * #{$line-height} * #{$line-height} * #{$line-height})
 $desktop-space-lv-5: calc(#{$desktop-base-font-size} * #{$line-height} * #{$line-height} * #{$line-height} * #{$line-height} * #{$line-height})
+
+// MARGIN PRESETS
+@mixin mobile-margin-preset
+    margin-left: 16px
+    margin-right: 16px
+
+@mixin mobile-padding-preset
+    padding-left: 16px
+    padding-right: 16px
+
+@mixin tablet-margin-preset
+    margin-left: 32px
+    margin-right: 32px
+
+@mixin tablet-padding-preset
+    padding-left: 32px
+    padding-right: 32px
+
+@media (max-width: 600px)
+    main
+        .container-characters
+            p
+                margin-bottom: $mobile-space-lv-1

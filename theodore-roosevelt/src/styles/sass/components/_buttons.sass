@@ -1,0 +1,17 @@
+@use '../base/space' as *
+
+// CTA "READ MORE" Button
+.read-more-btn
+    display: inline-block
+    // margin-top: $mobile-space-lv-1
+    // margin-bottom: $mobile-space-lv-1
+    margin-bottom: calc(#{$mobile-space-lv-1} + #{$mobile-space-lv-2})
+    &:hover
+        text-decoration: underline
+
+.container-read-more-btn
+    display: flex
+    justify-content: flex-start
+
+// .read-more-btn.opened
+//     text-align: right

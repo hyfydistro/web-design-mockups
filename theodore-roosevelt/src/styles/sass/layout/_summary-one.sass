@@ -1,0 +1,25 @@
+@use '../base/space' as *
+@use '../base/color' as color
+
+section.summary-one
+    width: 100%
+    background: color.$secondary-color-50
+    display: flex
+    justify-content: center
+    padding-top: $desktop-space-lv-4
+    padding-bottom: $desktop-space-lv-4
+    p
+        color: color.$text-color-90
+        max-width: 476px
+
+
+@media screen and (max-width: 1024px)
+    section.summary-one
+        @include tablet-padding-preset
+
+
+@media screen and (max-width: 600px)
+    section.summary-one
+        @include mobile-padding-preset
+        padding-top: $mobile-space-lv-4
+        padding-bottom: $mobile-space-lv-4
