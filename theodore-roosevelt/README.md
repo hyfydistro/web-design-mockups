@@ -90,6 +90,8 @@ It is possible Microsoft Edge will work well (because it runs on the same engine
 * gulp-concat
 * gulp-rename (NOT INCLUDED; Optional)
 * browser-sync
+* del (???)
+* rename
 
 Q. What version of babel you want to transpile to?
 
@@ -123,3 +125,9 @@ npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 - [Pure Html and CSS vertical Timeline Design - How To Create a Timeline - Tutorial](https://youtu.be/X6aMWDDJlJg)
 - [How To Create a Vertical Timeline Using HTML & CSS](https://www.youtube.com/watch?v=zNccqv0g6Q4&ab_channel=WEBCIFAR)
 - [Full Screen Image Slider With HTML, CSS & JS](https://youtu.be/7ZO2RTMNSAY)
+
+### Guides and Tutorials
+
+- [Pure CSS for multiline truncation with ellipsis](http://hackingui.com/a-pure-css-solution-for-multiline-text-truncation/)
+-[Read More / Read Less Button With Javascript | JS Tutorial](https://youtu.be/A_7sRo-mgz4)
+- [Read More Popup Box using Html Css Javascript | Responsive](https://youtu.be/DrshwKL_TYo)
