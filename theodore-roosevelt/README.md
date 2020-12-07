@@ -125,6 +125,7 @@ npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 - [Pure Html and CSS vertical Timeline Design - How To Create a Timeline - Tutorial](https://youtu.be/X6aMWDDJlJg)
 - [How To Create a Vertical Timeline Using HTML & CSS](https://www.youtube.com/watch?v=zNccqv0g6Q4&ab_channel=WEBCIFAR)
 - [Full Screen Image Slider With HTML, CSS & JS](https://youtu.be/7ZO2RTMNSAY)
+- [How To Create a Timeline - Simple Html5 Css 3 Timeline Tutorial For Beginners - Pure CSS Tutorial](https://www.youtube.com/watch?v=sWvRIYJZJ-c&ab_channel=OnlineTutorials)
 
 ### Guides and Tutorials
 

@@ -1,17 +1,19 @@
 // * For Modern Browsers Optimizations ONLY
 /* Designed for Single Page Apps */
-const {src, dest, watch, series, parallel} = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const htmlmin = require('gulp-html-minifier'),
-      sass = require('gulp-dart-sass'),
-      postcss = require('gulp-postcss'),
-      autoprefixer = require('autoprefixer'),
-      cleancss = require('clean-css'),
-      babel = require('gulp-babel'),
-      terser = require('gulp-terser'),
-      imagemin = require('gulp-imagemin'),
-      sourcemaps = require('gulp-sourcemaps'),
-      concat = require('gulp-concat'),
-      browserSync = require('browser-sync').create();
+    sass = require('gulp-dart-sass'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cleancss = require('clean-css'),
+    babel = require('gulp-babel'),
+    terser = require('gulp-terser'),
+    imagemin = require('gulp-imagemin'),
+    sourcemaps = require('gulp-sourcemaps'),
+    concat = require('gulp-concat'),
+    del = require('del'),
+    rename = require('rename'),
+    browserSync = require('browser-sync').create();
 
 // =========
 // Checklist
@@ -49,6 +51,11 @@ const paths = {
     }
 };
 
+const scriptWatchFiles = [
+    'src/scripts/animations/*.js',
+    'src/scripts/modules/*.js'
+];
+
 // =====================
 // PRE-DEVELOPMENT STAGE
 // =====================
@@ -61,9 +68,9 @@ const paths = {
 // Copy HTML file and minify to 'dist' folder
 function copyHtml() {
     return src('./src/*.html')
-            .pipe(htmlmin({
-                collapseWhitespace: true
-            }))
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
         .pipe(dest('./dist/'));
 }
 
@@ -98,7 +105,7 @@ function compileSassToCss() {
     // 2. Initialise sourcemaps
     // 3. Pass the file through sass compiler.
     // 4. Pass the file through PostCSS plugins
-        // Add Autoprefixer
+    // Add Autoprefixer
     // 5. Choose a directory to save the compiled CSS.
     // 6. Stream changes to all browser.
     const plugins = [
@@ -111,10 +118,10 @@ function compileSassToCss() {
             largeFile: true
         }))
         .pipe(sass({
-                outputStyle: 'expanded',
-                cascade: false
-            }))
-            .on('error', sass.logError)
+            outputStyle: 'expanded',
+            cascade: false
+        }))
+        .on('error', sass.logError)
         .pipe(postcss(plugins))
         .pipe(sourcemaps.write())
         .pipe(dest('./src/'))
@@ -124,17 +131,28 @@ function compileSassToCss() {
 function transpileJs() {
     // transpile into pre-ES6
     // concat into one file 'main.js'
-    return src(paths.scripts.jsSRC)
+    return src(scriptWatchFiles)
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(concat('main.js'))
+        .pipe(concat('script.js'))
         .pipe(sourcemaps.write())
         .pipe(dest('./src/'))
         .pipe(browserSync.stream());
 }
 
+// function cleanSrcFiles() {
+//     return del(['./src/main.js', './src/style.css']);
+// }
+
+// function cleanJs() {
+//     return del(['./src/main.js']);
+// }
+
+// function cleanCss() {
+//     return del(['./src/style.css']);
+// }
 // ================
 // PRODUCTION STAGE
 // ================
@@ -142,20 +160,20 @@ function transpileJs() {
 
 function concatCSS() {
     return src('./src/*.css')
-    .pipe(sourcemaps.init({
-        // loadMaps: true,
-        largeFile: true
-    }))
-    .pipe(cleancss())
-    // .pipe(sourcemaps.write('./maps/'))
-    .pipe(sourcemaps.write())
-    .pipe(dest('./dist/'));
+        .pipe(sourcemaps.init({
+            // loadMaps: true,
+            largeFile: true
+        }))
+        .pipe(cleancss())
+        // .pipe(sourcemaps.write('./maps/'))
+        .pipe(sourcemaps.write())
+        .pipe(dest('./dist/'));
 }
 
 function minifyJS() {
     return src('./src/main.js')
-    .pipe(terser())
-    .pipe(dest(paths.scripts.jsDEST));
+        .pipe(terser())
+        .pipe(dest(paths.scripts.jsDEST));
 }
 
 // ===========
@@ -172,9 +190,9 @@ function watchDevFiles() {
 
     // Run function when any sass file changes
     watch('./src/styles/sass/**/*.sass', compileSassToCss);
-    watch(paths.scripts.jsSRC, transpileJs);
-    // watch(paths.scripts.jsSR).on('change', browserSync.reload); // ? Test if it works this way as well
+    watch(scriptWatchFiles, transpileJs);
     watch('src/*.html').on('change', browserSync.reload);
+    // watch(paths.scripts.jsSR).on('change', browserSync.reload); // ? Test if it works this way as well
 }
 
 // EXPORTS
@@ -192,7 +210,7 @@ exports.compileSassToCss = compileSassToCss;
 exports.transpileJs = transpileJs;
 
 // WATCH FILES
-exports.watchDevFiles= watchDevFiles;
+exports.watchDevFiles = watchDevFiles;
 exports.dev = series(parallel(compileSassToCss, transpileJs), watchDevFiles);
 
 // PRODUCTION STAGE

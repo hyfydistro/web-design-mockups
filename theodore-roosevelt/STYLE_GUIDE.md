@@ -491,6 +491,50 @@ height:
 ...
 
 
+### CTA prev / next
+
+
+**dots**
+
+width: 12px
+height: 12px
+
+>Effects
+Active
+    - color: 808080
+Passive
+    - color: CCCCCC
+
+**prev**
+
+html entity: &#10094;
+
+Arrow component
+    width: 14px
+    height: 14px
+
+color: CCCCCC
+
+Circle component
+
+color: 808080
+
+**next**
+
+html entity: &#10095;
+
+
+**prev & next cirle background**
+
+Mobile
+width: 32px
+height: 32px
+
+Tablet
+width: 72px
+height: 72px
+
+
 ### Timeline Components
 
 #### Mobile
