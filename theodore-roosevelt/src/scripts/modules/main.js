@@ -9,6 +9,9 @@ const dots = document.querySelectorAll('.dots');
 const doubleArrowSymbol = document.querySelectorAll('.double-arrow-symbol');
 const ContainerReadMoreBtn = document.querySelectorAll('.container-read-more-btn');
 
+const timelineWrappers = document.querySelectorAll('.timeline-wrap');
+
+const timelineBgEnd = document.querySelector('.timeline-bg-dot.end');
 // todo
 // Move back and from '.container-read-more-btn' inside, and
 // outside of '.timeline-item' SECOND - order matters!
@@ -31,15 +34,17 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             ContainerReadMoreBtn[i].style.justifyContent = 'flex-end';
             ContainerReadMoreBtn[i].classList.add('open');
             galleryContainer[i].classList.add('open');
-            // ! APPLY to open and close CTA 'READ MORE
-            // toggle classlist:
-            // - edit margin bot to space-lv1 + space-lv2
-            // timelineItem.classList.add('open');
+            timelineWrappers[i + 1].classList.add('open');
 
-            timelineItems[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
-            timelineItems[i].insertAdjacentElement('afterend', galleryContainer[i]);
+            timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
+            timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
 
             isOpened = true;
+
+            // Special stylize for uniqeu situations
+            if (i == readMoreBtn.length - 2) {
+                timelineBgEnd.classList.add('special');
+            }
         } else {
             console.log('close');
             dots[i].style.display = 'inline';
@@ -48,31 +53,21 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             ContainerReadMoreBtn[i].style.justifyContent = 'flex-start';
             ContainerReadMoreBtn[i].classList.remove('open');
             galleryContainer[i].classList.remove('open');
-            // toggle classlist:
-            // - edit margin bot to space-lv2
-            // timelineItem.classList.remove('open');
+            timelineWrappers[i + 1].classList.remove('open');
 
             timelineItems[i].insertAdjacentElement('beforeend', galleryContainer[i]);
             timelineItems[i].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
 
             isOpened = false;
+
+            // Special stylize for uniqeu situations
+            if (i == readMoreBtn.length - 2) {
+                timelineBgEnd.classList.remove('special');
+            }
         }
     });
 }
 
-// ! Test
-// const galleryProperty = [
-// {    '0000': {
-//         'url': ['images/tr-age11-paris-209w.jpg', 'images/Birthplace-from-west-sml-600w.jpg'],
-//         'alt': 'Theodore Roosevelt 11 years old at Paris.',
-//         'figcaption': 'T.R. 11 years old. (Paris)'
-//     }},
-// {    '0001': {
-//     'url': ['images/tr-avid-boxer-at-harvard-sml-600w.jpg'],
-//     'alt': 'Theodore Roosevelt 11 years old at Paris.',
-//     'figcaption': 'T.R. 11 years old. (Paris)'
-// }}
-// ];
 
 const galleryProperty = {
     '0000': {
@@ -140,7 +135,6 @@ for (let key in galleryProperty) {
     // Create textNode for the first element of the array
     let textNode = document.createTextNode(galleryProperty[key]['figcaption'][0]);
 
-    // ! WIP
     // Set up first image to display as default
     // Append images
     images.src = galleryProperty[key]['url'][0];
@@ -148,8 +142,6 @@ for (let key in galleryProperty) {
 
     // Append textNode
     text.appendChild(textNode);
-
-
 
     // Create gallery ImageSlide function if conditions are met
     // If 'url' length is greater than 1
@@ -162,7 +154,6 @@ for (let key in galleryProperty) {
 
         let slideIndex = 0;
 
-        // ? Create a Radio button instead ???
         // Create dot container
         let containerDots = document.createElement('div');
         containerDots.className = 'container-dots';
@@ -174,10 +165,6 @@ for (let key in galleryProperty) {
         for (let j = 0; j < galleryProperty[key]['url'].length; j += 1) {
             dotArr[j] = document.createElement('span');
             dotArr[j].className = 'dot';
-            // ? To create span tag or radio tag???
-            // dotArr[j].setAttribute('type', 'radio');
-            // dotArr[j].setAttribute('name', 'radio-btn');
-            // dotArr[j].htmlFor = `radio${j}`
 
             // Add class '.active' to the first image on display
             if (j == 0) {
@@ -187,14 +174,14 @@ for (let key in galleryProperty) {
             // Create Event Listener for dot indicator
             // if a dot is selected, add class '.active'
             // and remove other dots of that class
-            dotArr[j].addEventListener('click', function() {
+            dotArr[j].addEventListener('click', function () {
                 // add toggle add/remove class
                 dotArr[j].classList.toggle('active');
 
                 // Remove class '.active' from other dot(s) than the one selected
-                let unselected = dotArr.filter(function(elem) { return elem !== dotArr[j]; });
+                let unselected = dotArr.filter(function (elem) { return elem !== dotArr[j]; });
 
-                for (let x = 0; x < unselected.length; x+=1) {
+                for (let x = 0; x < unselected.length; x += 1) {
                     unselected[x].classList.remove('active');
                 }
 
@@ -209,6 +196,12 @@ for (let key in galleryProperty) {
             console.log(dotArr[j]);
         }
 
+        // ! WIP dot-indcator for prev/next button
+        console.log(containerDots);
+        containerDots.childNodes[0].classList.add('active');
+        console.log(containerDots.childNodes[0].classList);
+        console.log(containerDots.childNodes.length);
+
         // Add Event Listener
         prevBtn.addEventListener('click', function () {
             // Condition
@@ -218,6 +211,21 @@ for (let key in galleryProperty) {
                 images.src = galleryProperty[key]['url'][slideIndex];
                 images.alt = galleryProperty[key]['alt'][slideIndex];
                 text.textContent = galleryProperty[key]['figcaption'][slideIndex];
+
+                // Change dot indicator
+                let currentDotArr = containerDots.childNodes;
+                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                    currentDotArr[y].classList.remove('active');
+
+                    if (y == slideIndex) {
+                        currentDotArr[y].classList.add('active');
+                    }
+                }
+
+
+                // function CheckIfCurrent(searchIndex) {
+                //     return
+                // }
             } else {
                 slideIndex--;
 
@@ -227,9 +235,16 @@ for (let key in galleryProperty) {
                 text.textContent = galleryProperty[key]['figcaption'][slideIndex];
 
                 // Change dot indicator
+                // dotArr
+                let currentDotArr = containerDots.childNodes;
+                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                    currentDotArr[y].classList.remove('active');
 
+                    if (y == slideIndex) {
+                        currentDotArr[y].classList.add('active');
+                    }
+                }
             }
-
         });
 
         nextBtn.addEventListener('click', function () {
@@ -240,6 +255,16 @@ for (let key in galleryProperty) {
                 images.src = galleryProperty[key]['url'][slideIndex];
                 images.alt = galleryProperty[key]['alt'][slideIndex];
                 text.textContent = galleryProperty[key]['figcaption'][slideIndex];
+
+                // Change dot indicator
+                let currentDotArr = containerDots.childNodes;
+                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                    currentDotArr[y].classList.remove('active');
+
+                    if (y == slideIndex) {
+                        currentDotArr[y].classList.add('active');
+                    }
+                }
             } else {
                 slideIndex++;
 
@@ -248,9 +273,16 @@ for (let key in galleryProperty) {
                 text.textContent = galleryProperty[key]['figcaption'][slideIndex];
 
                 // Change dot indicator
+                // dotArr
+                let currentDotArr = containerDots.childNodes;
+                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                    currentDotArr[y].classList.remove('active');
 
+                    if (y == slideIndex) {
+                        currentDotArr[y].classList.add('active');
+                    }
+                }
             }
-
         });
 
         // Append dot-indicator container, dots, prev button, next button
@@ -271,51 +303,6 @@ for (let key in galleryProperty) {
     galleryContainer[index].appendChild(galleryContent);
 
 
-    // Append prev/next buttons if conditions met
-
-    // if (galleryContainer[0]) {
-    //     // # Image element setup
-    //     // Create image element(s)
-    //     // Cssign source file
-    //     // Assign alt text
-    //     // Create div element with class name 'gallery__text'
-    //     // Create p element - 'text'
-    //     // Create text node assigned with figcaption
-    //     // Append 'textNode' to p element 'text'
-    //     // Append 'text' to div element 'gallery__text'
-    //     for (let x = 0; x < galleryProperty['0000']['url'].length; x += 1) {
-    //         let images = document.createElement('img');
-    //         images.src = galleryProperty['0000']['url'][x];
-    //         images.alt = galleryProperty['0000']['alt'][x];
-
-    //         // Create gallery text
-    //         let textNode = document.createTextNode(galleryProperty['0000']['figcaption'][x]);
-
-    //         text.appendChild(textNode);
-    //         galleryText.appendChild(text);
-
-    //         galleryImageSlider.appendChild(images)
-    //         galleryContent.appendChild(galleryText);
-    //     }
-
-    //     // Determine whether to add prev/next button
-    //     if (galleryProperty['0000']['url'].length > 1) {
-    //         // Create CTA pre / next buttons
-    //         let prevBtn = document.createElement('a');
-    //         prevBtn.className = 'prev';
-    //         let nextBtn = document.createElement('a');
-    //         nextBtn.className = 'next';
-
-    //         // Create dot(s) indicator
-    //         let dotNav = document.createElement('div');
-    //         dotNav.className = 'container-nav-dot';
-
-    //         // for (let z = 0; z < galleryProperty['0000']['url'].length; z+=1) {
-    //         //     let dots = document.createElement('span');
-    //         //     dots.className = 'nav-dots';
-    //         // }
-    //     }
-
     // # Append to '.containerGallery'
     // galleryContent.appendChild(galleryImageSlider);
     // containerGallery.appendChild(galleryContent);
@@ -323,273 +310,6 @@ for (let key in galleryProperty) {
     // }
 
 }
-
-
-// ! Test#3
-// for (const key in galleryProperty) {
-//     for (const value in key) {
-//         console.log(value['url']);
-//     }
-// }
-
-
-// // ! Tes#2
-// for (const property in galleryProperty) {
-//     let galleryContent = document.createElement('div');
-//     galleryContent.className = 'gallery__content';
-//     let galleryImageSlider = document.createElement('div');
-//     galleryImageSlider.className = 'gallery__image';
-
-//     console.log('inside ' + property);
-
-//     // if (property == '0000') {
-//     console.log(property['url']);
-
-//     // # Image element setup
-//     // Create image element(s)
-//     // Cssign source file
-//     // Assign alt text
-//     // Create div element with class name 'gallery__text'
-//     // Create p element - 'text'
-//     // Create text node assigned with figcaption
-//     // Append 'textNode' to p element 'text'
-//     // Append 'text' to div element 'gallery__text'
-//     for (let x = 0; x < property['url'].length; x += 1) {
-//         console.log('loop starting');
-
-//         let images = document.createElement('img');
-//         images.src = property['url'][x];
-//         images.alt = property['alt'][x];
-
-//         // Create gallery text
-//         let galleryText = document.createElement('div');
-//         galleryText.className = 'gallery__text';
-//         let text = document.createElement('p');
-//         let textNode = document.createTextNode(property['figcaption'][x]);
-
-//         text.appendChild(textNode);
-//         galleryText.appendChild(text);
-
-//         galleryImageSlider.appendChild(images)
-//         galleryContent.appendChild(galleryText);
-//     }
-//     // }
-
-//     // Append images
-//     // Append prev/next buttons if conditions met
-
-//     // if (galleryContainer[0]) {
-//     //     // # Image element setup
-//     //     // Create image element(s)
-//     //     // Cssign source file
-//     //     // Assign alt text
-//     //     // Create div element with class name 'gallery__text'
-//     //     // Create p element - 'text'
-//     //     // Create text node assigned with figcaption
-//     //     // Append 'textNode' to p element 'text'
-//     //     // Append 'text' to div element 'gallery__text'
-//     //     for (let x = 0; x < galleryProperty['0000']['url'].length; x += 1) {
-//     //         let images = document.createElement('img');
-//     //         images.src = galleryProperty['0000']['url'][x];
-//     //         images.alt = galleryProperty['0000']['alt'][x];
-
-//     //         // Create gallery text
-//     //         let galleryText = document.createElement('div');
-//     //         galleryText.className = 'gallery__text';
-//     //         let text = document.createElement('p');
-//     //         let textNode = document.createTextNode(galleryProperty['0000']['figcaption'][x]);
-
-//     //         text.appendChild(textNode);
-//     //         galleryText.appendChild(text);
-
-//     //         galleryImageSlider.appendChild(images)
-//     //         galleryContent.appendChild(galleryText);
-//     //     }
-
-//     // Determine whether to add prev/next button
-//     if (property['url'].length > 1) {
-//         // Create CTA pre / next buttons
-//         let prevBtn = document.createElement('a');
-//         prevBtn.className = 'prev';
-//         let nextBtn = document.createElement('a');
-//         nextBtn.className = 'next';
-
-//         // Create dot(s) indicator
-//         let dotNav = document.createElement('div');
-//         dotNav.className = 'container-nav-dot';
-
-//         // for (let z = 0; z < galleryProperty['0000']['url'].length; z+=1) {
-//         //     let dots = document.createElement('span');
-//         //     dots.className = 'nav-dots';
-//         // }
-//     }
-
-//     console.log(property['index'])
-//     let target = galleryContainer[property['index']].getBoundingClientRect();
-
-//     // let target = galleryContainer[0].getBoundingClientRect();
-//     galleryContent.style.top = target.y.toString() + 'px';
-
-//     galleryContent.appendChild(galleryImageSlider);
-//     document.body.appendChild(galleryContent);
-
-// }
-
-// ! Test#1
-// for (let y = 0; y < galleryContainer.length; y += 1) {
-//     let galleryContent = document.createElement('div');
-//     galleryContent.className = 'gallery__content';
-//     let galleryImageSlider = document.createElement('div');
-//     galleryImageSlider.className = 'gallery__image';
-
-//     // Append images
-//     // Append prev/next buttons if conditions met
-
-//     if (galleryContainer[0]) {
-//         // # Image element setup
-//         // Create image element(s)
-//         // Cssign source file
-//         // Assign alt text
-//         // Create div element with class name 'gallery__text'
-//         // Create p element - 'text'
-//         // Create text node assigned with figcaption
-//         // Append 'textNode' to p element 'text'
-//         // Append 'text' to div element 'gallery__text'
-//         for (let x = 0; x < galleryProperty['0000']['url'].length; x += 1) {
-//             let images = document.createElement('img');
-//             images.src = galleryProperty['0000']['url'][x];
-//             images.alt = galleryProperty['0000']['alt'][x];
-
-//             // Create gallery text
-//             let galleryText = document.createElement('div');
-//             galleryText.className = 'gallery__text';
-//             let text = document.createElement('p');
-//             let textNode = document.createTextNode(galleryProperty['0000']['figcaption'][x]);
-
-//             text.appendChild(textNode);
-//             galleryText.appendChild(text);
-
-//             galleryImageSlider.appendChild(images)
-//             galleryContent.appendChild(galleryText);
-//         }
-
-//         // Determine whether to add prev/next button
-//         if (galleryProperty['0000']['url'].length > 1) {
-//             // Create CTA pre / next buttons
-//             let prevBtn = document.createElement('a');
-//             prevBtn.className = 'prev';
-//             let nextBtn = document.createElement('a');
-//             nextBtn.className = 'next';
-
-//             // Create dot(s) indicator
-//             let dotNav = document.createElement('div');
-//             dotNav.className = 'container-nav-dot';
-
-//             // for (let z = 0; z < galleryProperty['0000']['url'].length; z+=1) {
-//             //     let dots = document.createElement('span');
-//             //     dots.className = 'nav-dots';
-//             // }
-//         }
-
-//         let target = galleryContainer[0].getBoundingClientRect();
-//         galleryContent.style.top = target.y.toString() + 'px';
-
-//         galleryContent.appendChild(galleryImageSlider);
-//         document.body.appendChild(galleryContent);
-
-//     }
-//     // galleryImageSlider.appendChild(images);
-//     // galleryContent.appendChild(galleryImageSlider);
-//     // galleryContent.appendChild(galleryText);
-
-//     // document.body.appendChild(galleryContent);
-
-//     // let target = document.querySelector('.gallery').getBoundingClientRect();
-
-//     // galleryContent.style.top = target.y.toString() + 'px';
-
-
-//     // images.src = galleryProperty['0000']['url'][0];
-//     // images.alt = galleryProperty['0000']['alt'];
-
-//     // // create gallery text
-//     // let galleryText = document.createElement('div');
-//     // galleryText.className = 'gallery__text';
-//     // let text = document.createElement('p');
-//     // let textNode = document.createTextNode(galleryProperty['0000']['figcaption']);
-
-//     // text.appendChild(textNode);
-//     // galleryText.appendChild(text);
-//     // galleryText.appendChild(text);
-
-//     // // CTA pre / next buttons
-//     // let prevBtn = document.createElement('a');
-//     // let nextBtn = document.createElement('a');
-
-//     // // Insert to DOM
-//     // galleryImageSlider.appendChild(images);
-//     // galleryContent.appendChild(galleryImageSlider);
-//     // galleryContent.appendChild(galleryText);
-
-//     // document.body.appendChild(galleryContent);
-
-//     // let target = document.querySelector('.gallery').getBoundingClientRect();
-
-//     // galleryContent.style.top = target.y.toString() + 'px';
-// }
-
-
-
-// for (let j = 0; j < galleryProperty['0000']['url'].length; i += 1) {
-//     let images = document.createElement('')
-// }
-
-// ! end of experimental loop
-
-
-
-// target via gallery['0000'][0];
-// let galleryContent = document.createElement('div');
-// galleryContent.className = 'gallery__content';
-// let galleryImageSlider = document.createElement('div');
-// galleryImageSlider.className = 'gallery__image';
-// let images = document.createElement('img');
-// images.src = galleryProperty['0000']['url'][0];
-// images.alt = galleryProperty['0000']['alt'];
-
-// // create gallery text
-// let galleryText = document.createElement('div');
-// galleryText.className = 'gallery__text';
-// let text = document.createElement('p');
-// let textNode = document.createTextNode(galleryProperty['0000']['figcaption']);
-
-// text.appendChild(textNode);
-// galleryText.appendChild(text);
-// galleryText.appendChild(text);
-
-// // CTA pre / next buttons
-// let prevBtn = document.createElement('a');
-// let nextBtn = document.createElement('a');
-
-// // Insert to DOM
-// galleryImageSlider.appendChild(images);
-// galleryContent.appendChild(galleryImageSlider);
-// galleryContent.appendChild(galleryText);
-
-// document.body.appendChild(galleryContent);
-
-// let target = document.querySelector('.gallery').getBoundingClientRect();
-
-// galleryContent.style.top = target.y.toString() + 'px';
-// you could configure this style before hand,
-// so when user open their screen it will
-// be adjusted so
-
-// create space
-// let TimelineContent = document.querySelector('.content');
-// // ! spacing needed when CTA 'READ MORE' open
-// TimelineContent.style.marginBottom = (333 + 18).toString() + 'px';
-
 
 // todo
 // create dots for number of gallery,
