@@ -39,10 +39,14 @@ main
                 // padding-left: 25px // ! Should hanges on media query
                 // margin-left: 9px // ! Should hanges on media query
                 border-left: 2px solid #1A1A1A
+                // * Hotfix bottom-padding for unique div
+            .timeline-wrap:nth-of-type(7)
+                border: 2px red solid
+                padding-bottom: $mobile-space-lv-2
             .timeline-item
                 // @include mobile-margin-preset
                 position: relative
-                background: #ccc
+                // background: #ccc
                 padding-left: 25px // ! Should hanges on media query
                 // margin-left: 9px // ! Should hanges on media query
                 // border-left: 2px solid #1A1A1A
@@ -58,7 +62,7 @@ main
                 left: -9px
                 width: 12px
                 height: 12px
-                background: #000000
+                background: color.$text-color-90
                 border-radius: 50%
                 z-index: 22
                 // &::before
@@ -86,7 +90,7 @@ main
                 width: 16px
                 height: 16px
                 background: #FFFFFF
-                border: 2px solid #1A1A1A
+                border: 2px solid color.$text-color-90
                 // &::before
                 //     position: absolute
                 //     content: ''
@@ -126,7 +130,7 @@ main
                     left: 6px
                     width: 2px
                     height: calc(#{$mobile-space-lv-half} + #{$mobile-space-lv-2})
-                    background: #1A1A1A
+                    background: color.$text-color-90
                     // border-radius: 50%
                     z-index: -99
             h3
