@@ -19,106 +19,99 @@ main
 
 @media screen and (max-width: 600px)
     main
-        display: block
+        display: flex
+        justify-content: center
+        flex-direction: column
         position: relative
         width: 100%
         height: auto
-        @include mobile-padding-preset
         h2
             position: relative
             margin-top: $mobile-space-lv-4
             margin-bottom: $mobile-space-lv-2
             text-align: center
-            // left: 50%
-            // transform: translate(-50%, 0)
-        .container-timeline
-            position: relative
-            display: flex
-            justify-content: flex-end
+        .timeline
             width: 100%
-        .timeline-body
-            position: relative
-            display: flex
-            flex-direction: column
-            width: 86.8%
-            // width: 250px
-            &::before
-                content: ''
-                position: absolute
-                top: 0
-                left: calc((#{$mobile-space-lv-2}) * -1)
-                width: 2px
-                height: 100%
-                background-color: color.$text-color-90
-                z-index: -99
-            .timeline-item.start
-                position: relative
-                &::after
-                    content: ''
-                    position: absolute
-                    width: 16px
-                    height: 16px
-                    border-radius: 50%
-                    border: 2px solid color.$text-color-90
-                    background-color: #FFFFFF
-                    left: calc((#{$mobile-space-lv-2} + 9px) * -1)
-                    top: 0px
-                    z-index: 99
-            .timeline-item.end
-                position: relative
-                &::after
-                    content: ''
-                    position: absolute
-                    width: 16px
-                    height: 16px
-                    border-radius: 50%
-                    border: 2px solid color.$text-color-90
-                    background-color: color.$text-color-90
-                    left: calc((#{$mobile-space-lv-2} + 9px) * -1)
-                    top: 0px
-                    z-index: 99
             .timeline-item
+                @include mobile-margin-preset
                 position: relative
-                &::after
-                    content: ''
-                    position: absolute
-                    width: 12px
-                    height: 12px
-                    border-radius: 50%
-                    border: 2px solid color.$text-color-90
-                    background-color: color.$text-color-90
-                    left: calc((#{$mobile-space-lv-2} + 8px) * -1)
-                    top: 0px
-                    z-index: 99
-                .content
-                    position: relative
-                    // margin-bottom: $mobile-space-lv-2
-                .date
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    width: 56.3px
-                    height: 24px
-                    margin-bottom: $mobile-space-lv-1
-                    color: #FFFFFF
-                    background-color: color.$text-color-90
-                .text-box
-                    margin-bottom: $mobile-space-lv-half
-                    padding-right: 32px // * Hotfix
-                    margin-right: 16px // * Hotfix
-                    p span.more
-                        display: none
-                        // &::before
-                        //     content: '...'
-                        //     position: absolute
-                        //     right: 0
-                        //     bottom: 0
-                        // &::after
-                        //     content: ''
-                        //     position: absolute
-                        //     right: 0
-                        //     width: 1em
-                        //     height: 1em
-                        //     margin-top: 0.2em
-    footer
-        clear: both
+                background: #ccc
+                padding-left: 25px // ! Should hanges on media query
+                margin-left: 9px // ! Should hanges on media query
+                border-left: 2px solid #1A1A1A
+                // ? Use content ::before
+                // z-index: -22
+            .timeline-item:last-child
+                border-left: 2px solid transparent
+            .timeline-dot
+                position: absolute
+                top: 3px
+                left: -7px
+                width: 12px
+                height: 12px
+                background: #000000
+                border-radius: 50%
+                z-index: 22
+                // &::before
+                //     position: absolute
+                //     content: ''
+                //     top: -2px
+                //     left: -2.5px
+                //     width: calc(12px + 4.5px)
+                //     height: calc(12px + 4.5px)
+                //     background: #FFFFFF
+                //     border-radius: 50%
+                    // z-index: -1
+            .timeline-bg-dot
+                position: absolute
+                top: 1px
+                left: -9.5px
+                width: calc(12px + 4.5px)
+                height: calc(12px + 4.5px)
+                background: #FFFFFF
+                border-radius: 50%
+                z-index: 11
+            .timeline-dot.start
+                top: 0px
+                left: -9px
+                width: 16px
+                height: 16px
+                background: #FFFFFF
+                border: 2px solid #1A1A1A
+                // &::before
+                //     position: absolute
+                //     content: ''
+                //     top: -4px
+                //     left: -4.5px
+                //     width: calc(16px + 4.5px)
+                //     height: calc(16px + 4.5px)
+                //     background: #FFFFFF
+                //     border-radius: 50%
+                //     z-index: -11
+            .timeline-bg-dot.start
+                background: rgba(0,0,0,0)
+            .timeline-dot.end
+                top: 0px
+                left: -9px
+                width: 16px
+                height: 16px
+                // &::before
+                //     position: absolute
+                //     content: ''
+                //     top: -2.5px
+                //     left: -2.5px
+                //     width: calc(16px + 4.5px)
+                //     height: calc(16px + 4.5px)
+                //     background: #FFFFFF
+                //     border-radius: 50%
+            .timeline-bg-dot.end
+                background: rgba(0,0,0,0)
+            h3
+                position: relative
+                top: calc(#{$mobile-space-lv-half} * -1)
+                padding: 7px 14px
+                width: 56.3px
+                color: #FFFFFF
+                background: #000000
+            .text-box
+                margin-top: $mobile-space-lv-half
