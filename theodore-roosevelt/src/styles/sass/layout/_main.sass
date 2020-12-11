@@ -32,21 +32,30 @@ main
             text-align: center
         .timeline
             width: 100%
-            .timeline-item
+            .timeline-wrap
                 @include mobile-margin-preset
                 position: relative
                 background: #ccc
-                padding-left: 25px // ! Should hanges on media query
-                margin-left: 9px // ! Should hanges on media query
+                // padding-left: 25px // ! Should hanges on media query
+                // margin-left: 9px // ! Should hanges on media query
                 border-left: 2px solid #1A1A1A
+            .timeline-item
+                // @include mobile-margin-preset
+                position: relative
+                background: #ccc
+                padding-left: 25px // ! Should hanges on media query
+                // margin-left: 9px // ! Should hanges on media query
+                // border-left: 2px solid #1A1A1A
                 // ? Use content ::before
                 // z-index: -22
+            .timeline-wrap:last-child
+                border-left: 2px solid transparent
             .timeline-item:last-child
                 border-left: 2px solid transparent
             .timeline-dot
                 position: absolute
                 top: 3px
-                left: -7px
+                left: -9px
                 width: 12px
                 height: 12px
                 background: #000000
@@ -65,7 +74,7 @@ main
             .timeline-bg-dot
                 position: absolute
                 top: 1px
-                left: -9.5px
+                left: -11.5px
                 width: calc(12px + 4.5px)
                 height: calc(12px + 4.5px)
                 background: #FFFFFF
@@ -73,7 +82,7 @@ main
                 z-index: 11
             .timeline-dot.start
                 top: 0px
-                left: -9px
+                left: -11px
                 width: 16px
                 height: 16px
                 background: #FFFFFF
@@ -92,7 +101,7 @@ main
                 background: rgba(0,0,0,0)
             .timeline-dot.end
                 top: 0px
-                left: -9px
+                left: -11px
                 width: 16px
                 height: 16px
                 // &::before
@@ -104,8 +113,22 @@ main
                 //     height: calc(16px + 4.5px)
                 //     background: #FFFFFF
                 //     border-radius: 50%
+                //     z-index: -99
             .timeline-bg-dot.end
                 background: rgba(0,0,0,0)
+            .timeline-bg-dot.end.special
+                &::before
+                    position: absolute
+                    content: ''
+                    // top: calc(-(#{$mobile-space-lv-half} - #{$mobile-space-lv-2}))
+                    top: calc(-36px)
+                    // top: calc(#{$mobile-space-lv-half} - #{$mobile-space-lv-2} - 2.5px * -1)
+                    left: 6px
+                    width: 2px
+                    height: calc(#{$mobile-space-lv-half} + #{$mobile-space-lv-2})
+                    background: #1A1A1A
+                    // border-radius: 50%
+                    z-index: -99
             h3
                 position: relative
                 top: calc(#{$mobile-space-lv-half} * -1)
@@ -115,3 +138,6 @@ main
                 background: #000000
             .text-box
                 margin-top: $mobile-space-lv-half
+
+div.timeline-wrap.open
+    padding-top: calc(#{$mobile-space-lv-half} + #{$mobile-space-lv-2})
