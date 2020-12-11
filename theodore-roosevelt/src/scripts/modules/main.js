@@ -13,11 +13,19 @@ const timelineWrappers = document.querySelectorAll('.timeline-wrap');
 
 const timelineBgEnd = document.querySelector('.timeline-bg-dot.end');
 // todo
+// fix error: Uncaught 'appendChil' undefined ???
+// TRY fill in object literal first
 // Add more content to object literal (the data)
 // Create media query
 // Create for Desktop display
+// Create an object literal for Desktop for image sizes
+// Create an object literal for Tablet for image sizes
 
 const timelineItems = document.querySelectorAll('.timeline-item');
+
+const timelineItem = document.querySelector('.timeline-item');
+const galleryContainer = document.querySelectorAll('.gallery');
+
 // galleryContainer
 let isOpened = false;
 for (let i = 0; i < readMoreBtn.length; i += 1) {
@@ -33,12 +41,34 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             ContainerReadMoreBtn[i].style.justifyContent = 'flex-end';
             ContainerReadMoreBtn[i].classList.add('open');
             galleryContainer[i].classList.add('open');
-            timelineWrappers[i + 1].classList.add('open');
-
-            timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
-            timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
 
             isOpened = true;
+
+            if (i >= 6) {
+                // ! WIP - Fix last timeline-item Unable to close when clicked >>
+                // Target last element
+                if (i == readMoreBtn.length - 1) {
+                    timelineWrappers[i + 1].classList.add('open');
+
+                    timelineWrappers[i + 1].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
+                    timelineWrappers[i + 1].insertAdjacentElement('afterend', galleryContainer[i]);
+                } else {
+                    timelineWrappers[i + 2].classList.add('open');
+
+                    // ! WIP
+                    timelineWrappers[i + 1].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
+                    timelineWrappers[i + 1].insertAdjacentElement('afterend', galleryContainer[i]);
+                }
+
+                // ! <<
+
+            } else {
+                timelineWrappers[i + 1].classList.add('open');
+
+                // ! WIP
+                timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
+                timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
+            }
 
             // Special stylize for uniqeu situations
             if (i == readMoreBtn.length - 2) {
@@ -52,12 +82,34 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             ContainerReadMoreBtn[i].style.justifyContent = 'flex-start';
             ContainerReadMoreBtn[i].classList.remove('open');
             galleryContainer[i].classList.remove('open');
-            timelineWrappers[i + 1].classList.remove('open');
-
-            timelineItems[i].insertAdjacentElement('beforeend', galleryContainer[i]);
-            timelineItems[i].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
 
             isOpened = false;
+
+            // ! WIP
+            if (i >= 6) {
+                // ! WIP - Fix last timeline-item Unable to close when clicked >>
+                if (i == readMoreBtn.length - 1) {
+                    timelineWrappers[i + 1].classList.remove('open');
+
+                    timelineItems[i + 1].insertAdjacentElement('beforeend', galleryContainer[i]);
+                    timelineItems[i + 1].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
+                } else {
+
+                    timelineWrappers[i + 2].classList.remove('open');
+
+                    timelineItems[i + 1].insertAdjacentElement('beforeend', galleryContainer[i]);
+                    timelineItems[i + 1].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
+
+                }
+
+                // ! <<
+            } else {
+                timelineWrappers[i + 1].classList.remove('open');
+
+                timelineItems[i].insertAdjacentElement('beforeend', galleryContainer[i]);
+                timelineItems[i].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
+            }
+
 
             // Special stylize for uniqeu situations
             if (i == readMoreBtn.length - 2) {
@@ -69,28 +121,88 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
 
 
 const galleryProperty = {
-    '0000': {
+    '1858': {
         'index': 0,
         'url': ['images/tr-age11-paris-209w.jpg', 'images/Birthplace-from-west-sml-600w.jpg'],
         'alt': ['Theodore Roosevelt 11 years old at Paris.', 'Manhattan'],
         'figcaption': ['T.R. 11 years old. (Paris)', 'Manhattan']
     },
-    '0001': {
+    '1879': {
         'index': 1,
         'url': ['images/tr-avid-boxer-at-harvard-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt Boxing.'],
-        'figcaption': ['T.R. boxing']
+        'alt': ['Theodore Roosevelt sitting down with his arms crossed.'],
+        'figcaption': ['T.R. an avid boxerand wrestler. (Harvard)']
     },
-    '0003': {
+    '1880': {
         'index': 2,
-        'url': ['images/tr-age11-paris-209w.jpg', 'images/Birthplace-from-west-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt 11 years old at Paris.', 'Manhattan'],
-        'figcaption': ['T.R. 11 years old. (Paris)', 'Manhattan']
-    }
+        'url': ['images/white-house-portrait-sml-600w.jpg'],
+        'alt': ['Portrait of Theodore Roosevelt painted by John Singer Sargent.'],
+        'figcaption': ['This official portrait of Theodore Roosevelt was painted by John Singer Sargent.']
+    },
+    '1881': {
+        'index': 3,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    '1881': {
+        'index': 4,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    '1881': {
+        'index': 5,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    '1881': {
+        'index': 6,
+        'url': null,
+        'alt': null,
+        'figcaption': null
+    },
+    '1881': {
+        'index': 7,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    '1881': {
+        'index': 8,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    '1881': {
+        'index': 9,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    '1881': {
+        'index': 10,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    '1881': {
+        'index': 11,
+        'url': ['images/roosevelt-reading-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+        'figcaption': ['T.R. writing at a desk.']
+    },
+    // '1881': {
+    //     'index': 12,
+    //     'url': ['images/roosevelt-reading-sml-600w.jpg'],
+    //     'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
+    //     'figcaption': ['T.R. writing at a desk.']
+    // }
 };
 
-const timelineItem = document.querySelector('.timeline-item');
-const galleryContainer = document.querySelectorAll('.gallery');
+// 13 total
+
 
 // ! Creating Gallery
 
@@ -113,6 +225,10 @@ for (let key in galleryProperty) {
     // Add Event Listener
     // When 'click' move previous or next
     // Disable  prev / next when at the end or beginning of length.
+
+    if (galleryProperty[key]['index'] == 6) {
+        continue;
+    }
 
     // Create '.gallery__content'
     let galleryContent = document.createElement('div');
@@ -138,8 +254,16 @@ for (let key in galleryProperty) {
     images.src = galleryProperty[key]['url'][0];
     images.alt = galleryProperty[key]['alt'][0];
 
-    // Append textNode
+    let index = galleryProperty[key]['index'];
+    galleryContainer[index].appendChild(galleryContent);
+    galleryContent.appendChild(galleryText);
+    galleryContent.appendChild(galleryImageSlider);
+    galleryImageSlider.appendChild(images);
+    galleryText.appendChild(text);
     text.appendChild(textNode);
+
+    // Append textNode
+    // text.appendChild(textNode);
 
     // Create gallery ImageSlide function if conditions are met
     // If 'url' length is greater than 1
@@ -211,7 +335,7 @@ for (let key in galleryProperty) {
 
                 // Change dot indicator
                 let currentDotArr = containerDots.childNodes;
-                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                for (let y = 0; y < containerDots.childNodes.length; y += 1) {
                     currentDotArr[y].classList.remove('active');
 
                     if (y == slideIndex) {
@@ -228,7 +352,7 @@ for (let key in galleryProperty) {
 
                 // Change dot indicator
                 let currentDotArr = containerDots.childNodes;
-                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                for (let y = 0; y < containerDots.childNodes.length; y += 1) {
                     currentDotArr[y].classList.remove('active');
 
                     if (y == slideIndex) {
@@ -249,7 +373,7 @@ for (let key in galleryProperty) {
 
                 // Change dot indicator
                 let currentDotArr = containerDots.childNodes;
-                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                for (let y = 0; y < containerDots.childNodes.length; y += 1) {
                     currentDotArr[y].classList.remove('active');
 
                     if (y == slideIndex) {
@@ -265,7 +389,7 @@ for (let key in galleryProperty) {
 
                 // Change dot indicator
                 let currentDotArr = containerDots.childNodes;
-                for (let y = 0; y < containerDots.childNodes.length; y+=1) {
+                for (let y = 0; y < containerDots.childNodes.length; y += 1) {
                     currentDotArr[y].classList.remove('active');
 
                     if (y == slideIndex) {
@@ -282,13 +406,24 @@ for (let key in galleryProperty) {
     }
 
     // # Append the whole gallery content together
-    text.appendChild(textNode);
-    galleryText.appendChild(text);
-    galleryImageSlider.appendChild(images);
-    galleryContent.appendChild(galleryImageSlider);
-    galleryContent.appendChild(galleryText);
+    // text.appendChild(textNode);
+    // galleryText.appendChild(text);
+    // galleryImageSlider.appendChild(images);
+    // galleryContent.appendChild(galleryImageSlider);
+    // galleryContent.appendChild(galleryText);
 
-    let index = galleryProperty[key]['index'];
 
-    galleryContainer[index].appendChild(galleryContent);
+    // let index = galleryProperty[key]['index'];
+
+    // ! TEST
+    // console.log(galleryContent);
+    console.log(galleryContainer[index]);
+    console.log(galleryProperty[key]['index']);
+
+    // ! WIP >>
+    // setTimeout(function() {  }, 1000);
+
+    // galleryContainer[index].appendChild(galleryContent);
+    // ! <<
+
 }
