@@ -13,10 +13,9 @@ const timelineWrappers = document.querySelectorAll('.timeline-wrap');
 
 const timelineBgEnd = document.querySelector('.timeline-bg-dot.end');
 // todo
-// Move back and from '.container-read-more-btn' inside, and
-// outside of '.timeline-item' SECOND - order matters!
-// Move back and from '.gallery' inside, and
-// outside of '.timeline-item' FIRST
+// Add more content to object literal (the data)
+// Create media query
+// Create for Desktop display
 
 const timelineItems = document.querySelectorAll('.timeline-item');
 // galleryContainer
@@ -95,7 +94,6 @@ const galleryContainer = document.querySelectorAll('.gallery');
 
 // ! Creating Gallery
 
-// for (let y = 0; y < galleryContainer.length; y += 1) {
 for (let key in galleryProperty) {
     // # Create '.gallery__content',
     // '.gallery__image',
@@ -196,7 +194,6 @@ for (let key in galleryProperty) {
             console.log(dotArr[j]);
         }
 
-        // ! WIP dot-indcator for prev/next button
         console.log(containerDots);
         containerDots.childNodes[0].classList.add('active');
         console.log(containerDots.childNodes[0].classList);
@@ -221,11 +218,6 @@ for (let key in galleryProperty) {
                         currentDotArr[y].classList.add('active');
                     }
                 }
-
-
-                // function CheckIfCurrent(searchIndex) {
-                //     return
-                // }
             } else {
                 slideIndex--;
 
@@ -235,7 +227,6 @@ for (let key in galleryProperty) {
                 text.textContent = galleryProperty[key]['figcaption'][slideIndex];
 
                 // Change dot indicator
-                // dotArr
                 let currentDotArr = containerDots.childNodes;
                 for (let y = 0; y < containerDots.childNodes.length; y+=1) {
                     currentDotArr[y].classList.remove('active');
@@ -273,7 +264,6 @@ for (let key in galleryProperty) {
                 text.textContent = galleryProperty[key]['figcaption'][slideIndex];
 
                 // Change dot indicator
-                // dotArr
                 let currentDotArr = containerDots.childNodes;
                 for (let y = 0; y < containerDots.childNodes.length; y+=1) {
                     currentDotArr[y].classList.remove('active');
@@ -291,7 +281,7 @@ for (let key in galleryProperty) {
         galleryImageSlider.appendChild(nextBtn);
     }
 
-    // Append the whole gallery content together
+    // # Append the whole gallery content together
     text.appendChild(textNode);
     galleryText.appendChild(text);
     galleryImageSlider.appendChild(images);
@@ -301,21 +291,4 @@ for (let key in galleryProperty) {
     let index = galleryProperty[key]['index'];
 
     galleryContainer[index].appendChild(galleryContent);
-
-
-    // # Append to '.containerGallery'
-    // galleryContent.appendChild(galleryImageSlider);
-    // containerGallery.appendChild(galleryContent);
-
-    // }
-
 }
-
-// todo
-// create dots for number of gallery,
-// functionality - add event listener
-// e.g. image.length, create dots
-// create cta prev and next, and
-// add event listener
-// put images manually and make
-// display none first
