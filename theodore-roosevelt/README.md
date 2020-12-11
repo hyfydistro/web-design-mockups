@@ -126,9 +126,14 @@ npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 - [How To Create a Vertical Timeline Using HTML & CSS](https://www.youtube.com/watch?v=zNccqv0g6Q4&ab_channel=WEBCIFAR)
 - [Full Screen Image Slider With HTML, CSS & JS](https://youtu.be/7ZO2RTMNSAY)
 - [How To Create a Timeline - Simple Html5 Css 3 Timeline Tutorial For Beginners - Pure CSS Tutorial](https://www.youtube.com/watch?v=sWvRIYJZJ-c&ab_channel=OnlineTutorials)
+- [Image Slider - With Auto-play & Manual Navigation Buttons - Using CSS, HTML & Javascript](https://youtu.be/0wvrlOyGlq0)
 
 ### Guides and Tutorials
 
 - [Pure CSS for multiline truncation with ellipsis](http://hackingui.com/a-pure-css-solution-for-multiline-text-truncation/)
 -[Read More / Read Less Button With Javascript | JS Tutorial](https://youtu.be/A_7sRo-mgz4)
 - [Read More Popup Box using Html Css Javascript | Responsive](https://youtu.be/DrshwKL_TYo)
+- [JavaScript Nested Loops with Arrays and Objects](https://youtu.be/AqgVLYpBWG8)
+- [Element.insertAdjacentElement()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement)
+- [How do you create variables in for loop?](https://stackoverflow.com/questions/10325651/how-do-you-create-variables-in-for-loop)
+- [How to select all other values in an array except the ith element?](https://stackoverflow.com/questions/15361189/how-to-select-all-other-values-in-an-array-except-the-ith-element)

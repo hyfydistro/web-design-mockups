@@ -500,10 +500,16 @@ width: 12px
 height: 12px
 
 >Effects
-Active
+Active on-hover
     - color: 808080
-Passive
+    - rgba(128, 128, 128, 1)
+Active (NOT on-hover)
+    - rgba(128, 128, 128, 0.5)
+Passive on-hover
     - color: CCCCCC
+    - rgba(204, 204, 204, 1)
+Passive (NOT on-hover)
+    - rgba(204, 204, 204, 0.5)
 
 **prev**
 
