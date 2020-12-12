@@ -48,7 +48,7 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             isOpened = true;
 
             if (i >= 6) {
-                // ! WIP - Fix last timeline-item Unable to close when clicked, text and image position >>
+                // ! WIP - Fix last timeline-item Unable to close when clicked >>
                 // Target last element
                 if (i == readMoreBtn.length - 1) {
                     timelineWrappers[i + 1].classList.add('open');
@@ -66,9 +66,23 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
                 // ! <<
 
             } else {
+                // if (i == readMoreBtn.length - 1) {
+                //     timelineWrappers[i].classList.add('open');
+
+                //     // ! WIP
+                //     timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
+                //     timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
+                // } else {
+                //     timelineWrappers[i + 1].classList.add('open');
+
+                //     // ! WIP
+                //     timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
+                //     timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
+                // }
+
+                // ! Original
                 timelineWrappers[i + 1].classList.add('open');
 
-                // ! WIP
                 timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
                 timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
             }
@@ -273,6 +287,7 @@ for (let key in galleryProperty) {
     images.src = galleryProperty[key]['url'][0];
     images.alt = galleryProperty[key]['alt'][0];
 
+    // # Append the whole gallery content together
     let index = galleryProperty[key]['index'];
 
     // ! WIP >>
@@ -284,14 +299,11 @@ for (let key in galleryProperty) {
     }
 
     // ! <<
-    galleryContent.appendChild(galleryText);
     galleryContent.appendChild(galleryImageSlider);
     galleryImageSlider.appendChild(images);
+    galleryContent.appendChild(galleryText);
     galleryText.appendChild(text);
     text.appendChild(textNode);
-
-    // Append textNode
-    // text.appendChild(textNode);
 
     // Create gallery ImageSlide function if conditions are met
     // If 'url' length is greater than 1
@@ -446,7 +458,7 @@ for (let key in galleryProperty) {
         galleryImageSlider.appendChild(nextBtn);
     }
 
-    // # Append the whole gallery content together
+
     // text.appendChild(textNode);
     // galleryText.appendChild(text);
     // galleryImageSlider.appendChild(images);
@@ -455,6 +467,9 @@ for (let key in galleryProperty) {
 
 
     // let index = galleryProperty[key]['index'];
+
+    // * LOGGING
+    console.log('Finish gallery', galleryProperty[key]['index'], key);
 
     // ! TEST
     // console.log(galleryContent);
