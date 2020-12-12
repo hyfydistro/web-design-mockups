@@ -1,0 +1,67 @@
+// Table of Contents
+// - Outer Link
+// - Footer
+
+@use '../base/space' as *
+@use '../base/color' as color
+
+// # Outer Link
+
+
+section.outer-link
+    width: 100%
+    background: #FFFFFF
+    display: flex
+    justify-content: center
+    padding-top: $desktop-space-lv-2
+    padding-bottom: $desktop-space-lv-2
+    a
+        color: color.$text-color-90
+        max-width: 476px
+        text-decoration: underline
+        cursor: pointer
+        &:hover
+            text-decoration: none
+
+
+@media screen and (max-width: 1024px)
+    section.summary-one
+        @include tablet-padding-preset
+
+
+@media screen and (max-width: 600px)
+    section.summary-one
+        @include mobile-padding-preset
+        padding-top: $mobile-space-lv-2
+        padding-bottom: $mobile-space-lv-2
+
+// # Footer
+
+footer
+    width: 100%
+    background: color.$text-color-90
+    display: flex
+    justify-content: center
+    padding-top: $desktop-space-lv-2
+    padding-bottom: $desktop-space-lv-2
+    p
+        color: #FFFFFF
+        max-width: 476px
+        a
+            color: #FFFFFF
+            cursor: pointer
+            text-decoration: underline
+            &:hover
+                text-decoration: none
+
+
+@media screen and (max-width: 1024px)
+    footer
+        @include tablet-padding-preset
+
+
+@media screen and (max-width: 600px)
+    footer
+        @include mobile-padding-preset
+        padding-top: $mobile-space-lv-2
+        padding-bottom: $mobile-space-lv-2
