@@ -20,6 +20,7 @@ const timelineBgEnd = document.querySelector('.timeline-bg-dot.end');
 // Create for Desktop display
 // Create an object literal for Desktop for image sizes
 // Create an object literal for Tablet for image sizes
+// CSS Fix gallery__text display for under images only
 
 const timelineItems = document.querySelectorAll('.timeline-item');
 
@@ -29,9 +30,11 @@ const galleryContainer = document.querySelectorAll('.gallery');
 // galleryContainer
 let isOpened = false;
 for (let i = 0; i < readMoreBtn.length; i += 1) {
-    readMoreBtn[i].addEventListener('click', function moreContent() {
 
-        console.log(i);
+    // * LOGGING
+    console.log('Initialising \'Read More\' button Event Listener for', i);
+
+    readMoreBtn[i].addEventListener('click', function moreContent() {
 
         if (!isOpened) {
             console.log("open" + i);
@@ -45,7 +48,7 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             isOpened = true;
 
             if (i >= 6) {
-                // ! WIP - Fix last timeline-item Unable to close when clicked >>
+                // ! WIP - Fix last timeline-item Unable to close when clicked, text and image position >>
                 // Target last element
                 if (i == readMoreBtn.length - 1) {
                     timelineWrappers[i + 1].classList.add('open');
@@ -116,6 +119,9 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
                 timelineBgEnd.classList.remove('special');
             }
         }
+
+        // * LOGGING
+        console.log('Finish \'Read More\' button Event Listener for', i);
     });
 }
 
@@ -125,7 +131,7 @@ const galleryProperty = {
         'index': 0,
         'url': ['images/tr-age11-paris-209w.jpg', 'images/Birthplace-from-west-sml-600w.jpg'],
         'alt': ['Theodore Roosevelt 11 years old at Paris.', 'Manhattan'],
-        'figcaption': ['T.R. 11 years old. (Paris)', 'Manhattan']
+        'figcaption': ['T.R. 11 years old. (Paris)', 'Manhattan.']
     },
     '1879': {
         'index': 1,
@@ -141,64 +147,64 @@ const galleryProperty = {
     },
     '1881': {
         'index': 3,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/roosevelt-reading-sml-600w.jpg', 'images/tr-writings-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt sitting with a book on his hand.', 'A collection of Theodore\'s books on the shelf'],
+        'figcaption': ['T.R. sitting with a book on his hand.', 'T.R. books he has written.']
     },
-    '1881': {
+    '1884': {
         'index': 4,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/tr-mother-and-first-wife-sml-600w.jpg', 'images/tr-sherif-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt\'s mother and wife.', 'Theodore Roosevelt in sherif\'s uniform'],
+        'figcaption': ['T.R.\'s mother (left) and his first wife (right).', 'T.R. as a sherif.']
     },
-    '1881': {
+    '1886': {
         'index': 5,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/tr-horse-sml-600w.jpg', 'images/tr-new-family-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt on a horse.', 'Theodore Roosevelt and his new family.'],
+        'figcaption': ['T.R. writing at a desk.', 'T.R. family.']
     },
-    '1881': {
+    '1895': {
         'index': 6,
         'url': null,
         'alt': null,
         'figcaption': null
     },
-    '1881': {
+    '1897': {
         'index': 7,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/spanish-vs-americans-sml-600w.jpg', 'images/rough-riders-sml-600w.jpg'],
+        'alt': ['A painting of the Asiatic Squadron destroying Spanish fleet in Battle of Manila Bay.', 'A group of people known as the Rough Riders'],
+        'figcaption': ['Asiatic Squadron destroying Spanish fleet in Battle of Manila Bay on May 1 1898', 'Rough Riders']
     },
-    '1881': {
+    '1901': {
         'index': 8,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/tr-at-chicago-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt at Chicago.'],
+        'figcaption': ['T.R. at Chicago.']
     },
-    '1881': {
+    '1909': {
         'index': 9,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/tr-safari-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt standing next to the elephant he shot on safari.'],
+        'figcaption': ['T.R standing next to the elephant he shot on safari.']
     },
-    '1881': {
+    '1910': {
         'index': 10,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/tr-and-taft-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt and Taft.'],
+        'figcaption': ['T.R (left) and Taft (right).']
     },
-    '1881': {
+    '1912': {
         'index': 11,
-        'url': ['images/roosevelt-reading-sml-600w.jpg'],
-        'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-        'figcaption': ['T.R. writing at a desk.']
+        'url': ['images/tr-medical-xray-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt medical x-ray on October 14 after the assassination attempt, showing the bullet.'],
+        'figcaption': ['T.R. medical x-ray on October 14 after the assassination attempt, showing the bullet.']
     },
-    // '1881': {
-    //     'index': 12,
-    //     'url': ['images/roosevelt-reading-sml-600w.jpg'],
-    //     'alt': ['Theodore Roosevelt sitting with a book on his hand.'],
-    //     'figcaption': ['T.R. writing at a desk.']
-    // }
+    '1919': {
+        'index': 12,
+        'url': ['images/tr-tomb-sml-600w.jpg'],
+        'alt': ['Theodore Roosevelt\'s grave.'],
+        'figcaption': ['T.R.\'s grave, Oyster Bay, New York.']
+    }
 };
 
 // 13 total
@@ -226,9 +232,22 @@ for (let key in galleryProperty) {
     // When 'click' move previous or next
     // Disable  prev / next when at the end or beginning of length.
 
-    if (galleryProperty[key]['index'] == 6) {
+    // * LOGGING
+    console.log('Creating gallery', galleryProperty[key]['index'], key);
+
+    // ! WIP - Need to skip this text section to display images >>
+    if (key == '1895') {
+        // * LOGGING
+        console.log('Pass condition: Skip 1', 'Creating gallery', galleryProperty[key]['index'], key);
         continue;
     }
+
+    if (galleryProperty[key]['index'] === 6) {
+        // * LOGGING
+        console.log('Pass condition: Skip 2', 'Creating gallery', galleryProperty[key]['index'], key);
+        continue;
+    }
+    // ! <<
 
     // Create '.gallery__content'
     let galleryContent = document.createElement('div');
@@ -255,7 +274,16 @@ for (let key in galleryProperty) {
     images.alt = galleryProperty[key]['alt'][0];
 
     let index = galleryProperty[key]['index'];
-    galleryContainer[index].appendChild(galleryContent);
+
+    // ! WIP >>
+
+    if (index >= 6) {
+        galleryContainer[index-1].appendChild(galleryContent);
+    } else {
+        galleryContainer[index].appendChild(galleryContent);
+    }
+
+    // ! <<
     galleryContent.appendChild(galleryText);
     galleryContent.appendChild(galleryImageSlider);
     galleryImageSlider.appendChild(images);
@@ -268,6 +296,10 @@ for (let key in galleryProperty) {
     // Create gallery ImageSlide function if conditions are met
     // If 'url' length is greater than 1
     if (galleryProperty[key]['url'].length > 1) {
+
+        // * LOGGING
+        console.log('Pass condition: gallery exceeds more than 1 images available', 'Creating gallery', galleryProperty[key]['index']);
+
         // Create prev / next button
         let prevBtn = document.createElement('a');
         prevBtn.className = 'prev';
@@ -315,13 +347,22 @@ for (let key in galleryProperty) {
             });
 
             containerDots.appendChild(dotArr[j]);
-            console.log(dotArr[j]);
+            // console.log(dotArr[j]);
         }
 
-        console.log(containerDots);
-        containerDots.childNodes[0].classList.add('active');
-        console.log(containerDots.childNodes[0].classList);
-        console.log(containerDots.childNodes.length);
+        // ! WIP - TEST >>
+        // * LOGGING
+        // console.log('Pass condition 1', 'Creating gallery', galleryProperty[key]['index']);
+
+        // console.log(containerDots);
+        // console.log(containerDots.childNodes[0].classList);
+        // console.log(containerDots.childNodes.length);
+
+        // ! Disable the following and test...
+
+        // containerDots.childNodes[0].classList.add('active');
+
+        // ! <<
 
         // Add Event Listener
         prevBtn.addEventListener('click', function () {
@@ -417,8 +458,8 @@ for (let key in galleryProperty) {
 
     // ! TEST
     // console.log(galleryContent);
-    console.log(galleryContainer[index]);
-    console.log(galleryProperty[key]['index']);
+    // console.log(galleryContainer[index]);
+    // console.log(galleryProperty[key]['index']);
 
     // ! WIP >>
     // setTimeout(function() {  }, 1000);
