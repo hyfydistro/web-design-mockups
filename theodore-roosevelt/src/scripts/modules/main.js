@@ -13,7 +13,7 @@ const timelineWrappers = document.querySelectorAll('.timeline-wrap');
 
 const timelineBgEnd = document.querySelector('.timeline-bg-dot.end');
 // todo
-// fix error: Uncaught 'appendChil' undefined ???
+// Fix awkward gap for last timeline wrapper when the previous timeline wrapper opens
 // TRY fill in object literal first
 // Add more content to object literal (the data)
 // Create media query
@@ -28,8 +28,11 @@ const timelineItem = document.querySelector('.timeline-item');
 const galleryContainer = document.querySelectorAll('.gallery');
 
 // galleryContainer
-let isOpened = false;
+// window.onload = function addButtonListener() {
+
+// }
 for (let i = 0; i < readMoreBtn.length; i += 1) {
+    let isOpened = false;
 
     // * LOGGING
     console.log('Initialising \'Read More\' button Event Listener for', i);
@@ -47,15 +50,17 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
 
             isOpened = true;
 
+            // * NOTE: timelineWrappers length and readMoreBtn length are different!
             if (i >= 6) {
                 // ! WIP - Fix last timeline-item Unable to close when clicked >>
                 // Target last element
                 if (i == readMoreBtn.length - 1) {
-                    timelineWrappers[i + 1].classList.add('open');
+                    // timelineWrappers[i + 1].classList.add('open');
 
                     timelineWrappers[i + 1].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
                     timelineWrappers[i + 1].insertAdjacentElement('afterend', galleryContainer[i]);
                 } else {
+                    // * Styles: Give padding to NEXT timelineWrappers
                     timelineWrappers[i + 2].classList.add('open');
 
                     // ! WIP
@@ -66,20 +71,6 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
                 // ! <<
 
             } else {
-                // if (i == readMoreBtn.length - 1) {
-                //     timelineWrappers[i].classList.add('open');
-
-                //     // ! WIP
-                //     timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
-                //     timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
-                // } else {
-                //     timelineWrappers[i + 1].classList.add('open');
-
-                //     // ! WIP
-                //     timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
-                //     timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
-                // }
-
                 // ! Original
                 timelineWrappers[i + 1].classList.add('open');
 
@@ -87,10 +78,12 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
                 timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
             }
 
+            // ! WIP
             // Special stylize for uniqeu situations
             if (i == readMoreBtn.length - 2) {
                 timelineBgEnd.classList.add('special');
             }
+            // ! <<
         } else {
             console.log('close');
             dots[i].style.display = 'inline';
@@ -106,6 +99,9 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             if (i >= 6) {
                 // ! WIP - Fix last timeline-item Unable to close when clicked >>
                 if (i == readMoreBtn.length - 1) {
+                    // ! UNLESS... if the previous element for the last timeline wrapper is open, keep class open (the padding)
+
+                    // ! <<
                     timelineWrappers[i + 1].classList.remove('open');
 
                     timelineItems[i + 1].insertAdjacentElement('beforeend', galleryContainer[i]);
@@ -127,11 +123,19 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
                 timelineItems[i].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
             }
 
-
+            // ! WIP
             // Special stylize for uniqeu situations
-            if (i == readMoreBtn.length - 2) {
+            if (galleryContainer[readMoreBtn.length - 2].classList.contains('open')) {
+                // don't do anything // return values
+                timelineWrappers[i + 1].classList.add('open');
+            } else if (i == readMoreBtn.length - 2) {
                 timelineBgEnd.classList.remove('special');
             }
+            // Special stylize for uniqeu situations
+            // if (i == readMoreBtn.length - 2) {
+            //     timelineBgEnd.classList.remove('special');
+            // }
+            // ! <<
         }
 
         // * LOGGING
@@ -291,9 +295,9 @@ for (let key in galleryProperty) {
     let index = galleryProperty[key]['index'];
 
     // ! WIP >>
-
+    // * Condition for the 6th only text maintenance
     if (index >= 6) {
-        galleryContainer[index-1].appendChild(galleryContent);
+        galleryContainer[index - 1].appendChild(galleryContent);
     } else {
         galleryContainer[index].appendChild(galleryContent);
     }
