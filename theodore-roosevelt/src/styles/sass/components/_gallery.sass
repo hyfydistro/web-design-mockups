@@ -37,7 +37,9 @@
     position: relative
     max-height: 284px
     max-width: 100vw
+    width: auto
     display: flex
+    object-fit: contain
     justify-content: center
     align-items: center
 
@@ -46,6 +48,18 @@
     margin-top: $mobile-space-lv-1
 
 div.gallery__image
+    span.prev-btn-bg
+        cursor: pointer
+        position: absolute
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        margin-left: $mobile-space-lv-1
+        display: inline-block
+        left: 0
+        background-color: rgba(204, 204, 204, 0.2)
+        &:hover
+            background-color: rgba(204, 204, 204, 0.5)
     a.prev
         cursor: pointer
         position: absolute
@@ -53,21 +67,25 @@ div.gallery__image
         height: 13px
         margin-left: $mobile-space-lv-1
         border: solid color.$text-color-20
-        border-width: 0 3px 3px 0
+        border-width: 0 2px 2px 0
         display: inline-block
         transform: rotate(135deg)
         z-index: 99
-        left: 0
-        &::before
-            position: absolute
-            content: ''
-            width: 32px
-            height: 32px
-            border-radius: 50%
-            // ! WIP arrow circle bg
-            // background: rgba(77, 77, 77, 0.5) // $text-color-70
-            background: green
-            z-index: -99
+        left: -6px
+        top: 10px
+    span.next-btn-bg
+        cursor: pointer
+        position: absolute
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        margin-right: $mobile-space-lv-1
+        border-width: 0 3px 3px 0
+        display: inline-block
+        background-color: rgba(204, 204, 204, 0.2)
+        right: 0
+        &:hover
+            background-color: rgba(204, 204, 204, 0.5)
     a.next
         cursor: pointer
         position: absolute
@@ -75,12 +93,12 @@ div.gallery__image
         height: 13px
         margin-right: $mobile-space-lv-1
         border: solid color.$text-color-20
-        border-width: 0 3px 3px 0
+        border-width: 0 2px 2px 0
         display: inline-block
         transform: rotate(-45deg)
         z-index: 99
-        right: 0
-
+        right: -6px
+        top: 10px
 .container-dots
     position: absolute
     width: 100%
@@ -100,7 +118,6 @@ span.dot
     border-radius: 50%
     background-color: rgba(128, 128, 128, 0.3)
     // background-color: rgba(204, 204, 204, 0.5) //$text-color-20
-
 
 // ! Check if this works >> '.active'
 span.dot:hover,

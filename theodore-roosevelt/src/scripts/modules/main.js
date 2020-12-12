@@ -13,9 +13,7 @@ const timelineWrappers = document.querySelectorAll('.timeline-wrap');
 
 const timelineBgEnd = document.querySelector('.timeline-bg-dot.end');
 // todo
-// Fix awkward gap for last timeline wrapper when the previous timeline wrapper opens
-// TRY fill in object literal first
-// Add more content to object literal (the data)
+// Add new span and add class next-bg and prev-bg and insert prev and next span into it.
 // Create media query
 // Create for Desktop display
 // Create an object literal for Desktop for image sizes
@@ -321,6 +319,18 @@ for (let key in galleryProperty) {
         let nextBtn = document.createElement('a');
         nextBtn.className = 'next';
 
+        // ! WIP >>
+        // Create prev / next background for button, and add class
+        let  prevBtnBg = document.createElement('span');
+        prevBtnBg.className = 'prev-btn-bg';
+        let  nextBtnBg = document.createElement('span');
+        nextBtnBg.className = 'next-btn-bg';
+
+        // Insert button to bg button
+        prevBtnBg.appendChild(prevBtn);
+        nextBtnBg.appendChild(nextBtn);
+
+        // ! <<
         let slideIndex = 0;
 
         // Create dot container
@@ -368,7 +378,7 @@ for (let key in galleryProperty) {
         // console.log('Pass condition 1', 'Creating gallery', galleryProperty[key]['index']);
 
         // Add Event Listener
-        prevBtn.addEventListener('click', function () {
+        prevBtnBg.addEventListener('click', function () {
             // Condition
             if (slideIndex === 0) {
                 slideIndex = galleryProperty[key]['url'].length - 1;
@@ -406,7 +416,7 @@ for (let key in galleryProperty) {
             }
         });
 
-        nextBtn.addEventListener('click', function () {
+        nextBtnBg.addEventListener('click', function () {
             // Condition
             if (slideIndex === galleryProperty[key]['url'].length - 1) {
                 slideIndex = 0;
@@ -445,8 +455,8 @@ for (let key in galleryProperty) {
 
         // Append dot-indicator container, dots, prev button, next button
         galleryImageSlider.appendChild(containerDots);
-        galleryImageSlider.appendChild(prevBtn);
-        galleryImageSlider.appendChild(nextBtn);
+        galleryImageSlider.appendChild(prevBtnBg);
+        galleryImageSlider.appendChild(nextBtnBg);
     }
 
 
