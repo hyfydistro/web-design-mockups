@@ -95,7 +95,6 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
 
             isOpened = false;
 
-            // ! WIP
             if (i >= 6) {
                 // ! WIP - Fix last timeline-item Unable to close when clicked >>
                 if (i == readMoreBtn.length - 1) {
@@ -363,22 +362,10 @@ for (let key in galleryProperty) {
             });
 
             containerDots.appendChild(dotArr[j]);
-            // console.log(dotArr[j]);
         }
 
-        // ! WIP - TEST >>
         // * LOGGING
         // console.log('Pass condition 1', 'Creating gallery', galleryProperty[key]['index']);
-
-        // console.log(containerDots);
-        // console.log(containerDots.childNodes[0].classList);
-        // console.log(containerDots.childNodes.length);
-
-        // ! Disable the following and test...
-
-        // containerDots.childNodes[0].classList.add('active');
-
-        // ! <<
 
         // Add Event Listener
         prevBtn.addEventListener('click', function () {
@@ -474,16 +461,5 @@ for (let key in galleryProperty) {
 
     // * LOGGING
     console.log('Finish gallery', galleryProperty[key]['index'], key);
-
-    // ! TEST
-    // console.log(galleryContent);
-    // console.log(galleryContainer[index]);
-    // console.log(galleryProperty[key]['index']);
-
-    // ! WIP >>
-    // setTimeout(function() {  }, 1000);
-
-    // galleryContainer[index].appendChild(galleryContent);
-    // ! <<
 
 }
