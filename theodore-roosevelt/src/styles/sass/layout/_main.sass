@@ -2,12 +2,9 @@
 @use '../base/color' as color
 
 // todo
-// mobile: fix timeline component
-// fix ellipses for "more to read"
+// Add animation effects
 // tablet: create timeline component
 // desktop: create timeline component
-// Create module for CTA "Read More"
-// stop timeline line component at the end
 
 main
     h2
@@ -35,24 +32,16 @@ main
             .timeline-wrap
                 @include mobile-margin-preset
                 position: relative
-                background: #ccc
+                // background: #ccc
                 // padding-left: 25px // ! Should hanges on media query
                 // margin-left: 9px // ! Should hanges on media query
                 border-left: 2px solid #1A1A1A
-                // * Hotfix bottom-padding for unique div #6
-            // .timeline-wrap:nth-child(7)
+                // * Hotfix bottom-padding for unique div #6 VV BELOW VV
             .timeline-wrap.plus-bot-padding
-                border: 2px red solid
                 padding-bottom: $mobile-space-lv-2
             .timeline-item
-                // @include mobile-margin-preset
                 position: relative
-                // background: #ccc
                 padding-left: 25px // ! Should hanges on media query
-                // margin-left: 9px // ! Should hanges on media query
-                // border-left: 2px solid #1A1A1A
-                // ? Use content ::before
-                // z-index: -22
             .timeline-wrap:last-child
                 border-left: 2px solid transparent
             .timeline-item:last-child
