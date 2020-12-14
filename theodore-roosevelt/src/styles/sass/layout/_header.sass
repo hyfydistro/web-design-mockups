@@ -1,8 +1,5 @@
 @use '../base/space' as *
 
-// todo
-// - give height to text title container
-
 header
     display: block
     position: relative
@@ -30,43 +27,17 @@ header
             background-repeat: no-repeat
             background-size: 75% 100%
             background-attachment: fixed
-            // top: 50%
-            // left: 50%
-            // transform: translate(-50%, -50%)
-            // margin: 0 auto
-            // background: // a
-            // z-index: -88
             z-index: 88
-        // picture.hero-wallpaper
-        //     display: block
-        //     position: absolute
-        //     top: 50%
-        //     left: 50%
-        //     transform: translate(-50%, -50%)
-        //     margin: 0 auto
-        //     // background: // add media query for images
-        //     z-index: -88
-        // .hero-wallpaper img
-        //     position: absolute
-        //     top: 50%
-        //     left: 50%
-        //     transform: translate(-50%, -50%)
-        //     max-width: 960px
-        //     height: 100vh
         .container-gradient
             width: 100%
             @include tablet-padding-preset
             margin-left: auto
             margin-right: auto
-            // ! WIP >>S
             position: absolute
-            // // height: 320px
             height: 45%
             width: 100vw
             bottom: 0
             left: 0
-            // ! <<
-            // margin-bottom: $desktop-space-lv-4
             background: linear-gradient(rgba(0,0,0,0), #000)
             z-index: 99
             padding-bottom: $desktop-space-lv-4
@@ -87,7 +58,6 @@ header
         h1,
         h2
             color: #FFFFFF
-            // margin: 0 auto
         h1
             text-align: left
             margin-bottom: $desktop-space-lv-1
@@ -95,15 +65,8 @@ header
             width: 530.5px
             text-align: right
 
-@media screen and (min-width: 1025px)
-    // header
-        // .gradient-screen
-        //     position: absolute
-        //     top: 0
-        //     width: 100vw
-        //     height: 100vh
-        //     z-index: -77
-        //     background: linear-gradient(transparent, 75%, black)
+// @media screen and (min-width: 1025px)
+
 
 @media screen and (max-width: 1024px)
     header
@@ -112,12 +75,6 @@ header
                 background-image: url(images/hero-med-600w.jpg)
                 background-size: cover
                 background-position: center center
-                // background-size: 130% 100%
-                // background-position: 100% 0%
-            // picture.hero-wallpaper img
-            // width: 100vw
-            // max-width: 960px
-            // height: 100vh
             .container-gradient
                 @include tablet-padding-preset
                 height: auto
@@ -141,25 +98,17 @@ header
         .container-header
             div.hero-wallpaper
                 background-image: url(images/hero-sml-600w.png)
-                // background-size: 130% 100%
-                // background-position: 100% 0%
                 background-size: cover
                 background-position: center center
-            // picture.hero-wallpaper img
-            // width: 100vw
-            // height: 100vh
             .container-gradient
                 @include mobile-padding-preset
                 height: auto
                 padding-bottom: $mobile-space-lv-4
             .container-title
                 width: auto
-                // margin-bottom: $mobile-space-lv-4
-                // margin-bottom: 0
             h1
                 width: 274px
                 margin-bottom: $mobile-space-lv-1
             h2
 
                 text-align: left !important
-    // .parrallax
