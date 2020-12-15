@@ -495,9 +495,13 @@ height:
 
 
 **dots**
-
+Mobile
 width: 12px
 height: 12px
+
+Tablet-Dektop
+width: 20px
+height: 20px
 
 >Effects
 Active on-hover
@@ -516,8 +520,12 @@ Passive (NOT on-hover)
 html entity: &#10094;
 
 Arrow component
+Mobile
     width: 14px
     height: 14px
+Tablet-Desktop
+    width: 31.5
+    height: 31.5
 
 color: CCCCCC
 
@@ -603,7 +611,7 @@ height: 24px
 
 **Line**
 
-width: 2px
+width: 4px
 
 distance between line component: 9px above and below
 
