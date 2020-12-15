@@ -1,5 +1,8 @@
 console.log("Initiating animation");
 
+const mq600 = window.matchMedia("(max-width: 600px)");
+const mq1024 = window.matchMedia("(max-width: 1024px)");
+
 // Add-on class appear
 const faders = document.querySelectorAll('.fader');
 // Add-on class slide
@@ -55,12 +58,44 @@ const sliderOptions = {
 // sliders.forEach(slider => {
 //     slideInOnScroll.observe(slider)
 // })
+// ! WIP - Only tested on mobile, need to develop for desktop (and tablet ?) size
+// # REVEALERS
+const revealOnScrollMobileView = new IntersectionObserver(function (entries, revealOnScrollMobileView) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('reveal');
+            revealOnScrollMobileView.unobserve(entry.target);
+        }
+    });
+}, revealOptions);
 
-const mq = window.matchMedia("(max-width: 600px)");
+// # SLIDERS
+const slideOnScrollMobileView = new IntersectionObserver(function (entries, slideOnScrollMobileView) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('slide');
+            slideOnScrollMobileView.unobserve(entry.target);
+        }
+    });
+}, sliderOptions);
+
+revealers.forEach(revealer => {
+    revealOnScrollMobileView.observe(revealer);
+})
+
+sliders.forEach(slider => {
+    slideOnScrollMobileView.observe(slider);
+})
+
+
 
 // # Faders Event Listerner
 
-if (mq.matches) {
+if (mq600.matches) {
     // ! UNDER TESTING
     console.log("media query working");
     // # FADERS
@@ -75,41 +110,12 @@ if (mq.matches) {
         });
     }, appearOptionsMobileView);
 
-    // # REVEALERS
-    const revealOnScrollMobileView = new IntersectionObserver(function (entries, revealOnScrollMobileView) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('reveal');
-                revealOnScrollMobileView.unobserve(entry.target);
-            }
-        });
-    }, revealOptions);
 
-    // # SLIDERS
-    const slideOnScrollMobileView = new IntersectionObserver(function (entries, slideOnScrollMobileView) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('slide');
-                slideOnScrollMobileView.unobserve(entry.target);
-            }
-        });
-    }, sliderOptions);
 
     faders.forEach(fader => {
         appearOnScrollMobileView.observe(fader);
     })
 
-    revealers.forEach(revealer => {
-        revealOnScrollMobileView.observe(revealer);
-    })
-
-    sliders.forEach(slider => {
-        slideOnScrollMobileView.observe(slider);
-    })
 } else {
     const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
         entries.forEach(entry => {
