@@ -1,13 +1,16 @@
 @use '../base/space' as *
 
 // CTA "READ MORE" Button
+
+// # DEFAULT || DESKTOP
 .container-read-more-btn
-    margin-right: 16px
-    position: relative
-    display: flex
-    justify-content: flex-start
-    margin-top: $mobile-space-lv-half
-    padding-bottom: $mobile-space-lv-2
+    // margin-right: 32px
+    // position: relative
+    // display: flex
+    // justify-content: flex-start
+    // ! WIP >>
+    margin-top: $desktop-space-lv-half
+    padding-bottom: $desktop-space-lv-2
     z-index: 99
     .read-more-btn
         display: inline-block
@@ -15,7 +18,34 @@
         &:hover
             display: block
             text-decoration: underline
+            // ! <<
+// ! WIP - Not sure what to do for desktop yet
 
-.container-read-more-btn.open
-    padding-bottom: $mobile-space-lv-1 !important
-    // padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-1}) !important
+// # TABLET
+@media screen and (max-width: 1024px)
+    .container-read-more-btn
+        margin-right: 32px
+        position: relative
+        display: flex
+        justify-content: flex-start
+        margin-top: $desktop-space-lv-half
+        padding-bottom: $desktop-space-lv-2
+        z-index: 99
+        .read-more-btn
+            display: inline-block
+            &:hover
+                display: block
+                text-decoration: underline
+    .container-read-more-btn.open
+        padding-bottom: $desktop-space-lv-1 !important
+        // padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-1}) !important
+
+// # MOBILE
+@media screen and (max-width: 600px)
+    .container-read-more-btn
+        margin-right: 16px
+        margin-top: $mobile-space-lv-half
+        padding-bottom: $mobile-space-lv-2
+    .container-read-more-btn.open
+        padding-bottom: $mobile-space-lv-1 !important
+        // padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-1}) !important

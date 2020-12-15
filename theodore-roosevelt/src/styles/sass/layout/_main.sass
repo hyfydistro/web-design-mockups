@@ -2,19 +2,22 @@
 @use '../base/color' as color
 
 // todo
-// Add animation effects
 // tablet: create timeline component
 // desktop: create timeline component
 
 main
     h2
+        position: relative
         margin-top: $desktop-space-lv-4
         margin-bottom: $desktop-space-lv-2
         text-align: center
     .timeline
         margin: 0 auto
+        .timeline-dot
+            background: color.$text-color-90
+            border-radius: 50%
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 1024px)
     main
         display: flex
         justify-content: center
@@ -22,16 +25,94 @@ main
         position: relative
         width: 100%
         height: auto
+        .timeline
+            width: 100%
+            .timeline-wrap
+                @include tablet-margin-preset
+                position: relative
+                // padding-left: 25px // ! Should hanges on media query
+                // margin-left: 9px // ! Should hanges on media query
+                border-left: 4px solid #1A1A1A
+                // * Hotfix bottom-padding for unique div #6 VV BELOW VV
+            .timeline-wrap.plus-bot-padding
+                padding-bottom: $desktop-space-lv-2
+            .timeline-item
+                position: relative
+                padding-left: calc(#{$desktop-space-lv-1} + 16px) // * $desktop-space-lv-1 + extra between line component and timeline-item
+            .timeline-wrap:last-child
+                border-left: 4px solid transparent
+            .timeline-item:last-child
+                border-left: 4px solid transparent
+            .timeline-dot
+                position: absolute
+                top: 3px
+                left: -16px
+                width: 20px
+                height: 20px
+                z-index: 22 // ! Continue Below
+            .timeline-bg-dot
+                position: absolute
+                top: -1.5px
+                left: -21px
+                width: calc(20px + 9px)
+                height: calc(20px + 9px)
+                background: #FFFFFF
+                border-radius: 50%
+                z-index: 11
+            .timeline-dot.start
+                top: 0px
+                left: -18.5px
+                width: 24px
+                height: 24px
+                background: #FFFFFF
+                border: 4px solid color.$text-color-90
+            .timeline-bg-dot.start
+                background: rgba(0,0,0,0)
+            .timeline-dot.end
+                top: 0px
+                left: -18.5px
+                width: 24px
+                height: 24px
+            .timeline-bg-dot.end
+                background: rgba(0,0,0,0)
+            .timeline-bg-dot.end.special
+                &::before
+                    position: absolute
+                    content: ''
+                    top: -33.5px
+                    left: 13px
+                    width: 4px
+                    height: calc(#{$desktop-space-lv-half} + #{$desktop-space-lv-2})
+                    background: color.$text-color-90
+                    // border-radius: 50%
+                    z-index: -99
+            h3
+                position: relative
+                top: calc(#{$desktop-space-lv-half} * -1)
+                padding: 12.75px 25.5px
+                width: 112.8px
+                color: #FFFFFF
+                background: #000000
+            .text-box
+                margin-top: $desktop-space-lv-half
+        div.timeline-wrap.open
+            padding-top: calc(#{$desktop-space-lv-half} + #{$desktop-space-lv-2})
+
+@media screen and (max-width: 600px)
+    main
+        // display: flex
+        // justify-content: center
+        // flex-direction: column
+        // position: relative
+        // width: 100%
+        // height: auto
         h2
-            position: relative
             margin-top: $mobile-space-lv-4
             margin-bottom: $mobile-space-lv-2
-            text-align: center
         .timeline
             width: 100%
             .timeline-wrap
                 @include mobile-margin-preset
-                position: relative
                 // background: #ccc
                 // padding-left: 25px // ! Should hanges on media query
                 // margin-left: 9px // ! Should hanges on media query
@@ -40,8 +121,7 @@ main
             .timeline-wrap.plus-bot-padding
                 padding-bottom: $mobile-space-lv-2
             .timeline-item
-                position: relative
-                padding-left: 25px // ! Should hanges on media query
+                padding-left: 25px // * + plus $mobile-space-lv- >> Check Ref
             .timeline-wrap:last-child
                 border-left: 2px solid transparent
             .timeline-item:last-child
@@ -52,19 +132,6 @@ main
                 left: -9px
                 width: 12px
                 height: 12px
-                background: color.$text-color-90
-                border-radius: 50%
-                z-index: 22
-                // &::before
-                //     position: absolute
-                //     content: ''
-                //     top: -2px
-                //     left: -2.5px
-                //     width: calc(12px + 4.5px)
-                //     height: calc(12px + 4.5px)
-                //     background: #FFFFFF
-                //     border-radius: 50%
-                    // z-index: -1
             .timeline-bg-dot
                 position: absolute
                 top: 1px
@@ -81,16 +148,6 @@ main
                 height: 16px
                 background: #FFFFFF
                 border: 2px solid color.$text-color-90
-                // &::before
-                //     position: absolute
-                //     content: ''
-                //     top: -4px
-                //     left: -4.5px
-                //     width: calc(16px + 4.5px)
-                //     height: calc(16px + 4.5px)
-                //     background: #FFFFFF
-                //     border-radius: 50%
-                //     z-index: -11
             .timeline-bg-dot.start
                 background: rgba(0,0,0,0)
             .timeline-dot.end
@@ -98,16 +155,6 @@ main
                 left: -11px
                 width: 16px
                 height: 16px
-                // &::before
-                //     position: absolute
-                //     content: ''
-                //     top: -2.5px
-                //     left: -2.5px
-                //     width: calc(16px + 4.5px)
-                //     height: calc(16px + 4.5px)
-                //     background: #FFFFFF
-                //     border-radius: 50%
-                //     z-index: -99
             .timeline-bg-dot.end
                 background: rgba(0,0,0,0)
             .timeline-bg-dot.end.special
@@ -132,6 +179,5 @@ main
                 background: #000000
             .text-box
                 margin-top: $mobile-space-lv-half
-
-div.timeline-wrap.open
-    padding-top: calc(#{$mobile-space-lv-half} + #{$mobile-space-lv-2})
+        div.timeline-wrap.open
+            padding-top: calc(#{$mobile-space-lv-half} + #{$mobile-space-lv-2})
