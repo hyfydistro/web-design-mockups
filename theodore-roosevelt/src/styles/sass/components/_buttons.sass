@@ -5,11 +5,8 @@
 // # DEFAULT || DESKTOP
 .container-read-more-btn
     position: relative
-    // margin-right: 32px
-    // position: relative
     display: flex
     justify-content: center
-    // ! WIP >>
     margin-top: $desktop-space-lv-half
     padding-bottom: $desktop-space-lv-2
     z-index: 99
@@ -33,19 +30,11 @@
 @media screen and (max-width: 1024px)
     .container-read-more-btn
         margin-right: 32px
-        position: relative
-        display: flex
         justify-content: flex-start
-        margin-top: $desktop-space-lv-half
-        padding-bottom: $desktop-space-lv-2
-        z-index: 99
-        .read-more-btn
-            display: inline-block
-            &:hover
-                display: block
-                text-decoration: underline
-    .container-read-more-btn.open
-        padding-bottom: $desktop-space-lv-1 !important
+
+    // .container-read-more-btn.open
+        // padding-right: 0
+        // padding-bottom: $desktop-space-lv-1 !important
         // padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-1}) !important
 
 // # MOBILE
@@ -56,4 +45,5 @@
         padding-bottom: $mobile-space-lv-2
     .container-read-more-btn.open
         padding-bottom: $mobile-space-lv-1 !important
+        // padding-right: 0
         // padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-1}) !important
