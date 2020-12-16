@@ -46,3 +46,11 @@ Columns: 12x
 column width:  55.25px ea.
 Column gap: 27px ea.
 L / R Margins: 32px
+
+## Other
+
+### Image placeholder
+
+```
+<img src="https://via.placeholder.com/150"/>
+```

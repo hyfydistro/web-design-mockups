@@ -313,19 +313,19 @@ From light to dark order.
 *Small size*
 
 max-width: 600px
-height (optional): auto
+height (optional): 288 (?)
 
 
 *Medium size*
 
 width: 1024px
-height (optional): auto
+height (optional): 400px (800 * 0.5)
 
 
 *Large size*
 
 width: 1280px
-height (optional): auto
+height (optional): 384px (768 * 0.5)
 
 #### Source Checklist
 
@@ -618,6 +618,16 @@ distance between line component: 9px above and below
 Align center with the dates components (technically, the background component).
 
 #### Desktop
+
+**timeline container**
+width: 711.2px
+
+**timeline content**
+- date
+- text
+- "Read More" Button
+height: 318.6px
+width: 711.2px
 
 ...
 

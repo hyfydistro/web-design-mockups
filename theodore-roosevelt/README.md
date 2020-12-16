@@ -137,3 +137,10 @@ npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 - [Element.insertAdjacentElement()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement)
 - [How do you create variables in for loop?](https://stackoverflow.com/questions/10325651/how-do-you-create-variables-in-for-loop)
 - [How to select all other values in an array except the ith element?](https://stackoverflow.com/questions/15361189/how-to-select-all-other-values-in-an-array-except-the-ith-element)
+- [Flexbox Timeline Layout](https://codepen.io/paulhbarker/pen/apvGdv)
+- [How to make a vertical timeline with HTML, CSS, and Flex](https://stackoverflow.com/questions/54371446/how-to-make-a-vertical-timeline-with-html-css-and-flex)
+- [How to Create Responsive Vertical Timeline using Flexbox](https://youtu.be/iYOiK2FK4rs)
+
+### Error Reference
+
+- [How do I solve this? “Uncaught TypeError: Cannot read property 'appendChild' of null”](https://stackoverflow.com/questions/37133990/how-do-i-solve-this-uncaught-typeerror-cannot-read-property-appendchild-of)
