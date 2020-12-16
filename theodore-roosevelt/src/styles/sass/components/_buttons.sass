@@ -8,7 +8,7 @@
     display: flex
     justify-content: center
     margin-top: $desktop-space-lv-half
-    padding-bottom: $desktop-space-lv-2
+    padding-bottom: calc(#{$desktop-space-lv-2} + #{$desktop-space-lv-half})
     z-index: 99
     .read-more-btn
         display: inline-block
@@ -16,15 +16,14 @@
         &:hover
             display: block
             text-decoration: underline
-            // ! <<
 .container-read-more-btn.open
     position: relative
     width: 100%
     padding-bottom: $desktop-space-lv-1 !important
-    padding-right: $desktop-space-lv-1 // ! ADDITION
+    padding-right: $desktop-space-lv-1
     display: flex
     justify-content: flex-end
-// ! WIP - Not sure what to do for desktop yet
+
 
 // # TABLET
 @media screen and (max-width: 1024px)
@@ -32,18 +31,16 @@
         margin-right: 32px
         justify-content: flex-start
 
-    // .container-read-more-btn.open
-        // padding-right: 0
-        // padding-bottom: $desktop-space-lv-1 !important
-        // padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-1}) !important
 
 // # MOBILE
 @media screen and (max-width: 600px)
     .container-read-more-btn
         margin-right: 16px
         margin-top: $mobile-space-lv-half
-        padding-bottom: $mobile-space-lv-2
+        padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-half})
     .container-read-more-btn.open
         padding-bottom: $mobile-space-lv-1 !important
-        // padding-right: 0
-        // padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-1}) !important
+
+// * toggle script
+.more
+    display: none
