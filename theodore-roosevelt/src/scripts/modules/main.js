@@ -1,8 +1,7 @@
-// main module
+// # MAIN
 
-// CTA "Read More"
-// For Mobile
-
+// CTA "READ MORE" Button
+// Targets:
 const readMoreBtn = document.querySelectorAll('.read-more-btn');
 const moreText = document.querySelectorAll('.more');
 const dots = document.querySelectorAll('.dots');
@@ -12,23 +11,12 @@ const ContainerReadMoreBtn = document.querySelectorAll('.container-read-more-btn
 const timelineWrappers = document.querySelectorAll('.timeline-wrap');
 
 const timelineBgEnd = document.querySelector('.timeline-bg-dot.end');
-// todo
-// release onload or use 'defer' on scrip tag
-// Create media query
-// Create for Desktop display
-// Create an object literal for Desktop for image sizes
-// Create an object literal for Tablet for image sizes
-// CSS Fix gallery__text display for under images only
 
 const timelineItems = document.querySelectorAll('.timeline-item');
 
 const timelineItem = document.querySelector('.timeline-item');
 const galleryContainer = document.querySelectorAll('.gallery');
 
-// galleryContainer
-// window.onload = function addButtonListener() {
-
-// }
 // # "READ MORE" Button - toggle function
 // change button text
 // change button position
@@ -53,38 +41,33 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
 
             // * NOTE: timelineWrappers length and readMoreBtn length are different!
             if (i >= 6) {
-                // ! WIP - Fix last timeline-item Unable to close when clicked >>
-                // Target last element
+                // * Hotfix: unresponsive click event listener for last timeline-item
+                // * Situation: Unable to close
+                // Condtion: Target last element
                 if (i == readMoreBtn.length - 1) {
                     // timelineWrappers[i + 1].classList.add('open');
 
                     timelineWrappers[i + 1].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
                     timelineWrappers[i + 1].insertAdjacentElement('afterend', galleryContainer[i]);
                 } else {
-                    // * Styles: Give padding to NEXT timelineWrappers
+                    // * Styles: Give padding to NEXT timeline-wrap
                     timelineWrappers[i + 2].classList.add('open');
 
-                    // ! WIP
                     timelineWrappers[i + 1].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
                     timelineWrappers[i + 1].insertAdjacentElement('afterend', galleryContainer[i]);
                 }
-
-                // ! <<
-
             } else {
-                // ! Original
                 timelineWrappers[i + 1].classList.add('open');
 
                 timelineWrappers[i].insertAdjacentElement('afterend', ContainerReadMoreBtn[i]);
                 timelineWrappers[i].insertAdjacentElement('afterend', galleryContainer[i]);
             }
 
-            // ! WIP
-            // Special stylize for uniqeu situations
+            // * Situation: [Styles addition / hotfix]
+            // add aesthetic for last two gallery interaction
             if (i == readMoreBtn.length - 2) {
                 timelineBgEnd.classList.add('special');
             }
-            // ! <<
         } else {
             console.log('close');
             dots[i].style.display = 'inline';
@@ -97,25 +80,19 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             isOpened = false;
 
             if (i >= 6) {
-                // ! WIP - Fix last timeline-item Unable to close when clicked >>
                 if (i == readMoreBtn.length - 1) {
-                    // ! UNLESS... if the previous element for the last timeline wrapper is open, keep class open (the padding)
-
-                    // ! <<
+                    // * UNLESS... if the previous element for the last timeline wrapper is open, keep class open (the padding)
                     timelineWrappers[i + 1].classList.remove('open');
 
                     timelineItems[i + 1].insertAdjacentElement('beforeend', galleryContainer[i]);
                     timelineItems[i + 1].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
                 } else {
-
                     timelineWrappers[i + 2].classList.remove('open');
 
                     timelineItems[i + 1].insertAdjacentElement('beforeend', galleryContainer[i]);
                     timelineItems[i + 1].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
 
                 }
-
-                // ! <<
             } else {
                 timelineWrappers[i + 1].classList.remove('open');
 
@@ -123,19 +100,14 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
                 timelineItems[i].insertAdjacentElement('beforeend', ContainerReadMoreBtn[i]);
             }
 
-            // ! WIP
-            // Special stylize for uniqeu situations
+            // * Situation: [Styles addition / hotfix]
+            // add aesthetic for last two gallery interaction
             if (galleryContainer[readMoreBtn.length - 2].classList.contains('open')) {
                 // don't do anything // return values
                 timelineWrappers[i + 1].classList.add('open');
             } else if (i == readMoreBtn.length - 2) {
                 timelineBgEnd.classList.remove('special');
             }
-            // Special stylize for uniqeu situations
-            // if (i == readMoreBtn.length - 2) {
-            //     timelineBgEnd.classList.remove('special');
-            // }
-            // ! <<
         }
 
         // * LOGGING
@@ -143,7 +115,9 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
     });
 }
 
-// # Gallery setup
+
+// # GALLERY SETUP
+
 const mq600 = window.matchMedia("(max-width: 600px)");
 const mq1024 = window.matchMedia("(max-width: 1024px)");
 
@@ -400,11 +374,9 @@ if (mq600.matches) {
 
     createGallery(galleryProperty);
 }
-
 // total x13 timeline items
 
 
-// ! Creating Gallery
 function createGallery(galleryProperty) {
     for (let key in galleryProperty) {
         // # Create '.gallery__content',
@@ -470,7 +442,6 @@ function createGallery(galleryProperty) {
         // # Append the whole gallery content together
         let index = galleryProperty[key]['index'];
 
-        // ! WIP >>
         // * Condition for the 6th only text maintenance
         if (index >= 6) {
             galleryContainer[index - 1].appendChild(galleryContent);
@@ -478,7 +449,6 @@ function createGallery(galleryProperty) {
             galleryContainer[index].appendChild(galleryContent);
         }
 
-        // ! <<
         galleryContent.appendChild(galleryImageSlider);
         galleryImageSlider.appendChild(images);
         galleryContent.appendChild(galleryText);
@@ -498,7 +468,6 @@ function createGallery(galleryProperty) {
             let nextBtn = document.createElement('a');
             nextBtn.className = 'next';
 
-            // ! WIP >>
             // Create prev / next background for button, and add class
             let prevBtnBg = document.createElement('span');
             prevBtnBg.className = 'prev-btn-bg';
@@ -509,7 +478,6 @@ function createGallery(galleryProperty) {
             prevBtnBg.appendChild(prevBtn);
             nextBtnBg.appendChild(nextBtn);
 
-            // ! <<
             let slideIndex = 0;
 
             // Create dot container
