@@ -4,10 +4,11 @@
 
 // # DEFAULT || DESKTOP
 .container-read-more-btn
+    position: relative
     // margin-right: 32px
     // position: relative
-    // display: flex
-    // justify-content: flex-start
+    display: flex
+    justify-content: center
     // ! WIP >>
     margin-top: $desktop-space-lv-half
     padding-bottom: $desktop-space-lv-2
@@ -19,6 +20,13 @@
             display: block
             text-decoration: underline
             // ! <<
+.container-read-more-btn.open
+    position: relative
+    width: 100%
+    padding-bottom: $desktop-space-lv-1 !important
+    padding-right: $desktop-space-lv-1 // ! ADDITION
+    display: flex
+    justify-content: flex-end
 // ! WIP - Not sure what to do for desktop yet
 
 // # TABLET

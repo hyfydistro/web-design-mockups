@@ -2,20 +2,165 @@
 @use '../base/color' as color
 
 // todo
+// add 960pxmedia query
 // tablet: create timeline component
 // desktop: create timeline component
 
 main
+    margin-bottom: $desktop-space-lv-4
     h2
         position: relative
         margin-top: $desktop-space-lv-4
         margin-bottom: $desktop-space-lv-2
         text-align: center
+        // ! WIP #2 timeline component for Desktop
+        // ? Redo blue print ???
     .timeline
+        position: relative
+        width: 711.2px
+        max-width: 711.2px
+        // min-width: 711.2px
+        // width: 800px
+        // max-width: 960px
         margin: 0 auto
+        height: auto
+        display: flex
+        // flex-wrap: wrap
+        // justify-content: center
+        align-items: center
+        flex-direction: column
+        // ! center indicator
+        // &::before
+        //     content: ''
+        //     position: absolute
+        //     height: 100%
+        //     width: 4px
+        //     background: blue
+        //     left: 50%
+        //     transform: translateX(-50%)
+        //     z-index: 99
+        .timeline-wrap
+            position: relative
+            display: flex
+            // display: block
+            // flex-wrap: nowrap
+            // flex-direction: column
+            // justify-content: center
+            // width: 318.6px
+            width: auto
+            // margin-bottom: 500px
+            // width: 40%
+            // width: 100%
+            // width: 50%
+            // display: flex
+            // flex-direction: column
+            // padding
+            // add margin bottom
+        // .box-right
+        //     order: 1
+            // padding-right: 10px
+        // .box-left
+        //     order: 2
+            // padding-left: 10px
+        .timeline-wrap:nth-child(odd)
+            background-color: yellow
+            // display: flex
+            // padding-right: calc((#{$desktop-space-lv-1} + 16px) * -1) // * $desktop-space-lv-1 + extra between line component and timeline-item
+            // sml circle distance 27 + 10
+            // big circle distance 27 + 13
+            padding-right: calc(#{$desktop-space-lv-1} + 13px) // * $desktop-space-lv-1 + extra between line component and timeline-item
+            border-right: 4px solid #1A1A1A
+            // transform: translateX(-30px) // ! See guidelines
+            transform: translateX(-179px) // ! See guidelines
+        .timeline-wrap:nth-child(even)
+            background-color: cyan
+            padding-left: calc(#{$desktop-space-lv-1} + 13px) // * $desktop-space-lv-1 + extra between line component and timeline-item
+            border-left: 4px solid #1A1A1A
+            transform: translateX(180px) // ! See guidelines
+        // .time-wrap:last-child
+        //     margin-bottom: 0 // ?
+        div.timeline-wrap.end.box-right
+            border-right: 4px solid transparent !important
+        .timeline-item
+            position: relative
+            // width: 40%
+            h3.date
+                position: relative
+                top: calc(#{$desktop-space-lv-half} * -1)
+                padding: 12.75px 25.5px
+                width: 112.8px
+                color: #FFFFFF
+                background: #000000
+            .text-box
+                margin-top: $desktop-space-lv-half
+                width: 318.6px
+        .box-right h3.date
+            left: calc(246px - 44px)
+            // left: calc(246px - (#{$desktop-space-lv-half} + 13px))
+        .timeline-dot
+            position: absolute
+            width: 20px
+            height: 20px
+            background-color: color.$text-color-90
+            top: 0
+            // left: 0
+            // top: 3px
+            // left: -16px
+            border-radius: 50%
+            z-index: 22
+        .box-right .timeline-dot.start
+            width: 24px
+            height: 24px
+            left: 348px
+            background: #ffffff
+            border: 4px solid color.$text-color-90
+        .box-right .timeline-dot.end
+            width: 24px
+            height: 24px
+            left: 348px
+        .box-right .timeline-dot
+            left: 350px
+        .box-left .timeline-dot
+            left: -52px
+        .timeline-bg-dot
+            position: absolute
+            // top: -1.5px
+            // left: -21px
+            width: calc(20px + 9px)
+            height: calc(20px + 9px)
+            background: #FFFFFF
+            border-radius: 50%
+            z-index: 11
+        .box-right .timeline-bg-dot
+            top: -4px
+            left: 346px
+        .box-left .timeline-bg-dot
+            top: -4px
+            left: -57px
+        .box-right .timeline-bg-dot.start,
+        .box-right .timeline-bg-dot.end
+            background: rgba(0,0,0,0)
+        // .timeline-dot:nth-child(odd)
+        //     transform: translate(50%, -50%)
+            // right: 30px
+        // .timeline-dot:nth-child(even)
+        //     transform: translate(-50%, -50%)
+        //     left: -30px
+    .timeline-bg-dot.end.special
+        &::before
+            position: absolute
+            content: ''
+            top: -47.5px
+            left: 13px
+            width: 4px
+            height: calc(#{$desktop-space-lv-half} + #{$desktop-space-lv-2})
+            background: color.$text-color-90
+            z-index: -99
         .timeline-dot
             background: color.$text-color-90
             border-radius: 50%
+    div.timeline-wrap.open // * Toggle Script
+        padding-top: calc(#{$desktop-space-lv-half} + #{$desktop-space-lv-2})
 
 @media screen and (max-width: 1024px)
     main
@@ -116,7 +261,7 @@ main
                 // background: #ccc
                 // padding-left: 25px // ! Should hanges on media query
                 // margin-left: 9px // ! Should hanges on media query
-                border-left: 2px solid #1A1A1A
+                    border-left: 2px solid #1A1A1A
                 // * Hotfix bottom-padding for unique div #6 VV BELOW VV
             .timeline-wrap.plus-bot-padding
                 padding-bottom: $mobile-space-lv-2

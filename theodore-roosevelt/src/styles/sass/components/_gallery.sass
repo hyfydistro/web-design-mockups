@@ -2,7 +2,7 @@
 @use '../base/color' as color
 
 // todo
-// create frame drop down ANIMATION
+// Create similar styles to MOBILE-TABLET for DESKTOP
 // extend autoprefixer ???
 // media query
     // delete double used things
@@ -12,6 +12,118 @@
 .gallery
     display: none
 
+//! WIP >>
+.gallery.open
+    position: relative
+    display: block
+    width: 100%
+    height: 467px // total fig image 400px + fig caption 67px
+    margin-top: $desktop-space-lv-1
+
+.gallery__content
+    width: 100%
+    height: 100%
+    background: #FFFFFF
+
+.gallery__image
+    position: relative
+    width: 100%
+    height: 400px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: color.$text-color-90
+
+.gallery__image img
+    position: relative
+    max-height: 400px
+    max-width: 100vw
+    width: auto
+    display: flex
+    object-fit: contain
+    justify-content: center
+    align-items: center
+
+.gallery__text
+    text-align: center
+    margin-top: $desktop-space-lv-1
+
+div.gallery__image
+    span.prev-btn-bg
+        cursor: pointer
+        position: absolute
+        width: 72px
+        height: 72px
+        border-radius: 50%
+        margin-left: $desktop-space-lv-1
+        display: inline-block
+        left: 0
+        background-color: rgba(204, 204, 204, 0.2)
+        &:hover
+            background-color: rgba(204, 204, 204, 0.5)
+    a.prev
+        cursor: pointer
+        position: absolute
+        width: 31.5px
+        height: 31.5px
+        margin-left: $desktop-space-lv-1
+        border: solid color.$text-color-20
+        border-width: 0 4px 4px 0
+        display: inline-block
+        transform: rotate(135deg)
+        z-index: 99
+        left: 0px
+        top: 20px
+    span.next-btn-bg
+        cursor: pointer
+        position: absolute
+        width: 72px
+        height: 72px
+        border-radius: 50%
+        margin-right: $desktop-space-lv-1
+        border-width: 0 3px 3px 0
+        display: inline-block
+        background-color: rgba(204, 204, 204, 0.2)
+        right: 0
+        &:hover
+            background-color: rgba(204, 204, 204, 0.5)
+    a.next
+        cursor: pointer
+        position: absolute
+        width: 31.5px
+        height: 31.5px
+        margin-right: $desktop-space-lv-1
+        border: solid color.$text-color-20
+        border-width: 0 4px 4px 0
+        display: inline-block
+        transform: rotate(-45deg)
+        z-index: 99
+        right: 0px
+        top: 20px
+.container-dots
+    position: absolute
+    width: 100%
+    display: flex
+    bottom: 0
+    justify-content: center
+    z-index: 99
+
+span.dot:first-child
+    margin-right: $desktop-space-lv-1
+
+span.dot
+    display: inline-block
+    margin-bottom: $desktop-space-lv-1
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background-color: rgba(128, 128, 128, 0.3) // $text-color-90
+    // background-color: rgba(204, 204, 204, 0.5) //$text-color-20
+
+span.dot:hover,
+span.dot.active
+    background-color: rgba(128, 128, 128, 0.8) // $text-color-90
+// ! <<
 // # TABLET
 @media screen and (max-width: 1024px)
     .gallery
