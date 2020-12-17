@@ -23,9 +23,6 @@ const galleryContainer = document.querySelectorAll('.gallery');
 for (let i = 0; i < readMoreBtn.length; i += 1) {
     let isOpened = false;
 
-    // * LOGGING
-    console.log('Initialising \'Read More\' button Event Listener for', i);
-
     readMoreBtn[i].addEventListener('click', function moreContent() {
 
         if (!isOpened) {
@@ -110,8 +107,6 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
             }
         }
 
-        // * LOGGING
-        console.log('Finish \'Read More\' button Event Listener for', i);
     });
 }
 
@@ -398,13 +393,8 @@ function createGallery(galleryProperty) {
         // When 'click' move previous or next
         // Disable  prev / next when at the end or beginning of length.
 
-        // * LOGGING
-        console.log('Creating gallery', galleryProperty[key]['index'], key);
-
         // ! WIP - Need to skip this text section to display images >>
         if (key == '1895') {
-            // * LOGGING
-            console.log('Pass condition: Skip 1', 'Creating gallery', galleryProperty[key]['index'], key);
             continue;
         }
 
@@ -458,10 +448,6 @@ function createGallery(galleryProperty) {
         // Create gallery ImageSlide function if conditions are met
         // If 'url' length is greater than 1
         if (galleryProperty[key]['url'].length > 1) {
-
-            // * LOGGING
-            console.log('Pass condition: gallery exceeds more than 1 images available', 'Creating gallery', galleryProperty[key]['index']);
-
             // Create prev / next button
             let prevBtn = document.createElement('a');
             prevBtn.className = 'prev';
@@ -520,9 +506,6 @@ function createGallery(galleryProperty) {
 
                 containerDots.appendChild(dotArr[j]);
             }
-
-            // * LOGGING
-            // console.log('Pass condition 1', 'Creating gallery', galleryProperty[key]['index']);
 
             // Add Event Listener
             prevBtnBg.addEventListener('click', function () {
@@ -606,8 +589,6 @@ function createGallery(galleryProperty) {
             galleryImageSlider.appendChild(nextBtnBg);
         }
 
-        // * LOGGING
-        console.log('Finish gallery', galleryProperty[key]['index'], key);
     }
 }
 
