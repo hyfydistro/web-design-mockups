@@ -8,8 +8,6 @@ main
         margin-top: $desktop-space-lv-4
         margin-bottom: $desktop-space-lv-2
         text-align: center
-        // ! WIP #2 timeline component for Desktop
-        // ? Redo blue print ???
     .timeline
         position: relative
         width: 711.2px
@@ -37,7 +35,7 @@ main
             width: auto
             // * Hotfix bottom-padding for unique div #6 VV BELOW VV
         .timeline-wrap.plus-bot-padding
-            padding-bottom: $desktop-space-lv-2
+            padding-bottom: calc(#{$desktop-space-lv-2} + #{$desktop-space-lv-half})
         .timeline-wrap:nth-child(odd)
             border-right: 4px solid color.$text-color-90
             transform: translateX(-179px)
@@ -165,7 +163,6 @@ main
         position: relative
         width: 100%
         height: auto
-        // ? add or not: margin-bottom: $desktop-space-lv-4
         .timeline
             width: 100%
             display: block // ! Reset Component
@@ -209,7 +206,7 @@ main
                 border-left: 2px solid #1A1A1A !important
                 // * Hotfix bottom-padding for unique div #6 VV BELOW VV
             .timeline-wrap.plus-bot-padding
-                padding-bottom: $mobile-space-lv-2
+                padding-bottom: calc(#{$mobile-space-lv-2} + #{$mobile-space-lv-half})
             div.timeline-wrap.end.box-right
                 border-left: 4px solid transparent !important
             .timeline-item
