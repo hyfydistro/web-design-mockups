@@ -226,6 +226,9 @@ exports.transpileJs = transpileJs;
 exports.watchDevFiles = watchDevFiles;
 exports.dev = series(parallel(compileSassToCss, transpileJs), watchDevFiles);
 
+// PRE-PRODUCTION STAGE
+exports.preprod = parallel(compileSassToCss, transpileJs);
+
 // PRODUCTION STAGE
 exports.concatCSS = concatCSS;
 exports.minifyJS = minifyJS;
