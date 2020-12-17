@@ -18,7 +18,11 @@ Basic Devices
 
 ## Sample
 
-(A UI Display in Responsive Design: Mobile, Desktop.)
+![tr - desktop v2 0](https://user-images.githubusercontent.com/24542308/102479855-08aeac00-4092-11eb-9727-101f6fe2cdb0.png)
+
+
+![tr - mobile v11 1](https://user-images.githubusercontent.com/24542308/102479884-119f7d80-4092-11eb-9b80-c5f85c64a746.png)
+
 
 ## Supports
 
@@ -36,15 +40,14 @@ Basic Devices
 
 - [ ] Old Browser Support - **OBS**
 
-- [ ] Progressive Web Application **PWA**
-      - [ ] Service Worker
+- [x] Progressive Web Application **PWA**
+      - [x] Service Worker
 
 - [ ] Graceful Degradation / *Progressive Enhancement* **PE**
     - CSS PE
     - JavaScript PE
 
-- [ ] Available at GitHub Pages (SOON)
-    - [ ] Link provided above
+- [x] Available at GitHub Pages
 
 
 ## Browsers Compatibility
@@ -80,8 +83,7 @@ It is possible Microsoft Edge will work well (because it runs on the same engine
 * gulp-html-minifier
 * gulp-dart-sass
 * autoprefixer
-* clean-css [REMOVED]
-* gulp-clean-css [ADDED]
+* gulp-clean-css
 * gulp-postcss
 * gulp-babel@next @babel/core
 * gulp-uglify
@@ -101,7 +103,7 @@ Q. What version of babel you want to transpile to?
 * browser-sync
 
 ```
-npm install --save-dev gulp gulp-html-minifier gulp-dart-sass autoprefixer clean-css gulp-postcss gulp-sourcemaps gulp-uglify gulp-terser gulp-imagemin gulp-concat browser-sync
+npm install --save-dev gulp gulp-html-minifier gulp-dart-sass autoprefixer gulp-clean-css gulp-postcss gulp-sourcemaps gulp-uglify gulp-terser gulp-imagemin gulp-concat browser-sync
 ```
 
 * gulp-babel
@@ -116,7 +118,7 @@ npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 
 ## Credits
 
-- [](https://www.compart.com/en/unicode/search?q=arrow#characters)
+- [Arrow Characters](https://www.compart.com/en/unicode/search?q=arrow#characters)
 - [Create your design system, part 4: Spacing](https://medium.com/codyhouse/create-your-design-system-part-4-spacing-895c9213e2b9)
 - [gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css)
 - [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)
