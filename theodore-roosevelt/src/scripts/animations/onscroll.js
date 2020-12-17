@@ -1,6 +1,6 @@
 console.log("Initiating animation");
 
-// ! Safari does not support 'Intersection Observer', use polyfill
+// ! Safari does not support 'Intersection Observer', use polyfill (?)
 
 const mq600 = window.matchMedia("(max-width: 600px)");
 const mq1024 = window.matchMedia("(max-width: 1024px)");
@@ -8,7 +8,6 @@ const mq1024 = window.matchMedia("(max-width: 1024px)");
 // Add-on class appear
 const faders = document.querySelectorAll('.fader');
 // Add-on class slide
-// ? Specify direction if there's more
 const sliders = document.querySelectorAll('.slider');
 // Add-on class reveal
 const revealers = document.querySelectorAll('.revealer');
@@ -43,24 +42,6 @@ const sliderOptions = {
     // rootMargin: "0px 0px -250px 0px"
 };
 
-
-// # Sliders Event Listener
-
-// const slideInOnScroll = new IntersectionObserver(function (entries, slideInOnScroll) {
-//     entries.forEach(entry => {
-//         if (!entry.isIntersecting) {
-//             return;
-//         } else {
-//             entry.target.classList.add('slider');
-//             slideInOnScroll.unobserve(entry.target);
-//         }
-//     });
-// }, sliderOptions);
-
-// sliders.forEach(slider => {
-//     slideInOnScroll.observe(slider)
-// })
-// ! WIP - Only tested on mobile, need to develop for desktop (and tablet ?) size
 // # REVEALERS
 const revealOnScrollMobileView = new IntersectionObserver(function (entries, revealOnScrollMobileView) {
     entries.forEach(entry => {
@@ -94,12 +75,7 @@ sliders.forEach(slider => {
 })
 
 
-
-// # Faders Event Listerner
-
 if (mq600.matches) {
-    // ! UNDER TESTING
-    console.log("media query working");
     // # FADERS
     const appearOnScrollMobileView = new IntersectionObserver(function (entries, appearOnScroll) {
         entries.forEach(entry => {
