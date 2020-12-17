@@ -37,8 +37,9 @@ const paths = {
         cssDEST: "./dist/"
     },
     scripts: {
-        jsSRC: "./src/**/*.js",
-        jsDEST: "./dist/js/"
+        jsSRC: "./src/scripts/**/*.js",
+        jsDEST: "./dist/js/",
+        jsServiceWorker: "./sw.js"
     },
     images: {
         faviconSRC: "./src/favicon.ico",
@@ -95,6 +96,18 @@ function copyFonts() {
         .pipe(dest('./dist/fonts/'));
 }
 
+// Copy Service Worker script to DIST repo
+function copyServiceWorker() {
+    return src('./src/sw.js')
+        .pipe(dest('./dist/'));
+}
+
+// Copy Manifest file to DIST repo
+function copyManifest() {
+    return src('./src/manifest.webmanifest')
+        .pipe(dest('./dist/'));
+}
+
 // =================
 // DEVELOPMENT STAGE
 // =================
@@ -131,7 +144,7 @@ function compileSassToCss() {
 function transpileJs() {
     // transpile into pre-ES6
     // concat into one file 'main.js'
-    return src(scriptWatchFiles)
+    return src(paths.scripts.jsSRC)
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']
@@ -203,7 +216,7 @@ exports.copyAndMinifyImages = copyAndMinifyImages;
 exports.copyFavicon = copyFavicon;
 exports.copyFonts = copyFonts;
 
-exports.predev = parallel(copyHtml, copyAndMinifyImages, copyFavicon, copyFonts);
+exports.predev = parallel(copyHtml, copyAndMinifyImages, copyFavicon, copyFonts,copyServiceWorker, copyManifest);
 
 // DEVELOPMENT STAGE
 exports.compileSassToCss = compileSassToCss;
