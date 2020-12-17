@@ -80,7 +80,8 @@ It is possible Microsoft Edge will work well (because it runs on the same engine
 * gulp-html-minifier
 * gulp-dart-sass
 * autoprefixer
-* clean-css
+* clean-css [REMOVED]
+* gulp-clean-css [ADDED]
 * gulp-postcss
 * gulp-babel@next @babel/core
 * gulp-uglify

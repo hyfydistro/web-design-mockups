@@ -5,7 +5,7 @@ const htmlmin = require('gulp-html-minifier'),
     sass = require('gulp-dart-sass'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
-    cleancss = require('clean-css'),
+    cleancss = require('gulp-clean-css'),
     babel = require('gulp-babel'),
     terser = require('gulp-terser'),
     imagemin = require('gulp-imagemin'),
@@ -172,21 +172,22 @@ function transpileJs() {
 // ? Rename 'style.css' to 'style.min.css'
 
 function concatCSS() {
-    return src('./src/*.css')
-        .pipe(sourcemaps.init({
-            // loadMaps: true,
-            largeFile: true
-        }))
-        .pipe(cleancss())
-        // .pipe(sourcemaps.write('./maps/'))
-        .pipe(sourcemaps.write())
+    return src('./src/style.css')
+        .pipe(cleancss({compatibility: 'ie11'}))
         .pipe(dest('./dist/'));
+        // .pipe(cleancss({compatibility: 'ie11'}))
+        // .pipe(sourcemaps.init({
+        //     // loadMaps: true,
+        //     largeFile: true
+        // }))
+            // .pipe(sourcemaps.write('./maps/'))
+        // .pipe(sourcemaps.write())
 }
 
 function minifyJS() {
-    return src('./src/main.js')
+    return src('./src/script.js')
         .pipe(terser())
-        .pipe(dest(paths.scripts.jsDEST));
+        .pipe(dest('./dist/'));
 }
 
 // ===========
