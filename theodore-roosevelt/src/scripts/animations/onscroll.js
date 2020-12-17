@@ -1,5 +1,3 @@
-console.log("Initiating animation");
-
 // ! Safari does not support 'Intersection Observer', use polyfill (?)
 
 const mq600 = window.matchMedia("(max-width: 600px)");

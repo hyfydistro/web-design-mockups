@@ -26,7 +26,6 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
     readMoreBtn[i].addEventListener('click', function moreContent() {
 
         if (!isOpened) {
-            console.log("open" + i);
             dots[i].style.display = 'none';
             moreText[i].style.display = 'inline';
             readMoreBtn[i].innerHTML = '<span class="double-arrow-symbol">&laquo;</span> READ LESS ';
@@ -66,7 +65,6 @@ for (let i = 0; i < readMoreBtn.length; i += 1) {
                 timelineBgEnd.classList.add('special');
             }
         } else {
-            console.log('close');
             dots[i].style.display = 'inline';
             moreText[i].style.display = 'none';
             readMoreBtn[i].innerHTML = 'READ MORE <span class="double-arrow-symbol">&raquo;</span>';
@@ -399,8 +397,6 @@ function createGallery(galleryProperty) {
         }
 
         if (galleryProperty[key]['index'] === 6) {
-            // * LOGGING
-            console.log('Pass condition: Skip 2', 'Creating gallery', galleryProperty[key]['index'], key);
             continue;
         }
         // ! <<
@@ -414,8 +410,6 @@ function createGallery(galleryProperty) {
         // Create '.gallery__text'
         let galleryText = document.createElement('div');
         galleryText.className = 'gallery__text';
-
-        console.log(galleryProperty[key]['url'][0]);
 
         // Create 'p' element
         let text = document.createElement('p');
