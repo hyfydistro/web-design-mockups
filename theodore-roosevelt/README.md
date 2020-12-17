@@ -22,7 +22,7 @@ Basic Devices
 
 ## Supports
 
-- [ ] Responsive mobile / tablet / laptop - **R**
+- [x] Responsive mobile / tablet / laptop - **R**
     Recommended:
         - 380w x 568h (min)
         - 768w x 1024h
@@ -144,3 +144,7 @@ npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 ### Error Reference
 
 - [How do I solve this? “Uncaught TypeError: Cannot read property 'appendChild' of null”](https://stackoverflow.com/questions/37133990/how-do-i-solve-this-uncaught-typeerror-cannot-read-property-appendchild-of)
+
+### Polyfills
+
+-[IntersectionObserver](https://github.com/w3c/IntersectionObserver/tree/master/polyfill)
