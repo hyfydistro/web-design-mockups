@@ -30,6 +30,8 @@ header
             background-attachment: fixed
             z-index: 88
         .container-gradient
+            display: flex
+            align-items: flex-end
             width: 100%
             @include tablet-padding-preset
             margin-left: auto
@@ -45,10 +47,11 @@ header
             margin-bottom: 0
         .container-title
             position: relative
-            display: flex
-            justify-content: flex-end
-            align-items: flex-start
-            flex-direction: column
+            display: block
+            // display: flex
+            // justify-content: flex-end
+            // align-items: flex-start
+            // flex-direction: column
             width: 960px
             margin: 0 auto
         .quote-box
@@ -78,7 +81,7 @@ header
                 @include tablet-padding-preset
                 height: auto
             .container-title
-                width: auto
+                width: 100% !important
                 position: relative
                 diplay: flex
                 justify-content: flex-start
@@ -105,7 +108,7 @@ header
                 height: auto
                 padding-bottom: $mobile-space-lv-4
             .container-title
-                width: auto
+                width: 100% !important
             h1
                 width: 274px
                 margin-bottom: $mobile-space-lv-1
