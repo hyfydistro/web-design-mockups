@@ -1,0 +1,19 @@
+{
+    "short_name": "TheodoreR",
+    "name": "Theodore Roosevelt",
+    "start_url": "/index.html",
+
+    "theme_color": "#19BFCB",
+    "background_color": "#ABB67C",
+
+    "display": "standalone",
+    "orientation": "portrait",
+
+    "icons": [
+      {
+        "src": "images/tr-profile-150wx150h.png",
+        "sizes": "150x150",
+        "type": "image/png"
+      }
+    ]
+  }
