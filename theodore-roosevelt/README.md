@@ -150,4 +150,4 @@ npm install --save-dev gulp-babel gulp-babel@next @babel/core @babel/preset-env
 
 ### Polyfills
 
--[IntersectionObserver](https://github.com/w3c/IntersectionObserver/tree/master/polyfill)
+- [IntersectionObserver](https://github.com/w3c/IntersectionObserver/tree/master/polyfill)

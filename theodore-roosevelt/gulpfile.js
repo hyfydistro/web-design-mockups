@@ -122,7 +122,8 @@ function compileSassToCss() {
     // 5. Choose a directory to save the compiled CSS.
     // 6. Stream changes to all browser.
     const plugins = [
-        autoprefixer({ overrideBrowserslist: ['last 2 chrome version', 'last 2 firefox version', 'last 2 safari version', '> 5%'], grid: true })
+        autoprefixer({ overrideBrowserslist: ['ie >= 11', '> 5%'], grid: true })
+        // autoprefixer({ overrideBrowserslist: ['last 2 chrome version', 'last 2 firefox version', 'last 2 safari version', '> 5%'], grid: true })
     ];
 
     return src('./src/styles/sass/**/*.sass')
