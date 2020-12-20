@@ -7,5 +7,40 @@
 .fader.appear
     opacity: 1
 
-.quick-delay
-    transition-delay: 0.35s
+.fade-now
+    animation: fadeNow ease 1.5s
+    -webkit-animation: fadeNow ease 1.5s
+    -moz-animation: fadeNow ease 1.5s
+    -o-animation: fadeNow ease 1.5s
+    -ms-animation: fadeNow ease 1.5s
+
+@keyframes fadeNow
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@-moz-keyframes fadeNow
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@-webkit-keyframes fadeNow
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@-o-keyframes fadeNow
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@-ms-keyframes fadeNow
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
