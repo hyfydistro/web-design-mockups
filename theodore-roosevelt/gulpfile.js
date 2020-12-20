@@ -229,6 +229,8 @@ exports.watchDevFiles = watchDevFiles;
 exports.dev = series(parallel(compileSassToCss, transpileJs), watchDevFiles);
 
 // PRE-PRODUCTION STAGE
+// todo
+// Add and Minify Html file
 exports.preprod = parallel(compileSassToCss, transpileJs);
 
 // PRODUCTION STAGE
