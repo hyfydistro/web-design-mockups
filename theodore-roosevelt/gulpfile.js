@@ -138,6 +138,7 @@ function compileSassToCss() {
         .on('error', sass.logError)
         .pipe(postcss(plugins))
         .pipe(sourcemaps.write())
+        .pipe(concat('style.css'))
         .pipe(dest('./src/'))
         .pipe(browserSync.stream());
 }
